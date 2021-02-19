@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/06/25 16:58:41") 
+  (specialized) 
+  (example-snippet "husband was available") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::AVAILABLE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

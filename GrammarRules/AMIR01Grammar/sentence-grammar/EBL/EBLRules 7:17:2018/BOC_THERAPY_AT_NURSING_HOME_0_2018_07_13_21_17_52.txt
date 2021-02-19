@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:THERAPY-AT-NURSING-HOME:-0-2018/07/13 21:17:52") 
+  (specialized) 
+  (example-snippet "OT services at askilled nursing facility") 
+  (ordered true) 
+  (concept ":THERAPY-AT-NURSING-HOME:") 
+  (stype "<INPATIENT-TREATMENT-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":OCCUPATIONAL-THERAPY::AT-NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-LIVES-IN-ASSISTED-LIVING::2017/11/03 19:56:08") 
+  (specialized) 
+  (example-snippet "patient lives in assisted living") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-LIVES-IN-ASSISTED-LIVING:") 
+  (stype "<LIVE-IN-FACILITY-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":LIVE-AT::PREP::ASSISTED-LIVING:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-MISS-DOSE::2018/04/03 23:07:00") 
+  (specialized) 
+  (example-snippet "she did miss a dose") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-MISS-DOSE:") 
+  (stype "<MEDICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":MISS-DOSE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

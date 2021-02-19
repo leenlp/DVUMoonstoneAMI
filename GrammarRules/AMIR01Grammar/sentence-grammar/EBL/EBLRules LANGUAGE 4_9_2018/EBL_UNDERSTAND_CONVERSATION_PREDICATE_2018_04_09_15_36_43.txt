@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNDERSTAND-CONVERSATION-PREDICATE::2018/04/09 15:36:43") 
+  (specialized) 
+  (example-snippet "understands what we are talking about") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":UNDERSTAND-CONVERSATION-PREDICATE:") 
+  (stype "<UNDERSTAND-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":UNDERSTAND:") 
+    (":CONTENT-OF-COMMUNICATION-THING:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

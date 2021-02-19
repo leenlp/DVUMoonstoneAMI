@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HISTORY-OBTAINED-FROM-FAMILY-SENTENCE::2019/12/30 23:36:21") 
+  (specialized) 
+  (example-snippet "information was provided by his wife") 
+  (ordered true) 
+  (sourceid "passive-sentence-rule") 
+  (concept ":HISTORY-OBTAINED-FROM-FAMILY-SENTENCE:") 
+  (stype "<HISTORY-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":INFORMATION:") 
+    (":PROVIDE::PREP::FF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1") 
+    (verb-form "passive")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

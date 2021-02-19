@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-7-2018/07/12 23:01:10") 
+  (specialized) 
+  (example-snippet "ADL routine is currently limited") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":ADL-ACTIVITY::CURRENTLY::DEFICIT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

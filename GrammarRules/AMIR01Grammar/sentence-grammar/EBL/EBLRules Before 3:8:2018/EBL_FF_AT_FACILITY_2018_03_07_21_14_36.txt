@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-AT-FACILITY::2018/03/07 21:14:36") 
+  (specialized) 
+  (example-snippet "her husband was in the clinic this afternoon") 
+  (sourceid "sentence-plus-time-rule") 
+  (concept ":FF-AT-FACILITY:") 
+  (stype "<PERSON-AT-PLACE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY::IS::PREP::MEDICAL-FACILITY:") 
+    (":SPECIFIC-TIME:")) 
+  (properties 
+    (sentence "?0") 
+    (time "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

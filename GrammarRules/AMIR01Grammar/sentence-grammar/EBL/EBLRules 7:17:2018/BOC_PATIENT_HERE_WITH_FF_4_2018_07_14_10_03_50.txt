@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-HERE-WITH-FF:-4-2018/07/14 10:03:50") 
+  (specialized) 
+  (example-snippet "PRESENT FOR THE INTERVIEW Patient and dtrs") 
+  (ordered true) 
+  (concept ":PATIENT-HERE-WITH-FF:") 
+  (stype "<AT-PLACE-WITH-PERSON-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":HERE::PREP::PATIENT-AND-FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-GIVE-CONSENT::2018/03/28 20:09:42") 
+  (specialized) 
+  (example-snippet "Mother gave informed consent") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FAMILY-GIVE-CONSENT:") 
+  (stype "<GIVE-TAKE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PARENT:") 
+    (":GIVE-CONSENT:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

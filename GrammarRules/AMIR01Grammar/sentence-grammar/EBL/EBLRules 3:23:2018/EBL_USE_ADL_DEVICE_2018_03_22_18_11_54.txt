@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::USE-ADL-DEVICE::2018/03/22 18:11:54") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":USE-ADL-DEVICE:") 
+  (stype "<USE-ADL-DEVICE>") 
+  (window 32.0) 
+  (words 
+    (":USE:<ACTION>") 
+    (":ADL-DEVICE:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

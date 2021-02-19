@@ -1,0 +1,21 @@
+'(
+wordrule
+( 
+  (ruleid "EBL::UNABLE-TO-MOVE-TO-OR-FROM-ADL-DESTINATION::2018/03/21 10:47:22") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":UNABLE-TO-MOVE-TO-OR-FROM-ADL-DESTINATION:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":UNABLE:") 
+    (":RISE::PREP::ADL-DESTINATION:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

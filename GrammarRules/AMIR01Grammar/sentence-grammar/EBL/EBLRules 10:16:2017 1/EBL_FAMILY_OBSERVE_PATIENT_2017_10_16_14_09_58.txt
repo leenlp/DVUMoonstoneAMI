@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-OBSERVE-PATIENT::2017/10/16 14:09:58") 
+  (specialized) 
+  (example-snippet "his mom is going to keep an eye on him") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FAMILY-OBSERVE-PATIENT:") 
+  (stype "<PERSON-OBSERVE-THING-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":OBSERVE-PATIENT:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::AT-TIME::2018/02/18 23:05:36") 
+  (specialized) 
+  (example-snippet "20 minutes four or five days out of the week") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":AT-TIME:") 
+  (stype "<TIME-MODIFIER>") 
+  (window 16.0) 
+  (words 
+    (":NUMBER:<PROPERTY>") 
+    (":TIME-UNIT::AT-TIME:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

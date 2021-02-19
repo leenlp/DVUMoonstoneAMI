@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DISEASE-NEED-TREATMENT::2017/10/23 20:28:38") 
+  (specialized) 
+  (example-snippet "his depression needs to be treated") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":DISEASE-NEED-TREATMENT:") 
+  (stype "<TREATMENT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":DEPRESSION:<THING>") 
+    (":NEED-TREATMENT:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

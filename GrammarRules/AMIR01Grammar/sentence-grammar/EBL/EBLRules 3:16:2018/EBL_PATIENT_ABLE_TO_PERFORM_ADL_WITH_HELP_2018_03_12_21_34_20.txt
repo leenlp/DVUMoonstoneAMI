@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-ABLE-TO-PERFORM-ADL-WITH-HELP::2018/03/12 21:34:20") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-ABLE-TO-PERFORM-ADL-WITH-HELP:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":ABLE-TO-WALK-WITH-HELP:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

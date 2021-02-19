@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-PATHOLOGIC-BEHAVIOR::2018/02/18 20:24:45") 
+  (specialized) 
+  (example-snippet "difficulty with repetitive questioning") 
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":ADL-PATHOLOGIC-BEHAVIOR:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":DIFFICULTY:<THING>") 
+    (":PREP::ADL-PATHOLOGIC-BEHAVIOR:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

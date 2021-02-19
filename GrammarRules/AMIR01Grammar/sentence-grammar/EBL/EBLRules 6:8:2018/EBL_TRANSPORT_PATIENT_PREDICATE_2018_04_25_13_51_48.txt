@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TRANSPORT-PATIENT-PREDICATE::2018/04/25 13:51:48") 
+  (specialized) 
+  (example-snippet "bring the patient home") 
+  (ordered true) 
+  (sourceid "action-thing-thing-rule") 
+  (concept ":TRANSPORT-PATIENT-PREDICATE:") 
+  (stype "<MOVE-THING-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ACCOMPANY:") 
+    (":PATIENT:") 
+    (":HOME:")) 
+  (properties 
+    (action "?0") 
+    (first-object "?1") 
+    (second-object "?2")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

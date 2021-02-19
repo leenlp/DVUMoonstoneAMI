@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NONCOMPLIANT::2018/04/02 23:25:55") 
+  (specialized) 
+  (example-snippet "is not compliant") 
+  (ordered true) 
+  (sourceid "predicate-not-state-rule") 
+  (concept ":NONCOMPLIANT:") 
+  (stype "<BEHAVIOR-PROPERTY>") 
+  (window 16.0) 
+  (words 
+    (":ISNT:") 
+    (":COMPLIANT:")) 
+  (properties 
+    (directionality "negated")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

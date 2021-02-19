@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-MOVE-ADL-FURNITURE::2018/03/21 14:45:18") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-MOVE-ADL-FURNITURE:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":MOVE-ADL-FURNITURE-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("neg" ?1)))
+
+)

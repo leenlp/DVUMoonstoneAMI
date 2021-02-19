@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PASSIVELY-MOVED-TO-ADL-FURNITURE::2018/07/25 15:53:11") 
+  (specialized) 
+  (example-snippet "was laterally transferred to neuro chair") 
+  (ordered true) 
+  (sourceid "predicate-state-rule") 
+  (concept ":PASSIVELY-MOVED-TO-ADL-FURNITURE:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":WAS:") 
+    (":RELOCATE::PREP::ADL-FURNITURE:")) 
+  (properties 
+    (property "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

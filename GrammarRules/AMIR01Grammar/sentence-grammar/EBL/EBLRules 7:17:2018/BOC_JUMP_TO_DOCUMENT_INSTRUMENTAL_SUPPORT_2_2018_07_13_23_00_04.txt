@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-2-2018/07/13 23:00:04") 
+  (specialized) 
+  (example-snippet "brother who assists with dressing") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::PROVISION-OF-CARE::PREP::ADL-ACTIVITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-0-2018/06/08 19:16:33") 
+  (specialized) 
+  (example-snippet "primary caregiver posttransplant will be her youngest daughter") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":PROVIDER::SPECIFIC-TIME::FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

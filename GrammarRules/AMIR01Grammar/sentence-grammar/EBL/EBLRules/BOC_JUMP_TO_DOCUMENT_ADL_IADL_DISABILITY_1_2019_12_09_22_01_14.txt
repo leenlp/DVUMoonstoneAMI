@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-1-2019/12/09 22:01:14") 
+  (specialized) 
+  (example-snippet "not able to move right side") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":ABLE::MOVE::ANATOMIC-APPENDAGE:")) 
+  (tests 
+    ("neg" ?0)) 
+  (removeproperties directionality))
+
+)

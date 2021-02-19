@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-LIVE-WITH-FAMILY:-0-2018/03/09 23:20:25") 
+  (specialized) 
+  (example-snippet "patient was discharged to return home to her parents") 
+  (ordered true) 
+  (concept ":PATIENT-LIVE-WITH-FAMILY:") 
+  (stype "<LIVE-WITH-PERSON-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

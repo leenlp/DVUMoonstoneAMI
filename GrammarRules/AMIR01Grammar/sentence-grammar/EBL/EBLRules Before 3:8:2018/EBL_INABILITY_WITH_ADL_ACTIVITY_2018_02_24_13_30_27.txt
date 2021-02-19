@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::INABILITY-WITH-ADL-ACTIVITY::2018/02/24 13:30:27") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":INABILITY-WITH-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":IMPAIRMENT:<THING>") 
+    (":PREP::ADL-FACILITY:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

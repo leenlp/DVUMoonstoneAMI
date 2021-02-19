@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-IMPAIRMENT::2018/02/28 17:14:28") 
+  (specialized) 
+  (sourceid "adl-therapy-word-rule") 
+  (concept ":ADL-IMPAIRMENT:") 
+  (stype "<ADL-ABILITY>") 
+  (window 16.0) 
+  (words 
+    ("functional mobility training")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

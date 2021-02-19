@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-IS-NONCOMPLIANT:-1-2018/04/03 20:38:29") 
+  (specialized) 
+  (example-snippet "he overdosed on haldol") 
+  (ordered true) 
+  (concept ":PATIENT-IS-NONCOMPLIANT:") 
+  (stype "<BEHAVIOR-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-OVERDOSE-ON-MEDICATION-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-0-2019/12/18 22:26:46") 
+  (specialized) 
+  (example-snippet "The patient is unable to give consent") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::UNABLE-GIVE-CONSENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

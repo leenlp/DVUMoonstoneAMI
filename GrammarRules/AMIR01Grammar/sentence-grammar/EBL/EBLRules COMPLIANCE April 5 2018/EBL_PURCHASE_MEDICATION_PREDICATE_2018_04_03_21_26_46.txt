@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PURCHASE-MEDICATION-PREDICATE::2018/04/03 21:26:46") 
+  (specialized) 
+  (example-snippet "purchased any prescription medications") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":PURCHASE-MEDICATION-PREDICATE:") 
+  (stype "<PURCHASE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":PURCHASE-ACTION:") 
+    (":PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

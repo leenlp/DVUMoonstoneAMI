@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-2-2018/06/29 16:48:49") 
+  (specialized) 
+  (example-snippet "presents with cognitive deficits") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DISPLAYS-SOMETHING-ACTION::MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

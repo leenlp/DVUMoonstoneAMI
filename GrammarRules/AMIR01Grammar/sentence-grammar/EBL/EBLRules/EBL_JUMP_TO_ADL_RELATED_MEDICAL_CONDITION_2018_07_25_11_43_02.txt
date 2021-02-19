@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-ADL-RELATED-MEDICAL-CONDITION::2018/07/25 11:43:02") 
+  (specialized) 
+  (example-snippet "Rule Out Delirium") 
+  (ordered true) 
+  (sourceid "rule-out-disease-rule") 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (window 16.0) 
+  (words 
+    ("rule out") 
+    (":DELIRIUM:")) 
+  (properties 
+    (directionality "uncertain")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

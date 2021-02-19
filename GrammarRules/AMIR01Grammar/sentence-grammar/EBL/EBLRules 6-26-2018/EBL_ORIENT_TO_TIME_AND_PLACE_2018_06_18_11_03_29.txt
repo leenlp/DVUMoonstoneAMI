@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ORIENT-TO-TIME-AND-PLACE::2018/06/18 11:03:29") 
+  (specialized) 
+  (example-snippet "orient to time or place") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":ORIENT-TO-TIME-AND-PLACE:") 
+  (stype "<COGNITIVE-ABILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ORIENT:") 
+    (":PREP::TIME-AND-PLACE:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

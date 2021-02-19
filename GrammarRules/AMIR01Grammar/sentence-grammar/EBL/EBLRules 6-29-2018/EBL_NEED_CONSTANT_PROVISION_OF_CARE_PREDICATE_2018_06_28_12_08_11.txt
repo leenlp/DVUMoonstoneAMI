@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NEED-CONSTANT-PROVISION-OF-CARE-PREDICATE::2018/06/28 12:08:11") 
+  (specialized) 
+  (example-snippet "needs 24 hour assistance") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":NEED-CONSTANT-PROVISION-OF-CARE-PREDICATE:") 
+  (stype "<PROVISION-OF-CARE>") 
+  (window 32.0) 
+  (words 
+    (":NEED:<ACTION>") 
+    (":CONSTANT-PROVISION-OF-CARE:<PREDICATE>")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

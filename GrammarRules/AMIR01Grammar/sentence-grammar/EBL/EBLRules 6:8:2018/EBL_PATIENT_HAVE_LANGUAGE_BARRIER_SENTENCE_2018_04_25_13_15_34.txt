@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE::2018/04/25 13:15:34") 
+  (specialized) 
+  (example-snippet "The patient speaks English fairly well") 
+  (ordered true) 
+  (sourceid "EBL::PATIENT-SPEAKS-COMPETENT-ENGLISH-SENTENCE::2018/04/09 15:14:57") 
+  (concept ":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":SPEAK-COMPETENT-ENGLISH-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")
+    (directionality uncertain))
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

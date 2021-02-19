@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-IS-NONCOMPLIANT:-2-2018/04/02 23:26:27") 
+  (specialized) 
+  (example-snippet "is not compliant") 
+  (ordered true) 
+  (concept ":PATIENT-IS-NONCOMPLIANT:") 
+  (stype "<BEHAVIOR-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":NONCOMPLIANT:")) 
+  (tests 
+    ("neg" ?0)))
+
+)

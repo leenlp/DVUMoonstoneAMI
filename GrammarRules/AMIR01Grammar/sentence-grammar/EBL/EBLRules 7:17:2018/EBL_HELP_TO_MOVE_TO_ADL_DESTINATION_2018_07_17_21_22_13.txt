@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HELP-TO-MOVE-TO-ADL-DESTINATION::2018/07/17 21:22:13") 
+  (specialized) 
+  (example-snippet "assist pt to transfer  tobed") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":HELP-TO-MOVE-TO-ADL-DESTINATION:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":HELP:") 
+    (":PATIENT::MOVE-TO-OR-FROM-ADL-DESTINATION:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

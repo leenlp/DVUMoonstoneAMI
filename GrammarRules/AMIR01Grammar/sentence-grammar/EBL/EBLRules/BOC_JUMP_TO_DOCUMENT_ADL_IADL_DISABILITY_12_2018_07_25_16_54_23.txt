@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-12-2018/07/25 16:54:23") 
+  (specialized) 
+  (example-snippet "required Min A to maintain static and dynamic sitting balance") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED-HELP::STATIC::POSITIONAL-BALANCE-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

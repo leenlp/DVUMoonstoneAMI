@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:TOTAL-ASSISTANCE:-2-2018/07/13 17:13:08") 
+  (specialized) 
+  (example-snippet "Total Assistance") 
+  (ordered true) 
+  (concept ":TOTAL-ASSISTANCE:") 
+  (stype "<HELP>") 
+  (bagofconcepts true) 
+  (words 
+    (":COMPLETE-PROPERTY::PROVISION-OF-CARE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PROVIDER-COMMUNICATE-WITH-PATIENT-AND-FAMILY-SENTENCE::2018/03/08 10:54:02") 
+  (specialized) 
+  (example-snippet "patient and her daughter completed both days of diabetes education") 
+  (ordered true) 
+  (sourceid "person-thing-thing-rule") 
+  (concept ":PROVIDER-COMMUNICATE-WITH-PATIENT-AND-FAMILY-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":PATIENT-AND-FAMILY:") 
+    (":EDUCATION:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

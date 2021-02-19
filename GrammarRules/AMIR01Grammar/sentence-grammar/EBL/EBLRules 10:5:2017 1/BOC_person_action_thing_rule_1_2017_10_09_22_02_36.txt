@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "BOC-person-action-thing-rule-1-2017/10/09 22:02:36") 
+  (specialized) 
+  (example-snippet "he is living in foster care") 
+  (ordered true) 
+  (concept ":PATIENT-NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-SENTENCE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT:") 
+    (":LIVE-AT:") 
+    (":PREP:") 
+    (":FOSTER-HOME:")))
+
+)

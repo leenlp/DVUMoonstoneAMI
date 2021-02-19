@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:THROWAWAY-CONCEPT:-0-2018/03/08 18:34:25") 
+  (specialized) 
+  (example-snippet "I have been taking care of her husband") 
+  (ordered true) 
+  (concept ":THROWAWAY-CONCEPT:") 
+  (stype "<THROWAWAY-CONCEPT>") 
+  (bagofconcepts true) 
+  (iscapture true)
+  (words 
+    (":PROVIDER-CARE-FOR-FAMILY-MEMBER:")))
+
+)

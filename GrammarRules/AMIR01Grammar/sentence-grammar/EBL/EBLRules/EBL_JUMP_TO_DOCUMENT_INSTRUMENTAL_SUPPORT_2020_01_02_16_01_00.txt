@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT::2020/01/02 16:01:00") 
+  (specialized) 
+  (example-snippet "patient and her family") 
+  (ordered true) 
+  (sourceid "EBL::PATIENT-AND-FAMILY::2020/01/02 15:51:54") 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (window 16.0) 
+  (words 
+    (":PATIENT:") 
+    ("and") 
+    (":MULTI-FAMILY:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

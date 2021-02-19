@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-2-2019/12/11 15:15:05") 
+  (specialized) 
+  (example-snippet "Avalon Valley that they will transport patient") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NURSING-HOME:") 
+    (":PERSON:") 
+    (":TRANSPORT:") 
+    (":PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

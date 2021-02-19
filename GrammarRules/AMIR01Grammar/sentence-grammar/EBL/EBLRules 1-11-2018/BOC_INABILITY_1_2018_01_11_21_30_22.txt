@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:INABILITY:-1-2018/01/11 21:30:22") 
+  (specialized) 
+  (example-snippet "is not able") 
+  (ordered true) 
+  (concept ":INABILITY:") 
+  (stype "<ABILITY>") 
+  (bagofconcepts true) 
+  (words 
+    (":ISNT:") 
+    (":ABILITY:")))
+
+)

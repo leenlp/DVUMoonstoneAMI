@@ -1,0 +1,22 @@
+'(
+wordrule
+
+((ruleid "EBL::EAT-AT-NURSING-HOME::2017/10/05 15:50:18") 
+  (specialized) 
+  (example-snippet "eats meals at the nursing home") 
+  (ordered true) 
+  (sourceid "action-thing-pp-rule") 
+  (concept ":EAT-AT-NURSING-HOME:") 
+  (stype "<PERFORM-ADL-IN-FACILITY>") 
+  (window 32.0) 
+  (words 
+    (":EATING:") 
+    (":FOOD:") 
+    (":AT-NURSING-HOME:")) 
+  (properties 
+    (action "?0") 
+    (first-object "?1") 
+    (pp-object (thing ?2))))
+
+
+)

@@ -1,0 +1,801 @@
+Assessment:
+Diagnosis:
+Household Members:
+Support Systems:
+Other Household Members:
+Funding Confirmed:
+Obtained From:
+Admitted From:
+Contact Person:
+Support Systems:
+Discharge Transportation:
+Home Health Prior to Admission:
+Discharge Detail:
+Information Obtained From:
+Patient Admitted From:
+Admitted type:
+Contact Person:
+Discharge Transportation:
+Home Assessment:
+Stairs or Elevator:
+ADL Prior to Admission:
+ME Prior to Admission:
+All Vendor Info:
+Dialysis Prior to Admission:
+Other Services Prior to Admission:
+Discharge Plan:
+CM Anticipated Plan:
+Specific Needs Identified:
+Decision Points:
+Expected Discharge Date:
+Date of Admission Order:
+Discharge Referral:
+Plan Discussed with:
+Facility Name:
+Admission Date:
+Primary Service:
+Depression:
+Obtained From:
+Home Health Prior to Admission:
+Discharge Detail:
+Final Patient Facility:
+Patient Facility:
+*** BELOW ARE AUTO-EXTRACTED HEADERS FROM TRAINING CORPUS:
+:
+ABD:
+ABDOMEN:
+ACS:
+ADHD:
+ADL Prior to Admission:
+ADL's/IADL's:
+ADMIT DATE:
+AFib/prior NSVT/priorPEA:
+AIMB:
+AIRWAYS:
+AKI:
+AROM:
+ASSESSMENT AND PLAN:
+ATTENDING PHYSICIAN ATTESTATION:
+AUDIT Score:
+Ab:
+Abd:
+Abdomen:
+Abdominal:
+Abuse:
+Acceptance:
+Acidemia:
+Active Meds:
+Active Problems:
+Activity Status:
+Activity:
+Addenda:
+Addendum:
+Additional Ambulation Distances:
+Admin Instructions:
+Admission Date:
+Admission Information:
+Admission Order:
+Admission Vitals:
+Admission/Consult:
+Admission:
+Admit Type:
+Admitted From:
+Admitting Diagnosis:
+Advance Directive:
+Affect:
+Age:
+Airway Examination:
+Airway:
+Alcohol Use:
+All Vendor Info:
+All:
+Allergies:
+Ambulation:
+Anemia:
+Anticipated Discharge Transportation:
+Anticipated Plan:
+Anticoagulants:
+Anxiety History:
+Anxiety:
+Appearance:
+Appetite/Gastrointestinal:
+Arousal/Alertness:
+Assessment Comment:
+Assessment Comments:
+Assessment/Plan:
+Assessment/Recommendation:
+Assessment:
+Assistance Type/Devices:
+Assistance:
+Asthma:
+Attending Attestation:
+Attending MD:
+Attending Participation:
+Attending Physician Attestation:
+Attending Provider:
+Attending:
+Attention:
+Attitude:
+Author:
+BH Energy Level:
+BH MSE AFFECT; IP:
+BH MSE BEHAVIOR EXAM; IP:
+BH MSE GROOMING; IP:
+BH MSE INSIGHT; IP:
+BH MSE JUDGEMENT; IP:
+BH MSE ORIENTATION; IP:
+BH Sleep:
+BP:
+Barriers Prior To Admission:
+Bearing Status:
+Bedsit:
+Behavior Exam:
+Behavior:
+Behavioral/Psych:
+Birth:
+Bladder:
+Blood Pressure:
+Both:
+Bowel:
+By:
+CARDIOVASCULAR:
+CARE PLAN:
+CATH LAB;  Service:
+CBC:
+CC:
+CLINICAL INFORMATION:
+CM Anticipated Plan:
+CMS Modifier:
+CODE STATUS:
+COMPARISON:
+COPD Exacerbation:
+CV:
+CVICU:
+CVMU:
+CVS:
+Cane:
+Capacity:
+Card:
+Cardiac Catheterization:
+Cardiopulmonary:
+Cardiovascular:
+Cardiovascular;  Laterality:
+Case Manager/Utilization Review Nurse, Phone:
+Cath CORONARY ANGIOGRAPHY;  Surgeon:
+Cath Perc Coronary Intervention;  Surgeon:
+Cath Right Heart Cath;  Surgeon:
+Cath;  Surgeon:
+Chair:
+Chest Pain:
+Chest:
+Chief Complaint:
+Children:
+1st Choice Contact Info:
+Choice Contact Info:
+Choice Home Health - Fax & Acceptance:
+Choice Home Health Contact Info:
+Coagulopathy:
+Code Status:
+Cognition/Orientation:
+Cognition:
+Cognitive Disorders:
+Cognitive Status:
+Collection Time:
+Commands:
+Comment:
+Comments/Details:
+Comments:
+Communication:
+Comorbidities/Problems:
+Complications:
+Comprehension Method:
+Confirmed:
+Constitutional:
+Consult:
+Consults:
+Contact Person:
+Contact:
+Content:
+Course:
+Criteria:
+Current Facility-Administered Medications:
+Current Functional Status:
+Current Medications:
+Current Oxygen Therapy:
+Current Relationship Status:
+Current:
+D:
+DAST-10 Referral:
+DIABETES DISCHARGE INSTRUCTIONS:
+DIET:
+DM:
+DOB:
+DVT Prophylaxis:
+Daily Route:
+Daily Weights:
+Date Reviewed:
+Date of Review:
+Date:
+David Kunz; Registered Nurse:
+Days:
+Decision Capacity:
+Decision Points:
+Demographics Verbally Confirmed:
+Department:
+Depression History:
+Depression:
+Dept Phone:
+Description:
+Detail:
+Diagnosis:
+Diagnostic Studies:
+Dialysis Prior to Admission:
+Diet:
+Discharge Date:
+Discharge Detail:
+Discharge Diagnosis:
+Discharge Diet:
+Discharge Disposition:
+Discharge Instructions:
+Discharge Medications/Nutrition:
+Discharge Medications:
+Discharge Plan:
+Discharge Time:
+Discharge Transportation:
+Discharge:
+Disease Cluster:
+Disorders:
+Disp:
+Dispo:
+Distances:
+DME Prior to Admission:
+Dose:
+Dosis:
+Drug Use:
+Dumke:
+Dynamic:
+E'Leesha:
+E-mail:
+ECG:
+ECHO:
+ED:
+EKG:
+ESRD:
+EXAMINATION:
+EXT:
+EXTREMITIES:
+Eating Disorder:
+Eating Disorders:
+Echo:
+Education Provided:
+Education:
+Electronic Medical Record:
+Elevator:
+Emergency Contact:
+Employment Status:
+Employment:
+End:
+Endocrine:
+Energy Level:
+Epic:
+Equipment:
+Exam:
+Examination:
+Expected Discharge Date:
+Expected Discharge Time:
+Expires:
+Ext:
+External Care Manager:
+Extremities:
+Eye Contact:
+Eyes:
+FAMILY HISTORY:
+FEN:
+FH:
+FINDINGS:
+FYI:
+Facilities:
+Facility-Administered Medications:
+Facility:
+Family Description:
+Family History:
+Family:
+Faxed:
+FiO2:
+Filed Vitals:
+Final DC Documents Faxed:
+Final Discharge Services:
+Final Discharge Transport:
+Final Patient Facility:
+Final Referral Packet:
+Financial Situation:
+Financial:
+Findings:
+Flow Rate:
+Fluids:
+Following Commands:
+Following:
+Freq:
+Frequency:
+From OSH:
+From:
+Funding Barriers Prior To Admission:
+Funding Confirmed:
+Funding:
+Future Appointments:
+GEN:
+GENERAL:
+GERD:
+GI Attending:
+GI Fellow:
+GI Prophylaxis:
+GI/Nutrition:
+Gait Assistance Level:
+Gait Assistance Type/Devices:
+Gait Pattern:
+Gait:
+Gastrointestinal:
+Gen:
+Gender:
+General Appearance:
+General:
+Genitourinary:
+Global Communication Method:
+Global Comprehension Method:
+Glucose:
+Goal:
+Grooming:
+HEART AND PERICARDIUM:
+HEENT:
+HEME:
+HENT:
+HFpEF:
+HH, Hospice:
+HHS:
+HISTORY OF PRESENT ILLNESS:
+HISTORY:
+HLD:
+HOCM:
+HOME MEDS:
+HPI:
+HR:
+HS Route:
+HTN:
+Head:
+Health Care Assistant:
+Healthy Diet:
+Heart:
+Height:
+Hematological:
+Histories:
+History:
+Home Assessment:
+Home Health Prior to Admission:
+Home Meds:
+Home:
+Hospice:
+Hospital Course:
+Hospital Day:
+Hospitalization:
+Household Members:
+Hx:
+Hyperglycemia:
+Hyperkalemia:
+Hypertension:
+Hypotension:
+Hypothyroidism:
+Hypoxia:
+ID PSY ROS:
+ID:
+II:
+IMAGING:
+IMPRESSION/FINDINGS:
+IMPRESSION:
+INDICATION:
+INTERPRETIVE INFORMATION:
+IP:
+Identification:
+Identified:
+Identifying Information:
+If You Have Chest Pain:
+Illness:
+Imaging Results:
+Imaging/Radiology:
+Imaging:
+Impairments/Limitations:
+Impression:
+Income/Insurance:
+Income:
+Indications:
+Inferior STEMI:
+Info:
+Informant:
+Information Obtained From:
+Information Obtained:
+Infusion Prior to Admission:
+Infusion:
+Inpatient Medications:
+Inpatient Status:
+Insight:
+Instructions:
+Intake/Output:
+InterQual Criteria:
+Intervention:
+Interventions:
+Interview Completed By:
+Irritants:
+Judgment:
+LABORATORY DATA:
+LABS:
+LAD:
+LCx:
+LE:
+LH-Cath:
+LHC:
+LLE Assessment:
+LOC:
+LOWER NECK:
+LUE Assessment:
+LUNG:
+LUNGS:
+Laboratory:
+Labs:
+Last Dose:
+Last INR:
+Lateral STEMI:
+Laterality:
+Latter Day Saints Admission Date:
+Left Ear:
+Legal History:
+Legend:
+Leukocytosis:
+Level:
+Lines/Tubes:
+Lines:
+Lives With:
+Location:
+Lungs:
+Lymphadenopathy:
+MD; Consulting Physician:
+MD; Surgeon:
+MD;  Location:
+MEDIASTINUM AND HILA:
+MG Tab Comments:
+MRN:
+MSE COGNITION:
+MSE SPEECH AND COMMUNICATION; IP:
+MSE THOUGHT CONTENT EXAM; IP:
+MSE THOUGHT PROCESSES; IP:
+MUSCULOSKELETAL:
+Macrocytosis:
+Maintain Strength:
+Manager:
+Mania History:
+Mania:
+Marital Status:
+Med/Surg Precautions:
+Medical Decision Capacity:
+Medicare Flag:
+Medicare Inpatient Flag done per Epic:
+Medication Instructions:
+Medication Reconciliation/Vaccine Screening:
+Medication Summary:
+Medications/Nutrition:
+Medications:
+Members:
+Memory:
+Mental Health History:
+Mental Status Exam:
+Mental Status Examination:
+Method:
+Military Service:
+Mobility:
+Modifier:
+Monitoring:
+Mood:
+Mouth/Throat:
+Musculoskeletal:
+MyChart Activation Code:
+N Medical Dr Phone:
+NCC:
+NECK:
+NEURO:
+NEUROLOGIC:
+NSTEMI:
+NSVT:
+Name:
+Neck:
+Needed/Special Monitoring:
+Needs Identified:
+Nemesio U:
+Neuro:
+Neurological:
+New Medications:
+Next Visit:
+Nightly Route:
+None/wildcard:
+Nose:
+Note Status:
+Notes:
+Nuevos Medicamentos:
+Numbers:
+Nutrition:
+O2 Flow Rate:
+O2 Therapy:
+OCD:
+OF DISCHARGE:
+ONCOLOGY HISTORY:
+OSSEOUS STRUCTURES AND CHEST WALL:
+Objective:
+Obtained From:
+Obtained:
+Office:
+On:
+Once Route:
+One:
+Operation:
+Order:
+Orientation Level:
+Orientation:
+Orthopedic:
+Osteoporosis:
+Other Household Members:
+Other Instructions:
+Other Referral Comments/Information:
+Other Services Prior to Admission:
+Other:
+Outcome:
+Outpatient Medications:
+Overall Cognitive Status:
+Oxygen Settings:
+Oxygen Therapy/Vent Settings:
+Oxygen:
+PAP Mean:
+PAP:
+PAST MEDICAL HISTORY:
+PAST SURGICAL HISTORY:
+PCP Confirmed:
+PCP:
+PCV:
+PHYSICAL EXAM:
+PHYSICAL EXAMINATION:
+PMH:
+PMHx:
+PPx:
+PRN:
+PROCEDURE:
+PSH:
+PSYCH:
+PSYCHIATRIC:
+PT Diagnosis:
+PT Duration:
+PT Frequency:
+PT Received On:
+PT/OT Rehab:
+PTSD:
+PULM:
+Packet:
+Pager:
+Pain:
+Participation:
+Past Medical History:
+Past Psychiatric History:
+Past Surgical History:
+PastSurgical History:
+Patient Admitted From:
+Patient Name:
+Patient Unit:
+Patient Verbalized Discharge Plan:
+Patient:
+Pattern:
+Pending Labs:
+Person:
+Pertinent Physical Exam:
+Pg:
+Pharmacy Instructions:
+Phillip Hatch MRN:
+Phone:
+Physical Exam:
+Plan:
+Pneumonia:
+Points:
+Pre-Anesthesia Assessment:
+Pre-procedure Diagnosis:
+Precautions:
+Present Illness:
+Presentation:
+Pressure:
+Preventive Cardiology:
+Primary Family:
+Principal Problem:
+Prior To Admission:
+Probable OSA:
+Problem:
+Procedure Date:
+Procedure:
+Procedures Performed:
+Processes:
+Product:
+Prognosis:
+Progress:
+Prophylactic Antibiotics:
+Prophylaxis:
+Provider:
+Providers:
+Psych/Social Precautions:
+Psych:
+Psychiatric:
+Psychosis:
+Pulm:
+Pulmonary Vascular Resistance:
+Pulmonary/Chest:
+Pulmonary:
+Pulse:
+Pulses:
+QT/QTc:
+Qty:
+Quit:
+RCA:
+RE:
+REASON FOR ADMISSION:
+RECOMMENDATION:
+RESPIRATORY:
+REVIEW OF SYSTEMS:
+Review of Systems (Psychiatric)  Depression:
+RHC:
+RLE Assessment:
+RN; Case Management:
+RN; Registered Nurse:
+RN; Surgeon:
+RVR:
+Raw Score:
+Reason:
+Recent Labs:
+Recomendations:
+Recommendation:
+Recommendations:
+Referral Packet:
+Referral Source:
+Referral:
+Referring MD:
+Refills:
+Registered Nurse:
+Relationship Status:
+Religion:
+Requesting Physician:
+Resolved Problems:
+Resp:
+Respiratory Examination:
+Respiratory Failure:
+Respiratory:
+Restrictions:
+Review Nurse and meets criteria for Inpatient Status:
+Review Nurse, Phone:
+Review:
+Reviewer's Comments:
+Rfl:
+Right Ear:
+Right Heart Cath;  Surgeon:
+Rolling:
+Route:
+SH:
+SKIN:
+SOCIAL HISTORY:
+SPACE:
+SSTU:
+STEMI:
+SUMMARY:
+SVO2:
+SVR:
+Safety Judgment:
+Scheduled:
+Score:
+Sedation:
+Service/Physician:
+Service:
+Services:
+Settings:
+Sexual Activity:
+Sexually Active:
+Shawna Nicole:
+Shaynie Shockey; Physical Therapist:
+Sig:
+Signing Provider:
+Sit:
+Site:
+Skin:
+Sleep:
+Social History:
+Social Work Description:
+Social Work Encounter:
+Social Work Visit Information:
+Social Worker Time Tracking:
+Source:
+SpO2:
+Specific Needs Identified:
+Speech/Verbalization/Communication:
+Speech:
+Spiritual Needs:
+Spiritual Practice:
+Spiritual Preference:
+Spouse Name:
+Stair Management Assistance:
+Stairs or Elevator:
+Stairs:
+Stand:
+Start:
+Static:
+Station:
+Status:
+Stopping:
+Stretcher:
+Strict Sternal Precautions:
+Subjective:
+Subset:
+Substance Use Disorder:
+Substance Use:
+Summary:
+Supine Scooting:
+Supine:
+Support Systems:
+Surgeon:
+Suspected UTI:
+Swallow/Nutrition:
+Systems:
+T:
+TECHNIQUE:
+THORACIC VESSELS:
+TTE:
+Telemetry/ECGs:
+Telemetry:
+Temp:
+TempSrc:
+Thought Content Exam:
+Thought Content:
+Thought Process:
+Thought Processes:
+Thrombocytepnia:
+Thrombocytopenia:
+Time Spent:
+Time:
+To Admission:
+Transfers:
+Transport:
+Transportation:
+Treatment Team:
+Treatment/Interventions:
+Treatment/Plan:
+Treatment:
+Troponin:
+Tubes:
+Type II DM:
+Type/Devices:
+Types:
+UH CARDIAC CATH LAB;  Service:
+UH CV VIRTUAL OR;  Service:
+UPPER ABDOMEN:
+Unit:
+Units Freq:
+Units/kg/hr Freq:
+Use Disorder:
+Use:
+VITAL SIGNS:
+VS:
+Value:
+Verbally Confirmed:
+Vernon Chad:
+Version:
+Vesicants:
+Visit Information:
+Vital Signs:
+Vitals:
+Walker:
+Weight Bearing Status:
+Weight:
+Wheelchair:
+White (Wife :
+Work Description:
+Wound Care:
+
+
+ 

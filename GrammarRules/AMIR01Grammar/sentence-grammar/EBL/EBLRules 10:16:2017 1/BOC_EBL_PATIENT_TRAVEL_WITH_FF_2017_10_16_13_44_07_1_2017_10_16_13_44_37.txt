@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::PATIENT-TRAVEL-WITH-FF::2017/10/16 13:44:07-1-2017/10/16 13:44:37") 
+  (specialized) 
+  (example-snippet "patient presents to the office today with his mom") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-TRAVEL-WITH-FF:")))
+
+)

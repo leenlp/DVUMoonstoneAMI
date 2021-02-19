@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MEDICAL-CONDITION-CAUSING-ADL-DISABILITY::2018/04/25 19:05:56") 
+  (specialized) 
+  (example-snippet "hearing impaired") 
+  (sourceid "functional-status-ability-state-general-rule") 
+  (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:") 
+  (stype "<DISEASE-THING>") 
+  (window 16.0) 
+  (words 
+    (":PERCEPTION-MODE-THING:") 
+    (":IMPAIRED:<THING>")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-0-2018/07/25 15:02:26") 
+  (specialized) 
+  (example-snippet "Limited by fatigue") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DEFICIT::FATIGUE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

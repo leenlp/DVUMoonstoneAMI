@@ -1,0 +1,270 @@
+**************************
+TRAINING SET 5
+
+LIVING ALONE:
+
+She lives with mom, sister and her grandparent (PROBLEM:  commas)
+
+The patient lives with his girlfriend on an on-off basis
+
+unclear if they will be immediately moving back in together
+
+now is in nursing facility
+
+she lives with her boyfriend and his father
+
+lives with biological father and mother
+
+(finished 10/13/2017)
+
+
+FAMILY SUPPORT:
+Mom is quite comfortable with bulb suctioning the nose with saline and they know they are to return immediately if she starts having difficulty breathing 
+
+Mother was advised regarding signs and symptoms of increased respiratory distress
+
+albuterol was given to the patient and more for mom to learn outpatient care
+
+Mom states she has no fever.  
+
+Mom returned to the clinic today because she got much worse overnight.
+
+The patient and his wife have requested and are agreeable with transfer to Medical Center.
+
+His mother and stepfather have been informed of the patient's discharge and the followup plan.
+
+his mother and stepfather, saying he is off his meds
+
+Encouraged her to speak with her family  (Lee:  I disagree.  This does not imply support.)
+
+She comes in today with her boyfriend.
+
+Her boyfriend does help to make sure that she understands what we are talking about.
+
+His parent spoke with a local physician.
+
+(finished 10/13/2017)
+
+ADL:
+
+to ill to care for herself
+
+There were also signs of memory, attention, reading and spelling deficits; and mild right-sided motor incoordination and mood variability. (Lee:  no explicit mention of ADL)
+
+
+DEPRESSION:
+
+PAST MEDICAL HISTORY:  Significant for arthritis, anxiety, depression and PCOS.
+
+1. Depression
+2. History of depression.
+
+No anxiety or depression.  (FAILED)
+
+No depression.
+
+PSYCH:  Negative for anxiety, irritability, depression, suicidal thoughts. (FAILED)
+
+21-year-old male with a history of bipolar disorder, anxiety and ADHD.
+
+PRESENT ILLNESS:  He has a history of bipolar disorder with mania and depression with anxiety and panic attacks.
+
+AXIS I:
+1. Bipolar disorder.
+2. Major depression with anxiety and panic attacks.
+
+history of bipolar disorder
+
+REVIEW OF SYSTEMS:  Significant for problems with agitated depression.
+
+PMH:  1) Depression.  2) Blind OS
+
+(Completed 10/14/2017)
+
+**************************
+TRAINING SET 6
+
+LIVING ALONE:
+
+He lives with both parents
+
+The patient lives with parents
+
+Her only meal that she eats at the nursing home is the noon meal
+
+She lives at Kansas Christian Home independently
+
+patient is in foster care
+
+she is in foster care
+
+
+** she will probably be hospitalized in respite care (Lee:  possibility, not actuality)
+
+lives with parents
+
+FAMILY SUPPORT:
+
+Mom understands the admission process.
+
+All questions have been answered to parental satisfaction.
+
+according to mom
+
+****
+
+"here today"
+
+? Should I have location @ time type & concept?
+
+
+
+****
+
+His mom is concerned
+
+At mom's insistence
+
+patient is here today with his mom
+
+She comes here today with a friend.
+
+The friend with her states that she is doing very well.
+
+patient is in foster care 
+
+Biological mom and grandma do visit on thursdays for about an hour
+
+relayed to foster mom
+
+foster mom 
+
+Mom brings the patient in today
+
+Patient in with mom
+
+Mom said he did seem to get better
+
+his family denied any sign or symptom
+
+transfer to Kindred  (???)
+
+<< COMPLETED 10/11 >>
+
+COMMUNITY SUPPORT:
+
+She will probably be hospitalized in respite care (???)
+
+ADL:
+
+She may not have enough appetite to eat unless food is prepared for her
+
+DEPRESSION:
+
+One month follow up for unintentional weight loss, [depression], paranoia ...
+
+2. Depression, doing well.
+
+(finished 10/13/2017)
+
+**************************
+TRAINING SET 7
+
+LIVING ALONE:
+
+housewife
+
+live with his mom
+
+He is living with his mom
+
+He lives in a household full of drug users  (FAILED)
+
+now that he is living with his mom
+
+The patient resides with his father in Houston
+
+resides with his father in Houston
+
+patient was discharged to return home to her parents
+
+female from the nursing home
+
+transferred back to assisted living in good condition
+
+household stressors with both of her children (FAILED)
+
+She lives with her husband
+
+FAMILY SUPPORT
+
+The patient's family and she will continue to think about these pain procedures
+
+patient presents to the office today with his mom
+
+he lives with his mom
+
+he is living with his mom
+
+long talk with the patient and his mom
+
+his mom is going to keep an eye on him
+
+After a lengthy discussion with the patient and his wife
+
+Consent was obtained from the daughter in law who has the power of attorney
+
+the patient was discharged home to her parents
+
+**** GOT THIS FAR ******
+she feels she does not get enough support from her parents
+
+I gave him the name and phone number of Behavioral Health and told him to call so that he can get into rehabilitation program or at least a support group. 
+
+The patient was discharged to return home to her parents and was referred to Community Health Agencies.
+
+94-year-old female from the nursing home 
+
+She works as a social worker (Lee:  How does *that* mean community support)
+
+MARGINAL SUPPORT:
+
+The patient was taken to the local shelter
+
+ADL/IADL:
+
+obstructive symptoms (???)
+
+The patient remained disorganized
+
+&&&& GOT THIS FAR &&&&
+
+initially admitted for evaluation of increased mood lability, disorganization and inappropriate behaviors 
+
+He also admits to being depressed.
+
+His depression needs to be treated (???)
+
+see him back in three weeks for the depression
+
+questioned him on the symptoms of bipolar disorder
+
+patient has a history of depression versus bipolar disorder
+
+Schizoaffective disorder, bipolar type
+
+history of bipolar affective disorder
+
+history of depression
+
+
+****
+
+
+
+
+
+
+
+
+

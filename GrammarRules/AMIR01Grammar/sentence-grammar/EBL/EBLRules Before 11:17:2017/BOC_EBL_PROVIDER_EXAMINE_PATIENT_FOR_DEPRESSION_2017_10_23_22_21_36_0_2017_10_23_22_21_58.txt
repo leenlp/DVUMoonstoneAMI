@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::PROVIDER-EXAMINE-PATIENT-FOR-DEPRESSION::2017/10/23 22:21:36-0-2017/10/23 22:21:58") 
+  (specialized) 
+  (example-snippet "I will see him back in three weeks for the depression") 
+  (ordered true) 
+  (concept ":PATIENT-IS-DEPRESSED:") 
+  (stype "<DEPRESSION-SENTENCE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PROVIDER-EXAMINE-PATIENT-FOR-DEPRESSION:")))
+
+)

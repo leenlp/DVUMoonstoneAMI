@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-GIVE-CONSENT::2018/03/28 20:56:38") 
+  (specialized) 
+  (example-snippet "Mother signed informed consent") 
+  (ordered true) 
+  (sourceid "person-thing-thing-rule") 
+  (concept ":FAMILY-GIVE-CONSENT:") 
+  (stype "<GIVE-TAKE-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":PARENT:") 
+    (":CONSENT:<THING>")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

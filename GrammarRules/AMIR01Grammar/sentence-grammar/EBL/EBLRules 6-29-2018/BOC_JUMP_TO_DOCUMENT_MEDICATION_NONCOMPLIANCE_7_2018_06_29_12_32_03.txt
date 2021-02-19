@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:-7-2018/06/29 12:32:03") 
+  (specialized) 
+  (example-snippet "getting Lortab from a friend") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":RECEIVE::PRESCRIPTION-MEDICATION::FRIEND:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

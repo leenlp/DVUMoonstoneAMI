@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "EBL::EVALUATION-FOR-DEPRESSION::2017/10/17 18:10:50") 
+  (specialized) 
+  (example-snippet "evaluation of increased mood lability") 
+  (sourceid "review-of-thing-rule") 
+  (concept ":EVALUATION-FOR-DEPRESSION:") 
+  (stype "<EVALUATION-THING-ACTION-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":EVALUATE:<THING>") 
+    ("of") 
+    (":DEPRESSION:<THING>")))
+
+)

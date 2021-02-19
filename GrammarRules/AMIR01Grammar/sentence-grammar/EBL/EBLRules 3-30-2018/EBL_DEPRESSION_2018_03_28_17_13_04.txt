@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DEPRESSION::2018/03/28 17:13:04") 
+  (specialized) 
+  (example-snippet "depressive symptoms") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":DEPRESSION:") 
+  (stype "<DEPRESSION>") 
+  (window 16.0) 
+  (words 
+    (":DEPRESSED:<PROPERTY>") 
+    (":SYMPTOM:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

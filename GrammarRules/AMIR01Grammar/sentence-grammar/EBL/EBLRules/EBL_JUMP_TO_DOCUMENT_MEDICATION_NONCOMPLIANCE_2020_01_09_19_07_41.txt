@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE::2020/01/09 19:07:41") 
+  (specialized) 
+  (example-snippet "hate taking medications") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (window 32.0) 
+  (words 
+    (":DISLIKE:") 
+    (":TAKE-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

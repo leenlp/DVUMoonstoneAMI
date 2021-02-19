@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:FF-DESIRE-THING-SENTENCE:-0-2020/01/17 19:21:11") 
+  (specialized) 
+  (example-snippet "brother would like her") 
+  (ordered true) 
+  (concept ":FF-DESIRE-THING-SENTENCE:") 
+  (stype "<DESIRE-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::DESIRE::PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

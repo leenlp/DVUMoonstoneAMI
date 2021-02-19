@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LIVING-ALONE:-0-2018/06/16 14:31:39") 
+  (specialized) 
+  (example-snippet "the patient has been admitted to Inpatient Rehabilitation Center") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::ADMISSION::INPATIENT::NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

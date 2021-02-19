@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATE-VIA-TRANSLATOR-PREDICATE::2018/04/09 14:07:44") 
+  (specialized) 
+  (example-snippet "conveyed with the use of a translator") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":COMMUNICATE-VIA-TRANSLATOR-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":PROVIDE:") 
+    (":PREP::USE-OF-TRANSLATOR:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

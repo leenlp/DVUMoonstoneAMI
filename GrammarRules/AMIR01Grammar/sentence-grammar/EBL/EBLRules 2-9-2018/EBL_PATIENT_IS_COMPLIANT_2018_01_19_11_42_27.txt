@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-IS-COMPLIANT::2018/01/19 11:42:27") 
+  (specialized) 
+  (example-snippet "he is compliant with meds") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-IS-COMPLIANT:") 
+  (stype "<BEHAVIOR-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":COMPLIANCE::PREP::PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

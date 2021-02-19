@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:FF-REQUEST-SOMETHING:-20-2018/06/25 22:01:20") 
+  (specialized) 
+  (example-snippet "his daughter has recommended assistedliving") 
+  (ordered true) 
+  (concept ":FF-REQUEST-SOMETHING:") 
+  (stype "<REQUEST-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::RECOMMEND::ASSISTED-LIVING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

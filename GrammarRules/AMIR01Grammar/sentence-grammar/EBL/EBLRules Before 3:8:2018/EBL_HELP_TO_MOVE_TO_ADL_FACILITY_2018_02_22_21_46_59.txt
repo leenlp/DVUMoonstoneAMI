@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HELP-TO-MOVE-TO-ADL-FACILITY::2018/02/22 21:46:59") 
+  (specialized) 
+  (example-snippet "help to move from the bathroom to the kitchen") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":HELP-TO-MOVE-TO-ADL-FACILITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":HELP:<ACTION>") 
+    (":MOVE-TO::PREP::ADL-FACILITY::PREP::ADL-FACILITY:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

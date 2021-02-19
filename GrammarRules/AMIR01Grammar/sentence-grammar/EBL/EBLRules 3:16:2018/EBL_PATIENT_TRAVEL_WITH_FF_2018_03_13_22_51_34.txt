@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-TRAVEL-WITH-FF::2018/03/13 22:51:34") 
+  (specialized) 
+  (example-snippet "she came to the hospital later that day with her mom") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-TRAVEL-WITH-FF:") 
+  (stype "<TRAVEL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":TRAVEL-TO-CLINIC-WITH-FF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

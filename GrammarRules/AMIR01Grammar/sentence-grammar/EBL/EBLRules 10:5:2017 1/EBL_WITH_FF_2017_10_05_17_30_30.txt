@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::WITH-FF::2017/10/05 17:30:30") 
+  (specialized) 
+  (example-snippet "with a friend") 
+  (ordered true) 
+  (sourceid "pp-rule") 
+  (concept ":WITH-FF:") 
+  (stype "<WITH-PERSON>") 
+  (window 16.0) 
+  (words 
+    (":PREP:") 
+    (":FRIEND:")) 
+  (properties 
+    (thing "?1")))
+
+)

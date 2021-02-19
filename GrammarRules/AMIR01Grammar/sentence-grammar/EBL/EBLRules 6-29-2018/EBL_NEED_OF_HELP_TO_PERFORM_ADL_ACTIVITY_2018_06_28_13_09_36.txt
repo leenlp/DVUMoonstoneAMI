@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY::2018/06/28 13:09:36") 
+  (specialized) 
+  (example-snippet "Transfers With assist") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":TRANSFER:<THING>") 
+    (":PREP::HELP:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

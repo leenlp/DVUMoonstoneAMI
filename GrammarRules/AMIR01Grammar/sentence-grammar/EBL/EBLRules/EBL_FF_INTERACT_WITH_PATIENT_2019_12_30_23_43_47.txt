@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-INTERACT-WITH-PATIENT::2019/12/30 23:43:47") 
+  (specialized) 
+  (example-snippet "her children had called her") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-imperfect-tense-rule") 
+  (concept ":FF-INTERACT-WITH-PATIENT:") 
+  (stype "<INTERACT-WITH-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":CHILDREN:") 
+    ("@have-word-rule@") 
+    (":CONTACT-ACTION::PATIENT:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?2") 
+    (tense "imperfect")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

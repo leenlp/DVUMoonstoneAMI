@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-FEEL-CONCERN::2017/10/05 17:23:16") 
+  (specialized) 
+  (example-snippet "mom is concerned") 
+  (ordered true) 
+  (sourceid "thing-is-state-rule") 
+  (concept ":FF-FEEL-CONCERN:") 
+  (stype "<CONCERN-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":FAMILY:") 
+    ("@is-auxilliary-word-rule@") 
+    (":CONCERN:<THING>")) 
+  (tests 
+    (notneg ?2)))
+
+)

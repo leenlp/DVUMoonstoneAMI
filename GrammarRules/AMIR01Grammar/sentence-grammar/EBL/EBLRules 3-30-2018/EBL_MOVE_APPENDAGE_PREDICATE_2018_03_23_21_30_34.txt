@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MOVE-APPENDAGE-PREDICATE::2018/03/23 21:30:34") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":MOVE-APPENDAGE-PREDICATE:") 
+  (stype "<MOVE-THING-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":RAISE:") 
+    (":ANATOMIC-MODIFIER::ANATOMIC-APPENDAGE:" ":ANATOMIC-APPENDAGE:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSITIONAL-BALANCE-THING:-10-2018/07/25 16:51:17") 
+  (specialized) 
+  (example-snippet "static balance") 
+  (ordered true) 
+  (concept ":POSITIONAL-BALANCE-THING:") 
+  (stype "<ADL-ACTIVITY>") 
+  (bagofconcepts true) 
+  (words 
+    (":STATIC::BALANCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,200 @@
+'(
+wordrule
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; BEHAVIORAL
+
+((ruleid eating-disorder-capture-rule)
+ (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:")
+ (words (":EATING-DISORDER:")))
+ 
+((ruleid eating-disorder-rule)
+ (concept ":EATING-DISORDER:")
+ (words (":EATING:") (":DISORDER:")))
+ 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; DEPRESSION
+
+((ruleid header-depression-rule)
+ (concept ":JUMP-TO-DOCUMENT-DEPRESSION:")
+ (words (":HEADER-FALSE:"))
+ (tests ("headerContainsOneOf" ?0 (list "depression" "depression"))))
+ 
+((ruleid family-is-depressed-capture-rule)
+ (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:")
+ (words (":FAMILY-IS-DEPRESSED:" ":EVALUATION-FOR-DEPRESSION:"))
+ (invalidate-all true))
+ 
+((ruleid family-is-depressed-rule)
+ (concept ":FAMILY-IS-DEPRESSED:")
+ (words (":FAMILY:") 
+ 		(":DEPRESSION:" ":DEPRESSED:" ":EVALUATION-FOR-DEPRESSION:"
+ 			":IS-DEPRESSED:")))
+ 
+((ruleid evaluation-for-depression-rule)
+ (concept ":EVALUATION-FOR-DEPRESSION:")
+ (words (":EVALUATE:") (":DEPRESSION:")))
+		 	
+((ruleid mood-word-rule)
+ (concept ":MOOD:")
+ (words ("mood")))
+ 
+((ruleid depressed-rule)
+ (concept ":DEPRESSED:")
+ (words ("depressed" "depressive" "withdrawn" "dysthymic" "sad")))
+ 
+((ruleid pseudo-depression-capture-rule)
+ (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:")
+ (juxtaposed true)
+ (words ("bicarbonate") (":DEPRESSION:"))
+ (invalidate-all true))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Mental / Cognitive
+
+((ruleid personality-disorder-rule)
+ (concept ":MENTAL-ILLNESS:")
+ (words ("antisocial personality disorder" 
+	"borderline personality disorder" "narcissistic personality disorder"
+	"dual diagnosis" "paranoia" "psychosis" "schizophrenia" "add" "odd")))
+
+((ruleid failure-word-rule)
+ (concept ":FAIL:")
+ (words ("fail" "failure" "failing" "decline")))
+
+((ruleid fear-word-rule)
+ (concept ":FEAR:")
+ (words ("fear" "fears" "worry" "worries" "worrying")))
+ 
+((ruleid upset-word-rule)
+ (concept ":UPSET:")
+ (words ("upset")))
+ 
+((ruleid rule-out-disease-rule)
+ (concept ?1)
+ (ordered true)
+ (words ("rule out") ("<THING>"))
+ (properties (directionality uncertain)))
+
+((ruleid non-adl-disorganization-rule)
+ (stype "<MENTAL-DISCORD>")
+ (concept ":NON-ADL-DISORGANIZATION:")
+ (words (":DISORGANIZATION:") ("sexual" "sexually")))
+ 
+((ruleid cognitive-impairment-rule-1)
+ (concept ":MENTAL-IMPAIRMENT-THING:")
+ (juxtaposed true)
+ (words ("memory" "mental" "mentally" "developmental" "developmentally" 
+ 		"cognitive" "cognitively" "functional") 
+ 		("delay" "delays" "delayed" 
+ 		"challenge" "challenged" "challenges" "decline" 
+ 		"failure" "loss" "deficit" "deficits")))
+ 		
+((ruleid memory-action-word-rule)
+ (concept ":REMEMBER:")
+ (words ("remember" "remembering" "recall" "recalling")))
+ 
+((ruleid things-to-remember-words-rule)
+ (concept ":THINGS-TO-REMEMBER:")
+ (words ("names" "phone numbers")))
+		
+((ruleid disorganization-word-rule)
+ (concept ":DISORGANIZATION:")
+ (words ("disorganized" "disorganization")))
+ 
+((ruleid state-of-mental-impairment-word-rule)
+ (concept ?1)
+ (ordered true)
+ (words ("state of") ("<MENTAL-IMPAIRMENT-THING>")))
+ 
+((ruleid dementia-word-rule)
+ (concept ":DEMENTIA:")
+ (words ("dementia" "cognitive decline" "alzheimer"
+ 		 "vascular dementia"
+		"alzheimers" "alzheimer's" "alzheimer's dementia"
+		"dementia of alzheimers type" "dementia of alzheimer's type"
+		"dementing disorder" "dementia syndrome" "dementia/alzheimer"
+		"dementia/alzheimers" "dementia/alzheimer's" "alzheimers/dementia"
+		)))
+		
+((ruleid dementia-word-rule)
+ (concept ":DEMENTED:")
+ (words ("demented" )))
+		
+((ruleid dementia-type-word-rule)
+ (concept ":DEMENTIA:")
+ (words (":DEMENTIA:") (":DEMENTIA:" "type")))
+ 
+((ruleid delerium-word-rule)
+ (concept ":DELIRIUM:")
+ (words ("delirium" "altered mental status" "confusion")))
+ 
+((ruleid dementia-word-rule)
+ (concept ":DELIRIOUS:")
+ (words ("delirious" "confused")))
+ 
+((ruleid confusion-word-rule)
+ (concept ":CONFUSION:")
+ (words ("confusion" "disorientation")))
+ 
+((ruleid confused-word-rule)
+ (concept ":CONFUSED:")
+ (words ("confused" "disoriented")))
+ 
+((ruleid short-term-memory-loss-rule)
+ (concept ":SHORT-TERM-MEMORY-LOSS:")
+ (words (":SHORT-TERM:") (":MEMORY-LOSS:")))
+
+((ruleid memory-loss-word-rule-1)
+ (concept ":MEMORY-LOSS:")
+ (words (":MEMORY:") 
+ 		(":LOSS:" ":PROBLEM:" ":DIFFICULTY:" ":FAILURE:" ":IMPAIRMENT:")))
+ 
+((ruleid memory-loss-word-rule-2)
+ (concept ":MEMORY-LOSS:")
+ (words ("forgetful" "forgetfulness" "memory loss" "memory problems" 
+ 		"problems with memory"
+ 		"memory failure" "failure of memory" "poor memory" "impaired memory" 
+ 		"memory impairment" "memory impairments")))
+ 
+((ruleid memory-thing-word-rule)
+ (concept ":MEMORY:")
+ (words ("memory")))
+ 
+((ruleid poor-historian-word-rule)
+ (concept ":POOR-HISTORIAN:")
+ (words ("poor historian")))
+		
+((ruleid failure-of-memory-rule)
+ (concept ":COGNITIVE-IMPAIRMENT:")
+ (words (":FAIL:" ":DIFFICULTY:" ":PROBLEM:") (":COGNITIVE-ABILITY-THING:")))
+ 
+ ((ruleid specific-cognitive-ability-word-rule)
+  (concept ":SPECIFIC-COGNITIVE-ABILITY-THING:")
+  (words ("memory" "cognitive linguistic" "cognitive-linguistic" "linguistic" "language" 
+  			"abstract reasoning" "executive reasoning" "problem solving")))
+  			
+((ruleid general-cognitive-ability-one-word-rule)
+  (concept ":GENERAL-COGNITIVE-ABILITY-THING:")
+  (words ("cognition" "cognitive")))  ;; "cognitive" incorrect syntax...
+  			
+((ruleid general-cognitive-ability-two-word-rule)
+  (concept ":GENERAL-COGNITIVE-ABILITY-THING:")
+  (ordered true)
+  (words ("cognitive" "higher level" "higher-level" "performance" 
+  			"multi-step" "multi step")
+  		 ("skill" "skills" "processing" "processing activities" "tasks")))
+
+((ruleid cognitive-ability-type-rule)
+  (concept ":COGNITIVE-ABILITY-THING:")
+  (words (":SPECIFIC-COGNITIVE-ABILITY-THING:" ":GENERAL-COGNITIVE-ABILITY-THING:")))
+  
+((ruleid disease-medication-thing)
+ (stype "<MEDICATION-THING>")
+ (complex-concept)
+ (words ("<DISEASE>" "<MENTAL-IMPAIRMENT-THING>") ("<MEDICATION-THING>"))
+ (relations (medication-for ?0 ?1)))
+ 
+)
+

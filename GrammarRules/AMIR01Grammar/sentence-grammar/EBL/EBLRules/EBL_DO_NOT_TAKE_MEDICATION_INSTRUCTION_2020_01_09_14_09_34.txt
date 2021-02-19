@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DO-NOT-TAKE-MEDICATION-INSTRUCTION::2020/01/09 14:09:34") 
+  (specialized) 
+  (example-snippet "Do not take any medicine") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":DO-NOT-TAKE-MEDICATION-INSTRUCTION:") 
+  (stype "<GIVE-TAKE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":DO:") 
+    (":NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

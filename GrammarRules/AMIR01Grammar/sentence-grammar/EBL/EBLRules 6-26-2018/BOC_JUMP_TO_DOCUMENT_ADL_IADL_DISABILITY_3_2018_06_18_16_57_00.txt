@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-3-2018/06/18 16:57:00") 
+  (specialized) 
+  (example-snippet "Presently needs 24 hour assistance") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED-REGULAR-ASSISTANCE-PREDICATE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

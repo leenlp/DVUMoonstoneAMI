@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:UNABLE-TO-PERFORM-COGNITIVE-TASK:-0-2020/03/12 22:20:28") 
+  (specialized) 
+  (example-snippet "poor concentratio") 
+  (ordered true) 
+  (concept ":UNABLE-TO-PERFORM-COGNITIVE-TASK:") 
+  (stype "<COGNITIVE-ABILITY-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":POOR::COGNITIVE-ABILITY-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

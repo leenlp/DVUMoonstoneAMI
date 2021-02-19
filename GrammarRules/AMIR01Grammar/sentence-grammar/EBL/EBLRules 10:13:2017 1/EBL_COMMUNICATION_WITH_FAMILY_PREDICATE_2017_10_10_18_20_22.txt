@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-FAMILY-PREDICATE::2017/10/10 18:20:22") 
+  (specialized) 
+  (example-snippet "relayed to foster mom") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":COMMUNICATION-WITH-FAMILY-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":AFFIRMATIVE-COMMUNICATION:") 
+    (":FAMILY:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")))
+
+)

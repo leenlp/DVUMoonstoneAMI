@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-4-2018/07/25 15:29:19") 
+  (specialized) 
+  (example-snippet "walks with moderate assistance") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PERFORM-ADL-WITH-HELP:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

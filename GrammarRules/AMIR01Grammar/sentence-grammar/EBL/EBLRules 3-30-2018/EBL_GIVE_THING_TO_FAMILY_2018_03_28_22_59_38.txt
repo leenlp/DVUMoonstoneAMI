@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::GIVE-THING-TO-FAMILY::2018/03/28 22:59:38") 
+  (specialized) 
+  (example-snippet "given to the patients wife") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":GIVE-THING-TO-FAMILY:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":PROVIDE:") 
+    (":PREP::PATIENTS-FAMILY:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

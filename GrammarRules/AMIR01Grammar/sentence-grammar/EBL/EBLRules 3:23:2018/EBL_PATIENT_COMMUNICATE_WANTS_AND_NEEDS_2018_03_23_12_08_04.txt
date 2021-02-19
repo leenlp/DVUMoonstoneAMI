@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-COMMUNICATE-WANTS-AND-NEEDS::2018/03/23 12:08:04") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-COMMUNICATE-WANTS-AND-NEEDS:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":COMMUNICATE-WANTS-AND-NEEDS:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

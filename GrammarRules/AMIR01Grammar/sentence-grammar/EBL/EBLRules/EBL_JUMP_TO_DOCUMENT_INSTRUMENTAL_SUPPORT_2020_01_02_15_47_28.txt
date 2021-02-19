@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT::2020/01/02 15:47:28") 
+  (specialized) 
+  (example-snippet "Adequate social support") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (window 32.0) 
+  (words 
+    (":GOOD:") 
+    (":SUPPORT:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

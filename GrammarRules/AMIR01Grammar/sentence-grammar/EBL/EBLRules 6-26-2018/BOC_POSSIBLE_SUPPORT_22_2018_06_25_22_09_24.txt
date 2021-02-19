@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-22-2018/06/25 22:09:24") 
+  (specialized) 
+  (example-snippet "POA Son") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":POA::FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

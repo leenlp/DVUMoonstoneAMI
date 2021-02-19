@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-IS-NONCOMPLIANT:-0-2018/04/03 21:28:23") 
+  (specialized) 
+  (example-snippet "they had not purchased any prescription medications") 
+  (ordered true) 
+  (concept ":PATIENT-IS-NONCOMPLIANT:") 
+  (stype "<BEHAVIOR-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-PURCHASE-MEDICATION-SENTENCE:")) 
+  (tests 
+    ("neg" ?0))
+  (removeproperties directionality))
+
+)

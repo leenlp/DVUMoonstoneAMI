@@ -1,0 +1,19 @@
+'(
+wordrule
+
+((ruleid "BOC-:JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:-2-2018/04/03 14:23:43") 
+  (specialized) 
+  (example-snippet "stopped taking her medicine") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":STOP-TAKING-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (tests 
+    ("notneg" ?0)
+    (notneg ?*)
+    ;; 1/9/2020:  Not for patient instructions
+    (not ("sentenceContainsOneOf" ?0 (list "stop " "stop ")))))
+
+)

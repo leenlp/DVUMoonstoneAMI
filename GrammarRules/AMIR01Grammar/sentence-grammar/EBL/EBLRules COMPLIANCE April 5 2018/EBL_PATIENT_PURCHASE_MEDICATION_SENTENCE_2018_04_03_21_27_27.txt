@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-PURCHASE-MEDICATION-SENTENCE::2018/04/03 21:27:27") 
+  (specialized) 
+  (example-snippet "they had not purchased any prescription medications") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-imperfect-tense-rule") 
+  (concept ":PATIENT-PURCHASE-MEDICATION-SENTENCE:") 
+  (stype "<PURCHASE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PERSON:") 
+    ("@have-word-rule@") 
+    (":PURCHASE-MEDICATION-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?2") 
+    (tense "imperfect")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("neg" ?2)))
+
+)

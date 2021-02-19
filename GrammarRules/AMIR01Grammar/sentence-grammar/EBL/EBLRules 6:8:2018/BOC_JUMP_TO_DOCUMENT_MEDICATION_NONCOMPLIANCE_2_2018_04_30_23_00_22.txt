@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:-2-2018/04/30 23:00:22") 
+  (specialized) 
+  (example-snippet "noncompliant with medications") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NONCOMPLIANT::PRESCRIPTION-MEDICATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

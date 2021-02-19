@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-ADL-DISABILITY::2018/03/10 16:37:39") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "action-manner-predicate-rule") 
+  (concept ":HAVE-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":ADL-ACTIVITY:<ACTION>") 
+    (":MINIMALLY:<MANNER>")) 
+  (properties 
+    (subject "?0") 
+    (manner "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

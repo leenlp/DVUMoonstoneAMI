@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/06/27 09:54:57") 
+  (specialized) 
+  (example-snippet "history was obtained from mother") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":HISTORY-OBTAINED-FROM-FAMILY-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,1677 @@
+'(new-ami-r01-metalinguistic-ontology
+
+(deftype root (isroot))
+
+;; (deftype aaa-test-type (isa root))
+;;; (defstringconstant ":AAA-TEST-CONSTANT:" "<AAA-TEST-TYPE>")
+
+(deftype action (isa root))
+(deftype predicate (isa root))
+(deftype thing (isa root))
+(deftype property (isa root))
+(deftype modifier (isa root))
+(deftype manner (isa root))
+(deftype state (isa root))
+(deftype sentence (isa root))
+(deftype pp (isa root))
+
+(deftype sentence-modifier (isa root))
+
+
+;; For constants introduced in grammar rules, without specified type
+(deftype undefined (isa root))  
+
+(deftype time (isa root))
+(deftype number (isa root))
+(deftype conjunct (isa root))
+(deftype sentence-conjunct (isa conjunct))
+(defstringconstant ":BECAUSE-OF:" "<SENTENCE-CONJUNCT>")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Semantics
+
+(deftype semantic-action (isa action))
+(deftype semantic-predicate (isa predicate))
+(deftype semantic-sentence (isa sentence))
+(defstringconstant ":INDETERMINATE-SENTENCE:" "<SEMANTIC-SENTENCE>")
+(deftype semantic-state (isa state))
+(deftype semantic-property (isa property))
+(deftype semantic-modifier (isa modifier))
+(deftype semantic-thing (isa thing))
+(deftype semantic-manner (isa manner))
+
+(deftype semantic-time (isa time))
+(deftype semantic-number (isa number))
+
+;; For phrases we don't need to define, but need to recognize.  Use this in 
+;; grammar rules when not sure where the constant should go.  Place the constant 
+;; properly later.
+
+(deftype undefined-thing (isa semantic-thing))
+(deftype undefined-predicate (isa semantic-predicate))
+(deftype undefined-property (isa semantic-property))
+(deftype undefined-manner (isa semantic-manner))
+(defstringconstant ":UNDEFINED-THING:"  "<UNDEFINED-THING>")
+(defstringconstant ":UNDEFINED-PREDICATE:" "<UNDEFINED-PREDICATE>")
+(defstringconstant ":UNDEFINED-PROPERTY:" "<UNDEFINED-PROPERTY>")
+(defstringconstant ":UNDEFINED-MANNER:" "<UNDEFINED-MANNER>")
+
+(deftype pronoun-thing (isa semantic-thing))
+(defstringconstant ":UNGENDERED-PLURAL-SUBJECT-PRONOUN:"
+	":UNGENDERED-PLURAL-OBJECT-PRONOUN:"
+	":UNGENDERED-SINGLE-PRONOUN:"
+	"<PRONOUN-THING>")
+(deftype pronoun-person (isa pronoun-thing))
+(defstringconstant ":MALE-SINGLE-SUBJECT-PERSON-PRONOUN:" 	
+	":FEMALE-SINGLE-SUBJECT-PERSON-PRONOUN:"
+	":MALE-SINGLE-OBJECT-PERSON-PRONOUN:"
+	":FEMALE-SINGLE-OBJECT-PERSON-PRONOUN:"
+	"<PRONOUN-PERSON>")
+
+;; 3/13/2018:  TEST- constants to permit jumping to document-level conclusion 
+;; without further literal processing, e.g. 
+;; ":DO::MEDICAL-PROCEDURE::AT-NURSING-HOME:" 
+;; implies living at nursing home, but don't want to forestall further literal 
+;; processing if it can be done.
+(defstringconstant ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:" 
+		":JUMP-TO-DOCUMENT-LIVING-ALONE:"
+		":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:" 
+		":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:"
+		":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:"
+		":JUMP-TO-DOCUMENT-DEPRESSION:"
+		":JUMP-TO-DOCUMENT-DEMENTIA:"
+		":JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:"
+		":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:"
+		
+		":CAPTURE-AT-DOCUMENT-CONCEPT:"
+		"<UNDEFINED>")
+
+(deftype ability (isa semantic-modifier semantic-property 
+	semantic-manner semantic-state))
+(defstringconstant ":ABLE:" ":UNABLE:" ":DIFFICULT:" ":INCORRECTLY:" ":CORRECTLY:" 
+	"<ABILITY>")
+(deftype ability-action (isa semantic-action))
+(deftype ability-manner (isa semantic-manner))
+(deftype ability-property (isa semantic-property))
+(deftype ability-thing (isa semantic-thing))
+(deftype ability-predicate (isa semantic-predicate))
+(defstringconstant ":ABILITY:" ":INABILITY:" ":NO-INABILITY:" 
+	"<ABILITY-THING>")
+(deftype ability-property (isa semantic-property semantic-state))
+(defstringconstant ":UNABLE-TO-DO-SOMETHING:" "<ABILITY-PREDICATE>")
+	
+(deftype home-modifier (isa semantic-modifier))
+(deftype existence (isa semantic-state 
+	semantic-modifier semantic-property semantic-thing))
+(deftype presence (isa existence))
+(deftype absence (isa existence))
+
+(defstringconstant ":LACK:" ":DEFICIT:" ":LOSS:" "<ABSENCE>")
+
+;; MOVE (transitive and intransitive)-RELATED TYPES
+
+(deftype move-action (isa semantic-action))
+(defstringconstant ":MOVE:" ":ENTER:" ":LEAVE:" ":COME:" ":GO:" ":RETURN:" 
+	":TRANSPORT:" ":TRAVEL-ACTION:" ":SEND:" ":ACCOMPANY:" ":RELOCATE:"
+	":RIDE-ACTION:" ":PULL:" ":PUSH:" ":RISE:" ":LIE-DOWN:" ":RAISE:" ":LOWER:" 
+	":MEET:" ":TRANSFER:" ":MEET:"
+	"<MOVE-ACTION>")
+(deftype move-thing (isa semantic-thing))
+(defstringconstant ":TRAVEL-THING:" ":RIDE-THING:" ":TRANSPORTATION:" 
+	":PUBLIC-TRANSPORTATION:"
+	":MOVEMENT:" ":LOCALIZED-MOVEMENT:" ":GENERALIZED-MOVEMENT:" 
+	":RANGE-OF-MOTION:" "<MOVE-THING>")
+(deftype move-predicate (isa semantic-predicate))
+(deftype move-sentence (isa semantic-sentence))
+(deftype move-thing-predicate (isa semantic-predicate))
+(defstringconstant ":MOVE-THING-PREDICATE:" 
+		":TRANSPORT-PATIENT:" 
+		":FF-TRANSPORT-PATIENT:" ":TRANSPORT-PATIENT-PREDICATE:" 
+		":MOVE-APPENDAGE-PREDICATE:"
+		"<MOVE-THING-PREDICATE>")
+		
+
+
+(deftype move-to-or-from-location-predicate  (isa move-predicate))
+(deftype move-from-location-to-location-predicate (isa move-predicate))
+(defstringconstant ":MOVE-TO-FACILITY:" ":MOVE-FROM-FACILITY:" 
+	":MOVE-TO-FACILITY:" ":MOVE-TO-LIVING-FACILITY:" ":MOVE-FROM-FACILITY:" 
+	":MEET-PERSON-PREDICATE:" ":MEET-FF-PREDICATE:" 
+	"<MOVE-TO-OR-FROM-LOCATION-PREDICATE>")
+(deftype move-thing-to-or-from-location-predicate (isa move-thing-predicate))
+(defstringconstant ":TRANSPORT-PATIENT-TO-LIVING-FACILITY:" 		
+	":TRANSPORT-PATIENT-FROM-LIVING-FACILITY:" 
+	"<MOVE-THING-TO-OR-FROM-LOCATION-PREDICATE>")
+	
+(deftype move-sentence (isa semantic-sentence))
+
+(deftype move-thing-sentence (isa move-sentence))
+(defstringconstant ":FF-SEND-OR-ACCOMPANY-PATIENT:" 
+	":PATIENT-MOVE-APPENDAGE-PREDICATE:" 
+	"<MOVE-THING-SENTENCE>")
+
+(deftype move-to-or-from-location-sentence (isa move-sentence))
+(defstringconstant ":FF-TRAVEL-TO-CLINIC:" ":PATIENT-MOVE-TO-LIVING-FACILITY:"
+	":PATIENT-TRAVEL-TO-MEDICAL-FACILITY:"
+	"<MOVE-TO-OR-FROM-LOCATION-SENTENCE>")
+
+(deftype discharge-predicate (isa semantic-predicate))
+(defstringconstant ":DISCHARGE-HOME:" 
+	":DISCHARGE-HOME-TO-LIVE-WITH-FAMILY:" 
+	":DISCHARGE-TO-NURSING-HOME:" 
+	":DISCHARGE-TO-ASSISTED-LIVING:"  ":DISCHARGE-TO-LIVING-FACILITY:" 
+	":DISCHARGE-FROM-LIVING-FACILITY:"
+	"<DISCHARGE-PREDICATE>")
+(deftype discharge-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-DISCHARGE-HOME:" 
+		":PATIENT-DISCHARGE-TO-NURSING-HOME:" 
+		":PATIENT-DISCHARGE-TO-ASSISTED-LIVING:" 
+		":PATIENT-DISCHARGE-TO-LIVING-FACILITY:" 	
+		":PATIENT-DISCHARGE-FROM-LIVING-FACILITY:"
+		"<DISCHARGE-SENTENCE>")
+		
+(deftype admit-predicate (isa semantic-predicate))
+(defstringconstant ":ADMIT-NURSING-HOME:" ":ADMIT-ASSISTED-LIVING:"  
+	":ADMIT-FOR-EVALUATION:" ":ADMIT-FROM-LIVING-FACILITY:"
+	":ADMIT-TO-LIVING-FACILITY:"
+	"<ADMIT-PREDICATE>")
+(deftype admit-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-ADMIT-NURSING-HOME:" 
+	":PATIENT-ADMIT-ASSISTED-LIVING:"  
+	":PATIENT-ADMIT-FROM-LIVING-FACILITY:"
+	":PATIENT-ADMIT-TO-LIVING-FACILITY:"
+	"<ADMIT-SENTENCE>")
+;;;;;;;
+
+(deftype facility-interaction-predicate (isa semantic-predicate))
+(defstringconstant ":INTERACT-WITH-LIVING-FACILITY:"  ":LIVING-FACILITY-INTERACT-SOMEONE:" "<FACILITY-INTERACTION-PREDICATE>")
+
+(deftype facility-interaction-sentence (isa semantic-sentence))
+(defstringconstant ":FF-INTERACT-WITH-LIVING-FACILITY:"  ":LIVING-FACILITY-INTERACT-WITH-PATIENT:" "<FACILITY-INTERACTION-SENTENCE>")
+
+(deftype receive-therapy-predicate (isa semantic-predicate))
+(defstringconstant ":RECEIVE-THERAPY:" ":RECEIVE-THERAPY-AT-HOME:" ":RECEIVE-THERAPY-AT-FACILITY:" "<RECEIVE-THERAPY-PREDICATE>")
+
+(deftype receive-therapy-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-RECEIVE-THERAPY:" ":PATIENT-RECEIVE-THERAPY-AT-HOME:" ":PATIENT-RECEIVE-THERAPY-AT-FACILITY:" "<RECEIVE-THERAPY-SENTENCE>")
+
+(deftype grammar-modified-sentence (isa grammar-sentence))
+(deftype according-to-person-sentence (isa grammar-modified-sentence))
+
+(deftype being-at-sentence (isa semantic-sentence))
+(deftype person-at-place-sentence (isa being-at-sentence))
+(defstringconstant ":PATIENT-AT-HOME:" ":PATIENT-AT-FACILITY:" 
+	":FF-AT-FACILITY:" ":PATIENT-AT-FACILITY:" 
+	":PERSON-AT-PLACE:" "<PERSON-AT-PLACE-SENTENCE>")
+(deftype person-with-person-sentence (isa being-at-sentence))
+(defstringconstant ":FF-WITH-PATIENT:" ":FF-AT-BEDSIDE:" 
+	"<PERSON-WITH-PERSON-SENTENCE>")
+
+;; WARNING:  WILL ADDING PP CAUSE THINGS TO BREAK?
+(deftype being-at-predicate (isa semantic-predicate pp))
+(deftype at-place-predicate (isa being-at-predicate))
+(defstringconstant ":AT-HOME:" ":AT-FACILITY:" ":AT-PLACE:" ":AT-NURSING-HOME:"
+	":AT-CLINIC:" ":FROM-PLACE-TO-PLACE:" 
+	":FROM-ADL-PLACE-TO-ADL-PLACE:" "<AT-PLACE-PREDICATE>")
+(deftype with-person-predicate (isa being-at-predicate))
+(defstringconstant ":WITH-PATIENT:" ":WITH-FAMILY:" ":WITH-FF:" ":AT-BEDSIDE:" 
+	":HERE-WITH-FF:" "<WITH-PERSON-PREDICATE>")
+(deftype at-place-with-person-predicate (isa being-at-predicate))
+(defstringconstant ":AT-PLACE-WITH-PERSON:" ":HERE-WITH-FAMILY:" ":HERE-WITH-FF:" "<AT-PLACE-WITH-PERSON-PREDICATE>")
+(deftype at-place-with-person-sentence (isa being-at-sentence))
+(defstringconstant ":PATIENT-HERE-WITH-FAMILY:" ":PATIENT-HERE-WITH-FF:"
+	":PERSON-AT-PLACE-WITH-PERSON:""<AT-PLACE-WITH-PERSON-SENTENCE>")
+
+(deftype contact-action (isa semantic-action))
+(defstringconstant ":CONTACT-ACTION:" "<CONTACT-ACTION>")
+(deftype contact-thing (isa semantic-thing))
+(defstringconstant ":CONTACT-PERSON:" "<CONTACT-THING>")
+(deftype contact-predicate (isa semantic-predicate))
+(defstringconstant ":CONTACT-FF:" ":CONTACT-PROVIDER:" "<CONTACT-PREDICATE>")
+(deftype contact-sentence (isa semantic-sentence))
+(defstringconstant ":PROVIDER-CONTACT-FF:" ":FF-CONTACT-PROVIDER:" "<CONTACT-SENTENCE>")
+
+(deftype change-in-state 
+	(isa semantic-predicate semantic-state semantic-action))
+(defstringconstant ":IMPROVE:" ":GET-WORSE:" ":BECOME:" "<CHANGE-IN-STATE>")
+(deftype change-thing (isa semantic-thing))
+(defstringconstant ":IMPROVEMENT:" ":WORSENING:" "<CHANGE-THING>")
+
+;;;;;
+
+(deftype interact-with-predicate (isa semantic-predicate))
+(defstringconstant ":INTERACT-WITH-FF:" ":INTERACT-WITH-PATIENT:" "<INTERACT-WITH-PREDICATE>")
+(deftype interact-with-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-INTERACT-WITH-FF:" ":FF-INTERACT-WITH-PATIENT:" 
+	"<INTERACT-WITH-SENTENCE>")
+
+(deftype social-support-target 
+	(isa semantic-thing semantic-predicate semantic-sentence))
+(defstringconstant ":HAVE-SUPPORT:" ":LACK-SUPPORT:" ":POSSIBLE-SUPPORT:" 
+	"<SOCIAL-SUPPORT-TARGET>")
+
+(deftype social-support-predicate (isa semantic-predicate))
+(deftype social-support-sentence (isa semantic-sentence))
+(deftype social-support-thing (isa semantic-thing))
+(defstringconstant ":SUPPORT-FROM-FF:" "<SOCIAL-SUPPORT-THING>")
+(deftype social-support-action (isa semantic-action))
+(deftype lack-support-predicate (isa social-support-predicate))
+(defstringconstant ":LACK-HELP:" ":LACK-CARE:" ":LACK-SUPPORT:" ":SOCIALLY-ISOLATED:" ":LACK-CAREGIVER:" 
+	"<LACK-SUPPORT-PREDICATE>")
+(deftype lack-support-sentence (isa social-support-sentence))
+(defstringconstant ":PATIENT-LACK-HELP:" "PATIENT-LACK-SUPPORT:" 
+	":PATIENT-SOCIALLY-ISOLATED:" ":PATIENT-LACK-CAREGIVER:" 
+	"<LACK-SUPPORT-SENTENCE>")
+
+(deftype receive-support-predicate (isa social-support-predicate))
+(defstringconstant ":RECEIVE-HELP:" ":RECEIVE-CARE:" ":HAVE-SUPPORT:" 
+	":HAVE-CAREGIVER:" ":PROVIDE-CARE:" ":PROVIDE-CARE-FOR-PATIENT:" 
+	":PROVIDE-CARE-FOR-FAMILY:" ":HELP-PATIENT-WITH-ADLS:" "<RECEIVE-SUPPORT-PREDICATE>")
+(deftype receive-support-sentence (isa social-support-sentence))
+(defstringconstant ":PATIENT-RECEIVE-HELP:" ":PATIENT-HAVE-CAREGIVER:" 
+	":FF-PROVIDE-CARE:" ":FF-PROVIDE-CARE-FOR-PATIENT:" 
+	":PATIENT-PROVIDE-CARE-FOR-FAMILY:"
+	":FF-UNABLE-TO-CARE-FOR-PATIENT:"
+	":PATIENT-UNABLE-TO-CARE-FAMILY:"
+	":PROVIDER-CARE-FOR-FAMILY-MEMBER:" 
+	"<RECEIVE-SUPPORT-SENTENCE>")
+	
+	;; Should this go down below?
+(deftype receive-adl-help-predicate (isa receive-support-predicate))
+(defstringconstant ":HAVE-HELP-TO-PERFORM-ADL:" ":HAVE-NO-HELP-TO-PERFORM-ADL:"  
+	"<RECEIVE-ADL-HELP-PREDICATE>")
+(deftype patient-receive-adl-help-sentence (isa social-support-sentence))
+(defstringconstant ":PATIENT-HAVE-HELP-TO-PERFORM-ADL:" 
+	":PATIENT-HAVE-NO-HELP-TO-PERFORM-ADL:"  "<PATIENT-HAVE-ADL-HELP-SENTENCE>")
+
+;; 10/5/2017:  :PROVISION-OF-CARE: has been a catch-all concept, simple too 
+;; complex.  I need to expand it correctly.  Until then, to accomodate existing  ;; grammar rules, I will just treat it as action, thing and predicate
+(deftype provision-of-care (isa semantic-predicate semantic-thing))
+(defstringconstant ":PROVISION-OF-CARE:" ":INVOLVED-IN-CARE:" 
+	":CONSTANT-PROVISION-OF-CARE:" 
+	":NEED-CONSTANT-PROVISION-OF-CARE-PREDICATE:" "<PROVISION-OF-CARE>")
+
+(deftype community-service-thing (isa social-support-thing))
+(defstringconstant ":SUPPORT-GROUP:" ":COMMUNITY-SERVICE:" 
+	"<COMMUNITY-SERVICE-THING>")
+(deftype access-to-community-services-predicate (isa social-support-predicate social-support-thing))
+(defstringconstant ":ACCESS-TO-COMMUNITY-SERVICES:"  
+	":REFERRAL-TO-COMMUNITY-SERVICES:"
+	"<ACCESS-TO-COMMUNITY-SERVICES-PREDICATE>")
+(deftype access-to-community-services-sentence (isa social-support-sentence))
+(defstringconstant ":PATIENT-HAS-ACCESS-TO-COMMUNITY-SERVICES:" 
+	"<ACCESS-TO-COMMUNITY-SERVICES-SENTENCE>")
+
+(deftype living-predicate (isa semantic-predicate))
+(deftype live-at-home-predicate (isa living-predicate))
+(defstringconstant ":LIVE-AT-HOME:" ":POSSIBLE-LIVE-AT-HOME:" 
+	":RETURN-TO-OR-LIVE-AT-HOME:" 
+	":DOES-NOT-LIVE-AT-HOME:" ":LIVE-AT-HOME-WITH-FAMILY:" 
+	":RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:"
+	"<LIVE-AT-HOME-PREDICATE>")
+(deftype living-sentence (isa semantic-sentence))
+(deftype live-at-home-sentence (isa living-sentence))
+(defstringconstant ":PATIENT-LIVE-AT-HOME:" 
+	":PATIENT-RETURN-TO-OR-LIVE-AT-HOME:" ":PATIENT-DOES-NOT-LIVE-AT-HOME:" 
+	":PATIENT-RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:"
+	"<LIVE-AT-HOME-SENTENCE>")
+
+(deftype living-action (isa semantic-action))
+(defstringconstant ":LIVE-AT:" ":LIVED-AT:" "<LIVING-ACTION>")
+(deftype stable-living-predicate (isa living-predicate))
+(deftype stable-living-sentence (isa living-sentence))
+
+(deftype live-with-person-predicate (isa living-predicate))
+(defstringconstant ":LIVE-WITH-FAMILY:" ":LIVE-WITH-FF:" 
+	":LIVE-WITH-PERSON:" ":FAMILY-LIVE-WITH:" ":MOVE-IN-WITH-FRIEND:" 
+	":LIVE-WITH-PERSON-HYPOTHETICAL-PREDICATE:"
+	"<LIVE-WITH-PERSON-PREDICATE>")
+(deftype live-with-person-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-LIVE-WITH-FAMILY:" ":PATIENT-LIVE-WITH-FRIENDS:" 
+	":PATIENT-LIVE-WITH-PERSON:" ":PATIENT-LIVE-WITH-FAMILY:" 
+		":PATIENT-LIVE-WITH-FF:" ":FAMILY-LIVE-WITH-PATIENT:" 
+		":PATIENT-MOVE-IN-WITH-FRIEND:"
+		":PATIENT-LIVE-WITH-PERSON-HYPOTHETICAL-SENTENCE:"
+		"<LIVE-WITH-PERSON-SENTENCE>")
+
+(deftype homeless-predicate (isa living-predicate))
+(deftype homeless-sentence (isa living-sentence))
+(defstringconstant ":HOMELESS:"  ":NOT-HOMELESS:" ":POSSIBLY-HOMELESS:" 
+	":NOT-HOMELESS-BUT-OTHER-LIVING-SITUATION:" "<HOMELESS-PREDICATE>")
+(defstringconstant ":PATIENT-HOMELESS:"  ":PATIENT-NOT-HOMELESS:" "<HOMELESS-SENTENCE>")
+
+
+(deftype living-in-marginal-space-predicate (isa living-predicate))
+(defstringconstant ":LIVING-IN-MARGINAL-SPACE:" "<LIVING-IN-MARGINAL-SPACE-PREDICATE>")
+(deftype living-in-marginal-space-sentence (isa living-sentence))
+(defstringconstant ":PATIENT-LIVING-IN-MARGINAL-SPACE:" "<LIVING-IN-MARGINAL-SPACE-SENTENCE>")
+
+;;;;;;;;;;
+
+(deftype live-in-facility-predicate (isa living-predicate))
+(defstringconstant ":LIVES-IN-GROUP-HOME:"  ":LIVES-IN-NURSING-HOME:"  
+	":LIVES-IN-ASSISTED-LIVING:" ":LIVES-IN-FACILITY:" 
+	"<LIVE-IN-FACILITY-PREDICATE>")
+(deftype live-in-facility-sentence (isa living-sentence))
+(defstringconstant ":PATIENT-LIVES-IN-GROUP-HOME:"  
+	":PATIENT-LIVES-IN-NURSING-HOME:"  ":PATIENT-LIVES-IN-ASSISTED-LIVING:" 
+	":PATIENT-LIVES-IN-FACILITY:"
+	"<LIVE-IN-FACILITY-SENTENCE>")
+(deftype living-thing (isa semantic-thing))
+(deftype living-with-person-thing (isa living-thing))
+(defstringconstant ":FF-WITH-WHOM-PATIENT-COULD-HYPOTHETICALLY-LIVE:" 
+	"<LIVING-WITH-PERSON-THING>")
+(deftype live-in-facility-thing (isa living-thing))
+(defstringconstant ":PATIENT-IN-LIVING-FACILITY-THING:" 
+	":PATIENT-IN-NURSING-HOME-THING:"
+	"<LIVE-IN-FACILITY-THING>")
+
+(deftype live-in-sro-predicate (isa living-predicate))
+(defstringconstant ":LIVES-IN-SRO:"  "<LIVE-IN-SRO-PREDICATE>")
+(deftype live-in-sro-sentence (isa living-sentence))
+(defstringconstant ":PATIENT-LIVES-IN-SRO:"  "<LIVE-IN-SRO-SENTENCE>")
+
+(deftype living-alone-predicate (isa living-predicate))
+(defstringconstant ":LIVING-ALONE:" ":NOT-LIVING-ALONE:"  "<LIVING-ALONE-PREDICATE>")
+(deftype living-alone-sentence (isa living-sentence))
+(defstringconstant ":PATIENT-LIVING-ALONE:" ":PATIENT-NOT-LIVING-ALONE:"  
+	":MULTI-PERSON-NOT-LIVING-ALONE:" ":MULTI-PERSON-LIVING-ALONE:" "<LIVING-ALONE-SENTENCE>")
+(defstringconstant ":EVIDENCE-OF-LIVING-ALONE:" ":EVIDENCE-OF-NOT-LIVING-ALONE:" 
+	"<LIVING-THING>")
+
+(deftype transportation-predicate (isa semantic-predicate))
+(defstringconstant ":TRANSPORT-PATIENT:" ":SEND-OR-ACCOMPANY-PATIENT:" ":USE-PUBLIC-TRANSPORT:"  "<TRANSPORTATION-PREDICATE>")
+(deftype transportation-sentence (isa semantic-sentence))
+(defstringconstant ":FF-TRANSPORT-PATIENT:" ":FF-SEND-OR-ACCOMPANY-PATIENT:" "<TRANSPORTATION-SENTENCE>")
+
+(deftype debt-predicate (isa semantic-predicate semantic-state))
+(defstringconstant ":UNABLE-TO-PAY-RENT:" ":PAY-RENT:" ":PAY-DEBT:" "<DEBT-PREDICATE>")
+(deftype debt-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-UNABLE-TO-PAY-RENT:" ":PATIENT-PAY-RENT:" ":PATIENT-PAY-DEBT:" "<DEBT-SENTENCE>")
+
+
+(deftype reside-action (isa semantic-action))
+(defstringconstant ":STAY-AT:" ":SLEEP-AT:" ":LIVE-AT:" "<RESIDE-ACTION>")
+(deftype reside-thing (isa semantic-thing))
+(deftype reside-at-place-thing (isa reside-thing))
+(defstringconstant ":RESIDE-AT-FACILITY-THING:" "<RESIDE-AT-PLACE-THING>")
+
+(deftype travel-action-or-thing (isa semantic-action semantic-thing))
+(defstringconstant ":TRAVEL:" ":TRAVEL-ACTION:" ":RETURN:" ":MOVE-TO:" ":GO:" 
+	":COME:" "<TRAVEL-ACTION-OR-THING>")
+(deftype travel-predicate (isa semantic-predicate))
+(deftype travel-sentence (isa semantic-sentence))
+(defstringconstant ":TRAVEL-WITH-FF:" ":TRAVEL-TO-PLACE-WITH-FF:" 
+	":COME-WITH-FF:" ":COME-TO-CLINIC:" ":TRAVEL-TO-CLINIC:" 
+	":TRAVEL-TO-CLINIC-WITH-FF:"
+	"<TRAVEL-PREDICATE>")
+(defstringconstant ":PATIENT-TRAVEL-WITH-FF:" ":FF-TRAVEL-TO-CLINIC:" 
+	"<TRAVEL-SENTENCE>")
+
+;;;;;;;;;;;;
+
+(deftype have-companion-predicate (isa semantic-state semantic-predicate))
+(defstringconstant ":HAVE-COMPANION:" ":LACK-COMPANION:" "<HAVE-COMPANION-PREDICATE>")
+(deftype have-companion-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-HAVE-COMPANION:" ":PATIENT-LACK-COMPANION:" "<HAVE-COMPANION-SENTENCE>")
+
+;;;;;
+;; Manner
+
+(deftype dependence-manner (isa semantic-manner))
+(defstringconstant ":ACCORDING-TO-FAMILY:" ":WITH-FAMILY-REQUEST:" 
+	"<DEPENDENCE-MANNER>")
+
+;;;;;
+;; Things
+
+(deftype thing (isa root))
+(deftype semantic-thing (isa thing))
+
+(deftype action (isa root))
+(deftype semantic-action (isa action))
+
+;; e.g. goodness, weakness
+(deftype semantic-state-thing (isa semantic-thing))
+
+(deftype identity-thing (isa semantic-thing))
+(defstringconstant ":NAME:" ":PSEUDONYM:" "<IDENTITY-THING>")
+
+;; Work-related things
+(deftype work-thing (isa semantic-thing))
+(defstringconstant ":EMPLOYMENT:" "<WORK-THING>")
+(deftype retirement-thing (isa work-thing))
+(defstringconstant ":RETIREMENT:" "<RETIREMENT-THING>")
+(deftype benefit-action (isa semantic-action))
+(defstringconstant ":BENEFIT-ACTION:" "<BENEFIT-ACTION>")
+(deftype benefit-thing (isa semantic-thing))
+(defstringconstant ":BENEFIT:" ":INSURANCE-PLAN:" "<BENEFIT-THING>")
+(deftype government-benefit-thing (isa benefit-thing))
+(defstringconstant ":GOVERNMENT-BENEFIT-THING:" ":GOVERNMENT-BENEFIT-THING-REQUIREMENT:"
+	":VAD-THING:" "<GOVERNMENT-BENEFIT-THING>")
+(deftype purchase-action (isa semantic-action))
+(defstringconstant ":PURCHASE-ACTION:" "<PURCHASE-ACTION>")
+(deftype purchase-predicate (isa semantic-predicate))
+(defstringconstant ":PURCHASE-MEDICATION-PREDICATE:" "<PURCHASE-PREDICATE>")
+(deftype purchase-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-PURCHASE-MEDICATION-SENTENCE:" 
+	"<PURCHASE-SENTENCE>")
+
+(deftype behavior-action (isa semantic-action))
+(defstringconstant ":DO:" ":ALLOW:" ":FORCE:" ":OVERDOSE-ACTION:" 
+	":ABUSE-ACTION:" "<BEHAVIOR-ACTION>")
+(deftype behavior-property (isa semantic-property))
+(defstringconstant ":NONCOMPLIANT:" ":COMPLIANT:" "<BEHAVIOR-PROPERTY>")
+(deftype behavior-thing (isa semantic-thing))
+(defstringconstant ":NONCOMPLIANCE:" ":COMPLIANCE:" 
+	":COMPLIANCE-WITH-TREATMENT:" ":POOR-COMPLIANCE-WITH-TREATMENT:" 
+	":NONCOMPLIANCE-WITH-TREATMENT:" ":OVERDOSE-THING:" ":ABUSE-THING:"
+	":OVERDOSE-OF-MEDICATION-THING:" ":CRIME:"
+	"<BEHAVIOR-THING>")
+	
+(deftype behavior-state (isa semantic-state))
+(deftype behavior-predicate (isa semantic-predicate))
+(defstringconstant ":NONCOMPLIANT-WITH-TREATMENT:" 
+	":COMPLIANT-WITH-TREATMENT:" ":OVERDOSE-ON-MEDICATION-PREDICATE:" 
+	"<BEHAVIOR-PREDICATE>")
+(deftype behavior-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-IS-NONCOMPLIANT:" ":PATIENT-IS-COMPLIANT:" 
+	":PATIENT-OVERDOSE-ON-MEDICATION-SENTENCE:" 
+		"<BEHAVIOR-SENTENCE>")
+
+;; 4/3/2018- Do I still need this?
+(deftype behavior (isa behavior-thing behavior-property behavior-action 
+	behavior-predicate))
+
+(deftype expression-thing (isa behavior-thing))
+(defstringconstant ":EXPRESSION:" "<EXPRESSION-THING>")
+
+(deftype psychology-action (isa semantic-action))
+(deftype psychology-sentence (isa semantic-sentence))
+(deftype psychology-predicate (isa semantic-predicate))
+(deftype psychology-thing (isa semantic-thing))
+(deftype mood-thing (isa psychology-thing))
+(defstringconstant ":MOOD:" ":ANGER:" ":HAPPINESS:" ":ANXIETY:" ":FEAR:" 
+	"<MOOD-THING>")
+(deftype psychology-state (isa semantic-state))
+(deftype psychology-property (isa semantic-property))
+(deftype mood-property (isa psychology-property psychology-state))
+(defstringconstant ":ANGRY:" ":IRRITATED:" ":HAPPY:" ":ANXIOUS:" ":FEARFUL:" 
+	":DEPRESSED:" "<MOOD-PROPERTY>")
+(defstringconstant ":IS-ANGRY:" ":IS-HAPPY:" ":IS-FEARFUL:" 
+	"<MOOD-PREDICATE>")
+(deftype mood-sentence (isa psychology-sentence))
+(defstringconstant ":PERSON-IS-ANGRY:" 
+	":PERSON-IS-HAPPY:" ":PERSON-IS-FEARFUL:" "<MOOD-SENTENCE>")
+
+(deftype satisfy 
+	(isa psychology-action psychology-property psychology-state)) 
+(defstringconstant ":SATISFY:" ":SATISFACTORY:" "<SATISFY>")
+(deftype satisfaction (isa psychology-thing)) 
+(defstringconstant ":SATISFACTION:" ":FAMILIAL-SATISFACTION:" "<SATISFACTION>")
+
+
+(deftype desire-action (isa psychology-action))
+(defstringconstant ":DESIRE:" ":WANT:" ":PLAN-ACTION:"  
+	"<DESIRE-ACTION>")
+(deftype desire-thing (isa psychology-thing))
+(deftype plan-thing (isa desire-thing))
+(defstringconstant ":PLAN-THING:" "<PLAN-THING>")
+(deftype desire-predicate (isa psychology-predicate))
+(defstringconstant ":DESIRE-THING-PREDICATE:" "<DESIRE-PREDICATE>")
+(deftype desire-sentence (isa psychology-sentence))
+(defstringconstant ":FF-DESIRE-THING-SENTENCE:" "<DESIRE-SENTENCE>")
+	
+(deftype information-thing (isa semantic-thing))
+(defstringconstant ":INFORMATION:" "<INFORMATION-THING>")
+(deftype information-person (isa information-thing person))
+(deftype inform-action (isa semantic-action))
+(defstringconstant ":INFORM-ACTION:" "<INFORM-ACTION>")
+(deftype inform-predicate (isa semantic-predicate))
+(defstringconstant ":INFORM-PREDICATE:" "<INFORM-PREDICATE>")
+(deftype inform-sentence (isa semantic-sentence))
+(defstringconstant ":INFORM-SENTENCE:" "<INFORM-SENTENCE>")
+
+(deftype understanding-thing (isa information-thing))
+(defstringconstant ":UNDERSTANDING:" ":KNOWLEDGE:" ":BELIEF:" 
+	"<UNDERSTANDING-THING>")
+(deftype understand-action (isa inform-action))
+(defstringconstant ":UNDERSTAND:" ":KNOW:" ":BELIEVE:" "<UNDERSTAND-ACTION>")
+(deftype understand-predicate (isa inform-predicate))
+(defstringconstant ":UNDERSTAND-PREDICATE:" ":UNDERSTAND-QUESTION-PREDICATE:" 
+	":UNDERSTAND-SOMETHING-PREDICATE:"
+	":UNDERSTAND-CONVERSATION-PREDICATE:" 	
+	":UNDERSTAND-CONVERSATION-WELL-PREDICATE:" 
+	":UNDERSTAND-CONVERSATION-POORLY-PREDICATE:"
+	":HELP-PATIENT-UNDERSTAND-CONVERSATION-PREDICATE:"
+	"<UNDERSTAND-PREDICATE>")
+(deftype understand-sentence (isa inform-sentence))
+(defstringconstant ":FF-UNDERSTAND-SOMETHING:" ":FF-ACCEPT-SOMETHING:" 	
+	":PATIENT-UNDERSTAND-CONVERSATION-SENTENCE:" 	
+	":PATIENT-UNDERSTAND-CONVERSATION-WELL-SENTENCE:" 
+	":PATIENT-UNDERSTAND-CONVERSATION-POORLY-SENTENCE:"
+	":PERSON-HELP-PATIENT-UNDERSTAND-CONVERSATION-SENTENCE:"
+	"<UNDERSTAND-SENTENCE>")
+	
+(deftype choice-thing (isa semantic-thing))
+(deftype ":OPTION-THING:" "<CHOICE-THING>")
+
+;; Communication
+(deftype communication-thing (isa information-thing))
+(defstringconstant ":COMMUNICATION:" ":INTERACTION:" 
+	":DISCUSSION:" ":EDUCATION:" ":COMMUNICATION-WITH-FAMILY-THING:"
+	":COMMUNICATION-WITH-PATIENT-AND-FAMILY-THING:"
+	":COMMUNICATION-WITH-PATIENT-THING:"
+	":COMMUNICATION-WITH-PROVIDER-THING:"
+	":CONTENT-OF-COMMUNICATION-THING:"
+	":INSTRUCTION:" ":COMMAND:"
+	"<COMMUNICATION-THING>")
+(deftype communication-action (isa inform-action))
+(defstringconstant ":COMMUNICATE:" ":INTERACT-WITH:" 
+	":DISCUSS:" ":EDUCATE:" ":TEACH:" 
+	":COMMUNICATE-AFFIRMATIVELY:" ":SPEAK:"
+	":COMMUNICATE-NEGATIVELY:" "<COMMUNICATION-ACTION>")
+(deftype communication-predicate (isa inform-predicate))
+(defstringconstant ":COMMUNICATION-WITH-FAMILY-PREDICATE:"
+	":ANSWER-QUESTION-PREDICATE:"
+	":UNABLE-TO-ANSWER-QUESTION-PREDICATE:"
+	":COMMUNICATION-PREDICATE:"
+	":COMMUNICATION-WITH-PROVIDER-PREDICATE:" 		
+	":COMMUNICATION-WITH-PATIENT-PREDICATE:"
+	":COMMUNICATION-WITH-PATIENT-AND-FAMILY-PREDICATE:"
+	":COMMUNICATE-WANTS-AND-NEEDS:"
+	":UNABLE-TO-COMMUNICATE-PREDICATE:"
+	
+	":HAVE-LANGUAGE-BARRIER-PREDICATE:"
+	":PRIMARY-FOREIGN-LANGUAGE-PREDICATE:"
+	":SPEAK-IMPERFECT-ENGLISH-PREDICATE:"
+	":SPEAK-COMPETENT-ENGLISH-PREDICATE:"
+	":COMMUNICATE-VIA-TRANSLATOR-PREDICATE:"
+	":USE-TRANSLATOR-PREDICATE:"
+	":NEED-TRANSLATOR-PREDICATE:"
+	":PROVIDE-TRANSLATOR-PREDICATE:"
+	":TEACH-FAMILY-PREDICATE:"
+	"<COMMUNICATION-PREDICATE>")
+(deftype communication-sentence (isa inform-sentence))
+(defstringconstant ":PROVIDER-COMMUNICATE-WITH-FAMILY-SENTENCE:"
+	":PATIENT-ANSWER-QUESTION-PREDICATE:"
+	":PATIENT-UNABLE-TO-ANSWER-QUESTION-PREDICATE:"
+	":PROVIDER-COMMUNICATE-WITH-PATIENT-AND-FAMILY-SENTENCE:"
+	":FAMILY-COMMUNICATE-WITH-PROVIDER-SENTENCE:"
+	":FAMILY-COMMUNICATE-SOMETHING-SENTENCE:"
+	":PATIENT-COMMUNICATE-WITH-FAMILY-SENTENCE:"
+	":PATIENT-COMMUNICATE-WANTS-AND-NEEDS:"
+	":PATIENT-UNABLE-TO-COMMUNICATE-SENTENCE:"
+	
+	":PATIENT-COMMUNICATE-VIA-TRANSLATOR-SENTENCE:"
+	":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:"
+	":PATIENT-USE-TRANSLATOR-SENTENCE:"
+	":PATIENT-NEED-TRANSLATOR-SENTENCE:"
+	":TRANSLATOR-IS-PROVIDED-SENTENCE:"
+	":PATIENT-PRIMARY-FOREIGN-LANGUAGE-SENTENCE:"
+	":PATIENT-SPEAKS-IMPERFECT-ENGLISH-SENTENCE:"
+	":PATIENT-SPEAKS-COMPETENT-ENGLISH-SENTENCE:"
+	
+	"<COMMUNICATION-SENTENCE>")
+	
+(deftype language-thing (isa communication-thing))
+(defstringconstant ":LANGUAGE:" ":PRIMARY-LANGUAGE:" ":FOREIGN-LANGUAGE:" 
+	":SECONDARY-LANGUAGE:" ":ENGLISH:" ":SPANISH:" ":NON-ENGLISH:" 
+	":LANGUAGE-BARRIER:" "<LANGUAGE-THING>")
+(deftype translation-thing (isa communication-thing))
+(defstringconstant ":TRANSLATION:" ":USE-OF-TRANSLATOR:" 
+	"<TRANSLATION-THING>")
+(deftype language-person (isa person))
+(defstringconstant ":TRANSLATOR:" "<LANGUAGE-PERSON>")
+(deftype translate-action (isa communication-action))
+(defstringconstant ":TRANSLATE:" "<TRANSLATE-ACTION>")
+(deftype translate-predicate (isa communication-predicate))
+(defstringconstant ":TRANSLATE-TO-ENGLISH-PREDICATE:" "<TRANSLATE-PREDICATE>")
+
+	
+(deftype request (isa communication-thing communication-state communication-action))
+(deftype request-sentence (isa communication-sentence))
+(deftype request-predicate (isa communication-predicate))
+(defstringconstant ":DEMAND:" ":REQUEST:" ":ENCOURAGE:" ":DECLINE:" "<REQUEST>")
+(defstringconstant ":REQUEST-SOMETHING:" ":DECLINE-SOMETHING:"  
+	":REQUESTED-TO-INTERACT-WITH-FF:"
+	":REQUEST-TO-DO-SOMETHING:" "<REQUEST-PREDICATE>")
+(defstringconstant ":FF-REQUEST-SOMETHING:" ":FF-DECLINE-SOMETHING:"
+	":PATIENT-REQUESTED-TO-INTERACT-WITH-FF:" "<REQUEST-SENTENCE>")
+	
+
+
+(deftype concern (isa psychology-thing psychology-state))
+(deftype concern-sentence (isa psychology-sentence))
+(deftype concern-predicate (isa psychology-predicate))
+(defstringconstant ":CONCERN:" "<CONCERN>")
+(defstringconstant ":FEEL-CONCERN:" "<CONCERN-PREDICATE>")
+(defstringconstant ":FF-FEEL-CONCERN:" "<CONCERN-SENTENCE>")
+
+(deftype accept (isa psychology-thing psychology-state psychology-action))
+(deftype accept-sentence (isa psychology-sentence))
+(deftype accept-predicate (isa psychology-predicate))
+(defstringconstant ":ACCEPT:" "<ACCEPT>")
+(defstringconstant ":ACCEPT-SOMETHING:" "<ACCEPT-PREDICATE>")
+(defstringconstant ":FF-ACCEPT-SOMETHING:" "<ACCEPT-SENTENCE>")
+
+(deftype experience (isa psychology-action psychology-thing psychology-state))
+(defstringconstant ":EXPERIENCE:" "<EXPERIENCE>")
+
+(deftype care-property (isa semantic-property semantic-state semantic-modifier))
+(defstringconstant ":CARING:" "<CARE-PROPERTY>")
+
+(deftype debt (isa semantic-thing))
+(defstringconstant ":DEBT:" "<DEBT>")
+(deftype rent-or-mortgage (isa debt))
+(defstringconstant ":RENT-OR-MORTGAGE:" "<RENT-OR-MORTGAGE>")
+(deftype pay-action (isa semantic-action))
+(defstringconstant ":PAY:" "<PAY-ACTION>")
+
+(deftype legal-thing-action (isa semantic-thing semantic-action))
+(defstringconstant ":POA:" ":CONSENT:" ":FAMILY-WHO-HAS-POA:" ":CONTRACT:" ":APPROVE:"
+	"<LEGAL-THING-ACTION>")
+(deftype legal-sentence (isa semantic-sentence))
+(defstringconstant ":LEGAL-CONSENT-OBTAINED-FROM-FAMILY-SENTENCE:" 
+	"<LEGAL-SENTENCE>")
+
+(deftype transportation-action (isa semantic-action))
+(deftype transportation-thing (isa semantic-thing))
+(deftype transportation-predicate (isa semantic-predicate))
+(defstringconstant ":TRANSPORT:" ":SEND:" ":ACCOMPANY:" ":BRING:" ":TAKE:"
+	"<TRANSPORTATION-ACTION>")
+
+(deftype person (isa semantic-thing))
+(deftype person-property (isa semantic-property))
+(defstringconstant ":PARENTAL:" ":FAMILIAL:" "<PERSON-PROPERTY>")
+(deftype patient (isa person))
+(defstringconstant ":PATIENT:" ":CANDIDATE:" "<PATIENT>")
+(defstringconstant ":PATIENT-AND-FAMILY:" ":PATIENT-AND-SPOUSE:" "<PERSON>")
+(defstringconstant ":SOMEONE:" ":PERSON:" ":SELF:" ":MULTI-PERSON:" "<PERSON>")
+(deftype non-patient (isa person))
+(defstringconstant ":NON-PATIENT:" ":NO-ONE:" "<NON-PATIENT>")
+(deftype friend-or-family (isa non-patient))
+(defstringconstant ":FF:" ":FRIEND:" ":FAMILY:" ":COMPANION:" ":CHILDREN:" 
+	":PATIENTS-FAMILY:" ":FAMILY-PATIENT-CAN-STAY-WITH:" 		
+	":FAMILY-WHO-STAYS-WITH-PATIENT:" ":FF-WHO-PROVIDES-HELP-TO-PATIENT:"
+	"<FRIEND-OR-FAMILY>")
+(deftype family (isa friend-or-family))
+(deftype multi-family (isa family))
+(defstringconstant ":MULTI-FAMILY:" ":PARENTS:" ":CHILDREN:" ":GRANDPARENTS:" 
+	":SIBLINGS:" "<MULTI-FAMILY>")
+(deftype single-family (isa family))
+(defstringconstant ":NON-SPOUSE-SINGLE-FAMILY:" ":SPOUSE:" ":PARENT:" 
+":MOTHER:" ":FATHER:" ":SIGNIFICANT-OTHER:" ":CHILD:" ":BROTHER:" ":SISTER:" ":COUSIN:" ":GRANDCHILD:" ":STEPCHILD" ":SON:" ":DAUGHTER:" ":SINGLE-FAMILY:" ":FOSTER-PARENT:" "<SINGLE-FAMILY>")
+(deftype neighbor (isa person))
+(defstringconstant ":NEIGHBOR:" "<NEIGHBOR>")
+(deftype housewife (isa person))
+(deftype gendered-person (isa person semantic-property))
+(defstringconstant ":MALE:" ":FEMALE:" "<GENDERED-PERSON>")
+(defstringconstant ":HOUSEWIFE:" "<HOUSEWIFE>")
+(deftype medical-provider (isa non-patient))
+(defstringconstant ":PROVIDER:" ":NURSE:" ":DOCTOR:" ":THERAPIST:" "SOCIAL-WORKER:" "<MEDICAL-PROVIDER>")
+(deftype care-provider (isa non-patient))
+(defstringconstant ":CAREGIVER:" "<CARE-PROVIDER>")
+(deftype ff-care-provider (isa care-provider))
+(defstringconstant ":FF-CARE-PROVIDER:" "<FF-CARE-PROVIDER>")
+
+(deftype place (isa semantic-thing))
+(defstringconstant ":NEARBY:" ":DISTANCE:" "<PLACE>")
+(deftype sameplace (isa place))
+(deftype otherplace (isa place))
+(deftype facility (isa place))
+(deftype living-facility (isa facility))
+(defstringconstant ":NURSING-HOME:" ":ASSISTED-LIVING:" ":GROUP-HOME:"  
+	":COMMUNITY-LIVING:" ":SENIOR-LIVING:" ":HOSPICE:" "<LIVING-FACILITY>")
+(deftype temporary-living-facility (isa living-facility))
+(deftype benefit-living-facility (isa living-facility))
+(defstringconstant ":BENEFIT-LIVING-CENTER:" ":CHARITABLE-HOUSING:" "<BENEFIT-LIVING-CENTER>")
+(defstringconstant ":TEMPORARY-LIVING:" ":SHELTER:" "<TEMPORARY-LIVING-FACILITY>")
+(deftype daycare-facility (isa facility))
+(defstringconstant ":DAYCARE:" "<DAYCARE-FACILITY>")
+
+(deftype marginal-support-facility (isa living-facility))
+(defstringconstant ":JAIL:" ":SHELTER:" ":MARGINAL-SUPPORT-FACILITY:" "<MARGINAL-SUPPORT-FACILITY>")
+(deftype living-facility-predicate (isa semantic-predicate))
+(deftype living-facility-sentence (isa semantic-sentence))
+(defstringconstant ":IN-MARGINAL-SUPPORT-FACILITY:" 
+	":TAKEN-TO-MARGINAL-SUPPORT-FACILITY:" 
+	"<LIVING-FACILITY-PREDICATE>")
+(defstringconstant ":PATIENT-IN-MARGINAL-SUPPORT-FACILITY:" 
+	"<LIVING-FACILITY-SENTENCE>")
+
+(defstringconstant ":STREET:" "<PLACE>")
+(deftype medical-facility (isa facility))
+(defstringconstant ":HOSPITAL:" ":ER:" ":CLINIC:" ":VA:" ":MEDICAL-FACILITY:" "<MEDICAL-FACILITY>")
+
+(deftype living-space (isa place))
+(defstringconstant ":LIVING-SPACE:" ":HOUSEHOLD:" "<LIVING-SPACE>")
+(deftype home (isa living-space))
+(defstringconstant ":HOME:" "<HOME>")
+(deftype patient-home (isa home))
+(defstringconstant ":PATIENT-HOME:" "<PATIENT-HOME>")
+(deftype ff-home (isa home))
+(defstringconstant ":FAMILY-HOME:" "<FAMILY-HOME>")
+(deftype other-home (isa home))
+(defstringconstant ":OTHER-HOME:" ":DRUG-USER-HOUSEHOLD:" "<OTHER-HOME>")
+(deftype non-home-living-space (isa living-space))
+(defstringconstant ":NON-HOME-LIVING-SPACE:" ":FOSTER-HOME:" 
+	"<NON-HOME-LIVING-SPACE>")
+(deftype marginal-living-space (isa living-space))
+(defstringconstant ":MARGINAL-LIVING-SPACE:" "<MARGINAL-LIVING-SPACE>")
+
+
+(deftype vehicle (isa semantic-thing))
+(deftype personal-vehicle (isa vehicle))
+(deftype ff-vehicle (isa personal-vehicle))
+(deftype patient-vehicle (isa personal-vehicle))
+(defstringconstant ":PERSONAL-VEHICLE:" "<PERSONAL-VEHICLE>")
+(defstringconstant ":FF-VEHICLE:" "<FF-VEHICLE>")
+(defstringconstant ":PATIENT-VEHICLE:" "<PATIENT-VEHICLE>")
+(deftype public-vehicle (isa vehicle))
+(defstringconstant ":PUBLIC-TRANSPORT:" "<PUBLIC-VEHICLE>")
+
+(deftype community-services (isa semantic-thing))
+(defstringconstant ":MEALS-ON-WHEELS:" "<COMMUNITY-SERVICES>")
+
+
+(deftype organization (isa semantic-thing))
+(deftype church (isa organization))
+(defstringconstant ":CHURCH:" "<CHURCH>")
+
+(deftype location-property (isa semantic-property 
+		semantic-state semantic-thing))
+(defstringconstant ":HERE:" ":THERE:" "<LOCATION-PROPERTY>")
+(deftype location-at-time-property (isa location-property))
+(defstringconstant ":HERE-NOW:" "<LOCATION-AT-TIME-PROPERTY>")
+
+(deftype alone-property (isa semantic-property semantic-state))
+(defstringconstant ":ALONE:" "<ALONE-PROPERTY>")
+
+(deftype resting-place (isa place))
+(defstringconstant ":BEDSIDE:" "<RESTING-PLACE>")
+
+(deftype charity-property (isa behavior semantic-state semantic-property))
+(defstringconstant ":CHARITY:" "<CHARITY-PROPERTY>")
+
+(deftype admission-discharge-action (isa semantic-thing semantic-action))
+(defstringconstant ":ADMIT:" ":ADMISSION:" ":PLACEMENT:" ":PLACE:" ":DISCHARGE:" "<ADMISSION-DISCHARGE-ACTION>")
+(deftype admission-for-predicate-thing
+	(isa semantic-thing semantic-predicate))
+(defstringconstant ":ADMISSION-FOR-REASON:" "<ADMISSION-FOR-PREDICATE-THING>")
+
+(deftype exam-thing (isa semantic-thing))
+(defstringconstant ":EXAM:" ":EXAMINATION:" ":BLOOD-LAB-TYPE:" "<EXAM-THING>")
+(deftype exam-result (isa exam-thing))
+(defstringconstant ":TASK-NOT-COMPLETED:" ":NOT-APPLICABLE:" ":UNABLE-TO-ASSESS:"
+	":TASK-MOSTLY-NOT-COMPLETED:" "<EXAM-RESULT>")
+(deftype examine-action (isa semantic-action semantic-thing))
+(defstringconstant ":EXAMINE:" ":WATCH:" ":OBSERVE:" ":REVIEW-FOR:" "<EXAMINE-ACTION>")
+(deftype examine-predicate (isa semantic-predicate))
+(defstringconstant ":EXAMINE-PATIENT:" "<EXAMINE-PREDICATE>")
+(deftype examine-patient-for-reason (isa examine-predicate))
+(defstringconstant ":EXAMINE-PATIENT-AT-TIME-FOR-REASON:" 
+	":EXAMINE-PATIENT-FOR-REASON:" 
+	":EXAMINE-PATIENT-FOR-DEPRESSION:"
+	"<EXAMINE-PATIENT-FOR-REASON>")
+(deftype examine-sentence (isa semantic-sentence))
+(deftype provider-examine-patient-for-reason (isa examine-sentence))
+(defstringconstant ":PROVIDER-EXAMINE-PATIENT-FOR-REASON:" 
+	":PROVIDER-EXAMINE-PATIENT-FOR-DEPRESSION:" 
+	"<PROVIDER-EXAMINE-PATIENT-FOR-REASON>")
+	
+(deftype refer-thing (isa semantic-thing))
+(defstringconstant ":REFERRAL:" "<REFER-THING>")
+(deftype refer-action (isa semantic-action))
+(defstringconstant ":REFER:" "<REFER-ACTION>")
+(deftype refer-predicate (isa semantic-predicate))
+(defstringconstant ":REFER-TO-SOMEONE:" ":REFERRED-BY-SOMEONE:"
+	"<REFER-PREDICATE>")
+(deftype refer-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-REFERRED-BY-SOMEONE:" 	
+	":PATIENT-REFERRED-TO-SOMEONE:" ":PROVIDER-REFER-PATIENT-TO-SOMEONE:" 
+	"<REFER-SENTENCE>")
+	
+(deftype diagnosis (isa semantic-thing semantic-action))
+(deftype diagnosis-with-disease (isa semantic-thing semantic-predicate))
+(defstringconstant ":DIAGNOSIS:" "<DIAGNOSIS>")
+(defstringconstant ":DIAGNOSIS-WITH-DISEASE:" "<DIAGNOSIS-WITH-DISEASE>")
+
+(defstringconstant ":NUMBER:" "<SEMANTIC-NUMBER>")
+
+(deftype availability-property (isa semantic-property semantic-state))
+(defstringconstant ":AVAILABLE:" "<AVAILABILITY-PROPERTY>")
+
+(deftype support-system-thing (isa semantic-thing semantic-property semantic-predicate))
+(defstringconstant ":SUPPORT-SYSTEM:" ":SUPPORT:")
+
+(deftype quality-property (isa semantic-property semantic-manner))
+(deftype poor-quality-property (isa quality-property))
+(defstringconstant ":POOR:" ":POORLY:" ":BAD-CONDITION:" 
+	"<POOR-QUALITY-PROPERTY>")
+(deftype good-quality-property (isa quality-property))
+(defstringconstant ":GOOD:" ":WELL:"  ":GOOD-CONDITION:" 
+	"<GOOD-QUALITY-PROPERTY>")
+(deftype absent-quality-property (isa quality-property))
+(defstringconstant ":ABSENT:" "<ABSENT-QUALITY-PROPERTY>")
+(deftype minimal-quality-property (isa quality-property))
+(defstringconstant ":MINIMAL:" ":MINIMALLY:" ":LIMITED-BY:" "<MINIMAL-QUALITY-PROPERTY>")
+(deftype moderate-quality-property (isa quality-property))
+(defstringconstant ":MODERATE:" ":MODERATELY:" "<MODERATE-QUALITY-PROPERTY>")
+(deftype maximal-quality-property (isa quality-property))
+(defstringconstant ":MAXIMAL:" ":MAXIMALLY:" ":TRAUMATIC:" 
+	"<MAXIMAL-QUALITY-PROPERTY>")
+(deftype local-quality-property (isa quality-property))
+(defstringconstant ":LOCALIZED:" "<LOCAL-QUALITY-PROPERTY>")
+(deftype general-quality-property (isa quality-property))
+(defstringconstant ":GENERALIZED:" "<GENERAL-QUALITY-PROPERTY>")
+(deftype increased-quality-property (isa quality-property))
+(defstringconstant ":INCREASED:" "<INCREASED-QUALITY-PROPERTY>")
+(deftype decreased-quality-property (isa quality-property))
+(defstringconstant ":DECREASED:" "<DECREASED-QUALITY-PROPERTY>")
+
+(deftype decide-action (isa semantic-action))
+(defstringconstant ":DECIDE:" "<DECIDE-ACTION>")
+(deftype decision-thing (isa semantic-action))
+(defstringconstant ":DECISION:" "<DECISION-THING>")
+(deftype decision-predicate (isa semantic-predicate))
+(defstringconstant ":DECISION-PREDICATE:" ":DECIDE-THING-PREDICATE:" 
+	":DECIDE-BY-FAMILY-PREDICATE:" "<DECISION-PREDICATE>")
+(deftype decision-sentence (isa semantic-sentence))
+(defstringconstant ":DECISION-SENTENCE:" ":FAMILY-DECIDE-THING-SENTENCE:" "<DECISION-SENTENCE>")
+	
+(deftype give-take-action (isa semantic-action))
+(deftype give-take-predicate (isa semantic-predicate))
+(deftype give-take-sentence (isa semantic-sentence))
+(defstringconstant ":RECEIVE:" ":GIVE:" ":PROVIDE:" ":TAKE:" 
+	":MISS:" "<GIVE-TAKE-ACTION>")
+(defstringconstant ":RECEIVE-THING-FROM-PERSON:" 
+	":GIVE-THING-TO-PERSON:"
+	":RECEIVE-THING-FROM-FAMILY:" ":GIVE-THING-TO-FAMILY:"
+	":GIVE-CONSENT:"
+	":RECEIVE-CONSENT-FROM-FAMILY:" ":GIVE-CONSENT-TO-PROVIDER:"
+	":RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE:"
+	":NOT-RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE:"
+	":TAKE-PRESCRIPTION-MEDICATION-PREDICATE:"
+	":NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE:"
+	":STOP-TAKING-PRESCRIPTION-MEDICATION-PREDICATE:"
+	"<GIVE-TAKE-PREDICATE>")
+(defstringconstant ":PROVIDER-RECEIVE-CONSENT-FROM-FAMILY:" 
+	":PERSON-RECEIVE-THING-FROM-PERSON:" 
+	":PERSON-GIVE-THING-TO-PERSON:"	
+	":PERSON-GIVE-THING-TO-FAMILY:"		
+	":FAMILY-GIVE-CONSENT:"
+	":PATIENT-RECEIVE-PRESCRIPTION-MEDICATION-SENTENCE:"
+	":PATIENT-NOT-RECEIVE-PRESCRIPTION-MEDICATION-SENTENCE:"
+	":PATIENT-TAKE-PRESCRIPTION-MEDICATION-SENTENCE:"
+	":PATIENT-NOT-TAKE-PRESCRIPTION-MEDICATION-SENTENCE:"
+	":PATIENT-STOP-TAKING-PRESCRIPTION-MEDICATION-SENTENCE:"
+	"<GIVE-TAKE-SENTENCE>")
+
+(deftype give-take-thing (isa semantic-thing))
+(defstringconstant ":GIFT:" ":RECEIPT:" "<GIVE-TAKE-ACTION>")
+
+;; 2/23/2018:  Time is binding to abstract rule patterns outside those that
+;; explicitly reference time
+(deftype time-expression (isa semantic-time))
+;;(deftype time-expression 
+;;     (isa semantic-modifier semantic-property semantic-thing))
+	
+(deftype time-modifier (isa time-expression))
+(deftype time-unit (isa time-expression))
+(deftype date (isa time-expression))
+(deftype time-duration (isa time-expression))
+(defstringconstant ":GENERAL-TIME:" ":REGULARLY:" ":CURRENTLY:" 
+	":PER-TIME-UNIT:" ":AT-TIME:" ":TWENTY-FOUR-HOUR:" ":SOMETIMES:" "<TIME-MODIFIER>")
+(defstringconstant ":TIME-UNIT:" "<TIME-UNIT>")
+(defstringconstant ":DATE:" ":TIME:" ":GENERAL-TIME:" ":SPECIFIC-TIME:" ":NOW:"
+	":DECADE-AGE:" "<TIME-EXPRESSION>")
+	
+(deftype temporal-duration-property (isa semantic-property))
+(defstringconstant ":LONG-TERM:" ":SHORT-TERM:" ":CONSTANT:" 
+	":INTERMITTENT:" ":DEVELOPING:" "<TEMPORAL-DURATION-PROPERTY>")
+
+(deftype visit-action (isa behavior semantic-thing))
+(defstringconstant ":VISIT:" "<VISIT-ACTION>")
+
+(deftype history-thing (isa semantic-thing semantic-property))
+(defstringconstant ":HISTORY:" ":FAMILY-HISTORY:" ":CURRENT-HISTORY:" ":SOCIAL-HISTORY:" ":HISTORY-OF-DISEASE:" ":FAMILY-HISTORY-OF-DISEASE:" "<HISTORY-THING>")
+(deftype history-sentence (isa semantic-sentence))
+(defstringconstant ":HISTORY-OBTAINED-FROM-FAMILY-SENTENCE:" "<HISTORY-SENTENCE>")
+
+
+(deftype involvement-thing (isa semantic-thing behavior semantic-state))
+(defstringconstant ":INVOLVED:" "<INVOLVEMENT-THING>")
+
+(deftype health-thing (isa semantic-thing))
+(defstringconstant ":HEALTH-CONDITION:" "<HEALTH-THING>")
+(deftype health-action (isa semantic-action))
+(deftype health-property (isa semantic-property))
+(deftype health-manner (isa semantic-manner))
+(deftype health-predicate (isa semantic-predicate))
+(deftype health-sentence (isa semantic-sentence))
+
+(deftype injury-thing (isa health-thing))
+(defstringconstant ":INJURY:" "<INJURY-THING>")
+(deftype brain-injury-thing (isa injury-thing))
+(defstringconstant ":BRAIN-INJURY:" ":TRAUMATIC-BRAIN-INJURY:" 
+	"<BRAIN-INJURY-THING>")
+(deftype fracture-injury-thing (isa injury-thing))
+(defstringconstant ":FRACTURE:" ":FRACTURE-OF-APPENDAGE:" 
+	"<FRACTURE-INJURY-THING>")
+	
+(deftype disease-thing (isa health-thing))
+(defstringconstant ":DISEASE:" ":MEDICAL-CONDITION:" ":DISEASE-AT-TIME:" 
+	":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:"
+	":MEDICAL-CONDITION-NOT-NECESSARILY-CAUSING-ADL-DISABILITY:" 
+	":OBSTRUCTION:" ":INCONTINENCE:" 
+	":NERVE-CONDUCTION-LOSS:" "<DISEASE-THING>")
+(deftype disease-property-or-manner (isa health-property health-manner))
+(defstringconstant ":PERCEPTION-IMPAIRED:" 
+	":MEDICAL-CONDITION-ADL-PROPERTY-OR-MANNER:" "<DISEASE-PROPERTY-OR-MANNER>")
+(deftype brain-disease-thing (isa disease-thing))
+(defstringconstant ":STROKE:" "<BRAIN-DISEASE-THING>")
+(deftype medical-condition-predicate (isa health-predicate))
+(deftype medical-condition-sentence (isa health-sentence))
+(defstringconstant ":HAVE-MEDICAL-CONDITION:" "<MEDICAL-CONDITION-PREDICATE>")
+(defstringconstant ":PERSON-HAVE-MEDICAL-CONDITION:" 
+	":PATIENT-HAVE-MEDICAL-CONDITION:" ":FAMILY-HAVE-MEDICAL-CONDITION:"
+	"<MEDICAL-CONDITION-SENTENCE>")
+(deftype mood-disease-thing (isa disease-thing))
+(defstringconstant ":DEPRESSION:" mood-disease-thing)
+(deftype mood-disease-predicate (isa medical-condition-predicate))
+(defstringconstant ":IS-DEPRESSED:" "<MOOD-DISEASE-PREDICATE>")
+(deftype mood-disease-sentence (isa medical-condition-sentence))
+(defstringconstant ":PERSON-IS-DEPRESSED:" "<MOOD-DISEASE-SENTENCE>")
+
+	
+(deftype syndrome-thing (isa disease-thing))
+(deftype brain-syndrome-thing (isa syndrome-thing))
+(defstringconstant ":ATTENTION-DEFICIT-DISORDER:" ":PTSD:" 
+	"<BRAIN-SYNDROME-THING>")
+	
+(deftype symptom (isa disease-thing))
+(deftype symptom-property-or-manner (isa disease-property-or-manner))
+(defstringconstant ":SYMPTOM:" ":FEVER:" ":PAIN:" ":FATIGUE:" ":DIZZINESS:" 
+	"<SYMPTOM>")
+(defstringconstant ":PAINFUL:" ":FATIGUED:" ":DIZZY:" 
+	"<SYMPTOM-PROPERTY-OR-MANNER>")
+(deftype head-symptom-thing (isa symptom))
+(defstringconstant ":HEADACHE:" "<HEAD-SYMPTOM-THING>")
+(deftype chest-symptom-thing (isa symptom))
+(defstringconstant ":SOB:" ":CHEST-PAIN:" "<CHEST-SYMPTOM-THING>")
+
+(deftype exam-finding-thing (isa health-thing))
+(defstringconstant ":FINDING:" "<EXAM-FINDING-THING>")
+
+(deftype treatment-thing (isa health-thing))
+(defstringconstant ":THERAPY:" ":TREATMENT:" ":PHYSICAL-THERAPY:" 
+	":SPEECH-THERAPY:" ":MEDICAL-THERAPY:" ":THERAPY-THING:" ":THERAPY-PROMPT:" 
+	"<TREATMENT-THING>")
+(deftype treatment-living-situation-thing (isa treatment-thing))
+(deftype inpatient-treatment-thing (isa treatment-living-situation-thing))
+(defstringconstant ":INPATIENT-TREATMENT:" ":THERAPY-AT-NURSING-HOME:" 
+	"<INPATIENT-TREATMENT-THING>")
+(deftype surgery-thing (isa treatment-thing))
+(defstringconstant ":AMPUTATION:" "<SURGERY-THING>")
+(deftype treatment-action (isa health-action))
+(defstringconstant ":TREAT:" "<TREATMENT-ACTION>")
+(deftype treatment-property (isa health-property health-manner))
+(defstringconstant ":THERAPEUTIC:" "<TREATMENT-PROPERTY>")
+(deftype treatment-living-situation-property (isa treatment-property))
+(defstringconstant ":INPATIENT:" "<TREATMENT-LIVING-SITUATION-PROPERTY>")
+(deftype treatment-predicate (isa health-predicate health-thing))
+(defstringconstant ":NEED-TREATMENT:" ":TREAT-DISEASE:" "<TREATMENT-PREDICATE>")
+(deftype treatment-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-NEED-TREATMENT:" ":DISEASE-NEED-TREATMENT:" 
+	":PATIENT-NEED-TREATMENT-FOR-DISEASE:"
+	"<TREATMENT-SENTENCE>")
+
+(deftype evaluation-thing-action-predicate 
+	(isa semantic-thing semantic-action semantic-predicate))
+(defstringconstant ":EVALUATE:" ":EVALUATION:" ":EVALUATION-FOR-THING:" 
+	":EVALUATION-FOR-DEPRESSION:" "<EVALUATION-THING-ACTION-PREDICATE>")
+(deftype evaluation-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-EVALUATED-FOR-THING:" 
+	":PATIENT-EVALUATED-FOR-DEPRESSION:" "<EVALUATION-SENTENCE>")
+	
+;; 6/15/2018:  Evaluation, diagnosis, recommendation etc should be under a single header.  
+;; I will start with recommendation and hopefully move others here later.
+(deftype evaluation-thing (isa semantic-thing))
+(deftype recommendation-thing (isa evaluation-thing))
+(defstringconstant ":RECOMMENDATION:" ":DISCHARGE-RECOMMENDATION:" "<RECOMMENDATION-THING>")
+(deftype evaluation-action (isa semantic-action))
+(deftype recommendation-action (isa evaluation-action))
+(defstringconstant ":RECOMMEND:" "<RECOMMENDATION-ACTION>")
+	
+(deftype substance-thing (isa semantic-thing))
+(defstringconstant ":ALCOHOL:" ":TOBACCO:" "<SUBSTANCE-THING>")
+(deftype substance-predicate (isa semantic-predicate))
+(deftype substance-sentence (isa semantic-sentence))
+(deftype medication-thing (isa substance-thing))
+(defstringconstant ":PRESCRIPTION-MEDICATION:" 
+	":DEMENTIA-MEDICATION:"
+	":PATIENT-PRESCRIPTION-MEDICATIONS:" ":ILLICIT-DRUG:" 
+	":DOSE:"
+	":OTC-MEDICATION:"
+	"<MEDICATION-THING>")
+(deftype medication-predicate (isa substance-predicate))
+(defstringconstant ":OFF-MEDS:" ":MISS-DOSE:" "<MEDICATION-PREDICATE>")
+(deftype medication-sentence (isa substance-sentence))
+(defstringconstant ":PERSON-HAVE-PATIENT-MEDICATIONS:" ":PATIENT-MISS-DOSE:" 
+	"<MEDICATION-SENTENCE>")
+(deftype medical-thing (isa semantic-thing))
+(defstringconstant ":HIPAA:" "<MEDICAL-THING>")
+(deftype medical-property (isa semantic-property))
+(deftype medical-procedure-property (isa semantic-property))
+(deftype medical-procedure (isa medical-thing))
+(defstringconstant ":MEDICAL-PROCEDURE:" 
+	":MECHANICAL-VENTILATION:" ":INTUBATION:" "<MEDICAL-PROCEDURE>")
+(defstringconstant ":MEDICAL-PROCEDURE-PROPERTY:" 
+	":VENTILATED:" ":INTUBATED:" "<MEDICAL-PROCEDURE-PROPERTY>")
+(deftype medical-measurement (isa medical-thing))
+
+
+(deftype medical-procedure-property-state (isa medical-thing))
+
+(deftype medication-user (isa person))
+(defstringconstant ":DRUG-USER:" "<MEDICATION-USER>")
+(defstringconstant ":MEDICAL-MEASUREMENT:" "<MEDICAL-MEASUREMENT>")
+
+(deftype physical-activity-thing (isa behavior))
+(defstringconstant ":PHYSICAL-ACTIVITY:" ":PHYSICAL-EXERCISE:" ":SEX:" "<PHYSICAL-ACTIVITY-THING>")
+
+(deftype bedside-place (isa place))
+(defstringconstant ":BEDSIDE:" "<BEDSIDE-PLACE>")
+
+(deftype psychology-event-thing (isa psychology-thing))
+(defstringconstant ":FLASHBACK:" ":DREAM:" ":NIGHTMARE:" 
+	"<PSYCHOLOGY-EVENT-THING>")
+
+(deftype resource-thing (isa semantic-thing))
+(defstringconstant ":RESOURCE:" "<RESOURCE-THING>")
+(deftype financial-resource (isa resource-thing))
+(defstringconstant ":GOVERNMENT-FUNDING:" ":JOB:" ":MONEY:" "<FINANCIAL-RESOURCE>")
+
+(deftype eligibility-state-thing (isa semantic-state semantic-thing))
+(defstringconstant ":ELIGIBLE:" ":INELIGIBLE:" ":ELIGIBILITY:" "<ELIGIBILITY-STATE-THING>")
+
+(deftype appropriateness (isa semantic-state semantic-property))
+(defstringconstant ":APPROPRIATE:" ":INAPPROPRIATE:" "<APPROPRIATENESS>")
+
+(deftype possibly 
+	(isa semantic-state semantic-manner))
+(defstringconstant ":POSSIBLY:" ":PROBABLY:" ":LIKELY:" "<POSSIBLY>")
+
+(deftype possibility (isa semantic-thing))
+(defstringconstant ":POSSIBILITY:" ":PROBABILITY:" ":RISK-THING:" "<POSSIBILITY>")
+
+(deftype observe-action-thing (isa semantic-action semantic-thing))
+(defstringconstant ":OBSERVE:" "<OBSERVE-ACTION-THING>")
+(deftype observe-thing-predicate (isa semantic-predicate))
+(defstringconstant ":OBSERVE-PATIENT:" "<OBSERVE-THING-PREDICATE>")
+(deftype person-observe-thing-sentence (isa semantic-sentence))
+(defstringconstant ":FAMILY-OBSERVE-PATIENT:" 
+	"<PERSON-OBSERVE-THING-SENTENCE>")
+
+(deftype question-answer (isa semantic-thing semantic-action))
+(defstringconstant ":QUESTION:" ":ANSWER:" "<QUESTION-ANSWER>")
+
+(deftype social-stressor (isa semantic-thing))
+(defstringconstant ":SOCIAL-STRESSOR:" "<SOCIAL-STRESSOR>")
+
+(deftype social-property (isa semantic-property))
+(defstringconstant ":FRIENDLY:" ":ANTAGONISTIC:" "<SOCIAL-PROPERTY>")
+
+;; Actions
+(deftype appear-action (isa semantic-action))
+(defstringconstant ":APPEAR:" ":PRESENT-APPEARANCE:" "<APPEAR-ACTION>")
+
+(deftype throwaway-concept 
+	(isa semantic-thing semantic-predicate semantic-sentence semantic-action 
+	semantic-property semantic-state))
+(defstringconstant ":REVIEW-FOR:" ":LITERATURE:" ":AGREEMENT:" 
+	":SCREEN:" ":THROWAWAY-CONCEPT:" "<THROWAWAY-CONCEPT>")
+	
+(deftype start-stop-action (isa semantic-action))
+(defstringconstant ":START:" ":STOP:" "<START-STOP-ACTION>")
+
+(deftype task-thing (isa semantic-thing))
+(deftype task-action (isa semantic-action))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Functional status types
+
+;; Need
+(deftype need-predicate (isa semantic-predicate))
+(deftype need-thing (isa semantic-thing))
+(defstringconstant ":NEED-THING:" ":PATIENT-NEED:" ":WANTS-AND-NEEDS:" "<NEED-THING>")
+(deftype need-action (isa semantic-action))
+(defstringconstant ":NEED-ACTION:" "<NEED-ACTION>")
+(deftype need-property (isa semantic-property))
+(deftype need (isa need-thing need-action need-property))
+(deftype need-thing-predicate (isa need-predicate))
+(defstringconstant ":NEED-REGULAR-ASSISTANCE-PREDICATE:" "<NEED-THING-PREDICATE>")
+(deftype need-thing-to-do-thing-predicate (isa need-thing-predicate))
+
+;; 4/1/2018 I need to break needs apart cleanly into things and actions.
+;; Need a way to quickly identify which rules contain a given concept, type or
+;; string in its pattern or concept.
+(deftype need-action-thing (isa semantic-action semantic-thing ))
+(defstringconstant ":NEED:" ":NO-NEEDS:" "<NEED-ACTION-THING>") 
+
+;; Added predicate 4/1/2018
+(deftype use-action-thing 
+	(isa semantic-action semantic-thing semantic-predicate ))
+(defstringconstant ":USE:" "<USE-ACTION-THING>")
+
+;; Help
+(deftype help-predicate (isa semantic-predicate))
+(deftype help-thing (isa semantic-thing))
+(deftype help-action (isa semantic-action))
+(deftype help (isa help-thing help-action))
+(deftype help-thing-predicate (isa help-predicate))
+(deftype help-thing-to-do-thing-predicate (isa help-thing-predicate))
+(deftype help (isa help-thing help-predicate help-action help-property))
+
+(defstringconstant ":CARE:" ":HELP:" ":NO-HELP:" ":WITHOUT-HELP:" ":WITH-HELP:" 
+	":SUPPORT:" ":MINIMAL-CONTACT-ASSISTANCE:" ":MAXIMAL-CONTACT-ASSISTANCE:" 
+	":TOTAL-ASSISTANCE:" ":PARTIAL-ASSISTANCE:" ":MODERATE-ASSISTANCE:"
+	":SUPERVISION:" ":NEED-HELP:" ":HELP-FROM-PROVIDER:" "<HELP>")
+	
+(deftype cause-action (isa semantic-action))
+(defstringconstant ":CAUSE:" "<CAUSE-ACTION>")
+
+;; Functional status
+(deftype functional-status-sentence (isa semantic-sentence))
+(deftype functional-status-thing (isa semantic-thing))
+(deftype functional-status-action (isa semantic-action))
+(deftype functional-status-predicate (isa semantic-predicate))
+(deftype functional-status-property (isa semantic-property))
+(deftype functional-status-manner (isa semantic-manner))
+(deftype functional-status-state (isa semantic-state))
+
+(deftype physical-state (isa functional-status-state))
+(defstringconstant ":WEAK:" ":ILL:" ":STRONG:" ":SAFE:" ":NOT-SAFE:" "<PHYSICAL-STATE>")
+(deftype physical-state-thing (isa functional-status-thing))
+(defstringconstant ":TOLERANCE:" "<PHYSICAL-STATE-THING>")
+(deftype physical-state-action (isa functional-status-action))
+(defstringconstant ":TOLERATE:" "<PHYSICAL-STATE-ACTION>")
+(deftype poor-physical-state-thing (isa physical-state-thing))
+(defstringconstant ":WEAKNESS:" ":ILLNESS:" ":NUMBNESS:" ":HYPOTONIC:"
+	":DEFICIT-IN-PHYSICAL-STATE-THING:" ":POOR-TOLERANCE:" "<POOR-PHYSICAL-STATE-THING>")
+(deftype good-physical-state-thing (isa physical-state-thing))
+(defstringconstant ":STRENGTH:" ":WELLNESS:" ":GOOD-TOLERANCE:" 
+	"<GOOD-PHYSICAL-STATE-THING>")
+
+;; Altered mental status
+(deftype mental-impairment-thing (isa functional-status-thing))
+(defstringconstant ":MEMORY-LOSS:" ":SHORT-TERM-MEMORY-LOSS:" ":MENTAL-IMPAIRMENT-THING:"
+	"<MENTAL-IMPAIRMENT-THING>")
+(deftype mental-impairment-property (isa functional-status-property))
+(defstringconstant ":DEMENTED:" ":DELIRIOUS:" ":DISORGANIZED:" 
+	":CONFUSED:" "<MENTAL-IMPAIRMENT-PROPERTY>")
+(deftype mental-impairment-state (isa functional-status-state))
+(deftype mental-impairment-predicate (isa functional-status-predicate))
+(defstringconstant ":HAVE-DEMENTIA-PREDICATE:" "<MENTAL-IMPAIRMENT-PREDICATE>")
+(deftype mental-impairment-thing (isa functional-status-thing))
+(defstringconstant ":MENTAL-IMPAIRMENT:" ":DEMENTIA:" ":DELIRIUM:"
+	":MEMORY-LOSS:" ":POOR-HISTORIAN:" ":PERSON-WITH-DEMENTIA:" 
+	":CONFUSION:"
+	"<MENTAL-IMPAIRMENT-THING>")
+(deftype mental-impairment-sentence (isa functional-status-sentence))
+(defstringconstant ":PATIENT-MENTALLY-IMPAIRED:" ":PATIENT-HAS-POOR-MEMORY:" 
+	":PERSON-HAS-DEMENTIA:" "<MENTAL-IMPAIRMENT-SENTENCE>")
+
+(deftype perception-mode-thing (isa functional-status-thing))
+(defstringconstant ":PERCEPTION-MODE-THING:" ":BALANCE:" "<PERCEPTION-MODE-THING>")
+	
+;; ANATOMIC LOCATION
+(deftype anatomy-modifier (isa semantic-thing semantic-property))
+(defstringconstant ":ANATOMIC-MODIFIER:" "<ANATOMY-MODIFIER>")
+(deftype anatomic-location (isa semantic-thing))
+(deftype anatomic-location-function (isa semantic-thing))
+(defstringconstant ":ANATOMIC-LOCATION:" ":ADL-ANATOMY:" 
+	":ANATOMIC-APPENDAGE:" ":ANATOMIC-GI:" 
+	"<ANATOMIC-LOCATION>")
+(deftype head-anatomic-location (isa anatomic-location))
+(defstringconstant ":ANATOMY-HEAD:" "<HEAD-ANATOMIC-LOCATION>")
+(deftype gi-anatomic-location (isa anatomic-location))
+(defstringconstant ":ANATOMIC-GI:" "<GI-ANATOMIC-LOCATION>")
+(deftype chest-anatomic-location (isa anatomic-location))
+(defstringconstant ":ANATOMIC-CHEST:" "<CHEST-ANATOMIC-LOCATION>")
+(deftype cns-anatomic-location (isa anatomic-location))
+(deftype brain-thing (isa cns-anatomic-location))
+(defstringconstant ":BRAIN:" "<BRAIN-THING>")
+(deftype heart-anatomic-location (isa anatomic-location))
+(defstringconstant ":HEART:" "<HEART-ANATOMIC-LOCATION>")
+(deftype heart-function-thing (isa anatomic-location-function))
+(defstringconstant ":HEART-FUNCTION-MEASURE:" "<HEART-FUNCTION-THING>")
+
+;; ADL
+(deftype adl-sentence (isa functional-status-sentence))
+(deftype adl-thing (isa functional-status-thing))
+(deftype adl-place (isa adl-thing))
+(deftype adl-room (isa adl-place))
+(deftype adl-object (isa adl-thing))
+(defstringconstant ":ADL-OBJECT:" "<ADL-OBJECT>")
+(deftype adl-place (isa adl-thing))
+(deftype adl-room (isa adl-place))
+(deftype adl-action (isa functional-status-action))
+(deftype adl-predicate (isa functional-status-predicate))
+(deftype adl-property (isa functional-status-property))
+(deftype adl-manner (isa functional-status-manner))
+(deftype adl-state (isa functional-status-state))
+(deftype adl-activity (isa adl-action adl-predicate adl-thing))
+(deftype adl-event (isa adl-action adl-predicate adl-thing))
+(deftype adl-anatomy (isa adl-thing))
+(deftype adl-furniture (isa adl-object))
+(deftype adl-fixture (isa adl-object))
+(deftype adl-device (isa adl-object))
+(deftype adl-destination (isa adl-object adl-room))
+(deftype adl-activity-object (adl-object))
+
+(defstringconstant ":ADL-DESTINATION:" "<ADL-DESTINATION>")
+
+(defstringconstant ":ADL-FIXTURE:" ":TOILET:" ":BATH:" ":SHOWER-THING:" 
+	"<ADL-FIXTURE>")
+(defstringconstant ":ADL-PLACE:" "<ADL-PLACE>")
+(defstringconstant ":ADL-ROOM:" ":BATHROOM" ":BEDROOM:" ":KITCHEN:" 
+	":ROOM:" ":FACILITY-ROOM:" "<ADL-ROOM>")
+(defstringconstant ":ADL-DEVICE:" "HEARING-AID:" ":ADL-CANE-WALKER:" 
+	":ADL-WHEELCHAIR:" "<ADL-DEVICE>")
+(defstringconstant ":BED:" ":CHAIR:" ":COUCH:" "<ADL-FURNITURE>")
+
+(deftype adl-help (isa adl-predicate help))
+(deftype adl-need (isa adl-predicate need))
+
+(deftype adl-therapy (isa adl-thing))
+(deftype adl-ability-thing (isa adl-thing))
+(deftype adl-ability-predicate (isa adl-predicate))
+(deftype adl-ability-sentence (isa adl-sentence))
+
+(deftype adl-ability-property-manner (isa ability-property ability-manner))
+
+(deftype physiologic-activity (isa semantic-activity semantic-thing))
+(deftype physiologic-difficulty (isa semantic-thing semantic-predicate))
+(deftype independently (isa adl-manner))
+(deftype independent (isa adl-property adl-state))
+(deftype independence (isa adl-thing))
+
+(deftype adl-body-control (isa adl-thing adl-predicate adl-property))
+
+(deftype cognitive-ability-thing (isa adl-thing))
+(defstringconstant ":COGNITIVE-ABILITY-THING:" 
+	":SPECIFIC-COGNITIVE-ABILITY-THING:"
+	":GENERAL-COGNITIVE-ABILITY-THING:"
+	":SPECIFIC-COGNITIVE-ABILITY-DEFICIT:"
+	":GENERAL-COGNITIVE-ABILITY-DEFICIT:"
+	":READING-THING:" ":WRITING-THING:" ":LANGUAGE-SKILL-THING:"
+	":UNDERSTAND-THING:" ":FOCUS-THING:" 
+ 	":ORIENT-THING:" ":LANGUAGE-SKILL-THING:"
+	":MEMORY-THING:" 
+	":ATTENTION-THING:" ":SPELLING-THING:" ":ORIENTATION-TO-TIME-AND-PLACE:"
+	":THINGS-TO-REMEMBER:" ":LEVEL-OF-CONSCIOUSNESS:"
+	"<COGNITIVE-ABILITY-THING>")
+(deftype cognitive-ability-action (isa adl-action))
+(defstringconstant ":COGNITIVE-ABILITY-ACTION:" ":LEARNED-COGNITIVE-SKILL-ACTION:"
+	":MEMORY-ACTION:"  ":ORIENT-ACTION:" ":FOCUS-ACTION:" ":UNDERSTAND-ACTION:"
+	":LANGUAGE-SKILL-ACTION:"
+	"<COGNITIVE-ABILITY-ACTION>")
+(deftype cognitive-ability-property (isa adl-property))
+(deftype cognitive-ability-mode-property (isa cognitive-ability-property))
+(defstringconstant ":COGNITIVE-ABILITY-MODE:" "<COGNITIVE-ABILITY-MODE-PROPERTY>")
+(deftype cognitive-ability-predicate (isa adl-predicate))
+(defstringconstant ":ORIENT-TO-TIME-AND-PLACE:" ":UNABLE-TO-ORIENT-TO-TIME-AND-PLACE:" 
+	":LEVEL-OF-CONSCIOUSNESS-POOR:" ":UNABLE-TO-PERFORM-COGNITIVE-TASK:" 
+	"<COGNITIVE-ABILITY-PREDICATE>")
+(deftype cognitive-ability-sentence (isa adl-sentence))
+
+(deftype neurological-ability-thing (isa functional-status-thing))
+(defstringconstant ":NEUROLOGICAL-ABILITY-THING:" 
+	"<NEUROLOGICAL-ABILITY-THING>")
+(deftype neurological-property (isa functional-status-property))
+(defstringconstant ":NEUROLOGICAL:" "<NEUROLOGICAL-PROPERTY>")
+
+;; ADL PREDICATE TYPES
+(deftype perform-adl-predicate (isa adl-predicate))
+(deftype adl-provision-of-self-care (isa provision-of-care))
+(deftype use-adl-device (isa adl-predicate))
+(deftype have-adl-device (isa adl-predicate))
+(deftype perform-adl-in-facility (isa perform-adl-predicate))
+
+;; ADL SENTENCE TYPES
+(deftype patient-perform-adl-in-facility (isa perform-adl-sentence))
+
+(defstringconstant ":ADL-ROOM:" ":BATHROOM:" "<ADL-ROOM>")
+(defstringconstant ":ADL-FURNITURE:" ":COUCH:" ":CHAIR:" ":BED:" 
+	"<ADL-FURNITURE>")
+(defstringconstant ":FOOD:" ":CHORES:" ":MEAL:" "<ADL-ACTIVITY-OBJECT>")
+(defstringconstant ":FALL:" ":FALL-FROM-ADL-DEVICE:" "<ADL-EVENT>")
+
+(defstringconstant ":DYSARTHRIC:" ":APHASIC:" "<ADL-PROPERTY>")
+(defstringconstant ":DYSARTHRIA:" ":APHASIA:" "<ADL-THING>")
+(defstringconstant ":INDEPENDENTLY:" ":NOT-INDEPENDENTLY:" "<INDEPENDENTLY>")
+(defstringconstant ":INDEPENDENT:" ":NOT-INDEPENDENT:" "<INDEPENDENT>")
+(defstringconstant ":INDEPENDENCE:" ":LACK-OF-INDEPENDENCE:" "<INDEPENDENCE>")
+(defstringconstant ":ADL-ANATOMY:" ":BOWEL:" ":BLADDER:" "<ADL-ANATOMY>")
+(defstringconstant ":PHYSIOLOGIC-ACTIVITY:" ":BREATHING:" 
+	"<PHYSIOLOGIC-ACTIVITY>")
+(defstringconstant ":PHYSIOLOGIC-DIFFICULTY:" ":DIFFICULTY-BREATHING:" 
+	"<PHYSIOLOGIC-DIFFICULTY>")
+	
+(defstringconstant ":ADL-ACTIVITY:" ":WALKING:"  
+	":TOILETING:" ":DRESSING:" ":HYGIENE:" ":EATING-FOOD:" ":COOKING:"
+	":SPEAKING:" ":HOMEMAKING:" ":DOING-CHORES:" ":BATHING:"
+	":SLEEPING:" ":WALKING:" ":STANDING:" ":DRIVE:" ":POSITIONAL-ACTION:"
+	":POSITIONAL-BALANCE-THING:"
+	":POSITIONAL-THING:"
+	":TRANSFER:" ":WHEELCHAIR-TRANSFER:" ":BED-MOBILITY:" ":FUNCTIONAL-MOBILITY:"
+	":ADL-THERAPY:" ":TRANSFER-FROM-LOCATION-TO-LOCATION:"
+	
+	":NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:"
+	":NO-NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:"
+	":NO-HELP-TO-PERFORM-ADL-ACTIVITY:"
+	":INABILITY-WITH-ADL-ACTIVITY:" 
+	":INABILITY-TO-CARE-FOR-SELF:" 
+	":ADL-DIFFICULTY:"
+	":ADL-DIFFICULTY-AMBULATING:"
+	":ADL-INSOMNIA:"
+	":ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:"
+	":ADL-PATHOLOGIC-BEHAVIOR:"
+	":FALL-RISK:"
+	":DIFFICULTY-WITH-COMMUNICATION:"
+	":NO-DIFFICULTY-WITH-COMMUNICATION:"
+	
+	":DIFFICULTY-AMBULATING:"
+	":NO-DIFFICULTY-AMBULATING:"
+	
+	":DISORGANIZATION:"
+	
+	":SPECIFIC-COGNITIVE-ABILITY-DEFICIT:"
+	":DYSARTHRIC-SPEECH:"
+	":INDEPENDENT-LIVING:"
+	
+	":GENERAL-ADL-TASK:"
+	
+	"<ADL-ACTIVITY>")
+
+(defstringconstant ":CONTINENT:" ":INCONTINENT:" "<ADL-BODY-CONTROL>")
+
+(defstringconstant ":PHYSICAL-THERAPY:" ":OCCUPATIONAL-THERAPY:" 
+		":PHYSICAL-THERAPY-EXERCISE:" "<ADL-THERAPY>")
+
+(defstringconstant ":IMPAIRMENT:" ":NO-IMPAIRMENT:" 
+		":ADL-IMPAIRMENT:" ":ADL-ABILITY:" ":DISABILITY:" 
+		":SIGNIFICANT-DISABILITY:" ":DECONDITIONING:"
+		"<ADL-ABILITY-THING>")
+(defstringconstant ":IMPAIRED:" ":DISABLED:" ":STATIC:" ":DYNAMIC:" 
+	"<ADL-ABILITY-PROPERTY-MANNER>")
+
+;; ADL Predicates
+
+(defstringconstant ":CARE-FOR-SELF:" 
+	":UNABLE-TO-CARE-FOR-SELF:"  ":ABLE-TO-CARE-FOR-SELF:" 
+	"<ADL-PROVISION-OF-SELF-CARE>")
+
+(defstringconstant ":USE-ADL-DEVICE:" ":USE-ADL-DEVICE-FOR-ADL-ACTIVITY:" 
+	":ADL-USES-CANE-WALKER:" ":LEAVE-ADL-DEVICE-SOMEWHERE:"
+	":START-USING-ADL-DEVICE:" ":STOP-USING-ADL-DEVICE:"
+	"<USE-ADL-DEVICE>")
+(defstringconstant ":HAVE-ADL-DEVICE:" ":HAVE-CANE:" "<HAVE-ADL-DEVICE>")
+(defstringconstant ":ABLE-TO-PERFORM-ADL:" ":UNABLE-TO-PERFORM-ADL:" 
+	":DIFFICULTY-PERFORMING-ADL:" ":ABLE-TO-PERFORM-ADL-WITH-DEVICE:"
+	":UNABLE-TO-PERFORM-ADL:"
+	":HAVE-ADL-DISABILITY:" 
+	":HAVE-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:"
+	":DOES-NOT-HAVE-ADL-DISABILITY:"
+	
+	":WALK-WITHOUT-DEVICE:"
+	":WALK-WITH-DEVICE:"
+	":WALK-WITHOUT-HELP:"
+	":WALK-WITH-HELP:"
+	
+	":PERFORM-ADL-WITHOUT-DEVICE:"
+	":PERFORM-ADL-WITH-HELP:"
+	":PERFORM-ADL-WITHOUT-HELP:"
+	":WALK-WITHOUT-DEVICE:"
+	":WALK-WITH-HELP:"
+	":WALK-WITHOUT-HELP:"
+	":PERFORM-ADL-WITHOUT-DEVICE:"
+	":PERFORM-ADL-WITH-HELP:"
+	":PERFORM-ADL-WITHOUT-HELP:"
+	
+	":MOVE-TO-OR-FROM-ADL-DESTINATION:"
+	":PASSIVELY-MOVED-TO-ADL-FURNITURE:"
+	
+	
+	":ABLE-TO-MOVE-TO-ADL-DESTINATION-WITH-HELP:"
+	":ABLE-TO-MOVE-TO-ADL-DESTINATION-WITHOUT-HELP:"
+	":UNABLE-TO-MOVE-TO-ADL-DESTINATION-WITHOUT-HELP:"
+	":ABLE-TO-MOVE-TO-OR-FROM-ADL-DESTINATION:"
+	":UNABLE-TO-MOVE-TO-OR-FROM-ADL-DESTINATION:"
+	
+	
+	":ABLE-TO-WALK:"
+	":ABLE-TO-WALK-WITHOUT-DEVICE:"
+	":ABLE-TO-WALK-WITH-HELP:"
+	":ABLE-TO-WALK-WITHOUT-HELP:"
+	":ABLE-TO-PERFORM-ADL-WITHOUT-DEVICE:"
+	":ABLE-TO-PERFORM-ADL-WITH-HELP:"
+	":ABLE-TO-PERFORM-ADL-WITHOUT-HELP:"
+	":UNABLE-TO-WALK:"
+	":UNABLE-TO-WALK-WITHOUT-DEVICE:"
+	":UNABLE-TO-MOVE-TO-DEVICE:"
+	":UNABLE-TO-WALK-WITH-HELP:"
+	":UNABLE-TO-WALK-WITHOUT-HELP:"
+	":UNABLE-TO-PERFORM-ADL-WITHOUT-DEVICE:"
+	":UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:"
+	
+	":UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:"
+	
+	":NEEDS-HELP-TO-PERFORM-ADL:"
+	":NEEDS-NO-HELP-TO-PERFORM-ADL:"
+	
+	":EXPERIENCE-ADL-EVENT:"
+	":EXPERIENCE-ADL-IMPAIRMENT:"
+	":HAVE-SPECIFIC-COGNITIVE-ABILITY-DEFICIT:"
+	
+	;; 3/20/2018:  Moved here from ADL-ACTIVITY
+	":MOVE-TO-ADL-DEVICE:"
+	":MOVE-TO-OR-FROM-ADL-DESTINATION:" 
+
+	":GET-OUT-OF-BED:"
+	":HELP-TO-MOVE-TO-ADL-DESTINATION:"
+	":NO-HELP-TO-MOVE-TO-ADL-DESTINATION:"
+	":HELP-TO-PERFORM-ADL-ACTIVITY:"
+	":HELP-FOR-MULTI-PERSON-TO-PERFORM-ADL-ACTIVITY:" ;; "to assist both of them 
+														;; in healthier eating"
+	":NEED-ADL-DEVICE:"
+	":LIVE-INDEPENDENTLY:"
+	
+	;; Would like to connect this with <MOVE-THING-PREDICATE>, BUT ... 
+	;; ARDA MARRED...
+	":MOVE-ADL-FURNITURE-PREDICATE:"  
+	
+	":HAVE-DIFFICULTY-WITH-COMMUNICATION:"
+	
+	 "<PERFORM-ADL-PREDICATE>")
+
+(defstringconstant ":EAT-AT-NURSING-HOME:" "<PERFORM-ADL-IN-FACILITY>")
+(deftype disabled-predicate (isa adl-ability-predicate))
+(defstringconstant ":IS-DISABLED:" "<ADL-ABILITY-PREDICATE>")
+(deftype disabled-sentence (isa adl-ability-sentence))
+(defstringconstant ":PATIENT-IS-DISABLED:" "<ADL-ABILITY-SENTENCE>")
+
+;; ADL Sentences
+(deftype patient-provision-of-self-care-sentence 
+	(isa person-provision-of-care-sentence))
+(defstringconstant ":PATIENT-CARE-FOR-SELF:" 
+	":PATIENT-UNABLE-TO-CARE-FOR-SELF:"  ":PATIENT-ABLE-TO-CARE-FOR-SELF:" 
+	"<PATIENT-PROVISION-OF-SELF-CARE-SENTENCE>")
+(deftype perform-adl-sentence (isa adl-sentence))
+(defstringconstant ":PATIENT-PERFORM-ADL:" 
+	":PATIENT-ABLE-TO-PERFORM-ADL:" 
+	":PATIENT-HAS-ADL-DISABILITY:" 
+	":PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:"
+	":PATIENT-DOES-NOT-HAVE-ADL-DISABILITY:"
+	":PATIENT-DIFFICULTY-PERFORMING-ADL:" 
+	":PATIENT-DIFFICULTY-AMBULATING:"
+	":PATIENT-NO-DIFFICULTY-AMBULATING:"
+	
+	":PATIENT-ABLE-TO-WALK:"
+	":PATIENT-ABLE-TO-WALK-WITHOUT-DEVICE:"
+	":PATIENT-ABLE-TO-WALK-WITH-HELP:"
+	":PATIENT-ABLE-TO-WALK-WITHOUT-HELP:"
+	
+	":PATIENT-HAS-DIFFICULTY-COMMUNICATING:"
+	":PATIENT-HAS-NO-DIFFICULTY-COMMUNICATING:"
+	
+	":PATIENT-ABLE-TO-PERFORM-ADL-WITH-DEVICE:"
+	":PATIENT-ABLE-TO-PERFORM-ADL-WITHOUT-DEVICE:"
+	":PATIENT-NEEDS-ADL-DEVICE:"
+	":PATIENT-ABLE-TO-PERFORM-ADL-WITH-HELP:" 
+	":PATIENT-ABLE-TO-PERFORM-ADL-WITHOUT-HELP:"
+	
+	":PATIENT-UNABLE-TO-PERFORM-ADL:" 
+	":PATIENT-UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:" 
+	":PATIENT-UNABLE-TO-PERFORM-ADL-WITHOUT-DEVICE:"
+	
+	":PATIENT-ABLE-TO-MOVE-TO-OR-FROM-ADL-DESTINATION:"
+	":PATIENT-UNABLE-TO-MOVE-TO-OR-FROM-ADL-DESTINATION:"
+	":PATIENT-MOVE-TO-OR-FROM-ADL-DESTINATION:" 
+	
+	":PATIENT-EXPERIENCE-ADL-EVENT:"
+	":PATIENT-EXPERIENCE-ADL-IMPAIRMENT:"
+	":PATIENT-HAVE-SPECIFIC-COGNITIVE-ABILITY-DEFICIT:"
+	
+	":PATIENT-LIVES-INDEPENDENTLY:"
+	
+	":PATIENT-MOVE-ADL-FURNITURE:" 
+	
+	":PATIENT-HAVE-DIFFICULTY-WITH-COMMUNICATION:"
+	
+	":PATIENT-IS-FALL-RISK:"
+	"<PERFORM-ADL-SENTENCE>")
+
+(defstringconstant ":PATIENT-EAT-IN-NURSING-HOME:" 
+	":PATIENT-PERFORM-ADL-IN-NURSING-HOME:" "<PATIENT-PERFORM-ADL-IN-FACILITY>")
+(deftype patient-use-adl-device (isa adl-sentence))
+(defstringconstant ":PATIENT-USES-ADL-DEVICE:" ":PATIENT-USES-CANE-WALKER:" 
+	":PATIENT-USE-ADL-DEVICE-FOR-ADL-ACTIVITY:" 
+	":PATIENT-LEAVE-ADL-DEVICE-SOMEWHERE:"
+	":PATIENT-START-USING-ADL-DEVICE:" ":PATIENT-STOP-USING-ADL-DEVICE:"
+	"<PATIENT-USE-ADL-DEVICE>")
+	
+(deftype "difficulty" (isa semantic-thing semantic-property))
+(defstringconstant ":DIFFICULTY:" ":PROBLEM:" ":FAILURE:" ":EASE:" 
+	"<DIFFICULTY>")
+
+(deftype time-and-place-thing (isa semantic-thing))
+(defstringconstant ":TIME-THING:" ":PLACE-THING:" ":TIME-AND-PLACE:" 
+	":TIME-BUT-NOT-PLACE:" ":PLACE-BUT-NOT-TIME:" ":SITUATION:" 
+	"<TIME-AND-PLACE-THING>")
+
+(deftype complexity-property (isa semantic-property))
+(defstringconstant ":SIMPLE-PROPERTY:" ":COMPLEX-PROPERTY:" "<COMPLEXITY-PROPERTY>")
+
+(deftype display-action (isa semantic-action))
+(defstringconstant ":DISPLAYS-SOMETHING-ACTION:" "<DISPLAY-ACTION>")
+
+(deftype complete-property (isa semantic-property))
+(defstringconstant ":COMPLETE-PROPERTY:" ":INCOMPLETE-PROPERTY:" 
+	":PARTIALLY-COMPLETE-PROPERTY:" "<COMPLETE-PROPERTY>")
+(deftype complete-action (isa semantic-action))
+(defstringconstant ":COMPLETE-ACTION:" ":NOT-COMPLETE-ACTION:" 
+	":PARTIALLY-COMPLETE-ACTION:" "<COMPLETE-ACTION>")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Grammar
+
+;; Grammar types
+(deftype grammar-sentence (isa sentence))
+(deftype grammar-predicate (isa predicate))
+(deftype grammar-thing (isa thing))
+(deftype grammar-state (isa state))
+(deftype grammar-manner (isa manner))
+(deftype grammar-property (isa property))
+
+(deftype grammar-time (isa time))
+
+;; Grammar predicates
+(deftype grammar-predicate-pp-predicate (isa grammar-predicate))
+(deftype grammar-passive-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-thing-predicate (isa grammar-predicate))
+(deftype grammar-action-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-pp-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-pp-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-manner-predicate (isa grammar-predicate))
+(deftype grammar-is-pp-predicate (isa grammar-predicate))
+(deftype grammar-is-state-predicate (isa grammar-predicate))
+(deftype grammar-isnt-state-predicate (isa grammar-predicate))
+
+(deftype grammar-action-state-thing-infinitive-predicate 
+	(isa grammar-predicate))
+
+
+;; Grammar sentences
+(deftype grammar-conjunct-sentence (isa grammar-sentence))
+(deftype grammar-passive-sentence (isa grammar-sentence))
+(deftype grammar-thing-is-state-sentence (isa grammar-sentence))
+(deftype grammar-thing-isnt-state-sentence (isa grammar-sentence))
+(deftype grammar-person-predicate-sentence (isa grammar-sentence))
+(deftype grammar-person-have-thing-sentence (isa grammar-sentence))
+(deftype grammar-thing-is-pp-sentence (isa grammar-sentence))
+(deftype grammar-thing-pp-sentence (isa grammar-sentence))
+
+;; Grammar predicates
+(deftype grammar-passive-predicate (isa grammar-predicate))
+
+;; Grammar states
+(deftype grammar-state-pp (isa grammar-state))  ;; "alone at home"
+(deftype grammar-state-predicate (isa grammar-state))
+(deftype grammar-action-state (isa grammar-state))  ;; "live alone"
+(deftype grammar-state-action-thing (isa grammar-state))
+(deftype grammar-state-action-thing-pp (isa grammar-state))
+
+;; Grammar things
+(deftype grammar-thing-pp-thing (isa grammar-thing))
+
+;; PP
+(defstringconstant ":PP:" "<PP>")
+
+(deftype grammar-modifier-thing (isa grammar-modifier grammar-thing)) ;; 2 bedroom, 2 bedroom home
+
+(deftype grammar-conjunct (isa conjunct))
+(defstringtype ":CONJ:" ":BUT:" ":SENTENCE-CONJUNCT:" "<GRAMMAR-CONJUNCT>")
+
+;; (deftype context-word (isa property state)) -- Only use this in negation rule, not as state or property
+(defstringconstant ":PRE-NEGATION-WORD:" "<CONTEXT-WORD>")
+
+(deftype checkbox-checked (isa meta-grammar-property))
+(defstringconstant ":CHECKBOX-CHECKED:" ":CHECKBOX-UNCHECKED:" "<CHECKBOX-CHECKED>")
+
+(defstringconstant ":BULLET:" ":CHECKBOX:" "<META-GRAMMAR-THING>")
+
+(deftype wh-word (isa sentence-modifier))
+(defstringconstant ":WHAT:" ":WHO:" ":WHERE:" ":WHY:" "<WH-WORD>")
+
+;; Meta grammar items
+(deftype meta-grammar (isa root))
+(deftype meta-grammar-thing (isa meta-grammar))
+(deftype meta-grammar-property (isa meta-grammar))
+
+
+)
+
+
+
+
+
+
+
+

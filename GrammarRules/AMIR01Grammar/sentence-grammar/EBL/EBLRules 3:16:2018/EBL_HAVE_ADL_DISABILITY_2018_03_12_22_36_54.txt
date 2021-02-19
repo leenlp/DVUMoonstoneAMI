@@ -1,0 +1,12 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-ADL-DISABILITY::2018/03/12 22:36:54") 
+  (concept ":HAVE-ADL-DISABILITY:") 
+  (window 16.0) 
+  (words 
+    (":UNDERSTAND-QUESTION-PREDICATE:")) 
+  (tests (neg ?0))
+  (removeproperties directionality))
+
+)

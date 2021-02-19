@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:-0-2018/02/18 21:23:36") 
+  (specialized) 
+  (example-snippet "Breathing remained somewhat labored") 
+  (ordered true) 
+  (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:") 
+  (stype "<DISEASE-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":PHYSIOLOGIC-DIFFICULTY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

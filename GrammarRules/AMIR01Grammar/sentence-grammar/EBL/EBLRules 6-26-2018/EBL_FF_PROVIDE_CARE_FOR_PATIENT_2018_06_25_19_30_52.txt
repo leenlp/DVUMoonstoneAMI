@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-PROVIDE-CARE-FOR-PATIENT::2018/06/25 19:30:52") 
+  (specialized) 
+  (example-snippet "family is able to arrange 24 hour assist") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-PROVIDE-CARE-FOR-PATIENT:") 
+  (stype "<RECEIVE-SUPPORT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    (":ABLE::HELP:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

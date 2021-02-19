@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HAVE-DIFFICULTY-WITH-COMMUNICATION:-0-2019/12/11 21:23:12") 
+  (specialized) 
+  (example-snippet "is deaf") 
+  (ordered true) 
+  (concept ":HAVE-DIFFICULTY-WITH-COMMUNICATION:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":DEAF:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,440 @@
+'(
+wordrule
+
+((ruleid singleton-support-capture-rule)
+ (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:")
+ (words ("general patient/family contact")))
+
+((ruleid care-provider-communication-thing-rule)
+ (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:")
+ (words (":FF-CARE-PROVIDER:" ":FF:" "<FAMILY>") ("<COMMUNICATION-THING>")))
+
+((ruleid family-header-support-rule)
+ (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:")
+ (words (":CARING:"))
+ (tests ("headerContainsOneOf" ?0 (list "family" "family"))))
+ 
+((ruleid discharge-home-with-family-indicates-support-rule)
+ (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:")
+ (words (":HOME::WITH-FF:" ":FAMILY:" "<FRIEND-OR-FAMILY>"))
+ (tests ("headerContainsOneOf" ?0 (list "plan" "discharge" "transport"))))
+ 
+((ruleid per-patient-record-and-family-rule)
+ (concept ":POSSIBLE-SUPPORT:")
+ (ordered true)
+ (words ("per") (":PATIENT-RECORD:") ("and") (":FAMILY:" ":PATIENT::FAMILY:")))
+ 
+((ruleid per-family-partial-word-rule)
+ (concept ":POSSIBLE-SUPPORT:")
+ (juxtaposed true)
+ (words ("per") (":FAMILY:" ":PATIENT::FAMILY:")))
+ 			
+;; Support:  Wife:  PROBLEM: JavaFunction method doesn't get called...
+((ruleid support-in-header-plus-family-indicates-support-rule)
+ (concept ":HAVE-SUPPORT:")
+ (words (":FAMILY:" ":FRIEND:"))
+ (tests (notneg ?0)
+ 		("headerContainsOneOf" ?0 (list "support" "hipaa" "hippa" 
+ 		
+ 										;; "contact" -- 12/12/2019.  
+ 										;; Contact person not ne essarily supportive 
+ 										;; in Utah
+ 										
+ 										"inform"  "poa"
+ 										"transport" "discuss" "plan"))
+ 		(not ("annotationContainedInHeader" ?0))))
+ 
+((ruleid contact-person-word-rule)
+ (concept ":CONTACT-PERSON:")
+ (words ("contact person" "emergency contact")))
+ 
+((ruleid contact-person-is-family-rule)
+ (concept ":POSSIBLE-SUPPORT:")
+ (ordered true)
+ (words (":CONTACT-PERSON:") (":FAMILY:")))
+ 
+;; 7/13/2018:  These tend to refer to clinical mobility tests, not support.
+((ruleidXXX gait-header-plus-help-indicates-support-rule)
+ (concept ":POSSIBLE-SUPPORT:")
+ (words (":PROVISION-OF-CARE:"))
+ (tests (notneg ?0) ("headerContainsString" ?0 "gait"))) 
+
+((ruleid complex-rule-social-support-rule)
+ (specialized)
+ (concept ":POSSIBLE-SUPPORT:" )
+ (words (
+		":PROVIDER::INTERACT-WITH::FAMILY:"
+		":PROVIDER::WORK::FAMILY:"
+		;; ":POSSIBLE-SUPPORT::MEDICAL-FACILITY:" -- Matches "Patient receives all support through VA"
+ 		":PERSON-AT-PLACE::CAREGIVER:"
+ 		":TRANSPORTATION::PATIENT::LIVING-SPACE:"
+ 		":TRANSPORTATION::PATIENT::HOME:"
+ 		":TRANSPORTATION::PATIENT::MEDICAL-FACILITY:"
+		":ACCOMPANY::FAMILY:"
+ 		":LIVE-AT::FRIEND::HELP:"
+ 		":SEND::HOME::FAMILY:"
+ 		":ACCOMPANY::PATIENT::MEDICAL-FACILITY:"
+ 		":HELP::PATIENT::FOOD:"
+		":FAMILY::CARING:"
+		":PATIENT::RECEIVES::VISIT:"
+		":PATIENT::RECEIVES::CARING::VISIT:"
+		":DISCHARGE::HOME::PROVIDE-CARE:" ;; "discharged home in care of his wife"
+		":PATIENT::RETURN::LIVING-SPACE::FAMILY:"
+		":FAMILY::POSSIBLE-SUPPORT:"
+		":FRIEND::POSSIBLE-SUPPORT:"
+		":PATIENT::POSSIBLE-SUPPORT:"
+		":PATIENT::VISIT::FAMILY-MEMBERS:"
+		":FRIEND::HELP::PRESCRIPTION-MEDICATION:"
+		":FAMILY::VISIT::BEDSIDE:"
+		
+		;; 5/29/2017
+		":CAREGIVER::HELP::PROVISION-OF-CARE:"
+		":CAREGIVER::LIVE-AT::PATIENT:"
+		
+		))
+ (tests (notneg ?0)))
+ 
+((ruleid family-or-friends-send-or-accompany-patient-indicates-support-rule) 
+  (stype "<SENTENCE>")
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":FAMILY:" ":FRIEND:") 
+    ("@complex_event_transportation-verb-rule-1@" ":TRANSPORTATION::PATIENT:" ":SEND::PATIENT:" ":ACCOMPANY::PATIENT:")))
+
+((ruleid family-provides-transport-to-medical-facility-indicates-support) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (words 
+    (":FAMILY:" ":FRIEND:" ":CHURCH:") 
+    (":TRANSPORTATION:" ":ACCOMPANY:" ":SEND:") 
+    (":MEDICAL-FACILITY:" ":CAREGIVER:" "<PLACE>")))
+
+((ruleid family-provides-transportation-indicates-support) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":TRANSPORTATION:" ":ACCOMPANY:" ":SEND:") 
+    (":FAMILY:")))
+	
+((ruleid family-availability-for-transportation-indicates-support) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":FAMILY:")
+	(":AVAILABLE:" ":HELP:")
+	(":TRANSPORTATION:" ":PROVISION-OF-CARE:")
+    ))
+
+((ruleid discharge-home-with-family-member-indicates-support-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (words 
+    (":DISCHARGE:") 
+    (":LIVING-SPACE:") 
+    (":FAMILY:")))
+ 
+ ((ruleid patient-receives-provision-of-care-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":PATIENT:") 
+    (":RECEIVES:") 
+    (":PROVISION-OF-CARE:")) 
+  (tests 
+    (notneg ?2)))
+
+((ruleid receives-provision-of-care-from-family-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":RECEIVES:") 
+    (":PROVISION-OF-CARE:") 
+    (":FAMILY:")))
+
+((ruleid well-supported-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (words 
+    (":WELL-SUPPORTED:")) 
+  (tests 
+    (notneg ?0)))
+
+((ruleid patient-is-well-supported-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":PATIENT:") 
+    (":WELL-SUPPORTED:")) 
+  (tests 
+    (notneg ?1)))
+    
+ ((ruleid interact-with-family-connotes-support-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":FAMILY:") 
+    (":INTERACT-WITH:" ":CONTACT:") 
+    (":PATIENT:" ":AUTHOR:")))
+
+((ruleid travel-with-family-or-friends-suggests-social-support-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":TRANSPORTATION:" ":MOVE-TO:" ":ACCOMPANY:" 
+    "travel" "go" "went" "gone" "return" "returned") 
+    (":FAMILY:" ":PATIENT-AND-FAMILY:" ":FRIEND:")))
+	
+;; 6/6/2016
+((ruleid supportive-person-connotes-social-support-rule)
+ (concept ":POSSIBLE-SUPPORT:")
+ (words (":SUPPORTIVE-PERSON:")))
+ 
+((ruleid patient-has-supportive-person-connotes-social-support-rule)
+ (concept ":POSSIBLE-SUPPORT:")
+ (words (":PATIENT:") (":SUPPORTIVE-PERSON:")))
+ 
+;; 8/3/2018 Changed:  I don't want negated "family here" to imply lack of support.
+((ruleid family-here-denotes-support-rule-1) 
+  (concept ":FF-WITH-PATIENT:")
+  ;; (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true)
+  (words 
+    (":FAMILY:" ":FRIEND:" ":CHURCH:") 
+    (":HERE:")) 
+  (tests 
+    (notneg ?0) (notneg ?1)))
+
+((ruleid family-here-denotes-support-rule-2) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":FAMILY:" ":FRIEND:" ":CHURCH:") 
+    (":HERE:") 
+    (":PATIENT:")) 
+  (tests (notneg ?1)))
+
+((ruleid interact-with-family-regularly-indicates-support-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (words (":INTERACT-WITH:")(":FAMILY:") (":REGULARLY:")))
+
+((ruleid patient-interact-with-family-regularly-indicates-support-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (words (":PATIENT:") (":INTERACT-WITH:") (":FAMILY:") (":REGULARLY:")))
+
+((ruleid header-caregiver-boolean-rule-1) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (words 
+    (":HEADER-TRUE:" ":HEADER-FALSE:")) 
+  (tests 
+    ("headerContainsOneOf" ?0 
+      ("caregiver" "care giver")) 
+    ("headerCoversSingleWord" ?0)) 
+  (properties 
+    (directionality 
+      (if (neg ?0) "negated" "affirmed"))))
+
+((ruleid header-has-support-boolean-rule-1) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (words 
+    (":HEADER-TRUE:" ":HEADER-FALSE:")) 
+  (tests 
+    ("headerContainsString" ?0 "support") 
+	(not ("headerContainsOneOf" ?0 ("need" "commode" "toilet")))  ;; 5/29/2017  "Does patient need additional support? no"
+    ("headerContainsSingleSentenceWithSingleWord" ?0)) 
+  (properties 
+    (directionality (if (neg ?0) "negated" "affirmed"))))
+
+((ruleid strong-provision-of-care-indicates-support-rule)
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true)
+  (words ("strong" "considerable" "significant" "lots" "great deal" "good") 
+  		 (":PROVISION-OF-CARE:")))
+  
+((ruleid support-systems-provision-of-care-indicates-social-support-rule)
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true)
+  (words (":SUPPORT-SYSTEM:") (":PROVISION-OF-CARE:" ":POSSIBLE-SUPPORT:" ":GOOD:"))
+  (tests (notneg ?1)))
+  
+((ruleid family-watches-patient-rule)
+ (concept ":POSSIBLE-SUPPORT:")
+ (ordered true)
+ (words (":FAMILY:" ":FRIEND:") (":VISIT:" ":WATCH:") (":PATIENT:")))
+ 
+((ruleid help-is-available-rule)
+  (concept ":POSSIBLE-SUPPORT:")
+  (ordered true)
+  (words (":HELP:") ("is") (":AVAILABLE:")))
+  
+((ruleid ff-providing-help-with-patient-need-indicates-support-rule-1)
+ (concept ":POSSIBLE-SUPPORT:")
+ (ordered true)
+ (words (":FAMILY:" ":FRIEND:") (":PROVISION-OF-CARE:") (":PATIENT-NEED:"))
+ (tests (notneg ?1)))
+ 
+((ruleid ff-providing-help-with-patient-need-indicates-support-rule-2)
+ (concept ":POSSIBLE-SUPPORT:")
+ (ordered true)
+ (words (":FAMILY:" ":FRIEND:") (":PROVISION-OF-CARE:") 
+ 		(":PATIENT:") (":PATIENT-NEED:"))
+ (tests (notneg ?1)))
+ 
+
+;;;;;;;;;;;;;;;;;;;
+;; Support-related:
+
+((ruleid concerns-about-something-rule)
+ (example-snippet "concerns about access to care")
+ (stype "<CONCERN>")
+ (concept ":CONCERN:")
+ (ordered true)
+ (words (":CONCERN:") ("about" "with" "for") ("<THING>"))
+ (properties (object ?2)))
+
+;; PROVISION OF CARE:
+((ruleid general-provide-care-rule) 
+  (concept ":PROVISION-OF-CARE:") 
+  (words (":PROVISION-OF-CARE:" ":CARE:" ":HELP:" ":CARING::VISIT:"
+  			)))
+			
+;; 11/3/2016, e.g. "care provided by family
+((ruleid care-provided-by-family-rule)
+ (concept ":POSSIBLE-SUPPORT:")
+ (ordered true)
+ (words (":PROVISION-OF-CARE:" ":HISTORY:") (":GIVE:" ":PROVIDE:") ("by") (":FAMILY:")))
+  
+((ruleid care-or-support-for-patient-rule)
+ (concept ":PROVISION-OF-CARE:")
+ (ordered true)
+ (words (":PROVISION-OF-CARE:" ":SUPPORT:") ("for") (":PATIENT:")))
+
+((ruleid provide-care-with-patient-needs-rule) 
+ (concept ":PROVISION-OF-CARE:") 
+ (words (":PROVISION-OF-CARE:") (":PATIENT-NEED:" ":PATIENT:"))
+ (tests (notneg ?0)))
+
+((ruleid person-providing-care-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (words 
+    (":FRIEND:" ":FAMILY:" ":CHURCH:") 
+    (":PROVISION-OF-CARE:")
+    (":PATIENT:"))
+  (tests 
+    (notneg ?1)))
+ 
+((ruleid person-providing-care-at-place-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (words 
+    (":FRIEND:" ":FAMILY:" ":CHURCH:") 
+    (":PROVISION-OF-CARE:" ":TRANSPORTATION:" ":ACCOMPANY:" ":SEND:")
+    (":PATIENT:")
+    ("<PLACE>"))
+  (tests 
+    (notneg ?1)))
+    
+((ruleid family-involved-with-treatment-indicates-support-rule)
+ (concept ":POSSIBLE-SUPPORT:") 
+ (ordered true)
+ (words (":FRIEND:" ":FAMILY:" ":CHURCH:") (":INVOLVED:") (":TREATMENT:"))
+ (tests (notneg ?1)))
+
+((ruleid care-object-rule) 
+  (concept ":PATIENT-NEED:") 
+  (words 
+    (
+	;; Removed 1/11/2018
+	;; "<ADL-ACTIVITY>" "<IADL-ACTIVITY>" 
+	;; ":COOK:"
+	":FOOD:" ":CHORES:" 
+    	":PHYSICAL-ACTIVITY:" ":TRANSPORTATION:" ":PRESCRIPTION-MEDICATION:")))
+
+((ruleid supportive-family-rule) 
+  (stype ?1)
+  (concept ":SUPPORTIVE-PERSON:") 
+  (ordered true)
+  (words (":CARING:") (":FAMILY:" ":FRIEND:")))
+
+((ruleid person-with-patient-rule) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (ordered true) 
+  (words 
+    (":FAMILY:" ":FRIEND:") 
+    ("with" "at") 
+    (":PATIENT:" ":RESTING-PLACE:"))
+  (tests (not (hcr ?2 ":PATIENT-SUBJECT:"))))
+    
+((ruleid help-available-rule)
+  (concept ":HELP:")
+  (words (":HELP:") (":AVAILABLE:")))
+ 
+((ruleid cooking-word-rule-2)
+ (stype "<ADL-ACTIVITY>")
+ (concept ":COOK:")
+ (ordered true)
+ (words (":COOK:" ":PREPARE:") (":MEALS:")))
+ 
+((ruleid compound-transportation-rule) 
+  (concept ":TRANSPORTATION:") 
+  (words (":TRANSPORTATION:")(":TRANSPORTATION:")))
+  
+ ;;;;;;;;;;;;;;;;;
+;; Community service
+ 
+((ruleid community-service-types-rule) 
+  (concept ":ACCESS-TO-COMMUNITY-SERVICES:") 
+  (words (":PATIENT:" ":REFER:" ":REFERRAL:") (":COMMUNITY-SERVICE:"))
+  (tests (notneg ?1)))
+  
+ ((ruleid community-service-complex-rule) 
+  (concept ":ACCESS-TO-COMMUNITY-SERVICES:") 
+  (words (":PATIENT::COMMUNITY-SERVICE:"))
+  (tests (notneg ?0)))
+
+((ruleid help-from-church-connotes-access-to-community-services-rule-1) 
+  (concept ":ACCESS-TO-COMMUNITY-SERVICES:") 
+  (words (":POSSIBLE-SUPPORT:")) 
+  (tests (notneg ?0) (hcr ?0 ":CHURCH:")))
+  
+ ((ruleid help-from-church-connotes-access-to-community-services-rule-2) 
+  (concept ":ACCESS-TO-COMMUNITY-SERVICES:") 
+  (words (":CHURCH:") (":FOOD:" ":POSSIBLE-SUPPORT:" ":CARE:" ":PROVISION-OF-CARE:" ":VISIT:"))
+  (tests (notneg ?1))) 
+
+;; SOCIAL SUPPORT
+
+((ruleid family-support-is-family-support-rule) 
+  (concept ":PROVISION-OF-CARE:") 
+  (words 
+    ("family support" "support from family" "support from family and friends" 
+    "support from friends and family")))
+
+((ruleid provide-rule-1) 
+  ;; (stype "<EVENT>") 
+  (concept ":PROVIDE:") 
+  (words 
+    ("provide" "provides" "providing" "provided" "give" "gives" "giving" "gave" "given" "conveyed")))
+
+((ruleid care-rule-1) 
+  ;; (stype "<EVENT-THING>") 
+  (concept ":CARE:") 
+  (words 
+    ("care" "cares" "cared" "cares for" "cared for" "caring for" "care process" 
+	"support" "supports" "supported" "supportive of" "supporting" 
+	"takes care of" "take care of" "take care" "takes care"
+	"patient care" "supportive with care" "take care of" "takes care of" "taking care of")))
+
+((ruleid access-to-care-rule) 
+  ;; (stype "<EVENT-THING>") 
+  (concept ":CARE-ACCESS:") 
+  (words ("access") ("care")))
+
+((ruleid help-rule-1) 
+  (concept ":HELP:") 
+  (words 
+    (":SUPPORT:" ":CARE:" "help" "helps" "helped" "helping" 
+    "assists" "assist" "assisted" "assisting" "assistance" "aid" "aids" "aided" "aiding"
+    "manage" "manages" "managing" "caregiving" ":SUPERVISION:"
+    "min a" "min a of 2" "mod a of 2" "max a of 2" "mod a" "max a" "min a"
+    "minimal contact assistance" "moderate contact assistance" 
+    "maximal contact assistance" "maximum contact assistance"
+    "supervision/assistance")))
+
+)

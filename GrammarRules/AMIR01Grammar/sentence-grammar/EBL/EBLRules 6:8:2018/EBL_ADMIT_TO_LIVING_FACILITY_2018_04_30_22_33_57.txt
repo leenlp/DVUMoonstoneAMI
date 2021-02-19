@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADMIT-TO-LIVING-FACILITY::2018/04/30 22:33:57") 
+  (specialized) 
+  (example-snippet "admitted to nursing home") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":ADMIT-TO-LIVING-FACILITY:") 
+  (stype "<ADMIT-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ADMISSION:") 
+    (":AT-NURSING-HOME:" ":NURSING-HOME:" ":REHAB-CLINIC:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

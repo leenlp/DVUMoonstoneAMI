@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY::2018/07/12 18:09:54") 
+  (specialized) 
+  (example-snippet "seated with min assist") 
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 32.0) 
+  (words 
+    (":ADL-ACTIVITY:<ACTION>") 
+    (":PREP::MINIMAL::HELP:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/07/19 20:52:52") 
+  (specialized) 
+  (example-snippet "sister at side") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::PREP::ANATOMIC-LOCATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

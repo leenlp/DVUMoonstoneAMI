@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TRANSPORT-PATIENT-PREDICATE::2018/06/27 15:54:24") 
+  (specialized) 
+  (example-snippet "brought him to Vanderbilt") 
+  (ordered true) 
+  (sourceid "predicate-pp-rule") 
+  (concept ":TRANSPORT-PATIENT-PREDICATE:") 
+  (stype "<MOVE-THING-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":TRANSPORT-PATIENT-PREDICATE:") 
+    (":PREP::MEDICAL-FACILITY:")) 
+  (properties 
+    (predicate "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

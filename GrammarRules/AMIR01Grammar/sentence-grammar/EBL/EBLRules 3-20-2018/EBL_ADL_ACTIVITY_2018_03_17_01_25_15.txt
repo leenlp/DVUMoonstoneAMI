@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-ACTIVITY::2018/03/17 01:25:15") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":ADL-ACTIVITY:<THING>") 
+    (":PREP::ADL-FACILITY:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

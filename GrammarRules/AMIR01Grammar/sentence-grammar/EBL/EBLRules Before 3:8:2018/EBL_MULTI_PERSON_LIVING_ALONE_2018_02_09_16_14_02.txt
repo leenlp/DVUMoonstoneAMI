@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MULTI-PERSON-LIVING-ALONE::2018/02/09 16:14:02") 
+  (specialized) 
+  (example-snippet "The two of them live alone now") 
+  (sourceid "sentence-plus-time-rule") 
+  (concept ":MULTI-PERSON-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":MULTI-PERSON::LIVE-AT::ALONE:") 
+    (":SPECIFIC-TIME:<MODIFIER>")) 
+  (properties 
+    (sentence "?0") 
+    (time "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

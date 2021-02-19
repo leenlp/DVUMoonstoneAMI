@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-CAPTURE-RULE:-0-2018/08/03 10:14:18") 
+  (specialized) 
+  (example-snippet "no family was available") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::AVAILABLE:")) 
+  (removeproperties directionality)
+  (tests 
+    ("neg" ?0)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MEDICAL-CONDITION-CAUSING-ADL-DISABILITY::2018/04/25 18:04:35") 
+  (specialized) 
+  (example-snippet "generalized weakness and lightheadedness") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:") 
+  (stype "<DISEASE-THING>") 
+  (window 16.0) 
+  (words 
+    ("<QUALITY-PROPERTY>") 
+    ("<POOR-PHYSICAL-STATE-THING>")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

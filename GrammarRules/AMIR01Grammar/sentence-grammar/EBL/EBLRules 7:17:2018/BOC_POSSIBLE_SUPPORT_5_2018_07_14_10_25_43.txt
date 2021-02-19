@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-5-2018/07/14 10:25:43") 
+  (specialized) 
+  (example-snippet "caregiver contract") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":CAREGIVER::CONTRACT:")) 
+  (tests 
+    ("notneg" ?0))
+  (properties (directionality uncertain)))
+
+)

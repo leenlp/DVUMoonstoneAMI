@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-13-2018/07/09 18:26:00") 
+  (specialized) 
+  (example-snippet "decreased proprioception") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NERVE-CONDUCTION-LOSS:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

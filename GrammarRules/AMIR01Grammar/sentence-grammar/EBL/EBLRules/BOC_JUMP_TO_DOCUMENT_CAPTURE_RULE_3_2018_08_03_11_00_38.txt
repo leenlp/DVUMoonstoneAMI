@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-CAPTURE-RULE:-3-2018/08/03 11:00:38") 
+  (specialized) 
+  (example-snippet "no family was present") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF::HERE:" ":FF-WITH-PATIENT:" ":FF-AT-BEDSIDE:")) 
+  (tests 
+    ("neg" ?0)))
+
+)

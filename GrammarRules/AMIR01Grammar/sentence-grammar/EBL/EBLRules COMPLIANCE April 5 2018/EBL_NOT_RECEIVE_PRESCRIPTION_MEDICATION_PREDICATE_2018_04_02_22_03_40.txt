@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NOT-RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE::2018/04/02 22:03:40") 
+  (specialized) 
+  (example-snippet "has not been getting Sinemet") 
+  (ordered true) 
+  (sourceid "predicate-not-state-rule") 
+  (concept ":NOT-RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (tests (neg ?0))
+  (removeproperties directionality))
+
+
+)

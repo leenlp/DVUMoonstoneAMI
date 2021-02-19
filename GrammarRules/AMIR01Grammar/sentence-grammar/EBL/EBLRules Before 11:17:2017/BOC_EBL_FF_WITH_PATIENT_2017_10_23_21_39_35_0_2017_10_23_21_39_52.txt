@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+;; Removed 8/3/2018:  Trying to let "no family with patient" NOT denote lack of support
+  (ruleidXXX "BOC-EBL::FF-WITH-PATIENT::2017/10/23 21:39:35-0-2017/10/23 21:39:52") 
+  (specialized) 
+  (example-snippet "wife is at bedside") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 16.0) 
+  (bagofconcepts true) 
+  (words 
+    (":FF-WITH-PATIENT:")))
+
+)

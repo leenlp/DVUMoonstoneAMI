@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-3-2018/07/09 11:50:37") 
+  (specialized) 
+  (example-snippet "hx of confusion") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":HISTORY::PREP::CONFUSION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

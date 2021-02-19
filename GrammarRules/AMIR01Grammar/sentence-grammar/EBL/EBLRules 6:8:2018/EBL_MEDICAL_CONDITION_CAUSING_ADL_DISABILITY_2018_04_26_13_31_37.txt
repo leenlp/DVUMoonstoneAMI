@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MEDICAL-CONDITION-CAUSING-ADL-DISABILITY::2018/04/26 13:31:37") 
+  (specialized) 
+  (example-snippet "obstructive symptoms") 
+  (sourceid "disease-problem-or-symptom-rule") 
+  (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:") 
+  (stype "<DISEASE-THING>") 
+  (window 16.0) 
+  (words 
+    (":OBSTRUCTION:") 
+    (":SYMPTOM:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

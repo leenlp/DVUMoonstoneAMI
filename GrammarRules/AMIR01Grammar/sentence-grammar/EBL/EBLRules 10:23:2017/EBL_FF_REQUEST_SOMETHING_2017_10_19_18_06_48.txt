@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-REQUEST-SOMETHING::2017/10/19 18:06:48") 
+  (specialized) 
+  (example-snippet "patient and his wife have requested and are agreeable with transfer to Medical Center") 
+  (ordered true) 
+  (sourceid "person-have-thing-rule") 
+  (concept ":FF-REQUEST-SOMETHING:") 
+  (stype "<REQUEST-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT-AND-FAMILY:") 
+    ("@have-word-rule@") 
+    (":REQUEST::PREP::MOVE-TO-FACILITY:")) 
+  (properties 
+    (subject "?0") 
+    (object "?2")))
+
+)

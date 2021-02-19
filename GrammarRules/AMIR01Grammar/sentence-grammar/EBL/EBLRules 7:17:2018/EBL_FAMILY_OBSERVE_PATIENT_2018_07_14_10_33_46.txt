@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-OBSERVE-PATIENT::2018/07/14 10:33:46") 
+  (specialized) 
+  (example-snippet "wife noticed he was having difficulty getting") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FAMILY-OBSERVE-PATIENT:") 
+  (stype "<PERSON-OBSERVE-THING-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":OBSERVE:" ":OBSERVE:<THING>" ":INTERACT-WITH:")
+    (":PATIENT:"))
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

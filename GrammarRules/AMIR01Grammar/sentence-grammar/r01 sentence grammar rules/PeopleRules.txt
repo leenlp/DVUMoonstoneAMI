@@ -1,0 +1,276 @@
+'(
+wordrule
+
+;; 10/13/2017
+;; Self-care rules
+
+((ruleid infinitive-phrase-predicate-rule)
+ (concept ":UNABLE-TO-CARE-FOR-SELF:")
+ (ordered true)
+ (words ("too") ("<STATE>" "<PROPERTY>") (":CARE-FOR-SELF:")))
+
+((ruleid possessive-person-rule)
+ (stype "<PERSON-PROPERTY>")
+ (concept ":FAMILY-POSSESSIVE:")
+ (words ("boyfriend's" "girlfriend's" "bf's" "gf's" "friend's" "neighbor's"
+			"son's" "daughter's" "family's" "sister's" "brother's" "mom's" 
+			"dad's" "mother's" "father's" "moms" "dads")))
+			
+((ruleid possessive-person-rule)
+ (concept ":PERSON-POSSESSIVE:")
+ (words ("his" "her" "their")))
+ 
+((ruleid single-third-person-rule)
+ (concept ":PATIENT:")
+ (words ("him" "her")))
+			
+;; 10/6/2017
+((ruleid at-family-request-rule)
+ (concept ":WITH-FAMILY-REQUEST:")
+ (ordered true)
+ (words ("at") (":FAMILY-POSSESSIVE:" ":FAMILY:")
+ 	(":DESIRE:" ":DEMAND:" ":REQUEST:")))
+
+;;;; Restored from backup
+ 
+((ruleid according-to-person-rule)
+ (concept ":ACCORDING-TO-FAMILY:")
+ (ordered true)
+ (words ("according to") ("<FAMILY>")))
+ 
+((ruleid someone-word-rule)
+ (concept ":SOMEONE:")
+ (words ("someone")))
+
+((ruleid family-definition-rule)
+ (concept ":FAMILY:" )
+ (words (":SPOUSE:" ":SINGLE-FAMILY:" ":MULTI-FAMILY:")))
+ 
+ ;; PROVIDERS
+((ruleid provider-word-rule)
+ (stype "<MEDICAL-PROVIDER>")
+ (concept ":PROVIDER:")
+ (words ("therapist" "social worker" "sw" "nurse" "rn" "doctor" "dr" "dr." "md" 
+ 		"physician" "nursing aid" "house team" "house team staff" "house md" "team" 
+ 		"staff" "va staff" "home health aid" "ent" "primary care" "primary care physician" 
+ 		"pcp")))
+ 		
+((ruleid ff-care-provider-word-rule)
+ (concept ":FF-CARE-PROVIDER:")
+ (words ("primary care giver" "primary caregiver" "secondary support person" 
+ 		"secondary support" "secondary caregiver" "secondary caregivers"
+ 		"family/caregiver" "patient/guardian"
+ 		"patient/caregiver" "patient/guardian" "patient/family/caregiver")))
+ 		
+((ruleid doctor-plus-pseudonym-word-rule)
+ (concept ":PROVIDER:")
+ (juxtaposed true)
+ (words ("dr") (":PSEUDONYM:")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; FAMILY / FRIENDS / SELF
+
+((ruleid any-family-type-person-is-family-concept-rule)
+ ;; (stype "<FAMILY>")
+ (concept ":FAMILY:")
+ (words ("<FAMILY>")))
+ 
+((ruleid family-definition-rule)
+ (concept ":FAMILY:" )
+ (words (":SPOUSE:" ":SINGLE-FAMILY:" ":MULTI-FAMILY:" ":LIVING-FAMILY-MEMBER:")))
+ 
+((ruleid single-family-member-word-rule)
+ (concept ":SINGLE-FAMILY:")
+ (words (":SPOUSE:" ":NON-SPOUSE-SINGLE-FAMILY:" ":INDETERMINATE-SINGLE-FAMILY:")))
+ 
+((ruleid living-family-member-rule)
+ (concept ":LIVING-FAMILY-MEMBER:")
+ (ordered true) (juxtaposed true)
+ (words ("living" "surviving") (":SINGLE-FAMILY:")))
+	
+((ruleid non-spouse-family-member-rule)
+ (concept ":NON-SPOUSE-SINGLE-FAMILY:")
+ (words ( ":PARENT:" ":FOSTER-PARENT:" "son"  "daughter" "dtr" "dtrs" "dtrs."
+	"sibling"  "brother" "sister" "dtr" "mother's" "mom's" "father's" "dad's" 
+	"son's" "daughter's" "grandparent" "grandma" "grandpa" "grandfather" 
+	"grandmother" "step father" "stepfather" "step mother" "stepmother"
+	"step son" "stepson" "step daughter" "stepdaughter"
+	"sibling's" "brother's" "sister's" "relative" "relative's"  "child" "ex" 
+	"granddaughter" "grandson" "granddaughter's" "grandson's" "grandsons" "grandchildren"
+	"nok" "next of kin" "godson" "nephew" "niece" "grandchild" "grand child"
+	"family member" "aunt" "uncle" "aunt's" "uncle's")))
+	
+((ruleid parent-word-rule)
+ (concept ":PARENT:")
+ (words ("mother" "mom" "father" "dad" "parent" )))
+	
+((ruleid foster-parent-word-rule)
+ (concept ":FOSTER-PARENT:")
+ (words ("foster mom" "foster mother" "foster dad" "foster father" 
+ 			"foster parent")))
+ 			
+((ruleid family-property-word-rule)
+ (concept ":FAMILIAL:")
+ (words ("parental" "spousal")))
+ 
+((ruleid in-law-word-rule-1)
+ (stype ?0)
+ (concept ?0)
+ (ordered true)
+ (words (":SINGLE-FAMILY:") ("in law" "in-law")))
+ 
+ ((ruleid in-law-word-rule-2)
+ (concept ":SINGLE-FAMILY:")
+ (words ("daughter-in-law" "son-in-law" "mother-in-law" "father-in-law" "sister-in-law" "brother-in-law")))
+
+((ruleid multi-family-member-word-rule)
+ (concept ":MULTI-FAMILY:")
+ (words (":CHILDREN:" "family" "family's" "family members" "fam" 	
+ 		"friends/relatives"  "brothers" "sisters" "grandparents" "parents"
+		"sons" "daughters" "siblings" "relatives"  "family/friend" 
+		"parents" "family/significant other")))
+		
+((ruleid multi-children-word-rule)
+ (concept ":CHILDREN:")
+ (words ("children")))
+
+((ruleid spouse-word-rule)
+ (concept ":SPOUSE:")
+ (words ("wife" "wife's" "husband" "husband's" "spouse" "spouse's" 
+		"significant other" "significant other's" "so's" "spouse/significant other" "vet/spouse")))
+		
+((ruleid housewife-word-rule)
+ (concept ":HOUSEWIFE:")
+ (words ("housewife" "house wife")))
+
+;; Need better way to differentiate patient "he" from son, brother, etc.
+((ruleid patient-rule-1)
+ (concept ":PATIENT:")
+ (words (":SELF:" ":PATIENT-SUBJECT:" ":PATIENT-OBJECT:" "he" 
+ 			"patient" "pt" "pt." "vet" "veteran" "she" "patienet")))
+		
+((ruleid third-person-person-rule)
+ (concept ":PERSON:")
+ (words ("he" "she" "they" "them")))
+		
+((ruleid self-word-rule)
+ (concept ":SELF:")
+ (words ("i" "we" "you" "me" "myself" "himself" "herself" )))
+ 
+((ruleid male-word-rule)
+ (concept ":MALE:")
+ (words ("male" "man" "boy" "gentleman")))
+ 
+((ruleid female-word-rule)
+ (concept ":FEMALE:")
+ (words ("female" "woman" "girl" "lady")))
+
+((ruleid third-person-possessive-rule)
+ (macro "_POSSESSIVE_")
+ (words ("his" "her" "their" "this veteran's" "the veteran's" "this patient's" 
+	"the patient's" "patient's" "his own" "her own" "their own" "vet's" "veteran's"
+	"sister-in-law's" "brother-in-law's")))
+	
+((ruleid ff-word-rule)
+ (concept ":FF:")
+ (words (":FRIEND:" ":FAMILY:" "family and friends" "friends and family" 
+ 			 "patient/family" "family/patient")))
+
+((ruleid friend-rule)
+ (concept ":FRIEND:")
+ (words ("girlfriend" "gf" "boyfriend" "boyfriend's" "girlfriend's" 
+		"bf" "friend" "friends" "friend's" "neighbor" "neighbors" 
+		"neighbor's" "neighborhood friends" "friend of the family" 
+		"friend/neighbor" "family/friend" "family/friends" "family / friend"
+		 "fiancee" "partner" "family friends")))
+		 
+((ruleid candidate-word-rule)
+ (concept ":CANDIDATE:")
+ (words ("candidate")))
+
+		 
+;; REMOVING THESE FOR THE TIME BEING...
+;; 6/13/2018
+;; PRONOUN FOR USE WITH REAL REFERENCE RESOLUTION
+((ruleidXXX male-single-subject-person-pronoun-rule)
+ (concept ":MALE-SINGLE-SUBJECT-PERSON-PRONOUN:")
+ (words ("he"))
+ (properties (pronoun true) (reftype person) (aspect subject) (gender male)  
+  			(number single)))
+ 
+((ruleidXXX female-single-subject-person-pronoun-rule)
+ (concept ":FEMALE-SINGLE-SUBJECT-PERSON-PRONOUN:")
+ (words ("she"))
+ (properties (pronoun true) (reftype person) (aspect subject) (gender female) 
+ 	(number single)))
+ 
+((ruleidXXX male-single-object-person-pronoun-rule)
+ (concept ":MALE-SINGLE-OBJECT-PERSON-PRONOUN:")
+ (words ("him"))
+ (properties (pronoun true) (reftype person) (aspect object) (gender male) 
+ 	(number single)))
+ 
+((ruleidXXX female-single-object-person-pronoun-rule)
+ (concept ":FEMALE-SINGLE-OBJECT-PERSON-PRONOUN:")
+ (words ("her"))
+ (properties (pronoun true) (reftype person)(aspect object) (gender female) 
+ 			(number single)))
+ 
+((ruleidXXX ungendered-plural-subject-person-pronoun-rule)
+ (concept ":UNGENDERED-PLURAL-SUBJECT-PRONOUN:")
+ (words ("they"))
+ (properties (pronoun true) (reftype undetermined) (aspect subject) 
+ 			(gender neutral) 
+ 			(number plural)))
+ 			
+((ruleidXXX ungendered-plural-object-person-pronoun-rule)
+ (concept ":UNGENDERED-PLURAL-OBJECT-PRONOUN:")
+ (words ("them"))
+ (properties (pronoun true) (reftype undetermined) (aspect object) 
+ 			(gender neutral) 
+ 			(number plural)))
+ 
+((ruleidXXX ungendered-single-subject-person-pronoun-rule)
+ (concept ":UNGENDERED-SINGLE-PRONOUN:")
+ (words ("it"))
+ (properties (pronoun true) (aspect indeterminate) (gender neutral) 
+ 			(number single)))
+ 
+		 
+;; CONJUNCTION RULES
+ 
+((ruleid patient-and-family-conjunct-rule-1)
+ (concept ":PATIENT-AND-FAMILY:")
+ (ordered true)
+ (words (":PATIENT:") ("and" "or") (":FAMILY:")))
+
+((ruleid patient-and-family-conjunct-rule-2)
+ (concept ":PATIENT-AND-FAMILY:")
+ (ordered true)
+ (words (":FAMILY:") ("and" "or") (":PATIENT:")))
+ 
+((ruleid patients-family-word-rule)
+ (concept ":PATIENTS-FAMILY:")
+ (juxtaposed true)
+ (words ("the patient's") (":FAMILY:")))
+ 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;  Disabled
+
+((ruleidXX patient-and-spouse-conjunct-rule)
+ (concept ":PATIENT-AND-SPOUSE:")
+ (ordered true)
+ (words (":PATIENT:") ("and") (":SPOUSE:")))
+ 
+((ruleidXX family-conjunction-rule)
+ (concept ":FAMILY:")
+ (ordered true)
+ (words (":FAMILY:") ("and") (":FAMILY:")))
+ 
+((ruleidXX ff-conjunction-rule)
+ (concept ":FF:")
+ (ordered true)
+ (words (":FF:") ("and") (":FF:")))
+ 
+)

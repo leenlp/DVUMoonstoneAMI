@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LIVE-INDEPENDENTLY::2018/03/21 12:28:23") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "pre-negation-context-rule-file") 
+  (concept ":LIVE-INDEPENDENTLY:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":PRE-NEGATION-WORD:") 
+    (":INDEPENDENT-LIVING:<PREDICATE>")) 
+  (properties 
+    (directionality "negated")))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MULTI-PERSON::2018/02/24 13:20:16") 
+  (specialized) 
+  (example-snippet "two of them") 
+  (ordered true) 
+  (sourceid "number-thing-rule") 
+  (concept ":MULTI-PERSON:") 
+  (stype "<PERSON>") 
+  (window 32.0) 
+  (words 
+    (":NUMBER:" "both") 
+    (":PERSON:")) 
+  (properties 
+    (number "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

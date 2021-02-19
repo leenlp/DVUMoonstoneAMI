@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-IN-MARGINAL-SUPPORT-FACILITY::2017/11/03 20:46:07") 
+  (specialized) 
+  (example-snippet "he was sent to the shelter today") 
+  (sourceid "sentence-plus-time-rule") 
+  (concept ":PATIENT-IN-MARGINAL-SUPPORT-FACILITY:") 
+  (stype "<LIVING-FACILITY-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT::IN-MARGINAL-SUPPORT-FACILITY:") 
+    (":SPECIFIC-TIME:<MODIFIER>")) 
+  (properties 
+    (sentence "?0") 
+    (time "?1")))
+
+)

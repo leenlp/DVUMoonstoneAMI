@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PERFORM-ADL-WITHOUT-HELP::2018/01/11 15:32:57") 
+  (specialized) 
+  (example-snippet "walk to the bathroom without help") 
+  (ordered true) 
+  (sourceid "action-property-rule") 
+  (concept ":PERFORM-ADL-WITHOUT-HELP:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":MOVE-TO-ADL-FACILITY:<ACTION>") 
+    (":WITHOUT-HELP:")) 
+  (properties 
+    (action "?0") 
+    (property "?1")))
+
+)

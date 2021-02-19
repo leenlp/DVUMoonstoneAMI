@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:LACK-SUPPORT:-0-2018/03/07 17:25:53") 
+  (specialized) 
+  (example-snippet "husband unable to take care of her") 
+  (ordered true) 
+  (concept ":LACK-SUPPORT:") 
+  (stype "<LACK-SUPPORT-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-UNABLE-TO-CARE-FOR-PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

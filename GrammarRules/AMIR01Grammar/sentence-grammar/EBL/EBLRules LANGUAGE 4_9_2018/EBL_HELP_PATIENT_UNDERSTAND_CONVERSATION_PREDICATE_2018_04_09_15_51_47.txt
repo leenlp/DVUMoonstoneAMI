@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HELP-PATIENT-UNDERSTAND-CONVERSATION-PREDICATE::2018/04/09 15:51:47") 
+  (specialized) 
+  (example-snippet "help to make sure that she understands what we are talking about") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":HELP-PATIENT-UNDERSTAND-CONVERSATION-PREDICATE:") 
+  (stype "<UNDERSTAND-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":HELP:<ACTION>") 
+    (":PATIENT::UNDERSTAND-CONVERSATION-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

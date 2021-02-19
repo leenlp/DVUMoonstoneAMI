@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:NOT-LIVING-ALONE:-2-2018/03/09 23:22:14") 
+  (specialized) 
+  (example-snippet "patient was discharged to return home to her parents") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-LIVE-WITH-FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

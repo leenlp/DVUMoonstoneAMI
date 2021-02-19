@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-2-2018/07/19 12:14:41") 
+  (specialized) 
+  (example-snippet "unable to recall") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":UNABLE::REMEMBER-ACTION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

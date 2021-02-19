@@ -1,0 +1,24 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PERSON-IS-DEPRESSED::2018/02/24 13:12:24") 
+  (specialized) 
+  (example-snippet "he says that he is depressed") 
+  (ordered true) 
+  (sourceid "communication-event-rule") 
+  (concept ":PERSON-IS-DEPRESSED:") 
+  (stype "<DEPRESSION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":COMMUNICATE-AFFIRMATIVELY::PERSON-IS-DEPRESSED:")) 
+  (properties 
+    (communication "true") 
+    (person "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (removeproperties directionality))
+
+)

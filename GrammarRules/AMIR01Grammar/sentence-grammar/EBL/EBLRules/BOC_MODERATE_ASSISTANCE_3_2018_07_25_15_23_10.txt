@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:MODERATE-ASSISTANCE:-3-2018/07/25 15:23:10") 
+  (specialized) 
+  (example-snippet "moderate assistance") 
+  (ordered true) 
+  (concept ":MODERATE-ASSISTANCE:") 
+  (stype "<HELP>") 
+  (bagofconcepts true) 
+  (words 
+    (":MODERATE::HELP:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

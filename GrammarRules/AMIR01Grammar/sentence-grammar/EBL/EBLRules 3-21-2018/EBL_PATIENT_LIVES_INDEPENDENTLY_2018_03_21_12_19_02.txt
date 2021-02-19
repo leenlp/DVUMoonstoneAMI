@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-LIVES-INDEPENDENTLY::2018/03/21 12:19:02") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-LIVES-INDEPENDENTLY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":INDEPENDENT-LIVING:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

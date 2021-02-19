@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DIFFICULTY-WITH-COMMUNICATION::2018/03/16 12:28:16") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":DIFFICULTY-WITH-COMMUNICATION:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":DIFFICULTY:<THING>") 
+    (":PREP::COGNITIVE-ABILITY-MODE::COMMUNICATION:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

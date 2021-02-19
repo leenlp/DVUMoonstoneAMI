@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-STOP-TAKING-PRESCRIPTION-MEDICATION-SENTENCE::2018/04/03 14:21:32") 
+  (specialized) 
+  (example-snippet "she stopped taking her medicine") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-STOP-TAKING-PRESCRIPTION-MEDICATION-SENTENCE:") 
+  (stype "<GIVE-TAKE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":STOP-TAKING-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

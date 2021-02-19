@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-NOT-LIVING-ALONE::2018/03/09 11:35:38") 
+  (specialized) 
+  (example-snippet "unclear if they will be immediately moving back in together") 
+  (ordered true) 
+  (sourceid "unclear-if-sentence-rule") 
+  (concept ":PATIENT-NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    ("unclear") 
+    (":PATIENT-MOVE-IN-WITH-FRIEND:")) 
+  (properties 
+    (assertion "hypothetical")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-IN-NURSING-HOME-THING::2017/10/25 20:45:44") 
+  (specialized) 
+  (example-snippet "female from the nursing home") 
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":PATIENT-IN-NURSING-HOME-THING:") 
+  (stype "<LIVE-IN-FACILITY-THING>") 
+  (window 16.0) 
+  (words 
+    (":FEMALE:<THING>") 
+    (":AT-NURSING-HOME:<PREDICATE>")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")))
+
+)

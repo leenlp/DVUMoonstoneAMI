@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COME-WITH-FF::2018/03/01 20:42:32") 
+  (specialized) 
+  (example-snippet "comes here today with a friend") 
+  (ordered true) 
+  (sourceid "action-thing-pp-rule") 
+  (concept ":COME-WITH-FF:") 
+  (stype "<TRAVEL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":COME:<ACTION>") 
+    (":HERE:<THING>") 
+    (":WITH-FF:<PP>")) 
+  (properties 
+    (action "?0") 
+    (first-object "?1") 
+    (pp-object "[thing, ?2]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

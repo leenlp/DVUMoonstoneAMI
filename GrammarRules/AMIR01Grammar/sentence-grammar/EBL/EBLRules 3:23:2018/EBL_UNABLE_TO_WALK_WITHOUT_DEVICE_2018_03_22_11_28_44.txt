@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-WALK-WITHOUT-DEVICE::2018/03/22 11:28:44") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "predicate-pp-rule") 
+  (concept ":UNABLE-TO-WALK-WITHOUT-DEVICE:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ABLE-TO-WALK:") 
+    (":PREP::ADL-CANE-WALKER:")) 
+  (properties 
+    (predicate "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

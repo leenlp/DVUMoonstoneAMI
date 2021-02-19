@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE:-0-2020/01/09 13:42:31") 
+  (specialized) 
+  (example-snippet "not take any prescriptions") 
+  (ordered true) 
+  (concept ":NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":TAKE-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (tests 
+    ("neg" ?0)) 
+  (removeproperties directionality))
+
+)

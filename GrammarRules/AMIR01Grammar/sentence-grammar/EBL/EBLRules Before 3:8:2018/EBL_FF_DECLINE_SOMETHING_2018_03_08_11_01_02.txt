@@ -1,0 +1,24 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-DECLINE-SOMETHING::2018/03/08 11:01:02") 
+  (specialized) 
+  (example-snippet "the patients family declined additional treatment") 
+  (ordered true) 
+  (sourceid "EBL::FAMILY-COMMUNICATE-SOMETHING-SENTENCE::2017/10/05 12:48:06") 
+  (concept ":FF-DECLINE-SOMETHING:") 
+  (stype "<REQUEST-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":DECLINE::TREATMENT:")) 
+  (properties 
+    (communication "true") 
+    (person "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (removeproperties directionality))
+
+)

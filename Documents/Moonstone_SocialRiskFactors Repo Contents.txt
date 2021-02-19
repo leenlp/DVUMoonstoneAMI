@@ -1,0 +1,6 @@
+In this repository are the following items:
+
+	1. Moonstone Social-Risk-Factors-Identification code base
+	2. User guide to running Moonstone
+	3. Annotation guideilines used for creating reference standard for training and evaluating Social Risk Factor Identification
+	

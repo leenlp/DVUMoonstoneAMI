@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PROVIDER-COMMUNICATE-WITH-FAMILY-SENTENCE::2019/12/30 23:34:42") 
+  (specialized) 
+  (example-snippet "team was able to meet with the patients sister today") 
+  (sourceid "sentence-plus-time-rule") 
+  (concept ":PROVIDER-COMMUNICATE-WITH-FAMILY-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PROVIDER::ABLE::MEET::WITH-FF:") 
+    (":SPECIFIC-TIME:")) 
+  (properties 
+    (sentence "?0") 
+    (time "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

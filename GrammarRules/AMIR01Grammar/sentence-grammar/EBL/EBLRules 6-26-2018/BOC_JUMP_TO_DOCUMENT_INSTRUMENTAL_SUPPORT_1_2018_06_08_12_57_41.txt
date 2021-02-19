@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-1-2018/06/08 12:57:41") 
+  (specialized) 
+  (example-snippet "relatives in Nashville with whom she could stay posttransplant") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-WITH-WHOM-PATIENT-COULD-HYPOTHETICALLY-LIVE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

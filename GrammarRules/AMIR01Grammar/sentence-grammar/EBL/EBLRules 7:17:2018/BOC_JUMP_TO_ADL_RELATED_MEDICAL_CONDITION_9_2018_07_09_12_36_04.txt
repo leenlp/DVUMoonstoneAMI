@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-9-2018/07/09 12:36:04") 
+  (specialized) 
+  (example-snippet "impaired staticdynamic balance") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PERCEPTION-IMPAIRED:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

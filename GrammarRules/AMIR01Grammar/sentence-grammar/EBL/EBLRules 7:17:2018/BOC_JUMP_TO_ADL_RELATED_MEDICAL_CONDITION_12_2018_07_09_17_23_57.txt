@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-12-2018/07/09 17:23:57") 
+  (specialized) 
+  (example-snippet "Impaired fine motor coordination") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":IMPAIRED::NEUROLOGICAL-ABILITY-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

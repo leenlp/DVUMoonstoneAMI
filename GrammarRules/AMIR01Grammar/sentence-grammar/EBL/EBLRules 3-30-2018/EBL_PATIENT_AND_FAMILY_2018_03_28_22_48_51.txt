@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-AND-FAMILY::2018/03/28 22:48:51") 
+  (specialized) 
+  (example-snippet "the patient or her mother") 
+  (ordered true) 
+  (sourceid "general-thing-conjunct-rule") 
+  (concept ":PATIENT-AND-FAMILY:") 
+  (stype "<PERSON>") 
+  (window 16.0) 
+  (flags conj) 
+  (words 
+    (":PATIENT:") 
+    ("@conjunct-word-rule@") 
+    (":PERSON-POSSESSIVE::PARENT:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

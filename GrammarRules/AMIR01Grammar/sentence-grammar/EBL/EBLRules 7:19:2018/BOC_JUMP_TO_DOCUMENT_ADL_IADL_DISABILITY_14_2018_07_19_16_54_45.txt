@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-14-2018/07/19 16:54:45") 
+  (specialized) 
+  (example-snippet "required multiple verbal cues") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED::COGNITIVE-ABILITY-MODE::THERAPY-PROMPT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-19-2018/06/25 21:48:07") 
+  (specialized) 
+  (example-snippet "contact husband") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":CONTACT-ACTION::SPOUSE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

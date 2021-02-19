@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TAKE-PRESCRIPTION-MEDICATION-PREDICATE::2018/05/10 12:54:51") 
+  (specialized) 
+  (example-snippet "take to any further tamoxifen") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":TAKE-PRESCRIPTION-MEDICATION-PREDICATE:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":TAKE:") 
+    (":PREP::PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

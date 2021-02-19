@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-UNABLE-TO-CARE-FOR-SELF::2017/10/14 01:04:59") 
+  (specialized) 
+  (example-snippet "she is too weak to care for herself") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-UNABLE-TO-CARE-FOR-SELF:") 
+  (stype "<PATIENT-PROVISION-OF-SELF-CARE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":WEAK::CARE-FOR-SELF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

@@ -1,0 +1,111 @@
+'(
+wordrule
+
+((ruleidXXX sentence-conj-sentence-rule)
+ (stype "<GRAMMAR-CONJUNCT-SENTENCE>")
+ ;; don't join meanings across sentences.  Eventually return a list.
+ (concept ?0)  
+ (ordered true)
+ (window 32)
+ (flags conj)
+ (words ("<SENTENCE>") 
+ 		;; ("_CONJ_" "<SENTENCE-CONJUNCT>")
+ 		("and" "or" "and/or" "and or" "as well as" "&" "but" ","
+ 		"as well as" ", and")
+ 		("<SENTENCE>" "<THING>"))
+ (properties (first-sentence ?0) (second-sentence ?2)))
+ 
+ ;;;;;;;;;;;; 11/17/2017 NEW TEST CONJUNCT RULES ;;;;;;;;;;;;;;;;;;;;
+
+;; LOUSY CONJUNCTION PLANNING:  NEED TO HANDLE DIFFERENCES BETWEEN 
+;; "and" and "or"
+((ruleid general-recursive-conjunct-rule) 
+  ;; (complex-concept)
+  (concept ?0) 
+  (ordered true) 
+  (flags conj) 
+  (window 32)
+  (words ("<THING>") 
+  		("and" "or" "and/or" "and or" "as well as" "&" "but" ","
+ 		"as well as" ", and" "including") 
+  		("@general-thing-conjunct-rule@"
+  		"@general-recursive-conjunct-rule@"))
+  (output-format (* # formatted))
+  (tests (not ("containsConjunct" ?0))
+ 		;;  (notneg ?0) 
+ 		;;  (notneg ?2) 
+ 		 ("coveredTextPercentGreaterThan" ?0 0.65)
+  		 ("formattedTypesAreUnifiable" ?*)))
+  
+((ruleid general-thing-conjunct-rule) 
+  (stype ?0)
+  ;; (complex-concept)
+  (concept ?0) 
+  (ordered true) 
+  (flags conj) 
+  (words ("<THING>") 
+  		 ("and" "or" "and/or" "and or" "as well as" "&" "but" ","
+ 		"as well as" ", and") 
+ 		("<THING>"))
+  (output-format (* # *))
+  (tests 
+  		;; 3/7/2018:  Could not create conjunct for "no sign or symptom",
+  		;; because sign and symptom both get negated via ConText...
+  		;; (notneg ?0) 
+  		;; (notneg ?2) 
+  		(not ("containsConjunct" ?0))
+  		(not ("containsConjunct" ?2))
+  		("coveredTextPercentGreaterThan" ?0 0.5)
+ 		("coveredTextPercentGreaterThan" ?2 0.5)
+  		("formattedTypesAreUnifiable" ?*)))
+
+	
+((ruleid general-state-state-conjunct-rule) 
+  (stype ?0)
+  (concept ?0) 
+  (ordered true) 
+  (flags conj) 
+  (words ("<STATE>")
+  		("and" "or" "and/or" "and or" "as well as" "&" "but" ","
+ 		"as well as" ", and") 
+ 		("<STATE>"))
+  (output-format (* # *))
+  (tests (notneg ?0) (notneg ?2) 
+  		(not ("containsConjunct" ?0))
+  		(not ("containsConjunct" ?2))
+  		("formattedTypesAreUnifiable" ?*)))
+  		
+((ruleid general-action-state-conjunct-rule) 
+  (stype ?0)
+  (concept ?0) 
+  (ordered true) 
+  (flags conj) 
+  (words ("<ACTION>") 
+  		("and" "or" "and/or" "and or" "as well as" "&" "but" ","
+ 		"as well as" ", and") 
+ 		("<ACTION>"))
+  (output-format (* # *))
+  (tests (notneg ?0) (notneg ?2) 
+  		(not ("containsConjunct" ?0))
+  		(not ("containsConjunct" ?2))
+  		("formattedTypesAreUnifiable" ?*)))
+
+((ruleid general-property-property-conjunct-rule) 
+  (stype ?0)
+  (concept ?0) 
+  (ordered true) 
+  (flags conj) 
+  (words ("<PROPERTY>") 
+  		("and" "or" "and/or" "and or" "as well as" "&" "but" ","
+ 		"as well as" ", and") 
+ 		("<PROPERTY>"))
+  (output-format (* # *))
+  (tests (notneg ?0) (notneg ?2) 
+  		(not ("containsConjunct" ?0))
+  		(not ("containsConjunct" ?2))
+  		("formattedTypesAreUnifiable" ?*)
+  		))
+
+
+)
+

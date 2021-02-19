@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LACK-SUPPORT::2018/01/12 15:14:19") 
+  (specialized) 
+  (example-snippet "wife unable to care for him") 
+  (ordered true) 
+  (sourceid "person-thing-thing-rule") 
+  (concept ":LACK-SUPPORT:") 
+  (stype "<LACK-SUPPORT-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":SPOUSE:") 
+    (":INABILITY::PROVISION-OF-CARE:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

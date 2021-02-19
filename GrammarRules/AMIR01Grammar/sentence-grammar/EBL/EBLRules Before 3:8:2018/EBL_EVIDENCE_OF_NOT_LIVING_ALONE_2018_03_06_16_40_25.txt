@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::EVIDENCE-OF-NOT-LIVING-ALONE::2018/03/06 16:40:25") 
+  (specialized) 
+  (example-snippet "household stressors with both of her children") 
+  (ordered true) 
+  (sourceid "EBL::SOCIAL-STRESSOR::2018/03/06 16:39:58") 
+  (concept ":EVIDENCE-OF-NOT-LIVING-ALONE:") 
+  (stype "<LIVING-THING>") 
+  (window 16.0) 
+  (words 
+    (":SOCIAL-STRESSOR:") 
+    (":PREP::CHILDREN:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

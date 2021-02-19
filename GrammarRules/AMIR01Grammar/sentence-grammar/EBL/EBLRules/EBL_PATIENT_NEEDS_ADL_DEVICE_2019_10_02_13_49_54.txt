@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-NEEDS-ADL-DEVICE::2019/10/02 13:49:54") 
+  (specialized) 
+  (example-snippet "he relies on the use of a walker") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-NEEDS-ADL-DEVICE:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":NEED-ADL-DEVICE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

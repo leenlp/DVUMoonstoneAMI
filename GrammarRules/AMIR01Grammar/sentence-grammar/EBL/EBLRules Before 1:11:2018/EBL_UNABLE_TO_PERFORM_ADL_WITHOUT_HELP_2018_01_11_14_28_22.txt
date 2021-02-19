@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-PERFORM-ADL-WITHOUT-HELP::2018/01/11 14:28:22") 
+  (specialized) 
+  (example-snippet "unable to walk to the bathroom without help") 
+  (ordered true) 
+  (sourceid "state-predicate-predicate-rule") 
+  (concept ":UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":INABILITY:") 
+    (":PERFORM-ADL-WITHOUT-HELP:")) 
+  (properties 
+    (state "?0") 
+    (predicate "?1"))
+  (tests (notneg ?0) (notneg ?1)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-ADMITTED-FROM-LIVING-FACILITY::2018/02/28 18:26:48") 
+  (specialized) 
+  (example-snippet "77yearold female who is brought down by way of ambulance from XYZ Nursing Home") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-ADMITTED-FROM-LIVING-FACILITY:") 
+  (stype "<ADMIT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FEMALE:" ":PERSON:" ":PATIENT:" ":MALE:") 
+    (":ADMITTED-FROM-LIVING-FACILITY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

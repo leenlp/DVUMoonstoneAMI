@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HAVE-SUPPORT:-2-2018/07/12 23:41:29") 
+  (specialized) 
+  (example-snippet "husband  is able to provide 24 hour supervisionassistance") 
+  (ordered true) 
+  (concept ":HAVE-SUPPORT:") 
+  (stype "<RECEIVE-SUPPORT-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::ABLE::PROVIDE::CONSTANT-PROVISION-OF-CARE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

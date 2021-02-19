@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-COMMUNICATE-VIA-TRANSLATOR-SENTENCE::2018/04/09 14:10:24") 
+  (specialized) 
+  (example-snippet "information was conveyed with the use of a translator") 
+  (ordered true) 
+  (sourceid "passive-sentence-rule") 
+  (concept ":PATIENT-COMMUNICATE-VIA-TRANSLATOR-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":INFORMATION:") 
+    (":COMMUNICATE-VIA-TRANSLATOR-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1") 
+    (verb-form "passive")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

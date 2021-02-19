@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:-6-2018/04/03 16:54:46") 
+  (specialized) 
+  (example-snippet "poor compliance with obstructive sleep apnea therapy") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":POOR-COMPLIANCE-WITH-TREATMENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

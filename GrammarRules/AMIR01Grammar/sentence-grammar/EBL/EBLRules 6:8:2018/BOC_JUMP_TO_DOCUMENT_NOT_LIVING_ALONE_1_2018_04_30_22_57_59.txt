@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:-1-2018/04/30 22:57:59") 
+  (specialized) 
+  (example-snippet "treat at Siskin Rehab Hospital") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":TREATMENT::AT-NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

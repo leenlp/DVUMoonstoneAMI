@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-NOT-LIVING-ALONE:-0-2018/03/13 13:24:35") 
+  (specialized) 
+  (example-snippet "she will probably be hospitalized in respite care") 
+  (ordered true) 
+  (concept ":PATIENT-NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-MOVE-TO-FACILITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

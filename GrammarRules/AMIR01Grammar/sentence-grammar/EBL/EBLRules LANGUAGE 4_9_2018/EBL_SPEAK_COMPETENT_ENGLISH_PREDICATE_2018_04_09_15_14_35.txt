@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::SPEAK-COMPETENT-ENGLISH-PREDICATE::2018/04/09 15:14:35") 
+  (specialized) 
+  (example-snippet "speaks English fairly well") 
+  (ordered true) 
+  (sourceid "action-manner-predicate-rule") 
+  (concept ":SPEAK-COMPETENT-ENGLISH-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":SPEAK::ENGLISH:") 
+    (":GOOD:<MANNER>")) 
+  (properties 
+    (action "?0") 
+    (manner "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-PRIMARY-FOREIGN-LANGUAGE-SENTENCE::2018/04/09 15:13:09") 
+  (specialized) 
+  (example-snippet "her primary language is Spanish") 
+  (ordered true) 
+  (sourceid "thing-is-thing-sentence-rule") 
+  (concept ":PATIENT-PRIMARY-FOREIGN-LANGUAGE-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PERSON-POSSESSIVE::PRIMARY-LANGUAGE:") 
+    (":SPANISH:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1") 
+    (object "[object, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

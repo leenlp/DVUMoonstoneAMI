@@ -1,0 +1,1845 @@
+'(
+	wordrule
+
+(
+  (ruleid "OWL-MODIFIER-DefiniteExistence_Certainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#DefiniteExistence_Certainty") 
+  (concept ":DEFINITEEXISTENCE_CERTAINTY:") 
+  (stype "<DEFINITEEXISTENCE_CERTAINTY>") 
+  (flags owl-modifier) 
+  (words 
+    ("asserted as" "definite" "doubtless" "evident" "hence" "obvious" "positive examination for" "positive study for" "seen as" "without doubt")))
+(
+  (ruleid "OWL-MODIFIER-DefiniteNegatedExistence_Certainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#DefiniteNegatedExistence_Certainty") 
+  (concept ":DEFINITENEGATEDEXISTENCE_CERTAINTY:") 
+  (stype "<DEFINITENEGATEDEXISTENCE_CERTAINTY>") 
+  (flags owl-modifier) 
+  (words 
+    ("without additional" "is no longer" "adequate to rule the patient out against" "are ruled out" "being ruled out" "can be ruled out" "can rule him out" "can rule him out against" "can rule out" "can rule out against" "can rule the patient out against" "cannot" "cleared of" "declined" "declines" "denied" "denies" "deny" "did rule her out" "did rule her out against" "did rule her out for" "did rule him out" "did rule him out against" "did rule him out for" "did rule out" "did rule out against" "did rule out for" "did rule the patient out" "did rule the patient out against" "did rule the patient out for" "excluded" "free" "free of" "has been ruled out" "have been ruled out" "is absent" "is negative" "is ruled out" "negative examination for" "negative for" "neither" "never developed" "never had" "no" "no evidence" "no new" "no other" "no support for" "no suspicion of" "not" "not exhibit" "not had" "not have" "not seen" "nothing" "patient was not" "reject" "rejected" "resolved" "ruled her out" "ruled her out against" "ruled her out for" "ruled him out" "ruled him out against" "ruled him out for" "ruled out" "ruled out against" "ruled out for" "ruled the patient out" "ruled the patient out against" "ruled the patient out for" "rules her out" "rules her out for" "rules him out" "rules him out for" "rules out" "rules out for" "rules the patient out" "rules the patient out for" "was ruled out" "with no" "without" "no evidence to suggest" "no interval change" "no mammographic evidence of" "no new evidence" "no other evidence" "no radiographic evidence of" "without any evidence of" "without evidence")))
+(
+  (ruleid "OWL-MODIFIER-ProbableExistence_Certainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#ProbableExistence_Certainty") 
+  (concept ":PROBABLEEXISTENCE_CERTAINTY:") 
+  (stype "<PROBABLEEXISTENCE_CERTAINTY>") 
+  (flags owl-modifier) 
+  (words 
+    ("versus" "acts as" "apparent" "apparently" "appear" "appearing" "appears" "assume" "assuming" "believe" "but rather" "can" "can be" "clinical picture as in" "clinical picture in line with" "clinical suspicion of" "compatible with" "conceivable" "concerning for" "consider" "considerations" "considerations include" "consistent with" "convincing" "could" "could be" "differential diagnosis would include" "eventual" "everything pointing at" "evidence" "favor" "feels like" "felt" "guess" "i believe" "identified" "implied" "implies" "in line with" "indicate" "indicated" "indicates" "interpreted as" "is in the differential" "is understood as" "likely" "looks like" "may" "may be" "may represent" "not certain" "not exclude" "not excluded" "not improbable" "not sure" "noted" "perceived as" "perhaps" "points to" "possible" "possibly" "potential" "preliminary" "presumably" "presumed" "presumptive" "probable" "probable cause" "probably" "question" "questionable" "raise the question of" "raises question of" "raises the question of" "raising the possibility of" "raising the question of" "reasonable" "reportedly" "representing" "represents" "seems like" "seen" "seen best" "should" "should be considered" "signs of" "somewhat suspected" "speaks for" "strong suspicion" "suggest" "suggested" "suggestion" "suggestive" "suggests" "supporting" "suppose" "suspect" "suspected" "suspicion" "suspicion for" "suspicious" "the possibility" "thought" "unclear" "unsure" "was seen as" "whether" "worrisome" "worrisome for" "would")))
+(
+  (ruleid "OWL-MODIFIER-ProbableNegatedExistence_Certainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#ProbableNegatedExistence_Certainty") 
+  (concept ":PROBABLENEGATEDEXISTENCE_CERTAINTY:") 
+  (stype "<PROBABLENEGATEDEXISTENCE_CERTAINTY>") 
+  (flags owl-modifier) 
+  (words 
+    ("absence of" "adequate to rule her out" "adequate to rule her out for" "adequate to rule him out" "adequate to rule him out for" "adequate to rule out" "adequate to rule out for" "adequate to rule the patient out" "adequate to rule the patient out for" "can rule her out" "can rule her out against" "can rule her out for" "can rule him out for" "can rule out for" "can rule the patient out" "can rule the patient out for" "cannot be excluded" "cannot exclude" "cannot see" "could be ruled out" "could not exclude" "denying" "do not think these findings speak for" "doubt" "doubtful" "exclude" "fails to reveal" "is not excluded" "is not indicated" "low probability" "no abnormal" "no cause of" "no complaints of" "no definite" "no demonstrated" "no findings of" "no findings to indicate" "no grounds for" "no indication of" "no obvious" "no sign of" "no significant" "no signs of" "no suggestion of" "no sure" "not a sure" "not appreciate" "not associated with" "not complain of" "not demonstrate" "not feel" "not know of" "not known to have" "not reveal" "not ruled out" "not see" "not think" "not to be" "rather than" "sufficient to rule her out" "sufficient to rule her out against" "sufficient to rule her out for" "sufficient to rule him out" "sufficient to rule him out against" "sufficient to rule him out for" "sufficient to rule out" "sufficient to rule out against" "sufficient to rule out for" "sufficient to rule the patient out" "sufficient to rule the patient out against" "sufficient to rule the patient out for" "test for" "to exclude" "unable to adequately assess" "unable to assess" "unlikely" "unremarkable for" "very little that speaks for" "without indication of" "without sign of" "not appear")))
+(
+  (ruleid "OWL-MODIFIER-Uncertain_Certainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Uncertain_Certainty") 
+  (concept ":UNCERTAIN_CERTAINTY:") 
+  (stype "<UNCERTAIN_CERTAINTY>") 
+  (flags owl-modifier) 
+  (words 
+    ("difficult to assess" "either" "equivocal" "uncertain" "versus")))
+(
+  (ruleid "OWL-MODIFIER-Initiates_ContextualAspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Initiates_ContextualAspect") 
+  (concept ":INITIATES_CONTEXTUALASPECT:") 
+  (stype "<INITIATES_CONTEXTUALASPECT>") 
+  (flags owl-modifier) 
+  (words 
+    ("initiate" "start" "beginning of")))
+(
+  (ruleid "OWL-MODIFIER-Intermittent_ContextualAspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Intermittent_ContextualAspect") 
+  (concept ":INTERMITTENT_CONTEXTUALASPECT:") 
+  (stype "<INTERMITTENT_CONTEXTUALASPECT>") 
+  (flags owl-modifier) 
+  (words 
+    ("intermittent")))
+(
+  (ruleid "OWL-MODIFIER-NotApplicable_ContextualAspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#NotApplicable_ContextualAspect") 
+  (concept ":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+  (stype "<NOTAPPLICABLE_CONTEXTUALASPECT>") 
+  (flags owl-modifier) 
+  (words 
+    ("not applicable")))
+(
+  (ruleid "OWL-MODIFIER-Novel_ContextualAspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Novel_ContextualAspect") 
+  (concept ":NOVEL_CONTEXTUALASPECT:") 
+  (stype "<NOVEL_CONTEXTUALASPECT>") 
+  (flags owl-modifier) 
+  (words 
+    ("novel" "new")))
+(
+  (ruleid "OWL-MODIFIER-Reinitiates_ContextualAspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Reinitiates_ContextualAspect") 
+  (concept ":REINITIATES_CONTEXTUALASPECT:") 
+  (stype "<REINITIATES_CONTEXTUALASPECT>") 
+  (flags owl-modifier) 
+  (words 
+    ("reinitiates")))
+(
+  (ruleid "OWL-MODIFIER-Terminates_ContextualAspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Terminates_ContextualAspect") 
+  (concept ":TERMINATES_CONTEXTUALASPECT:") 
+  (stype "<TERMINATES_CONTEXTUALASPECT>") 
+  (flags owl-modifier) 
+  (words 
+    ("terminates" "ends" "ended" "stopped in")))
+(
+  (ruleid "OWL-MODIFIER-FamilyMember_Experiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#FamilyMember_Experiencer") 
+  (concept ":FAMILYMEMBER_EXPERIENCER:") 
+  (stype "<FAMILYMEMBER_EXPERIENCER>") 
+  (flags owl-modifier) 
+  (words 
+    ("spouse" "spouse's" "son" "son's" "daughter" "daughter's" "aunt" "aunt's" "brother" "brother's" "dad" "dad's" "father" "father's" "grandfather" "granddad" "grandfather's" "granddad's" "grandmother" "grandmother's" "husband" "husband's" "mom" "mother's" "mom's" "roommate" "room mate" "roommate's" "room mate's" "sister" "sister's" "uncle" "uncle's" "wife" "wife's")))
+(
+  (ruleid "OWL-MODIFIER-After_DocTimeRel-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#After_DocTimeRel") 
+  (concept ":AFTER_DOCTIMEREL:") 
+  (stype "<AFTER_DOCTIMEREL>") 
+  (flags owl-modifier) 
+  (words 
+    ("as needed" "at risk for" "call" "come back for" "come back to" "if" "if clinical concern for" "if there is concern for" "look out for" "return" "returning" "should he" "should she" "should the" "should there")))
+(
+  (ruleid "OWL-MODIFIER-Before-Overlap_DocTimeRel-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Before-Overlap_DocTimeRel") 
+  (concept ":BEFORE_OVERLAP_DOCTIMEREL:") 
+  (stype "<BEFORE-OVERLAP_DOCTIMEREL>") 
+  (flags owl-modifier) 
+  (words 
+    ("day history of" "days history of" "month history of" "months history of" "evolving" "history" "persistent" "redemonstration of")))
+(
+  (ruleid "OWL-MODIFIER-Before_DocTimeRel-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Before_DocTimeRel") 
+  (concept ":BEFORE_DOCTIMEREL:") 
+  (stype "<BEFORE_DOCTIMEREL>") 
+  (flags owl-modifier) 
+  (words 
+    ("last january" "last jan" "past january" "past jan" "last february" "past february" "last feb" "past feb" "last march" "past mar" "past march" "last mar" "last april" "last apr" "past april" "past apr" "last may" "past may" "last june" "past june" "last jun" "past jun" "last july" "past jul" "past july" "last jul" "last august" "last aug" "past aug" "past august" "last sep" "last october" "last oct" "past oct" "past october" "last november" "past november" "last nov" "past nov" "last december" "past december" "last dec" "past dec" "in the past for" "old" "previous" "prior" "prior study" "distant history" "from age" "in the past" "past medical history" "past medical hx" "past med hx" "remote")))
+(
+  (ruleid "OWL-MODIFIER-Overlap_DocTimeRel-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Overlap_DocTimeRel") 
+  (concept ":OVERLAP_DOCTIMEREL:") 
+  (stype "<OVERLAP_DOCTIMEREL>") 
+  (flags owl-modifier) 
+  (words 
+    ("importance of" "important to")))
+(
+  (ruleid "OWL-MODIFIER-Range_gte_1_year-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Range_gte_1_year") 
+  (concept ":RANGE_GTE_1_YEAR:") 
+  (stype "<RANGE_GTE_1_YEAR>") 
+  (flags owl-modifier) 
+  (words 
+    ("range gte 1 year")))
+(
+  (ruleid "OWL-MODIFIER-Range_lt_1_year-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Range_lt_1_year") 
+  (concept ":RANGE_LT_1_YEAR:") 
+  (stype "<RANGE_LT_1_YEAR>") 
+  (flags owl-modifier) 
+  (words 
+    ("range lt 1 year")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#current_smoker_document") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<CURRENT_SMOKER_DOCUMENT>") 
+  (flags owl-variable) 
+  (words 
+    (":OVERLAP_DOCTIMEREL:") 
+    (":SMOKER:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoking_cessation_group_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_CESSATION_GROUP_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":OVERLAP_DOCTIMEREL:") 
+    (":SMOKING_CESSATION_GROUP:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoking_cessation_group_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_CESSATION_GROUP_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":SMOKING_CESSATION_GROUP:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoking_cessation_group_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_CESSATION_GROUP_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKING_CESSATION_GROUP:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoking_cessation_group_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_CESSATION_GROUP_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKING_CESSATION_GROUP:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#explicit_current_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<EXPLICIT_CURRENT_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":OVERLAP_DOCTIMEREL:") 
+    (":CURRENT_SMOKER:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#explicit_current_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<EXPLICIT_CURRENT_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":CURRENT_SMOKER:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#explicit_current_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<EXPLICIT_CURRENT_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":CURRENT_SMOKER:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_OVERLAP_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoking_but_continues_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKING_BUT_CONTINUES_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_OVERLAP_DOCTIMEREL:" ":BEFORE_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoking_but_continues_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKING_BUT_CONTINUES_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":CONTINUES_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoking_but_continues_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKING_BUT_CONTINUES_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoking_but_continues_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKING_BUT_CONTINUES_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:" ":PROBABLEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention_lt_1_year") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION_LT_1_YEAR>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention_lt_1_year") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION_LT_1_YEAR>") 
+  (flags owl-variable) 
+  (words 
+    (":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention_lt_1_year") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION_LT_1_YEAR>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention_lt_1_year") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION_LT_1_YEAR>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#just_quit_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<JUST_QUIT_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_OVERLAP_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#just_quit_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<JUST_QUIT_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":TERMINATES_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#just_quit_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<JUST_QUIT_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#just_quit_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<JUST_QUIT_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":OVERLAP_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":CONTINUES_CONTEXTUALASPECT:" ":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:" ":PROBABLEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoker_mention_with_duration") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKER_MENTION_WITH_DURATION>") 
+  (flags owl-variable) 
+  (words 
+    (":OVERLAP_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoker_mention_with_duration") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKER_MENTION_WITH_DURATION>") 
+  (flags owl-variable) 
+  (words 
+    (":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoker_mention_with_duration") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKER_MENTION_WITH_DURATION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoker_mention_with_duration") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKER_MENTION_WITH_DURATION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_started_or_reinitiated_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_STARTED_OR_REINITIATED_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":OVERLAP_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_started_or_reinitiated_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_STARTED_OR_REINITIATED_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":INITIATES_CONTEXTUALASPECT:" ":REINITIATES_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_started_or_reinitiated_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_STARTED_OR_REINITIATED_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_started_or_reinitiated_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_STARTED_OR_REINITIATED_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#negated_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NEGATED_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":OVERLAP_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#negated_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NEGATED_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#negated_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NEGATED_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#negated_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NEGATED_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITENEGATEDEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#non-user_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NON-USER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":OVERLAP_DOCTIMEREL:") 
+    (":TOBACCO_NON_USER:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#non-user_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NON-USER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":TOBACCO_NON_USER:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#non-user_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NON-USER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":TOBACCO_NON_USER:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#non-user_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NON-USER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":TOBACCO_NON_USER:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#past_smoker_document") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<PAST_SMOKER_DOCUMENT>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_DOCTIMEREL:") 
+    (":SMOKER:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#ex-user_for_1_year_or_greater_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<EX-USER_FOR_1_YEAR_OR_GREATER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":OVERLAP_DOCTIMEREL:") 
+    (":EX_TOBACCO_USER:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#ex-user_for_1_year_or_greater_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<EX-USER_FOR_1_YEAR_OR_GREATER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":EX_TOBACCO_USER:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#ex-user_for_1_year_or_greater_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<EX-USER_FOR_1_YEAR_OR_GREATER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":EX_TOBACCO_USER:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#ex-user_for_1_year_or_greater_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<EX-USER_FOR_1_YEAR_OR_GREATER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":EX_TOBACCO_USER:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_before_only_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_BEFORE_ONLY_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_before_only_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_BEFORE_ONLY_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_before_only_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_BEFORE_ONLY_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_before_only_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_BEFORE_ONLY_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention_gt_1_yr") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION_GT_1_YR>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_OVERLAP_DOCTIMEREL:" ":BEFORE_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention_gt_1_yr") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION_GT_1_YR>") 
+  (flags owl-variable) 
+  (words 
+    (":NOTAPPLICABLE_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention_gt_1_yr") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION_GT_1_YR>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#history_of_smoker_mention_gt_1_yr") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<HISTORY_OF_SMOKER_MENTION_GT_1_YR>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#negated_current_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NEGATED_CURRENT_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_OVERLAP_DOCTIMEREL:" ":BEFORE_DOCTIMEREL:" ":OVERLAP_DOCTIMEREL:") 
+    (":CURRENT_SMOKER:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#negated_current_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NEGATED_CURRENT_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":CURRENT_SMOKER:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#negated_current_smoker_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<NEGATED_CURRENT_SMOKER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITENEGATEDEXISTENCE_CERTAINTY:") 
+    (":CURRENT_SMOKER:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#quit_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<QUIT_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_DOCTIMEREL:" ":OVERLAP_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#quit_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<QUIT_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":TERMINATES_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#quit_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<QUIT_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#quit_smoking_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<QUIT_SMOKING_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hastemporality-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_stopped_for_1_year_or_greater_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_STOPPED_FOR_1_YEAR_OR_GREATER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":BEFORE_OVERLAP_DOCTIMEREL:" ":BEFORE_DOCTIMEREL:" ":OVERLAP_DOCTIMEREL:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hastemporality "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascontextualaspect-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_stopped_for_1_year_or_greater_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_STOPPED_FOR_1_YEAR_OR_GREATER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":TERMINATES_CONTEXTUALASPECT:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascontextualaspect "?0")))
+(
+  (ruleid "OWL-VARIABLE--hasexperiencer-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_stopped_for_1_year_or_greater_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_STOPPED_FOR_1_YEAR_OR_GREATER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":PATIENT_EXPERIENCER:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hasexperiencer "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_stopped_for_1_year_or_greater_mention") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<SMOKING_STOPPED_FOR_1_YEAR_OR_GREATER_MENTION>") 
+  (flags owl-variable) 
+  (words 
+    (":DEFINITEEXISTENCE_CERTAINTY:") 
+    (":SMOKE:" ":SMOKER:" ":TOBACCO:" ":TOBACCO_USE:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-VARIABLE--hascertainty-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#unknown_smoker_document") 
+  (ordered true) 
+  (concept "::") 
+  (stype "<UNKNOWN_SMOKER_DOCUMENT>") 
+  (flags owl-variable) 
+  (words 
+    (":UNCERTAIN_CERTAINTY:") 
+    (":SMOKER:")) 
+  (properties 
+    (hascertainty "?0")))
+(
+  (ruleid "OWL-ANCHOR-current_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Current_Smoker") 
+  (concept ":CURRENT_SMOKER:") 
+  (stype "<CURRENT_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("current smoker")))
+(
+  (ruleid "OWL-ANCHOR-ex-tobacco_user-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Ex-tobacco_user") 
+  (concept ":EX_TOBACCO_USER:") 
+  (stype "<EX-TOBACCO_USER>") 
+  (flags owl-anchor) 
+  (words 
+    ("ex-tobacco user")))
+(
+  (ruleid "OWL-ANCHOR-former_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Former_smoker") 
+  (concept ":FORMER_SMOKER:") 
+  (stype "<FORMER_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("former smoker" "prior smoker" "former tobacco user" "recovered smoker" "ex-smoker" "past tobacco smoker" "cessation of smoking")))
+(
+  (ruleid "OWL-ANCHOR-aggressive_ex-smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Aggressive_ex-smoker") 
+  (concept ":AGGRESSIVE_EX_SMOKER:") 
+  (stype "<AGGRESSIVE_EX-SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("aggressive ex-smoker")))
+(
+  (ruleid "OWL-ANCHOR-ex-cigar_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Ex-cigar_smoker") 
+  (concept ":EX_CIGAR_SMOKER:") 
+  (stype "<EX-CIGAR_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("ex-cigar smoker")))
+(
+  (ruleid "OWL-ANCHOR-ex-cigarette_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Ex-cigarette_smoker") 
+  (concept ":EX_CIGARETTE_SMOKER:") 
+  (stype "<EX-CIGARETTE_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("ex-cigarette smoker")))
+(
+  (ruleid "OWL-ANCHOR-ex-pipe_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Ex-pipe_smoker") 
+  (concept ":EX_PIPE_SMOKER:") 
+  (stype "<EX-PIPE_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("ex-pipe smoker")))
+(
+  (ruleid "OWL-ANCHOR-ex-smoker_for_more_than_1_year-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Ex-smoker_for_more_than_1_year") 
+  (concept ":EX_SMOKER_FOR_MORE_THAN_1_YEAR:") 
+  (stype "<EX-SMOKER_FOR_MORE_THAN_1_YEAR>") 
+  (flags owl-anchor) 
+  (words 
+    ("ex-smoker for more than 1 year")))
+(
+  (ruleid "OWL-ANCHOR-former_heavy_tobacco_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Former_heavy_tobacco_smoker") 
+  (concept ":FORMER_HEAVY_TOBACCO_SMOKER:") 
+  (stype "<FORMER_HEAVY_TOBACCO_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("former heavy tobacco smoker" "ex-heavy tobacco smoker")))
+(
+  (ruleid "OWL-ANCHOR-former_light_tobacco_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Former_light_tobacco_smoker") 
+  (concept ":FORMER_LIGHT_TOBACCO_SMOKER:") 
+  (stype "<FORMER_LIGHT_TOBACCO_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("former light tobacco smoker" "ex-light tobacco smoker")))
+(
+  (ruleid "OWL-ANCHOR-intolerant_ex-smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Intolerant_ex-smoker") 
+  (concept ":INTOLERANT_EX_SMOKER:") 
+  (stype "<INTOLERANT_EX-SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("intolerant ex-smoker")))
+(
+  (ruleid "OWL-ANCHOR-tolerant_ex-smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Tolerant_ex-smoker") 
+  (concept ":TOLERANT_EX_SMOKER:") 
+  (stype "<TOLERANT_EX-SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("tolerant ex-smoker")))
+(
+  (ruleid "OWL-ANCHOR-smoke-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoke") 
+  (concept ":SMOKE:") 
+  (stype "<SMOKE>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoke" "smoked" "smoking" "smokes")))
+(
+  (ruleid "OWL-ANCHOR-cigarette_smoke-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Cigarette_smoke") 
+  (concept ":CIGARETTE_SMOKE:") 
+  (stype "<CIGARETTE_SMOKE>") 
+  (flags owl-anchor) 
+  (words 
+    ("cigarette smoke")))
+(
+  (ruleid "OWL-ANCHOR-smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoker") 
+  (concept ":SMOKER:") 
+  (stype "<SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoker" "smokers")))
+(
+  (ruleid "OWL-ANCHOR-cigarette_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Cigarette_Smoker") 
+  (concept ":CIGARETTE_SMOKER:") 
+  (stype "<CIGARETTE_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("cigarette smoker")))
+(
+  (ruleid "OWL-ANCHOR-smoking_cessation_group-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoking_cessation_group") 
+  (concept ":SMOKING_CESSATION_GROUP:") 
+  (stype "<SMOKING_CESSATION_GROUP>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoking cessation group" "smoking cessation program" "recommendations included smoking cessation")))
+(
+  (ruleid "OWL-ANCHOR-tobacco_non-user-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#TOBACCO_NON-USER") 
+  (concept ":TOBACCO_NON_USER:") 
+  (stype "<TOBACCO_NON-USER>") 
+  (flags owl-anchor) 
+  (words 
+    ("tobacco non-user" "non-tobacco user")))
+(
+  (ruleid "OWL-ANCHOR-non-smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Non-smoker") 
+  (concept ":NON_SMOKER:") 
+  (stype "<NON-SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("non-smoker" "non-smokers" "non smoker" "nonsmoker")))
+(
+  (ruleid "OWL-ANCHOR-tobacco-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Tobacco") 
+  (concept ":TOBACCO:") 
+  (stype "<TOBACCO>") 
+  (flags owl-anchor) 
+  (words 
+    ("tobacco" "any tobacco" "tobacco - substance" "tobacco in any form" "tobacco products" "tobacco product" "tobacco leaf" "tabacco")))
+(
+  (ruleid "OWL-ANCHOR-cigarette-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Cigarette") 
+  (concept ":CIGARETTE:") 
+  (stype "<CIGARETTE>") 
+  (flags owl-anchor) 
+  (words 
+    ("cigarette" "cigs" "cigarettes" "cigarettes (containing tobacco)")))
+(
+  (ruleid "OWL-ANCHOR-bidi-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Bidi") 
+  (concept ":BIDI:") 
+  (stype "<BIDI>") 
+  (flags owl-anchor) 
+  (words 
+    ("bidi" "beedi" "beedie")))
+(
+  (ruleid "OWL-ANCHOR-kretek-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Kretek") 
+  (concept ":KRETEK:") 
+  (stype "<KRETEK>") 
+  (flags owl-anchor) 
+  (words 
+    ("kretek")))
+(
+  (ruleid "OWL-ANCHOR-very_low_nicotine_content_cigarette-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Very_Low_Nicotine_Content_Cigarette") 
+  (concept ":VERY_LOW_NICOTINE_CONTENT_CIGARETTE:") 
+  (stype "<VERY_LOW_NICOTINE_CONTENT_CIGARETTE>") 
+  (flags owl-anchor) 
+  (words 
+    ("very low nicotine content cigarette")))
+(
+  (ruleid "OWL-ANCHOR-filter_cigarette-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#filter_cigarette") 
+  (concept ":FILTER_CIGARETTE:") 
+  (stype "<FILTER_CIGARETTE>") 
+  (flags owl-anchor) 
+  (words 
+    ("filter cigarette")))
+(
+  (ruleid "OWL-ANCHOR-filterless_cigarette-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#filterless_cigarette") 
+  (concept ":FILTERLESS_CIGARETTE:") 
+  (stype "<FILTERLESS_CIGARETTE>") 
+  (flags owl-anchor) 
+  (words 
+    ("filterless cigarette")))
+(
+  (ruleid "OWL-ANCHOR-low_tar_cigarette-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#low_tar_cigarette") 
+  (concept ":LOW_TAR_CIGARETTE:") 
+  (stype "<LOW_TAR_CIGARETTE>") 
+  (flags owl-anchor) 
+  (words 
+    ("low tar cigarette")))
+(
+  (ruleid "OWL-ANCHOR-mentholated_cigarette-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#mentholated_cigarette") 
+  (concept ":MENTHOLATED_CIGARETTE:") 
+  (stype "<MENTHOLATED_CIGARETTE>") 
+  (flags owl-anchor) 
+  (words 
+    ("mentholated cigarette")))
+(
+  (ruleid "OWL-ANCHOR-cigars-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Cigars") 
+  (concept ":CIGARS:") 
+  (stype "<CIGARS>") 
+  (flags owl-anchor) 
+  (words 
+    ("cigars" "cigar")))
+(
+  (ruleid "OWL-ANCHOR-cigarillo-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Cigarillo") 
+  (concept ":CIGARILLO:") 
+  (stype "<CIGARILLO>") 
+  (flags owl-anchor) 
+  (words 
+    ("cigarillo")))
+(
+  (ruleid "OWL-ANCHOR-pipe_tobacco-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#pipe_tobacco") 
+  (concept ":PIPE_TOBACCO:") 
+  (stype "<PIPE_TOBACCO>") 
+  (flags owl-anchor) 
+  (words 
+    ("pipe tobacco" "tobacco pipe")))
+(
+  (ruleid "OWL-ANCHOR-tobacco_use-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Tobacco_use") 
+  (concept ":TOBACCO_USE:") 
+  (stype "<TOBACCO_USE>") 
+  (flags owl-anchor) 
+  (words 
+    ("tobacco use" "tobacco consumption" "tobacco abuse" "tobacco uses" "tobacco chewing")))
+(
+  (ruleid "OWL-ANCHOR-dependence_tobacco-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Dependence_Tobacco") 
+  (concept ":DEPENDENCE__TOBACCO:") 
+  (stype "<DEPENDENCE_TOBACCO>") 
+  (flags owl-anchor) 
+  (words 
+    ("dependence, tobacco" "tobacco dependence syndrome" "tobacco dependence" "tobacco dependences" "compulsive tobacco user syndrome")))
+(
+  (ruleid "OWL-ANCHOR-electronic_cigarette_user-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Electronic_cigarette_user") 
+  (concept ":ELECTRONIC_CIGARETTE_USER:") 
+  (stype "<ELECTRONIC_CIGARETTE_USER>") 
+  (flags owl-anchor) 
+  (words 
+    ("electronic cigarette user")))
+(
+  (ruleid "OWL-ANCHOR-e-cigarette_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#E-cigarette_smoker") 
+  (concept ":E_CIGARETTE_SMOKER:") 
+  (stype "<E-CIGARETTE_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("e-cigarette smoker")))
+(
+  (ruleid "OWL-ANCHOR-vapor_cigarette_smoker-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Vapor_cigarette_smoker") 
+  (concept ":VAPOR_CIGARETTE_SMOKER:") 
+  (stype "<VAPOR_CIGARETTE_SMOKER>") 
+  (flags owl-anchor) 
+  (words 
+    ("vapor cigarette smoker" "vapour cigarette smoker")))
+(
+  (ruleid "OWL-ANCHOR-smoking-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoking") 
+  (concept ":SMOKING:") 
+  (stype "<SMOKING>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoking")))
+(
+  (ruleid "OWL-ANCHOR-smoking_hashish-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoking_Hashish") 
+  (concept ":SMOKING__HASHISH:") 
+  (stype "<SMOKING_HASHISH>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoking, hashish" "hashish smoking" "smoking hashish")))
+(
+  (ruleid "OWL-ANCHOR-smoking_hookah-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoking_Hookah") 
+  (concept ":SMOKING__HOOKAH:") 
+  (stype "<SMOKING_HOOKAH>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoking, hookah" "hookah smoking")))
+(
+  (ruleid "OWL-ANCHOR-smoking_waterpipe-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Smoking_Waterpipe") 
+  (concept ":SMOKING__WATERPIPE:") 
+  (stype "<SMOKING_WATERPIPE>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoking, waterpipe" "waterpipe smoking")))
+(
+  (ruleid "OWL-ANCHOR-tobacco_smoking-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Tobacco_Smoking") 
+  (concept ":TOBACCO_SMOKING:") 
+  (stype "<TOBACCO_SMOKING>") 
+  (flags owl-anchor) 
+  (words 
+    ("tobacco smoking" "smoking" "finding of tobacco smoking behavior" "tobacco smoking behavior" "tobacco smoking behaviour - finding" "tobacco smoking behavior - finding" "smoking tobacco")))
+(
+  (ruleid "OWL-ANCHOR-freebasing-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#freebasing") 
+  (concept ":FREEBASING:") 
+  (stype "<FREEBASING>") 
+  (flags owl-anchor) 
+  (words 
+    ("freebasing")))
+(
+  (ruleid "OWL-ANCHOR-smoking_pipe-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_pipe") 
+  (concept ":SMOKING_PIPE__HISTORY_:") 
+  (stype "<SMOKING_PIPE>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoking pipe (history)" "pipe smoking")))
+(
+  (ruleid "OWL-ANCHOR-smoking_with_inhalation-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_with_inhalation") 
+  (concept ":SMOKING_WITH_INHALATION:") 
+  (stype "<SMOKING_WITH_INHALATION>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoking with inhalation")))
+(
+  (ruleid "OWL-ANCHOR-smoking_without_inhalation-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#smoking_without_inhalation") 
+  (concept ":SMOKING_WITHOUT_INHALATION:") 
+  (stype "<SMOKING_WITHOUT_INHALATION>") 
+  (flags owl-anchor) 
+  (words 
+    ("smoking without inhalation")))
+(
+  (ruleid "OWL-ANCHOR-tobacco_user-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Tobacco_user") 
+  (concept ":TOBACCO_USER:") 
+  (stype "<TOBACCO_USER>") 
+  (flags owl-anchor) 
+  (words 
+    ("tobacco user" "tobacco use")))
+(
+  (ruleid "OWL-ANCHOR-chews_tobacco-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Chews_tobacco") 
+  (concept ":CHEWS_TOBACCO:") 
+  (stype "<CHEWS_TOBACCO>") 
+  (flags owl-anchor) 
+  (words 
+    ("chews tobacco")))
+(
+  (ruleid "OWL-ANCHOR-snuff_user-2018/01/22 22:11:09") 
+  (uri "http://blulab.chpc.utah.edu/ontologies/examples/smoking.owl#Snuff_user") 
+  (concept ":SNUFF_USER:") 
+  (stype "<SNUFF_USER>") 
+  (flags owl-anchor) 
+  (words 
+    ("snuff user" "snuff taker")))
+(
+  (ruleid "OWL-RELATION-isanchorof-anchor-annotation-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANCHOR>") 
+    ("<ANNOTATION>")) 
+  (relations 
+    (isanchorof ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-isanchorof-compoundanchor-annotation-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<ANNOTATION>")) 
+  (relations 
+    (isanchorof ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasanchor-annotation-anchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<ANCHOR>")) 
+  (relations 
+    (hasanchor ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasanchor-annotation-compoundanchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<COMPOUNDANCHOR>")) 
+  (relations 
+    (hasanchor ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasunit-numericmodifier-unit-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<NUMERICMODIFIER>") 
+  (flags owl-relation) 
+  (words 
+    ("<NUMERICMODIFIER>") 
+    ("<UNIT>")) 
+  (relations 
+    (hasunit ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasrate-annotation-quantity-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<QUANTITY>")) 
+  (relations 
+    (hasrate ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasrate-annotation-rangemodifier-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<RANGEMODIFIER>")) 
+  (relations 
+    (hasrate ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasexclusion-modifier-modifier-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<MODIFIER>") 
+  (flags owl-relation) 
+  (words 
+    ("<MODIFIER>") 
+    ("<MODIFIER>")) 
+  (relations 
+    (hasexclusion ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasexclusion-modifier-annotation-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<MODIFIER>") 
+  (flags owl-relation) 
+  (words 
+    ("<MODIFIER>") 
+    ("<ANNOTATION>")) 
+  (relations 
+    (hasexclusion ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasexclusion-annotation-modifier-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<MODIFIER>")) 
+  (relations 
+    (hasexclusion ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasexclusion-annotation-annotation-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<ANNOTATION>")) 
+  (relations 
+    (hasexclusion ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasqualifier-modifier-qualifier-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<MODIFIER>") 
+  (flags owl-relation) 
+  (words 
+    ("<MODIFIER>") 
+    ("<QUALIFIER>")) 
+  (relations 
+    (hasqualifier ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasrelation-annotation-annotation-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<ANNOTATION>")) 
+  (relations 
+    (hasrelation ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasmentionannotation-composition-annotation-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOSITION>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOSITION>") 
+    ("<ANNOTATION>")) 
+  (relations 
+    (hasmentionannotation ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascomposition-medicalrecord-composition-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<MEDICALRECORD>") 
+  (flags owl-relation) 
+  (words 
+    ("<MEDICALRECORD>") 
+    ("<COMPOSITION>")) 
+  (relations 
+    (hascomposition ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascertainty-event-certainty-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<EVENT>") 
+  (flags owl-relation) 
+  (words 
+    ("<EVENT>") 
+    ("<CERTAINTY>")) 
+  (relations 
+    (hascertainty ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasannotationtype-annotation-annotationtype-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<ANNOTATIONTYPE>")) 
+  (relations 
+    (hasannotationtype ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument5-compoundanchor-anchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<ANCHOR>")) 
+  (relations 
+    (hascompoundargument5 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument5-compoundanchor-compoundanchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<COMPOUNDANCHOR>")) 
+  (relations 
+    (hascompoundargument5 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument4-compoundanchor-anchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<ANCHOR>")) 
+  (relations 
+    (hascompoundargument4 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument4-compoundanchor-compoundanchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<COMPOUNDANCHOR>")) 
+  (relations 
+    (hascompoundargument4 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument3-compoundanchor-anchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<ANCHOR>")) 
+  (relations 
+    (hascompoundargument3 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument3-compoundanchor-compoundanchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<COMPOUNDANCHOR>")) 
+  (relations 
+    (hascompoundargument3 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument2-compoundanchor-anchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<ANCHOR>")) 
+  (relations 
+    (hascompoundargument2 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument2-compoundanchor-compoundanchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<COMPOUNDANCHOR>")) 
+  (relations 
+    (hascompoundargument2 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasexperiencer-event-experiencer-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<EVENT>") 
+  (flags owl-relation) 
+  (words 
+    ("<EVENT>") 
+    ("<EXPERIENCER>")) 
+  (relations 
+    (hasexperiencer ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasmedicalrecordsummary-medicalrecord-annotation-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<MEDICALRECORD>") 
+  (flags owl-relation) 
+  (words 
+    ("<MEDICALRECORD>") 
+    ("<ANNOTATION>")) 
+  (relations 
+    (hasmedicalrecordsummary ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasepisode-medicalrecord-episode-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<MEDICALRECORD>") 
+  (flags owl-relation) 
+  (words 
+    ("<MEDICALRECORD>") 
+    ("<EPISODE>")) 
+  (relations 
+    (hasepisode ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-haspseudo-anchor-pseudoanchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANCHOR>") 
+    ("<PSEUDOANCHOR>")) 
+  (relations 
+    (haspseudo ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hassection-annotation-documentsection-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<DOCUMENTSECTION>")) 
+  (relations 
+    (hassection ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hassection-composition-documentsection-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOSITION>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOSITION>") 
+    ("<DOCUMENTSECTION>")) 
+  (relations 
+    (hassection ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasnumvalue-annotation-numericmodifier-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<NUMERICMODIFIER>")) 
+  (relations 
+    (hasnumvalue ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-wasderivedfrom-annotation-annotation-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<ANNOTATION>")) 
+  (relations 
+    (wasderivedfrom ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument-compoundanchor-anchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<ANCHOR>")) 
+  (relations 
+    (hascompoundargument ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasdoctype-annotation-documenttype-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<DOCUMENTTYPE>")) 
+  (relations 
+    (hasdoctype ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasdoctype-composition-documenttype-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOSITION>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOSITION>") 
+    ("<DOCUMENTTYPE>")) 
+  (relations 
+    (hasdoctype ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hastemporality-event-temporality-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<EVENT>") 
+  (flags owl-relation) 
+  (words 
+    ("<EVENT>") 
+    ("<TEMPORALITY>")) 
+  (relations 
+    (hastemporality ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascontextualaspect-event-contextualaspect-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<EVENT>") 
+  (flags owl-relation) 
+  (words 
+    ("<EVENT>") 
+    ("<CONTEXTUALASPECT>")) 
+  (relations 
+    (hascontextualaspect ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasmodifier-annotation-modifier-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<ANNOTATION>") 
+  (flags owl-relation) 
+  (words 
+    ("<ANNOTATION>") 
+    ("<MODIFIER>")) 
+  (relations 
+    (hasmodifier ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hasdocumentannotation-composition-annotation-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOSITION>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOSITION>") 
+    ("<ANNOTATION>")) 
+  (relations 
+    (hasdocumentannotation ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument1-compoundanchor-anchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<ANCHOR>")) 
+  (relations 
+    (hascompoundargument1 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-hascompoundargument1-compoundanchor-compoundanchor-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<COMPOUNDANCHOR>") 
+  (flags owl-relation) 
+  (words 
+    ("<COMPOUNDANCHOR>") 
+    ("<COMPOUNDANCHOR>")) 
+  (relations 
+    (hascompoundargument1 ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-haspseudo-modifier-pseudomodifier-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<MODIFIER>") 
+  (flags owl-relation) 
+  (words 
+    ("<MODIFIER>") 
+    ("<PSEUDOMODIFIER>")) 
+  (relations 
+    (haspseudo ?0 ?1)))
+(
+  (ruleid "OWL-RELATION-ispseudoof-pseudo-modifier-2018/01/22 22:11:09") 
+  (uri "NOURI") 
+  (concept "?0") 
+  (stype "<PSEUDO>") 
+  (flags owl-relation) 
+  (words 
+    ("<PSEUDO>") 
+    ("<MODIFIER>")) 
+  (relations 
+    (ispseudoof ?0 ?1)))
+
+)

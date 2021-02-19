@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2018/06/11 18:17:47") 
+  (specialized) 
+  (example-snippet "Has 2 sons and a sister that are involved in her care") 
+  (ordered true) 
+  (sourceid "passive-sentence-rule_27579") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    (":INVOLVED::PREP::PROVIDE-CARE-FOR-PATIENT:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1") 
+    (verb-form "passive")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

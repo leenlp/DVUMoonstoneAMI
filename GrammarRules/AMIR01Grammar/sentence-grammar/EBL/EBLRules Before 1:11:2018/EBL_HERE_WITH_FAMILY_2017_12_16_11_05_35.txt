@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HERE-WITH-FAMILY::2017/12/16 11:05:35") 
+  (specialized) 
+  (example-snippet "here with mom") 
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":HERE-WITH-FAMILY:") 
+  (stype "<AT-PLACE-WITH-PERSON-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":HERE:<THING>") 
+    (":PREP::FAMILY:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")))
+
+)

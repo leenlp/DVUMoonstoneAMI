@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-0-2018/07/25 18:38:09") 
+  (specialized) 
+  (example-snippet "assist for balance was decreased") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":HELP::PREP::BALANCE::DECREASED:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:MEDICAL-CONDITION-ADL-PROPERTY-OR-MANNER:-0-2018/04/26 14:29:56") 
+  (specialized) 
+  (example-snippet "generally weak") 
+  (ordered true) 
+  (concept ":MEDICAL-CONDITION-ADL-PROPERTY-OR-MANNER:") 
+  (stype "<DISEASE-PROPERTY-OR-MANNER>") 
+  (bagofconcepts true) 
+  (words 
+    (":GENERALIZED::MEDICAL-CONDITION-ADL-PROPERTY-OR-MANNER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

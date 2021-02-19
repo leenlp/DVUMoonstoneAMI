@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-IS-DEPRESSED::2017/10/17 18:22:53") 
+  (specialized) 
+  (example-snippet "He also admits to being depressed") 
+  (ordered true) 
+  (sourceid "thing-pp-is-sentence-rule") 
+  (concept ":PATIENT-IS-DEPRESSED:") 
+  (stype "<DEPRESSION-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":PATIENT:") 
+    (":PREP::DEPRESSION:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

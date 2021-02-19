@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TRAVEL-TO-PLACE-WITH-FF::2018/06/27 21:12:11") 
+  (specialized) 
+  (example-snippet "discharged on 0218 perfamily") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":TRAVEL-TO-PLACE-WITH-FF:") 
+  (stype "<TRAVEL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":DISCHARGE:") 
+    (":WITH-FF:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

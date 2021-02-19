@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-DEPRESSION:-5-2018/06/29 11:38:38") 
+  (specialized) 
+  (example-snippet "he has becomemore depressed") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-DEPRESSION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::BECOME::DEPRESSED:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

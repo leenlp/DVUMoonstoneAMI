@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:-0-2018/04/03 20:37:07") 
+  (specialized) 
+  (example-snippet "overdose of about 30 Haldol") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":OVERDOSE-OF-MEDICATION-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

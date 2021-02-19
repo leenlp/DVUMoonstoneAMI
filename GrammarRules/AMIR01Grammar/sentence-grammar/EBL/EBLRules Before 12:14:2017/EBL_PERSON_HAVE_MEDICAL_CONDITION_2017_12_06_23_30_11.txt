@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PERSON-HAVE-MEDICAL-CONDITION::2017/12/06 23:30:11") 
+  (specialized) 
+  (example-snippet "he denied auditory hallucinations") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PERSON-HAVE-MEDICAL-CONDITION:") 
+  (stype "<MEDICAL-CONDITION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PERSON:") 
+    (":HAVE-MEDICAL-CONDITION:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

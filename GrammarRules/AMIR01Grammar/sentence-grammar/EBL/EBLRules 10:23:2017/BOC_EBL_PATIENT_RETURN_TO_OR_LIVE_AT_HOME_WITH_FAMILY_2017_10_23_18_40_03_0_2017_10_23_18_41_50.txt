@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::PATIENT-RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY::2017/10/23 18:40:03-0-2017/10/23 18:41:50") 
+  (specialized) 
+  (example-snippet "patient was discharged to return home to her parents") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:")))
+
+)

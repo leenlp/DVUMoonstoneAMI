@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-UNDERSTAND-SOMETHING::2018/03/08 11:20:05") 
+  (specialized) 
+  (example-snippet "Mother understands") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-UNDERSTAND-SOMETHING:") 
+  (stype "<FF-UNDERSTAND-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    (":UNDERSTAND:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

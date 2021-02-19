@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-passive-sentence-rule-0-2017/10/23 22:49:43") 
+  (specialized) 
+  (example-snippet "he was referred to Community Mental Health Agencies") 
+  (ordered true) 
+  (concept ":PATIENT-HAS-ACCESS-TO-COMMUNITY-SERVICES:") 
+  (stype "<ACCESS-TO-COMMUNITY-SERVICES-SENTENCE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::REFER::PREP::COMMUNITY-SERVICE:")))
+
+)

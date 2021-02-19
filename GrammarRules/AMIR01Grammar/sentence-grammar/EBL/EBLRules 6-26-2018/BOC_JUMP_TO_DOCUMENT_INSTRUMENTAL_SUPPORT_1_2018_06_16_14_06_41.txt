@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-1-2018/06/16 14:06:41") 
+  (specialized) 
+  (example-snippet "The patients sisterinlaw did state that the patient") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF::COMMUNICATE-AFFIRMATIVELY::PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

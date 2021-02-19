@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LIVING-ALONE:-1-2018/07/23 16:41:59") 
+  (specialized) 
+  (example-snippet "patient for longterm care") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::PREP::LONG-TERM::CARE:" ":REFERRAL::PREP::NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0))
+  (properties (directionality uncertain)))
+
+)

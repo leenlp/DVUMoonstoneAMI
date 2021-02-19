@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-0-2018/06/08 12:56:42") 
+  (specialized) 
+  (example-snippet "relatives in Nashville with whom she could stay posttransplant") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-WITH-WHOM-PATIENT-COULD-HYPOTHETICALLY-LIVE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

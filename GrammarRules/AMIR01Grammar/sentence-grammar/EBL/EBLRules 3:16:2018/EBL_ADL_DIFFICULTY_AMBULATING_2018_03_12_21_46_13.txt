@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-DIFFICULTY-AMBULATING::2018/03/12 21:46:13") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":ADL-DIFFICULTY-AMBULATING:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":PROBLEM:<THING>") 
+    (":PREP::WALKING:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

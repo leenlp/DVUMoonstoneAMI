@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PERSON-IS-DEPRESSED:-0-2018/04/30 10:00:42") 
+  (specialized) 
+  (example-snippet "she was diagnosed with bipolar disorder") 
+  (ordered true) 
+  (concept ":PERSON-IS-DEPRESSED:") 
+  (stype "<DEPRESSION-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::DIAGNOSIS::PREP::DEPRESSION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

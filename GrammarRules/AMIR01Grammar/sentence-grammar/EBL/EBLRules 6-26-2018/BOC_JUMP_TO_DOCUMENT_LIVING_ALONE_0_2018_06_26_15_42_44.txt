@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LIVING-ALONE:-0-2018/06/26 15:42:44") 
+  (specialized) 
+  (example-snippet "relatives in Nashville with whomshe could stay posttransplant") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY-PATIENT-CAN-STAY-WITH:")) 
+  (properties (directionality uncertain))
+  (tests 
+    ("notneg" ?0)))
+
+)

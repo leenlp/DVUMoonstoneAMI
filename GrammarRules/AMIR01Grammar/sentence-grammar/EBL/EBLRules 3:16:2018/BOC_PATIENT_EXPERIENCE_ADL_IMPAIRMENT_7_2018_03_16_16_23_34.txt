@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-EXPERIENCE-ADL-IMPAIRMENT:-7-2018/03/16 16:23:34") 
+  (specialized) 
+  (example-snippet "he began to experienced progressive unsteadiness") 
+  (ordered true) 
+  (concept ":PATIENT-EXPERIENCE-ADL-IMPAIRMENT:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::EXPERIENCE::ADL-IMPAIRMENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

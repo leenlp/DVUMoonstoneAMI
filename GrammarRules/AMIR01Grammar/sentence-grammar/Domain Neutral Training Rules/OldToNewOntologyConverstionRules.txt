@@ -1,0 +1,14 @@
+'(
+wordrule
+ 
+ ((ruleid complex-event-to-predicate-conversion-rule)
+  (stype "<PREDICATE>")
+  (concept ?0)
+  (words ("<COMPLEX_EVENT>")))
+
+((ruleid event-to-action-conversion-rule)
+  (stype "<ACTION>")
+  (concept ?0)
+  (words ("<EVENT>")))
+
+)

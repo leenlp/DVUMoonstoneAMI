@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:GENERAL-COGNITIVE-ABILITY-DEFICIT:-0-2018/06/29 17:05:58") 
+  (specialized) 
+  (example-snippet "deficits in cognition") 
+  (ordered true) 
+  (concept ":GENERAL-COGNITIVE-ABILITY-DEFICIT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DEFICIT::PREP::GENERAL-COGNITIVE-ABILITY-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MOVE-TO-FACILITY::2018/03/13 12:51:54") 
+  (specialized)  
+  (sourceid "admission-for-reason") 
+  (concept ":MOVE-TO-FACILITY:") 
+  (stype "<MOVE-TO-OR-FROM-LOCATION-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":ADMISSION:") 
+    (":PREP:") 
+    (":ASSISTED-LIVING:")) 
+  (properties 
+    (reason "?2")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

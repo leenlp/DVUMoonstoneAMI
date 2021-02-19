@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE::2018/04/02 21:56:05") 
+  (specialized) 
+  (example-snippet "getting Sinemet") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":RECEIVE:") 
+    (":PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

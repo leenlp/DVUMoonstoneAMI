@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-IN-MARGINAL-SUPPORT-FACILITY::2017/12/16 01:01:14") 
+  (specialized) 
+  (example-snippet "patient was taken to jail") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-IN-MARGINAL-SUPPORT-FACILITY:") 
+  (stype "<LIVING-FACILITY-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":TAKEN-TO-MARGINAL-SUPPORT-FACILITY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (removeproperties directionality))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-7-2018/07/25 16:04:11") 
+  (specialized) 
+  (example-snippet "was laterally transferred to neuro chair") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PASSIVELY-MOVED-TO-ADL-FURNITURE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

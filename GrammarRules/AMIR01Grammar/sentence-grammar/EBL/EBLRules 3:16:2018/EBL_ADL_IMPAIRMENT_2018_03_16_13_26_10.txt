@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-IMPAIRMENT::2018/03/16 13:26:10") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":ADL-IMPAIRMENT:") 
+  (stype "<ADL-ABILITY>") 
+  (window 16.0) 
+  (words 
+    (":MINIMAL::HELP:") 
+    (":PREP::ADL-ACTIVITY:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

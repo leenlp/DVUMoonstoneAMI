@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::WITH-PATIENT::2017/10/05 10:39:01") 
+  (specialized) 
+  (example-snippet "in with patient") 
+  (ordered true) 
+  (sourceid "pp-rule") 
+  (concept ":WITH-PATIENT:") 
+  (stype "<WITH-PERSON-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    ("@preposition-word-rule@") 
+    (":PATIENT:")) 
+  (properties 
+    (thing "?1")))
+
+)

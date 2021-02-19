@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LIVING-ALONE:-3-2018/06/28 11:09:39") 
+  (specialized) 
+  (example-snippet "recommendations on appropriate level ofpostacute rehab") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":RECOMMENDATION::PREP::APPROPRIATE::NURSING-HOME:")) 
+  (properties (directionality uncertain))
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-3-2018/06/28 16:00:27") 
+  (specialized) 
+  (example-snippet "decreasing independence") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DECREASED::INDEPENDENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

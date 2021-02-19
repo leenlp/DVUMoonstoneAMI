@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-6-2018/07/12 22:51:33") 
+  (specialized) 
+  (example-snippet "returned to supine with max assist") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":RETURN::POSITIONAL-ACTION::PREP::MAXIMAL::PROVISION-OF-CARE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

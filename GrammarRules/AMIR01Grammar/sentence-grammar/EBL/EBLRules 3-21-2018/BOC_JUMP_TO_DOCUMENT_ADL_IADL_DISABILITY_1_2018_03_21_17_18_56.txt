@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-1-2018/03/21 17:18:56") 
+  (specialized)  
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":ADL-DIFFICULTY:")) 
+  (tests 
+    ("neg" ?0))
+  (properties (directionality negated)))
+
+)

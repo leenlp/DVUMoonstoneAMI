@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-WITH-PATIENT::2017/10/05 16:41:12") 
+  (specialized) 
+  (example-snippet "patient in with mom") 
+  (ordered true) 
+  (sourceid "person-action-thing-rule") 
+  (concept ":FF-WITH-PATIENT:") 
+  (stype "<PERSON-WITH-PERSON-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":WITH-FAMILY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

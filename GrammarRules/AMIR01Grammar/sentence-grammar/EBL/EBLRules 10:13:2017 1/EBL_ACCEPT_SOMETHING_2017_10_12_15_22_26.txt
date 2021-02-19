@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ACCEPT-SOMETHING::2017/10/12 15:22:26") 
+  (specialized) 
+  (example-snippet "comfortable with bulb suctioning") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":ACCEPT-SOMETHING:") 
+  (stype "<ACCEPT-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ACCEPT:<THING>") 
+    (":MEDICAL-PROCEDURE:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")))
+
+)

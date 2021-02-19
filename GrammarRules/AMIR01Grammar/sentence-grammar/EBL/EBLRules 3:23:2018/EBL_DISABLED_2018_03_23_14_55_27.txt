@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DISABLED::2018/03/23 14:55:27") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "manner-property-property-rule") 
+  (concept ":DISABLED:") 
+  (stype "<ADL-ABILITY-PROPERTY-MANNER>") 
+  (window 32.0) 
+  (words 
+    ("<QUALITY-PROPERTY>") 
+    (":DISABLED:<PROPERTY>")) 
+  (properties 
+    (manner "?0") 
+    (property "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-9-2018/07/25 16:09:42") 
+  (specialized) 
+  (example-snippet "unable to tolerate 23 minutes of standing") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":UNABLE::TOLERATE::TIME-UNIT::PREP::ADL-ACTIVITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

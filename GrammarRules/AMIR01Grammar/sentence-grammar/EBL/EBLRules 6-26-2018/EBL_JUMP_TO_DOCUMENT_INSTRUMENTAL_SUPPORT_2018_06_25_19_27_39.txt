@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT::2018/06/25 19:27:39") 
+  (specialized) 
+  (example-snippet "educate family as needed") 
+  (juxtaposed true) 
+  (sourceid "do-something-as-needed-predicate-rule") 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (window 16.0) 
+  (words 
+    (":TEACH-FAMILY-PREDICATE:") 
+    ("as needed")) 
+  (properties 
+    (directionality "uncertain")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

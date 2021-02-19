@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-6-2018/07/09 16:12:16") 
+  (specialized) 
+  (example-snippet "hypotonic") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":HYPOTONIC:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

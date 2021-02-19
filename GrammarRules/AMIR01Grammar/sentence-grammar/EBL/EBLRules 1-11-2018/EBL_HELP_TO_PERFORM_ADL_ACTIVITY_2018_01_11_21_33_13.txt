@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HELP-TO-PERFORM-ADL-ACTIVITY::2018/01/11 21:33:13") 
+  (specialized) 
+  (example-snippet "help to get to bathroom") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":HELP-TO-PERFORM-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":HELP:") 
+    (":RECEIVE::PREP::ADL-FACILITY:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")))
+
+)

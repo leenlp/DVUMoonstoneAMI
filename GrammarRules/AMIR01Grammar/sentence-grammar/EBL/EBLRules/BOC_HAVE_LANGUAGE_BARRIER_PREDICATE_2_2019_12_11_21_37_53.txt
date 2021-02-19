@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HAVE-LANGUAGE-BARRIER-PREDICATE:-2-2019/12/11 21:37:53") 
+  (specialized) 
+  (example-snippet "is deaf") 
+  (ordered true) 
+  (concept ":HAVE-LANGUAGE-BARRIER-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":DEAF:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

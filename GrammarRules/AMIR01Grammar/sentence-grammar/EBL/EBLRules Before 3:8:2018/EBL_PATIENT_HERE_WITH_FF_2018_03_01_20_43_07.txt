@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HERE-WITH-FF::2018/03/01 20:43:07") 
+  (specialized) 
+  (example-snippet "She comes here today with a friend") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-HERE-WITH-FF:") 
+  (stype "<AT-PLACE-WITH-PERSON-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":COME-WITH-FF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

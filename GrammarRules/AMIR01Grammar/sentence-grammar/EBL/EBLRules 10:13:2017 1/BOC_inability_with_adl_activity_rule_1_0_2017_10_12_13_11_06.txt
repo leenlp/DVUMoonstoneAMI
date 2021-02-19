@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-inability-with-adl-activity-rule-1-0-2017/10/12 13:11:06") 
+  (specialized) 
+  (example-snippet "difficult for her to remember to eat") 
+  (ordered true) 
+  (concept ":HAVE-ADL-DISABILITY:") 
+  (stype "<HAVE-ADL-DISABILITY>") 
+  (window 16.0) 
+  (bagofconcepts true) 
+  (words 
+    (":INABILITY-WITH-ADL-ACTIVITY:")))
+
+)

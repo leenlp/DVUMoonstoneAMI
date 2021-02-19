@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MOVE-TO-OR-FROM-ADL-FACILITY::2018/03/16 13:50:29") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "predicate-state-rule") 
+  (concept ":MOVE-TO-OR-FROM-ADL-FACILITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":IS:") 
+    (":MOVE::PREP::ADL-FACILITY:")) 
+  (properties 
+    (property "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

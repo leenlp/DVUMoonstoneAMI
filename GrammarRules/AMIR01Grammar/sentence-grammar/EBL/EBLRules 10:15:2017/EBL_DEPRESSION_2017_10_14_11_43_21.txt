@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DEPRESSION::2017/10/14 11:43:21") 
+  (specialized) 
+  (example-snippet "depression with anxiety") 
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":DEPRESSION:") 
+  (stype "<DEPRESSION>") 
+  (window 16.0) 
+  (words 
+    (":DEPRESSION:<THING>") 
+    (":PREP::MENTAL-DISCORD:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")))
+
+)

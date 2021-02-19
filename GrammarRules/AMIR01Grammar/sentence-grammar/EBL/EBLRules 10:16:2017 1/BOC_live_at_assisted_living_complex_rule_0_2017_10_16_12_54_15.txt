@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-live-at-assisted-living-complex-rule-0-2017/10/16 12:54:15") 
+  (specialized) 
+  (example-snippet "transferred back to assisted living") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (window 16.0) 
+  (bagofconcepts true) 
+  (words 
+    (":LIVES-IN-ASSISTED-LIVING:")))
+
+)

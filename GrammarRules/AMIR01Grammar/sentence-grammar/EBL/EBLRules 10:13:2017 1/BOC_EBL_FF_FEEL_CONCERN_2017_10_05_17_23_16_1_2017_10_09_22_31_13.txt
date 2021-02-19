@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::FF-FEEL-CONCERN::2017/10/05 17:23:16-1-2017/10/09 22:31:13") 
+  (specialized) 
+  (example-snippet "His mom is concerned") 
+  (ordered true) 
+  (concept ":HAVE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 16.0) 
+  (bagofconcepts true) 
+  (words 
+    (":FF-FEEL-CONCERN:")))
+
+)

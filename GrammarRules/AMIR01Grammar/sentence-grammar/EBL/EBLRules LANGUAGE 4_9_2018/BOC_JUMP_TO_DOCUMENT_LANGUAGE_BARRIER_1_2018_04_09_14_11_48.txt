@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:-1-2018/04/09 14:11:48") 
+  (specialized) 
+  (example-snippet "conveyed with the use of a translator") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":COMMUNICATE-VIA-TRANSLATOR-PREDICATE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-MOVE-TO-ADL-FACILITY-WITHOUT-HELP::2018/03/16 16:33:32") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "state-thing-rule") 
+  (concept ":UNABLE-TO-MOVE-TO-ADL-FACILITY-WITHOUT-HELP:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":UNABLE:<STATE>") 
+    (":MOVE-TO-OR-FROM-ADL-FACILITY:<ACTION>")) 
+  (properties 
+    (state "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

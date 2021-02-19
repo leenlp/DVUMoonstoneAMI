@@ -1,0 +1,23 @@
+'(
+
+	("AdjudicationEHostVsMoonstone"
+		("adjudicationEHostVsMoonstone" ?annotation ?value ?loop))
+
+	("AnnotationHasClassification"
+		("annotationHasClassification" ?annotation ?value))
+		
+	("AnnotationsHaveClassificationAndValues"
+		("annotationPairHasSameClassificationAndAttributeValues" ?annotation1 ?annotation2 ?value ?loop))
+		
+	("AnnotationsHaveClassificationAndValuesNEW"
+		("annotationPairHasSameClassificationAndAttributeValuesNEW" ?annotation1 ?annotation2 ?value ?loop 
+				?classification))
+		
+	("AnnotationHasValue"
+		("annotationHasValue" ?annotation ?value))
+		
+	
+
+
+)
+

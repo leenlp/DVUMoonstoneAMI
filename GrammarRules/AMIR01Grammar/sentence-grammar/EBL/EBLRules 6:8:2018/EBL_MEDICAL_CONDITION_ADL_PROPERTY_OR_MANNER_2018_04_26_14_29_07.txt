@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MEDICAL-CONDITION-ADL-PROPERTY-OR-MANNER::2018/04/26 14:29:07") 
+  (specialized) 
+  (example-snippet "weak") 
+  (sourceid "weak-state-word-rule") 
+  (concept ":MEDICAL-CONDITION-ADL-PROPERTY-OR-MANNER:") 
+  (stype "<DISEASE-PROPERTY-OR-MANNER>") 
+  (window 16.0) 
+  (words 
+    ("weak")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

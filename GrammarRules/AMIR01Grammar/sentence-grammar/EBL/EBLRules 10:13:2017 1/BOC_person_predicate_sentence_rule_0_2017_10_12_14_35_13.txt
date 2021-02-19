@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-person-predicate-sentence-rule-0-2017/10/12 14:35:13") 
+  (specialized) 
+  (example-snippet "patient is depressed") 
+  (ordered true) 
+  (concept ":PERSON-IS-DEPRESSED:") 
+  (stype "<DEPRESSION-SENTENCE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::DEPRESSION:")))
+
+)

@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::EXPERIENCE-ADL-EVENT::2018/03/16 16:55:56") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":EXPERIENCE-ADL-EVENT:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":EXPERIENCE:<ACTION>") 
+    (":FALL:<THING>")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

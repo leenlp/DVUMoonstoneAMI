@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ABLE-TO-WALK-WITHOUT-HELP::2018/03/21 20:25:17") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "action-manner-predicate-rule") 
+  (concept ":ABLE-TO-WALK-WITHOUT-HELP:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":WALKING:<PREDICATE>") 
+    (":INDEPENDENTLY:")) 
+  (properties 
+    (action "?0") 
+    (manner "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

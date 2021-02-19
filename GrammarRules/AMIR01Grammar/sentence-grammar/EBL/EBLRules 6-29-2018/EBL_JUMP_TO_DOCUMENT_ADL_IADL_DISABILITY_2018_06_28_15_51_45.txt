@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY::2018/06/28 15:51:45") 
+  (specialized) 
+  (example-snippet "moderate assistance") 
+  (juxtaposed true) 
+  (sourceid "property-thing-rule") 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (window 16.0) 
+  (words 
+    (":MODERATE:" ":MAXIMAL:" ":MINIMAL:") 
+    (":PROVISION-OF-CARE:<THING>")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

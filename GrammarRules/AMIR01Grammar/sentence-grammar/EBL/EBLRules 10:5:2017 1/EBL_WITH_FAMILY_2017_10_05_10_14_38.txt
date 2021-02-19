@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::WITH-FRIEND::2017/10/05 10:14:38") 
+  (specialized) 
+  (example-snippet "in with mom") 
+  (ordered true) 
+  (sourceid "pp-rule") 
+  (concept ":WITH-FF:") 
+  (stype "<WITH-PERSON-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    ("with") 
+    (":FF:" ":FAMILY:")) 
+  (properties 
+    (thing "?1")))
+
+)

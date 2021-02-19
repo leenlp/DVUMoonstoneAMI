@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADMISSION-FOR-REASON::2017/10/17 18:12:11") 
+  (specialized) 
+  (example-snippet "admitted for evaluation of increased mood lability") 
+  (sourceid "admission-for-reason") 
+  (concept ":ADMISSION-FOR-REASON:") 
+  (stype "<ADMISSION-FOR-PREDICATE-THING>") 
+  (window 16.0) 
+  (words 
+    (":ADMISSION:<THING>") 
+    (":PREP:") 
+    (":EVALUATION-FOR-DEPRESSION:<THING>")))
+
+)

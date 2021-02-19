@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-WHO-PROVIDES-HELP-TO-PATIENT::2018/06/25 17:13:30") 
+  (specialized) 
+  (example-snippet "husband who is able to provide 24 hour supervisionassistance") 
+  (ordered true) 
+  (sourceid "person-who-is-thing-or-event-rule") 
+  (concept ":FF-WHO-PROVIDES-HELP-TO-PATIENT:") 
+  (stype "<FRIEND-OR-FAMILY>") 
+  (window 16.0) 
+  (words 
+    (":FAMILY:") 
+    ("who is") 
+    (":ABLE::PROVIDE::HELP:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

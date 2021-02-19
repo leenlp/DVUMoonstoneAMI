@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:ADL-IMPAIRMENT:-0-2018/02/18 20:25:18") 
+  (specialized) 
+  (ordered true) 
+  (concept ":ADL-IMPAIRMENT:") 
+  (stype "<ADL-ABILITY>") 
+  (bagofconcepts true) 
+  (words 
+    (":ADL-PATHOLOGIC-BEHAVIOR:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-UNABLE-TO-PERFORM-ADL-WITHOUT-HELP::2018/01/11 21:20:33") 
+  (specialized) 
+  (example-snippet "Patient unable to walk to bathroom without help") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

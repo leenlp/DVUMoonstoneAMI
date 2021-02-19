@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-3-2018/06/11 18:28:15") 
+  (specialized) 
+  (example-snippet "involved in patients care") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":INVOLVED-IN-CARE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

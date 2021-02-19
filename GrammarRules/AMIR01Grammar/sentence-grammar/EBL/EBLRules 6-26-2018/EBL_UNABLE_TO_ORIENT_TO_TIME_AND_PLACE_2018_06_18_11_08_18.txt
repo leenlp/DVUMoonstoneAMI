@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-ORIENT-TO-TIME-AND-PLACE::2018/06/18 11:08:18") 
+  (specialized) 
+  (example-snippet "unable to orient to time or place") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":UNABLE-TO-ORIENT-TO-TIME-AND-PLACE:") 
+  (stype "<COGNITIVE-ABILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":UNABLE:<PROPERTY>") 
+    (":ORIENT-TO-TIME-AND-PLACE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

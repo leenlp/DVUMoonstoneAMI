@@ -1,0 +1,387 @@
+'(
+wordrule
+
+((ruleid admit-from-home-indicates-live-at-home-rule) 
+  (concept ":LIVE-AT-HOME:")
+  (words (":HOME:"))
+  (tests ("headerContainsOneOf" ?0 (list "admitted" "admitted from"))))
+  
+((ruleid facility-header-plus-nursing-home-indicates-not-living-alone-rue)
+ (concept ":LIVES-IN-NURSING-HOME:")
+ (words (":NURSING-HOME:"))
+ (tests (notneg ?0) ("headerContainsOneOf" ?0 (list "facility" "facility"))))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 10/9/2017
+;; Living in foster care
+
+((ruleid treatment-or-living-options-rule)
+ (complex-concept)
+ (words ("<LIVING-FACILITY>" "<TREATMENT-THING>") (":OPTION-THING:"))
+ (tests (notneg ?0) (notneg ?1)))
+
+((ruleid patient-located-in-assisted-living-rule)
+ ;; (stype "<SENTENCE>")
+ (concept ":LIVES-IN-FOSTER-CARE:")
+ (ordered true)
+ (words (":PATIENT:") ("@living-location-types-rule@"))
+ (tests (notneg ?1) (hcr ?1 ":FOSTER-HOME:")))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Living at home
+
+((ruleid living-alone-at-home-with-two-targets-rule)
+  (stype ?0)
+  (concept ":LIVE-AT-HOME:")
+  (ordered true)
+  (words (":LIVING-ALONE:") (":HOME:"))
+  (tests (notneg ?0)))
+
+;; 7/15/2016:  "e.g. "lives at home with wife"
+((ruleid not-living-alone-at-home-indicates-living-at-home-rule)
+ (concept ":LIVE-AT-HOME:")
+ (words (":NOT-LIVING-ALONE:"))
+ (tests (notneg ?0)
+		("propertyValueContainsStringRecursive" ?0 "object" ":LIVING-SPACE:")))
+		
+
+((ruleid patient-travel-home-rule)
+ ;; (stype "<SENTENCE>")
+ (concept ":LIVE-AT-HOME:")
+ (ordered true)
+ (words (":PATIENT:") (":TRAVEL:" ":RETURN:") (":HOME:" ":LIVING-SPACE:")))
+ 
+((ruleid patient-located-at-home-rule)
+ ;; (stype "<SENTENCE>")
+ (concept ":LIVE-AT-HOME:")
+ (ordered true)
+ (words (":PATIENT:") 
+		(
+		;; "@living-location-types-rule@" ;; Matches too many "patient home" phrases
+		":RETURN-TO-OR-LIVE-AT-HOME:"))
+ (tests (notneg ?1) (or (hcr ?1 ":LIVING-SPACE:") (hcr ?1 ":HOME:"))))
+ 
+ ;; 5/29/2017
+ ((ruleid live-at-home-with-family-indicates-living-at-home-rule)
+  (concept ":LIVE-AT-HOME:")
+  (ordered true)
+  (words (":LIVE-AT-HOME-WITH-FAMILY:"))
+  (tests (notneg ?0)))
+  
+((ruleid live-at-home-with-family-indicates-not-living-alone-rule)
+  (concept ":NOT-LIVING-ALONE:")
+  (ordered true)
+  (words (":LIVE-AT-HOME-WITH-FAMILY:"))
+  (tests (notneg ?0)))
+  
+ ((ruleid live-at-home-with-family-indicates-living-at-home)
+  (concept ":LIVE-AT-HOME-WITH-FAMILY:")
+  (ordered true)
+  (words (":RETURN-TO-OR-LIVE-AT-HOME:") ("with") (":FAMILY:"))
+  (tests (notneg ?0)))
+ 
+ ;; Updated 6-14-2016
+((ruleid living-at-home-or-living-space-rule)
+ ;; (stype "<PREDICATE>")
+ (concept ":RETURN-TO-OR-LIVE-AT-HOME:")
+ (ordered true)
+ (words (":LIVE-AT:" ":DISCHARGE:" ":RETURN:" "back" ":STAY-AT:")
+		(":HOME:" ":LIVING-SPACE:")))
+
+((ruleid patient-lives-at-home-rule)
+ ;; (stype "<SENTENCE>")
+ (concept ":LIVE-AT-HOME:")
+ (ordered true)
+ (words (":PATIENT:") 
+ 		("@general-patient-location-rule@" "@live-at-own-home-rule@"))
+ (tests (notneg ?1) (or (hcr ?1 ":LIVING-SPACE:") (hcr ?1 ":HOME:"))))
+ 
+ 
+((ruleid live-at-own-home-rule)
+ ;; (stype "<PREDICATE>")
+ (concept ":LIVE-AT-HOME:")
+ (ordered true)
+ (words (":LIVE-AT:") (":HOME:" ":LIVING-SPACE:" ":OWN-HOME:"))
+ (tests (notneg ?0)
+		(not (hcr ?1 ":FRIEND:"))
+		(not (hcr ?1 ":FAMILY:"))
+		(not (hcr ?1 ":NON-PATIENT-PERSON:"))))
+		
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Facility living
+ 
+((ruleid patient-seen-in-alf-rule-connotes-lives-in-assisted-living)
+ ;; (stype "<SENTENCE>")
+ (concept ":LIVES-IN-ASSISTED-LIVING:")
+ (ordered true)
+ (words (":PATIENT:") (":EXAMINE:") (":ASSISTED-LIVING:")))
+  
+;; 6/21/2016
+((ruleid nursing-home-assisted-living-means-nursing-home-complex-rule)
+ ;; (stype "<PREDICATE>")
+ (concept ":LIVES-IN-NURSING-HOME:")
+ (words (":LIVE-AT::NURSING-HOME::ASSISTED-LIVING:" ":LIVE-AT::NURSING-HOME:" 
+ 			":LIVING-ALONE::NURSING-HOME:" ":LIVE-AT::ALONE::NURSING-HOME:" 
+ 			":MOVE-TO::NURSING-HOME:"
+ 			":DISCHARGE::PATIENT::NURSING-HOME:"
+			":DISCHARGE::NURSING-HOME:"
+			":LIVING-ALONE::NURSING-HOME::LIVING-SPACE:"
+			":LIVING-ALONE::NURSING-HOME::LIVING-SPACE:"
+			":LIVE-AT::ALONE::NURSING-HOME:"
+			":LIVE-AT::ALONE::NURSING-HOME::LIVING-SPACE:"
+ 			))
+ (tests (notneg ?0) 
+ 		(not ("isPossibleUncertainOrHypothetical" ?0)) 
+ 		(not ("sentenceContainsOneOf" ?0 (list "if" "may" "vs" "would" "like to")))))
+ 
+((ruleid live-at-assisted-living-complex-rule)
+ ;; ;; (stype "<PREDICATE>")
+ (concept ":LIVES-IN-ASSISTED-LIVING:")
+ (words (
+		":LIVE-AT::ASSISTED-LIVING:" 
+		":LIVING-ALONE::ASSISTED-LIVING:"
+ 		":LIVE-AT::ALONE::ASSISTED-LIVING:"
+		":MOVE-TO::ASSISTED-LIVING:"
+		":PATIENT-LIVES-IN-ASSISTED-LIVING:"
+		))
+ (tests (notneg ?0)))
+
+;; "He is in assisted living" 
+((ruleid patient-located-in-assisted-living-rule)
+ ;; (stype "<SENTENCE>")
+ (concept ":LIVES-IN-ASSISTED-LIVING:")
+ (ordered true)
+ (words (":PATIENT:") ("@living-location-types-rule@"))
+ (tests (notneg ?1) (hcr ?1 ":ASSISTED-LIVING:")))
+ 
+ ;; "He is at a nursing home"
+((ruleid patient-located-in-nursing-home-rule)
+ ;; (stype "<SENTENCE>")
+ (concept ":LIVES-IN-NURSING-HOME:")
+ (ordered true)
+ (words (":PATIENT:") ("@living-location-types-rule@"))
+ (tests (notneg ?1) (hcr ?1 ":NURSING-HOME:")))
+ 
+ ;; "patient at clc"
+ ((ruleid patient-located-in-group-home-rule)
+  ;; (stype "<SENTENCE>")
+  (concept ":LIVES-IN-GROUP-HOME:")
+  (ordered true)
+  (words (":PATIENT:") ("@living-location-types-rule@"))
+  (tests (notneg ?1) (or (hcr ?1 ":GROUP-HOME:") (hcr ?1 ":COMMUNITY-LIVING:"))))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Homelessness
+
+((ruleid history-of-homelessness-connotes-homelessness-rule)
+  (concept ":POSSIBLY-HOMELESS:")
+  (ordered true)
+  (words ("history of") (":HOMELESSNESS:" ":POSSIBLY-HOMELESS:")))
+
+((ruleid homeless-complex-concept-rule)
+ (concept ":POSSIBLY-HOMELESS:")
+ (words (":PATIENT::POSSIBLY-HOMELESS:" 
+			":PATIENT::HOMELESS:"
+			":PATIENT::HOMELESSNESS:")))
+
+((ruleid shelter-denotes-homeless-event-rule)
+ (concept ":POSSIBLY-HOMELESS:")
+ (words (":LIVE-AT:" ":STAY-AT:" ":SLEEP:")
+		(":SHELTER:" 
+		;; ":STREET:"  -- 6/2/2017:  ;; There are no test references to living on the street, 
+									 ;; but there are statements such as "lives on same street"
+							
+		))
+ (tests (notneg ?0)))
+ 
+((ruleid patient-is-homeless-rule)
+ (concept ":POSSIBLY-HOMELESS:")
+ (words (":PATIENT:") (":HOMELESSNESS:" ":HOMELESS:" ":POSSIBLY-HOMELESS:" ":HOMELESSNESS:"))
+ (tests (notneg ?1)))
+ 
+;; "now homeless", "housing situation is homeless":  Anything to have >1 word...
+((ruleid housing-situation-homeless-rule)
+ (concept ":POSSIBLY-HOMELESS:")
+ (words ("housing" "now") (":HOMELESS:" ":POSSIBLY-HOMELESS:" ":HOMELESSNESS:"))
+ (tests (notneg ?1)))
+
+ ;; 5/28/2017
+((ruleid homeless-word-rule)
+ (concept ":HOMELESSNESS:")
+ (words ("homeless" "homelessness")))
+ 
+ 
+((ruleidXXX homeless-word-rule)
+ (concept ":POSSIBLY-HOMELESS:")
+ (words ("homeless" "homelessness")))
+ 
+;; 8/15/2016-- Problem with uppercase in "Patient is not Homeless"ve
+((ruleid not-homeless-word-rule)
+ (concept ":NOT-HOMELESS:")
+ (words ("not homeless")))
+ 
+ ;; 10/31/2016
+((ruleid negated-homeless-rule)
+ (concept ":NOT-HOMELESS:")
+ (words (":HOMELESS:" ":POSSIBLY-HOMELESS:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Single occupancy room
+
+((ruleid single-occupancy-room-word-string-rule)
+ ;; (stype "<EVENT-THING>")
+ (concept ":SINGLE-ROOM-OCCUPANCY:")
+ (words ("single room occupancy" "single room" "sro"
+			":LIVE-AT::SINGLE-ROOM-OCCUPANCY:"
+			":PATIENT::LIVE-AT::SINGLE-ROOM-OCCUPANCY:")))
+
+((ruleid single-occupancy-room-word-combination-rule)
+ ;; (stype "<PREDICATE>")
+ (concept ":SINGLE-ROOM-OCCUPANCY:")
+ (ordered true)
+ (words (":LIVE-AT:") ("single") ("room")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Living-related concepts
+
+((ruleid number-room-home-rule)
+ (example-snippet "2 bedroom home")
+ (concept ":HOME:")
+ (ordered true)
+ (words (":NUMBER:") (":ADL-FACILITY:" ":ROOM:" ":BEDROOM:") ("<LIVING-SPACE>" ":HOME:")))
+ 
+((ruleid someone-elses-home-rule)
+ ;; (stype "<NON-PATIENT-LIVING-SPACE>")
+ (example-snippet "daughter's home")
+ (concept ":NON-PATIENT-HOME:")
+ (ordered true)
+ (words ("@possessive-person-rule@") (":LIVING-SPACE:" ":HOME:")))
+
+ // Changed from <LIVING-SPACE> to :LIVING-SPACE: 5/15/2017.  Don't want to pick up marginal living space.
+((ruleid nonpatient-persons-living-space-rule)
+ ;; (stype "<NON-PATIENT-LIVING-SPACE>")
+ (concept ":NON-PATIENT-HOME:")
+ (words (":NON-PATIENT-PERSON:") ("<LIVING-SPACE>")))
+ 
+ ((ruleid nonpatient-marginal-living-space-rule)
+ ;; (stype "<NON-PATIENT-LIVING-SPACE>")
+ (concept ":NON-PATIENT-NON-HOME-LIVING-SPACE:")
+ (words (":NON-PATIENT-PERSON:") (":NON-HOME-LIVING-SPACE:")))
+ 
+  ;; 8/2/2016:  Trying out as complex concept
+((ruleid general-patient-location-rule)
+ ;; (stype "<PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (words (":DISCHARGE:" ":ADMISSION:" ":PLACEMENT:" ":LIVE-AT:" ":MOVE-TO:" ":RETURN:") 
+		("@living-location-types-rule@")))
+ 
+((ruleid living-location-types-rule)
+ (concept ?0)
+ (words (":COMMUNITY-LIVING:" ":GROUP-HOME:" ":NURSING-HOME:" ":ASSISTED-LIVING:" 
+			":LIVING-SPACE:" ":NON-HOME-LIVING-SPACE:" ":HOME:"
+			":FOSTER-HOME:")))
+ 
+((ruleid community-living-conglomerate-rule)
+ (concept ":COMMUNITY-LIVING:")
+ (words (":BENEFIT-LIVING-CENTER:" ":SENIOR-LIVING:")))
+
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; CAPTURE RULES
+
+((ruleid negated-living-at-home-indicates-does-not-live-at-home-rule)
+ ;; (stype "<PREDICATE>")
+ (concept ":DOES-NOT-LIVE-AT-HOME:")
+ (words (":LIVE-AT-HOME:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+ 
+ 
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ((ruleid nursing-home-rule-1)
+ (concept ":NURSING-HOME:")
+ (words ("nursing home" "residential rehabilitation setting" "nsg home" "nh" "cnh"
+		"heritage woods" "heritage" "heritage assisted living" 
+		"heritage nursing home" "heritage home" "nursing facility" 
+		"kansas christian home" "care center" "long term acute care" "ltac"
+		
+		;; ":PSEUDONYM:" 
+		"kindred" "promise" 
+		 "skilled nursing" "patient rehab"
+		"skilled nursing facility" "nursing facility" "snf"
+		"psych services" ;; 6/28/2018 Klooge, pure and simple
+		
+		;; 7/23/2018 - Some named services at Vanderbilt
+		"bordeaux" "greenhills" "wedgewood" "kindred" "avalon" "avalon valley"
+		"avalon valley rehab" "avalon ridge west" "avalon ridge"
+		)))
+		
+((ruleid nursing-home-rule-2)
+ (concept ":NURSING-HOME:")
+ (ordered true)
+ (words (":NURSING:") (":MEDICAL-FACILITY:")))
+ 		
+((ruleid rehab-clinic-rule)
+ ;; (concept ":NURSING-HOME:")
+ (concept ":REHAB-CLINIC:")
+ (ordered true)
+ (words ("acute" "post-acute" "post acute" "cardiac" ":INPATIENT:") 
+ 		(":REHABILITATION:")))
+		
+((ruleid compound-nursing-home-rule)
+ (concept ":NURSING-HOME:")
+ (juxtaposed true)
+ (words (":NURSING-HOME:") (":NURSING-HOME:")))
+		
+((ruleid hospice-word-rule)
+ (concept ":HOSPICE:")
+ (words ("hospice")))
+ 
+((ruleid nursing-home-rule-2)
+ (concept ":NURSING-HOME:")
+ (juxtaposed true)
+ (words (":NURSING:") (":HOME:")))
+ 
+((ruleid foster-care-word-rule)
+ (concept ":FOSTER-HOME:")
+ (juxtaposed true)
+ (words ("foster") ("care" "home" "living")))
+ 
+((ruleid nursing-word-rule)
+ (concept ":NURSING:")
+ (words ("nursing" "nsg")))
+ 
+((ruleid group-home-rule)
+  (concept ":GROUP-HOME:")
+  (words ("group home")))
+  
+((ruleid medical-facility-room-rule)
+ (concept ":FACILITY-ROOM:")
+ (words (":MEDICAL-FACILITY:") (":ROOM:")))
+  
+((ruleid home-word-rule)
+ ;; (stype "<LIVING-SPACE>")
+ (concept ":HOME:")
+ (words ("home" "house" "single level home" "private home" 
+			"single family home" "family home" "family's home"
+			"residence" "private residence" "lodging")))
+			
+((ruleid household-word-rule)
+ (concept ":DRUG-USER-HOUSEHOLD:")
+ (words (":HOUSEHOLD:" ":LIVING-SPACE:") (":DRUG-USER:")))
+ 
+((ruleid household-word-rule)
+ (concept ":HOUSEHOLD:")
+ (words ("household")))
+ 
+((ruleid own-home-word-rule)
+ ;; (stype "<LIVING-SPACE>")
+ (concept ":OWN-HOME:")
+ (words ("own home")))
+
+)

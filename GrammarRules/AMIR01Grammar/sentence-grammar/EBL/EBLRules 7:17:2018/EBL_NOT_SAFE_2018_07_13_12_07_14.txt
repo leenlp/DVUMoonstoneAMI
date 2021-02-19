@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NOT-SAFE::2018/07/13 12:07:14") 
+  (specialized) 
+  (example-snippet "is not safe") 
+  (ordered true) 
+  (sourceid "predicate-not-state-rule") 
+  (concept ":NOT-SAFE:") 
+  (words (":SAFE:"))
+  (tests 
+    (neg ?0))
+  (removeproperties directionality))
+
+)

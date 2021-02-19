@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-PROVIDE-CARE-FOR-PATIENT::2020/01/02 15:20:47") 
+  (specialized) 
+  (example-snippet "The patient and family appear to be able to appropriately advocate for the patients needs") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-PROVIDE-CARE-FOR-PATIENT:") 
+  (stype "<RECEIVE-SUPPORT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT-AND-FAMILY:") 
+    (":ABLE::ADVOCATE-FOR:" ":ADVOCATE-FOR:" ":ABLE::ADVOCATE-FOR::NEED:"))
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PERSON-IS-DEPRESSED:-0-2018/01/12 13:43:02") 
+  (specialized) 
+  (example-snippet "I amgoing to see him back in three weeks for the depression") 
+  (ordered true) 
+  (concept ":PERSON-IS-DEPRESSED:") 
+  (stype "<DEPRESSION-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PROVIDER-EXAMINE-PATIENT-FOR-DEPRESSION:"))
+  (tests (notneg ?0)))
+
+)

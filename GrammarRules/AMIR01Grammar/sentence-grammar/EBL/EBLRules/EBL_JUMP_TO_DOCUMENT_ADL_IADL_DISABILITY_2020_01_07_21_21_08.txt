@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY::2020/01/07 21:21:08") 
+  (specialized) 
+  (example-snippet "pregait shuffling") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (window 32.0) 
+  (words 
+    (":GAIT:") 
+    (":DIFFICULTY-AMBULATING:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

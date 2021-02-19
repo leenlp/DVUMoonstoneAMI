@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE::2020/01/09 13:49:00") 
+  (specialized) 
+  (example-snippet "refusing inhalers") 
+  (ordered true) 
+  (sourceid "person-communicates-sentence-or-thing-predicate-rule") 
+  (concept ":NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":DECLINE:") 
+    (":PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (topic "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (removeproperties directionality))
+
+)

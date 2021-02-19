@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-18-2018/06/25 21:42:38") 
+  (specialized) 
+  (example-snippet "Wife called my home") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF::CONTACT-ACTION::HOME:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

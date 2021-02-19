@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::THROWAWAY-CONCEPT::2018/03/09 12:02:35") 
+  (specialized) 
+  (example-snippet "I have been taking care of her husband") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":THROWAWAY-CONCEPT:") 
+  (stype "<THROWAWAY-CONCEPT>") 
+  (window 32.0) 
+  (words 
+    (":SELF:") 
+    (":POSSIBLE-SUPPORT:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-10-2018/07/19 15:41:41") 
+  (specialized) 
+  (example-snippet "Patient with generalized weaknessduring functional task") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::PREP::MEDICAL-CONDITION-CAUSING-ADL-DISABILITY::GENERAL-ADL-TASK:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

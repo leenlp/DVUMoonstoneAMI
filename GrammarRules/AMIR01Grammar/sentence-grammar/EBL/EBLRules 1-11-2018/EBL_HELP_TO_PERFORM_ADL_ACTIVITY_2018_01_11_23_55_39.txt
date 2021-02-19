@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HELP-TO-PERFORM-ADL-ACTIVITY::2018/01/11 23:55:39") 
+  (specialized) 
+  (example-snippet "no help to get to the bathroom") 
+  (ordered true) 
+  (sourceid "EBL::HELP-TO-PERFORM-ADL-ACTIVITY::2018/01/11 21:33:13") 
+  (concept ":NO-HELP-TO-PERFORM-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words (":HELP-TO-PERFORM-ADL-ACTIVITY:")) 
+  (tests (neg ?0))
+  (removeproperties directionality))
+)

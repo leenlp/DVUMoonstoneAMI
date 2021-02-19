@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-0-2018/03/08 10:54:47") 
+  (specialized) 
+  (example-snippet "patient and her daughter completed both days of diabetes education") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":PROVIDER-COMMUNICATE-WITH-PATIENT-AND-FAMILY-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

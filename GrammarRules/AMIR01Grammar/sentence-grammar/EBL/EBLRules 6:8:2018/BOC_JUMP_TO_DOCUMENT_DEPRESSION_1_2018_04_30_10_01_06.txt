@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-DEPRESSION:-1-2018/04/30 10:01:06") 
+  (specialized) 
+  (example-snippet "was diagnosed with bipolar disorder") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-DEPRESSION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DIAGNOSIS::PREP::DEPRESSION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

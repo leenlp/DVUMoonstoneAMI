@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY::2018/03/28 21:52:56") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "EBL::FALL-FROM-ADL-DEVICE::2018/03/28 21:51:43") 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (window 32.0) 
+  (words 
+    (":FALL:") 
+    (":ADL-DEVICE:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

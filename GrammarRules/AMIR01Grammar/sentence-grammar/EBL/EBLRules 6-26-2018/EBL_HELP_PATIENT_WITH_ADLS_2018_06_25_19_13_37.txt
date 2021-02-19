@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HELP-PATIENT-WITH-ADLS::2018/06/25 19:13:37") 
+  (specialized) 
+  (example-snippet "does all the cooking and cleaning for patient") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":HELP-PATIENT-WITH-ADLS:") 
+  (stype "<RECEIVE-SUPPORT-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":DO:") 
+    (":PATIENT-NEED::PREP::PATIENT:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

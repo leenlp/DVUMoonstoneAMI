@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-2-2018/07/09 09:56:50") 
+  (specialized) 
+  (example-snippet "Patient is obvious state of delirium") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::DELIRIUM:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

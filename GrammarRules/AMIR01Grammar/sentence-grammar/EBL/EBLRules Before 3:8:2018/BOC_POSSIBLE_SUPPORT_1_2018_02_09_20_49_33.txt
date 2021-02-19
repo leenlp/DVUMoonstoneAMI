@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-1-2018/02/09 20:49:33") 
+  (specialized) 
+  (example-snippet "procedure was discussed with father and mother") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":PROVIDER-COMMUNICATE-WITH-FAMILY-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

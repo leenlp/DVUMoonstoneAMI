@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::WITH-FF::2018/04/25 13:29:21") 
+  (specialized) 
+  (example-snippet "with her boyfriend") 
+  (ordered true) 
+  (sourceid "pp-rule") 
+  (concept ":WITH-FF:") 
+  (stype "<WITH-PERSON-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":PREP:") 
+    (":PERSON-POSSESSIVE::FRIEND:")) 
+  (properties 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

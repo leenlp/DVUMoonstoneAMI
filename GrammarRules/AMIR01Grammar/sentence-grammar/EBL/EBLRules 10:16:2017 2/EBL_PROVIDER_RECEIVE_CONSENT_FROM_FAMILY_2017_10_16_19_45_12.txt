@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PROVIDER-RECEIVE-CONSENT-FROM-FAMILY::2017/10/16 19:45:12") 
+  (specialized) 
+  (example-snippet "Consent was obtained from the daughter in law") 
+  (ordered true) 
+  (sourceid "action-manner-predicate-rule") 
+  (concept ":PROVIDER-RECEIVE-CONSENT-FROM-FAMILY:") 
+  (stype "<GIVE-TAKE-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":CONSENT:<THING>") 
+    (":RECEIVE::PREP::FAMILY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1") 
+    (verb-form "passive")))
+
+)

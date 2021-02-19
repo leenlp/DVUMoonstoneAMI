@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MEDICAL-CONDITION-ADL-PROPERTY-OR-MANNER::2018/04/25 19:14:40") 
+  (specialized) 
+  (example-snippet "hearing impaired") 
+  (sourceid "EBL::PERCEPTION-IMPAIRED::2018/04/25 19:10:55") 
+  (concept ":MEDICAL-CONDITION-ADL-PROPERTY-OR-MANNER:") 
+  (stype "<DISEASE-PROPERTY-OR-MANNER>") 
+  (window 16.0) 
+  (words 
+    (":PERCEPTION-MODE-THING:") 
+    (":IMPAIRED:<PROPERTY>")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-DIFFICULTY::2019/12/26 23:31:31") 
+  (specialized) 
+  (example-snippet "presents with aphasia") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":ADL-DIFFICULTY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 32.0) 
+  (words 
+    (":DISPLAYS-SOMETHING-ACTION:") 
+    (":APHASIA:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

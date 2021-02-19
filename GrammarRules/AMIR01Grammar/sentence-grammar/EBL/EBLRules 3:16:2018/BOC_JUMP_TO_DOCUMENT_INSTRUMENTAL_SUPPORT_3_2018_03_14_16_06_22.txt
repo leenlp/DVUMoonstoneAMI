@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-3-2018/03/14 16:06:22") 
+  (specialized) 
+  (example-snippet "rehabilitation program") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":ACCESS-TO-COMMUNITY-SERVICES:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

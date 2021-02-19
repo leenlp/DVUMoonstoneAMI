@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-ACCEPT-SOMETHING::2017/10/13 15:08:14") 
+  (specialized) 
+  (example-snippet "Mom is quite comfortable with bulb suctioning the nose") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-ACCEPT-SOMETHING:") 
+  (stype "<ACCEPT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    (":ACCEPT-SOMETHING:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

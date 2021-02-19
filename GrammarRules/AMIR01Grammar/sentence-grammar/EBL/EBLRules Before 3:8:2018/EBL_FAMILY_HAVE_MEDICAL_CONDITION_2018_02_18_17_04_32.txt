@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-HAVE-MEDICAL-CONDITION::2018/02/18 17:04:32") 
+  (specialized) 
+  (example-snippet "her husband has been diagnosed with high blood cholesterol") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FAMILY-HAVE-MEDICAL-CONDITION:") 
+  (stype "<MEDICAL-CONDITION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":DIAGNOSIS-WITH-DISEASE:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

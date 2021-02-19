@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-6-2018/07/09 12:30:08") 
+  (specialized) 
+  (example-snippet "aphasic") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":APHASIC:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

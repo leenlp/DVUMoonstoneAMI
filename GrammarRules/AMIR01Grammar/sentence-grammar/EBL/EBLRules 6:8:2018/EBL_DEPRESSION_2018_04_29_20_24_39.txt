@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DEPRESSION::2018/04/29 20:24:39") 
+  (specialized) 
+  (example-snippet "chronic Bipolar disorder") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":DEPRESSION:") 
+  (stype "<DEPRESSION>") 
+  (window 16.0) 
+  (words 
+    (":LONG-TERM:") 
+    (":DEPRESSION:<THING>")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

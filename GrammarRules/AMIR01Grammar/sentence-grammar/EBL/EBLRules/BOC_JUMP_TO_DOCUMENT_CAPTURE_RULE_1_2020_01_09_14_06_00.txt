@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-CAPTURE-RULE:-1-2020/01/09 14:06:00") 
+  (specialized) 
+  (example-snippet "do not stop taking this medication") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DO-NOT-STOP-TAKING-MEDICATION-INSTRUCTION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

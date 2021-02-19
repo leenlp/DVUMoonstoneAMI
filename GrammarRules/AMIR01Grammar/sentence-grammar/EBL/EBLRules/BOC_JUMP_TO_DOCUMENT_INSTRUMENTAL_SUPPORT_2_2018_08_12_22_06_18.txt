@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-2-2018/08/12 22:06:18") 
+  (specialized) 
+  (example-snippet "he went home by bus today") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::TRAVEL-ACTION::HOME::PREP::PUBLIC-TRANSPORTATION:")) 
+  (tests 
+    ("notneg" ?0))
+  (properties (directionality negated)))
+
+)

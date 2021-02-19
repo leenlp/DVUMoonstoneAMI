@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-12-2018/06/25 20:35:31") 
+  (specialized) 
+  (example-snippet "Family views medical treatment") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::BELIEVE::THERAPY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

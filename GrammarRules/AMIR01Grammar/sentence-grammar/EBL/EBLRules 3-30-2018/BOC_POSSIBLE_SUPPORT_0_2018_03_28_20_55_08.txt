@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-0-2018/03/28 20:55:08") 
+  (specialized) 
+  (example-snippet "she gave her informed consent to proceed with treatment") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":PERSON::GIVE-CONSENT::PREP::THERAPY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

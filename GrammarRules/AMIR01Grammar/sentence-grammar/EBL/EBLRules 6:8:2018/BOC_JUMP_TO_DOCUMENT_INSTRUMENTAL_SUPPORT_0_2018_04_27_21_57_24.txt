@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/04/27 21:57:24") 
+  (specialized) 
+  (example-snippet "discussion with the patients daughter") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":COMMUNICATION-WITH-FAMILY-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

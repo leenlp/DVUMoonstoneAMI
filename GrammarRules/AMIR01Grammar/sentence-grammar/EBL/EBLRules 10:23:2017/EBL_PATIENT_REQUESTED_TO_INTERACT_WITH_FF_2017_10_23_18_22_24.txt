@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-REQUESTED-TO-INTERACT-WITH-FF::2017/10/23 18:22:24") 
+  (specialized) 
+  (example-snippet "she was encouraged to talk with her family") 
+  (ordered true) 
+  (sourceid "communication-event-rule") 
+  (concept ":PATIENT-REQUESTED-TO-INTERACT-WITH-FF:") 
+  (stype "<REQUEST-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":REQUESTED-TO-INTERACT-WITH-FF:")) 
+  (properties 
+    (communication "true") 
+    (person "?0") 
+    (predicate "?1")) 
+  (removeproperties directionality))
+
+)

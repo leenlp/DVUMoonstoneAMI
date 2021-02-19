@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-AND-FAMILY::2020/01/02 15:51:54") 
+  (specialized) 
+  (example-snippet "patient and spouse") 
+  (ordered true) 
+  (sourceid "general-thing-conjunct-rule") 
+  (concept ":PATIENT-AND-FAMILY:") 
+  (stype "<PERSON>") 
+  (window 16.0) 
+  (words 
+    (":PATIENT:" "<FAMILY>") 
+    ("and") 
+    (":PATIENT:" "<FAMILY>" ":PERSON-POSSESSIVE::FAMILY:")))
+
+)

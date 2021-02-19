@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILIAL-SATISFACTION::2017/10/19 14:42:36") 
+  (specialized) 
+  (example-snippet "parental satisfaction") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":FAMILIAL-SATISFACTION:") 
+  (stype "<SATISFACTION>") 
+  (window 16.0) 
+  (words 
+    (":FAMILIAL:") 
+    (":SATISFACTION:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")))
+
+)

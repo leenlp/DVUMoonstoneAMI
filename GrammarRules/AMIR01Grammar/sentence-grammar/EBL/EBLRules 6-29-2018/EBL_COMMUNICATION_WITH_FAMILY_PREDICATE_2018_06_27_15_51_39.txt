@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-FAMILY-PREDICATE::2018/06/27 15:51:39") 
+  (specialized) 
+  (example-snippet "called his son") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":COMMUNICATION-WITH-FAMILY-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":CONTACT-ACTION:") 
+    (":FAMILY:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

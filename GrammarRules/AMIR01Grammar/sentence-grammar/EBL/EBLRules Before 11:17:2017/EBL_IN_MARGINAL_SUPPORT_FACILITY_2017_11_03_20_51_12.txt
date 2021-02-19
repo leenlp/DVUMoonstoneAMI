@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::IN-MARGINAL-SUPPORT-FACILITY::2017/11/03 20:51:12") 
+  (specialized) 
+  (example-snippet "at the local shelter") 
+  (ordered true) 
+  (sourceid "pp-rule") 
+  (concept ":IN-MARGINAL-SUPPORT-FACILITY:") 
+  (stype "<LIVING-FACILITY-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":PREP:") 
+    (":SHELTER:")) 
+  (properties 
+    (thing "?1")))
+
+)

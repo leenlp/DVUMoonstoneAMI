@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LIVING-ALONE:-0-2018/06/14 21:20:23") 
+  (specialized) 
+  (example-snippet "Discharge recommendations continue to be InpatientRehab") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":RECOMMENDATION:")
+    (":INPATIENT:"))
+  (properties (directionality hypothetical))
+  (tests 
+    ("notneg" ?0)))
+
+)

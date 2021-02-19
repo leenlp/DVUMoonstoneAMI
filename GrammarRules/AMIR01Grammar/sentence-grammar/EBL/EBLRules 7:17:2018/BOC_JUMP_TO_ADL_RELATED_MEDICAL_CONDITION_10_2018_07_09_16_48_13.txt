@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-10-2018/07/09 16:48:13") 
+  (specialized) 
+  (example-snippet "impaired sitting balance") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":IMPAIRED::POSITIONAL-ACTION::NEUROLOGICAL-ABILITY-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

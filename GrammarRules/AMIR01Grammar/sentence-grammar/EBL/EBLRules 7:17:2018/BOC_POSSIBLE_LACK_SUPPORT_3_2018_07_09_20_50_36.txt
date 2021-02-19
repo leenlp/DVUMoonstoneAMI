@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-LACK-SUPPORT:-3-2018/07/09 20:50:36") 
+  (specialized) 
+  (example-snippet "does NOT have 24hour support") 
+  (ordered true) 
+  (concept ":POSSIBLE-LACK-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DO::CONSTANT-PROVISION-OF-CARE:")) 
+  (tests 
+    ("neg" ?0))
+  (removeproperties directionality))
+
+)

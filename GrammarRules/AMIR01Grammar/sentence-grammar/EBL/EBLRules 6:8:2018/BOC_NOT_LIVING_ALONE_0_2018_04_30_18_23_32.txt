@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:NOT-LIVING-ALONE:-0-2018/04/30 18:23:32") 
+  (specialized) 
+  (example-snippet "he was taken to jail") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-IN-MARGINAL-SUPPORT-FACILITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

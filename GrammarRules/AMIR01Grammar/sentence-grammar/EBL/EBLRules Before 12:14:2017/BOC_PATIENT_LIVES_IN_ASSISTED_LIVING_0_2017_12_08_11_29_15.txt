@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-LIVES-IN-ASSISTED-LIVING:-0-2017/12/08 11:29:15") 
+  (specialized) 
+  (example-snippet "she is stabilized and transferred back to assisted living in good condition") 
+  (ordered true) 
+  (concept ":PATIENT-LIVES-IN-ASSISTED-LIVING:") 
+  (stype "<LIVE-IN-FACILITY-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::MOVE-TO-ADL-FACILITY::GOOD-CONDITION:")) 
+  (removeproperties directionality))
+
+)

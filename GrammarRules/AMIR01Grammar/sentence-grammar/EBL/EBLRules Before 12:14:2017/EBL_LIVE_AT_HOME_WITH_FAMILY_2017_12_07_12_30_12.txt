@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LIVE-AT-HOME-WITH-FAMILY::2017/12/07 12:30:12") 
+  (specialized) 
+  (example-snippet "lives with his sister at home") 
+  ;; (ordered true) 
+  (sourceid "action-pp-pp-rule") 
+  (concept ":LIVE-AT-HOME-WITH-FAMILY:") 
+  (stype "<LIVE-AT-HOME-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":LIVE-AT:") 
+    (":PREP::FAMILY:") 
+    (":PREP::HOME:")) 
+  (properties 
+    (action "?0") 
+    (first-pp "?1") 
+    (second-pp "?2")))
+
+)

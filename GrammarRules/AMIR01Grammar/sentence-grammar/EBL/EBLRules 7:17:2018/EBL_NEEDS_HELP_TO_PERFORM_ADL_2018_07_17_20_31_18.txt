@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NEEDS-HELP-TO-PERFORM-ADL::2018/07/17 20:31:18") 
+  (specialized) 
+  (example-snippet "needs help to get to bathroom") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":NEEDS-HELP-TO-PERFORM-ADL:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":NEED:") 
+    (":HELP-TO-MOVE-TO-ADL-DESTINATION:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

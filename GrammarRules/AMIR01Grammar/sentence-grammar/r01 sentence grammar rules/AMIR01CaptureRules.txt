@@ -1,0 +1,12 @@
+'(
+wordrule
+
+;;; Throwaway medical terminology
+((ruleid general-medical-procedure-word-rule)
+ (concept ":MEDICAL-PROCEDURE:")
+ (words ("bulb suctioning" "bulb suctioning the nose")))
+ 
+
+
+
+)

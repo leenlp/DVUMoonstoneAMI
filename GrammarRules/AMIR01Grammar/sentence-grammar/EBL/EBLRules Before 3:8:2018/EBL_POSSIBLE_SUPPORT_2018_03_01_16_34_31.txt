@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2018/03/01 16:34:31") 
+  (specialized) 
+  (example-snippet "driven by his mother") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":TRANSPORT:") 
+    (":PARENT:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

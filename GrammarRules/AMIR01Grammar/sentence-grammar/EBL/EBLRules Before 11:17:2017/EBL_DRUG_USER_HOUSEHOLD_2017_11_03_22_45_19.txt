@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DRUG-USER-HOUSEHOLD::2017/11/03 22:45:19") 
+  (specialized) 
+  (example-snippet "household of drug users") 
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":DRUG-USER-HOUSEHOLD:") 
+  (stype "<OTHER-HOME>") 
+  (window 16.0) 
+  (words 
+    (":HOUSEHOLD:") 
+    (":PREP::DRUG-USER:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")))
+
+)

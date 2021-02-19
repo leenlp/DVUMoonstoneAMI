@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-4-2019/12/11 15:29:57") 
+  (specialized) 
+  (example-snippet "work with PTOT") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":WORK::PREP::OCCUPATIONAL-THERAPY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

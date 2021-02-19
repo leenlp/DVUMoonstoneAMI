@@ -1,0 +1,12 @@
+'(
+wordrule
+
+((ruleidXXX "EBL::JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY::2019/12/18 22:32:21") 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (window 16.0) 
+  (words 
+    (":COGNITIVE-ABILITY-THING:")) 
+  (removeproperties directionality)
+  (tests ("neg" ?0)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-MOVE-TO-FACILITY::2018/03/13 13:23:23") 
+  (specialized) 
+  (example-snippet "she will probably be hospitalized in respite care") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-MOVE-TO-FACILITY:") 
+  (stype "<MOVE-TO-OR-FROM-LOCATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":MOVE-TO-FACILITY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PERSON-HAS-DEMENTIA::2018/02/09 11:48:57") 
+  (specialized) 
+  (example-snippet "patient is forgetful") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PERSON-HAS-DEMENTIA:") 
+  (stype "<MENTAL-IMPAIRMENT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":DEMENTIA:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

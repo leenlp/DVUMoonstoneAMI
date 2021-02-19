@@ -1,0 +1,1543 @@
+'(
+
+(deftype "root" 
+  (isroot))
+  
+;; LEE ADDED
+(deftype person (isa thing))
+(defstringconstant ":PATIENT:" "<PERSON>")
+(deftype "action" (isa root))
+(deftype "action-argument" (isa root))
+(deftype "complex-action" (isa root))
+
+(deftype "owl" 
+  (isa "root"))
+(deftype "thing" 
+  (isa "owl"))
+(deftype "annotation" 
+  (isa "thing"))
+(deftype "event" 
+  (isa "annotation"))
+(deftype "condition" 
+  (isa "event"))
+(deftype "finding" 
+  (isa "condition"))
+(deftype "unknown_smoker_document" 
+  (isa "finding"))
+(deftype "current_smoker_mention" 
+  (isa "finding"))
+(deftype "explicit_current_smoker_mention" 
+  (isa "current_smoker_mention"))
+(deftype "history_of_smoker_mention_lt_1_year" 
+  (isa "current_smoker_mention"))
+(deftype "smoking_cessation_group_mention" 
+  (isa "current_smoker_mention"))
+(deftype "just_quit_smoking_mention" 
+  (isa "current_smoker_mention"))
+(deftype "smoking_started_or_reinitiated_mention" 
+  (isa "current_smoker_mention"))
+(deftype "history_of_smoker_mention" 
+  (isa "current_smoker_mention"))
+(deftype "history_of_smoking_but_continues_mention" 
+  (isa "history_of_smoker_mention"))
+(deftype "smoker_mention_with_duration" 
+  (isa "current_smoker_mention"))
+(deftype "smoker_mention" 
+  (isa "current_smoker_mention"))
+(deftype "non-smoker_mention" 
+  (isa "finding"))
+(deftype "negated_smoking_mention" 
+  (isa "non-smoker_mention"))
+(deftype "non-user_mention" 
+  (isa "non-smoker_mention"))
+(deftype "past_smoker_mention" 
+  (isa "finding"))
+(deftype "quit_smoking_mention" 
+  (isa "past_smoker_mention"))
+(deftype "smoking_stopped_for_1_year_or_greater_mention" 
+  (isa "quit_smoking_mention"))
+(deftype "history_of_smoker_before_only_mention" 
+  (isa "past_smoker_mention"))
+(deftype "negated_current_smoker_mention" 
+  (isa "past_smoker_mention"))
+(deftype "history_of_smoker_mention_gt_1_yr" 
+  (isa "past_smoker_mention"))
+(deftype "ex-user_for_1_year_or_greater_mention" 
+  (isa "past_smoker_mention"))
+(deftype "non-smoker_document" 
+  (isa "finding"))
+(deftype "unknown_smoker_mention" 
+  (isa "finding"))
+(deftype "past_smoker_document" 
+  (isa "finding"))
+(deftype "current_smoker_document" 
+  (isa "finding"))
+(defstringconstant "::" "<CURRENT_SMOKER_DOCUMENT>")
+(hascertainty "<EVENT>" "<CERTAINTY>")
+(hasexperiencer "<EVENT>" "<EXPERIENCER>")
+(hastemporality "<EVENT>" "<TEMPORALITY>")
+(hascontextualaspect "<EVENT>" "<CONTEXTUALASPECT>")
+(deftype "entity" 
+  (isa "annotation"))
+(hasanchor "<ANNOTATION>" "<ANCHOR>")
+(hasanchor "<ANNOTATION>" "<COMPOUNDANCHOR>")
+(hasrate "<ANNOTATION>" "<QUANTITY>")
+(hasrate "<ANNOTATION>" "<RANGEMODIFIER>")
+(hasexclusion "<ANNOTATION>" "<MODIFIER>")
+(hasexclusion "<ANNOTATION>" "<ANNOTATION>")
+(hasrelation "<ANNOTATION>" "<ANNOTATION>")
+(hasannotationtype "<ANNOTATION>" "<ANNOTATIONTYPE>")
+(hassection "<ANNOTATION>" "<DOCUMENTSECTION>")
+(hasnumvalue "<ANNOTATION>" "<NUMERICMODIFIER>")
+(wasderivedfrom "<ANNOTATION>" "<ANNOTATION>")
+(hasdoctype "<ANNOTATION>" "<DOCUMENTTYPE>")
+(hasmodifier "<ANNOTATION>" "<MODIFIER>")
+(deftype "summary" 
+  (isa "thing"))
+(deftype "medicalrecord" 
+  (isa "summary"))
+(hascomposition "<MEDICALRECORD>" "<COMPOSITION>")
+(hasmedicalrecordsummary "<MEDICALRECORD>" "<ANNOTATION>")
+(hasepisode "<MEDICALRECORD>" "<EPISODE>")
+(deftype "composition" 
+  (isa "summary"))
+(deftype "nomentioncomposition" 
+  (isa "composition"))
+(hasmentionannotation "<COMPOSITION>" "<ANNOTATION>")
+(hassection "<COMPOSITION>" "<DOCUMENTSECTION>")
+(hasdoctype "<COMPOSITION>" "<DOCUMENTTYPE>")
+(hasdocumentannotation "<COMPOSITION>" "<ANNOTATION>")
+(deftype "episode" 
+  (isa "summary"))
+(deftype "attribute" 
+  (isa "thing"))
+(deftype "documenttype" 
+  (isa "attribute"))
+(deftype "annotationtype" 
+  (isa "attribute"))
+(deftype "mentionannotation" 
+  (isa "annotationtype"))
+(deftype "lexicon" 
+  (isa "owl"))
+(deftype "documentsection" 
+  (isa "lexicon"))
+(deftype "objectivedata_section" 
+  (isa "documentsection"))
+(deftype "laboratoryandradiologydata_section" 
+  (isa "objectivedata_section"))
+(deftype "radiographicstudies_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "typesofradiographicstudies_section" 
+  (isa "radiographicstudies_section"))
+(deftype "contraststudies_section" 
+  (isa "typesofradiographicstudies_section"))
+(deftype "intravenouscholangiography_section" 
+  (isa "contraststudies_section"))
+(deftype "angiography_section" 
+  (isa "contraststudies_section"))
+(deftype "cardiaccath_section" 
+  (isa "angiography_section"))
+(deftype "abdominalangiography_section" 
+  (isa "angiography_section"))
+(deftype "cerebralangiography_section" 
+  (isa "angiography_section"))
+(deftype "renalandadrenalangiography_section" 
+  (isa "angiography_section"))
+(deftype "extremitiesangiography_section" 
+  (isa "angiography_section"))
+(deftype "thoracicangiography_section" 
+  (isa "angiography_section"))
+(deftype "myelography_section" 
+  (isa "contraststudies_section"))
+(deftype "hysterosalpingography_section" 
+  (isa "contraststudies_section"))
+(deftype "gastrointestinalbariumcontraststudies_section" 
+  (isa "contraststudies_section"))
+(deftype "smallbowelfollowthrough_section" 
+  (isa "gastrointestinalbariumcontraststudies_section"))
+(deftype "bariumswalloworcine-esophogram_section" 
+  (isa "gastrointestinalbariumcontraststudies_section"))
+(deftype "bariumenema_section" 
+  (isa "gastrointestinalbariumcontraststudies_section"))
+(deftype "uppergiseriesbariummeal_section" 
+  (isa "gastrointestinalbariumcontraststudies_section"))
+(deftype "angiocardiography_section" 
+  (isa "contraststudies_section"))
+(deftype "lymphangiography_section" 
+  (isa "contraststudies_section"))
+(deftype "percutaneouscholangiography_section" 
+  (isa "contraststudies_section"))
+(deftype "cystography_section" 
+  (isa "contraststudies_section"))
+(deftype "endoscopicretrogradecholangiopancreatography_section" 
+  (isa "contraststudies_section"))
+(deftype "cholecystography_section" 
+  (isa "contraststudies_section"))
+(deftype "pyelography_section" 
+  (isa "contraststudies_section"))
+(deftype "pulmonaryarteriography_section" 
+  (isa "contraststudies_section"))
+(deftype "radionuclideimaging_section" 
+  (isa "typesofradiographicstudies_section"))
+(deftype "kidneyradioisotopescan_section" 
+  (isa "radionuclideimaging_section"))
+(deftype "cardiacradioisotopescan_section" 
+  (isa "radionuclideimaging_section"))
+(deftype "ventilationperfusionscan_section" 
+  (isa "radionuclideimaging_section"))
+(deftype "boneradioisotopescan_section" 
+  (isa "radionuclideimaging_section"))
+(deftype "hepatobiliaryradioisotopescan_section" 
+  (isa "radionuclideimaging_section"))
+(deftype "thyroidradioisotopescan_section" 
+  (isa "radionuclideimaging_section"))
+(deftype "brainradioisotopescan_section" 
+  (isa "radionuclideimaging_section"))
+(deftype "routinexrayradiographicstudies_section" 
+  (isa "typesofradiographicstudies_section"))
+(deftype "xrayjointsandbonystructures_section" 
+  (isa "routinexrayradiographicstudies_section"))
+(deftype "mammogram_section" 
+  (isa "xrayjointsandbonystructures_section"))
+(deftype "chestxray_section" 
+  (isa "routinexrayradiographicstudies_section"))
+(deftype "xrayabdomenplainfilm_section" 
+  (isa "routinexrayradiographicstudies_section"))
+(deftype "ultrasound_section" 
+  (isa "typesofradiographicstudies_section"))
+(deftype "imagingimpression_section" 
+  (isa "radiographicstudies_section"))
+(deftype "imagingfindings_section" 
+  (isa "radiographicstudies_section"))
+(deftype "eyesformalvisualfieldtesting_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "cardiovascularstudies_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "valvulardata_section" 
+  (isa "cardiovascularstudies_section"))
+(deftype "echocardiogram_section" 
+  (isa "cardiovascularstudies_section"))
+(deftype "electrocardiogram_section" 
+  (isa "cardiovascularstudies_section"))
+(deftype "stresstest_section" 
+  (isa "cardiovascularstudies_section"))
+(deftype "electrophysiologyresults_section" 
+  (isa "cardiovascularstudies_section"))
+(deftype "endoscopicprocedure_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "gastrointestinalendoscopy_section" 
+  (isa "endoscopicprocedure_section"))
+(deftype "sigmoidoscopy_section" 
+  (isa "gastrointestinalendoscopy_section"))
+(deftype "colonoscopysigmoidoscopy_section" 
+  (isa "gastrointestinalendoscopy_section"))
+(deftype "anoscopy_section" 
+  (isa "gastrointestinalendoscopy_section"))
+(deftype "colonoscopy_section" 
+  (isa "gastrointestinalendoscopy_section"))
+(deftype "egd_section" 
+  (isa "gastrointestinalendoscopy_section"))
+(deftype "endoscopicfindings_section" 
+  (isa "endoscopicprocedure_section"))
+(deftype "endoscopicimpressions_section" 
+  (isa "endoscopicprocedure_section"))
+(deftype "peritoneoscopy_section" 
+  (isa "endoscopicprocedure_section"))
+(deftype "cystoscopyandcystometrogram_section" 
+  (isa "endoscopicprocedure_section"))
+(deftype "respiratorytractendoscopy_section" 
+  (isa "endoscopicprocedure_section"))
+(deftype "bronchoscopy_section" 
+  (isa "respiratorytractendoscopy_section"))
+(deftype "laryngoscopy_section" 
+  (isa "respiratorytractendoscopy_section"))
+(deftype "culposcopy_section" 
+  (isa "endoscopicprocedure_section"))
+(deftype "culdoscopyandculdocentesis_section" 
+  (isa "endoscopicprocedure_section"))
+(deftype "arthroscopy_section" 
+  (isa "endoscopicprocedure_section"))
+(deftype "laboratorydata_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "microbiology_section" 
+  (isa "laboratorydata_section"))
+(deftype "culture_section" 
+  (isa "microbiology_section"))
+(deftype "culturesmycoplasmarickettsiaandchlamydia_section" 
+  (isa "culture_section"))
+(deftype "culturesbacteria_section" 
+  (isa "culture_section"))
+(deftype "culturesmycobacteria_section" 
+  (isa "culture_section"))
+(deftype "culturesfungi_section" 
+  (isa "culture_section"))
+(deftype "culturesviruses_section" 
+  (isa "culture_section"))
+(deftype "cytologicalexamination_section" 
+  (isa "microbiology_section"))
+(deftype "biopsiesconsistentwithmalignantneoplasticdisorders_section" 
+  (isa "laboratorydata_section"))
+(deftype "skintesting_section" 
+  (isa "laboratorydata_section"))
+(deftype "skintestsforexposuretomicroorganisms_section" 
+  (isa "skintesting_section"))
+(deftype "skinanergypanel_section" 
+  (isa "skintesting_section"))
+(deftype "commonchemistries_section" 
+  (isa "laboratorydata_section"))
+(deftype "cardiacenzymes_section" 
+  (isa "commonchemistries_section"))
+(deftype "basicmetabolicpanel_section" 
+  (isa "commonchemistries_section"))
+(deftype "bloodglucose_section" 
+  (isa "basicmetabolicpanel_section"))
+(deftype "completemetabolicpanel_section" 
+  (isa "commonchemistries_section"))
+(deftype "coagulationpanel_section" 
+  (isa "commonchemistries_section"))
+(deftype "electronmicroscopy_section" 
+  (isa "laboratorydata_section"))
+(deftype "csfanalysis_section" 
+  (isa "laboratorydata_section"))
+(deftype "urinalysis_section" 
+  (isa "laboratorydata_section"))
+(deftype "pericardialfluidanalysis_section" 
+  (isa "laboratorydata_section"))
+(deftype "pleuralfluidanalysis_section" 
+  (isa "laboratorydata_section"))
+(deftype "asciticfluidorperitonealaspirateanalysis_section" 
+  (isa "laboratorydata_section"))
+(deftype "toxicologicalstudies_section" 
+  (isa "laboratorydata_section"))
+(deftype "jointfluidanalysis_section" 
+  (isa "laboratorydata_section"))
+(deftype "pulmonarytests_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "abg_section" 
+  (isa "pulmonarytests_section"))
+(deftype "pfts_section" 
+  (isa "pulmonarytests_section"))
+(deftype "sleepstudies_section" 
+  (isa "pulmonarytests_section"))
+(deftype "neurologicalstudies_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "electronystagmogramandvestibularfunctiontests_section" 
+  (isa "neurologicalstudies_section"))
+(deftype "electromyography_section" 
+  (isa "neurologicalstudies_section"))
+(deftype "eeg_section" 
+  (isa "neurologicalstudies_section"))
+(deftype "visualandauditoryevokedpotentials_section" 
+  (isa "neurologicalstudies_section"))
+(deftype "nerveconductionvelocities_section" 
+  (isa "neurologicalstudies_section"))
+(deftype "telemetry_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "psychologicaldata_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "educationaltesting_section" 
+  (isa "psychologicaldata_section"))
+(deftype "developmentaltesting_section" 
+  (isa "psychologicaldata_section"))
+(deftype "radiologicalcardiologicalstudies_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "functionalassessment_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "pathologicdata_section" 
+  (isa "laboratoryandradiologydata_section"))
+(deftype "histopathologicalstudies_section" 
+  (isa "pathologicdata_section"))
+(deftype "physicalexamination_section" 
+  (isa "objectivedata_section"))
+(deftype "apgarscore_section" 
+  (isa "physicalexamination_section"))
+(deftype "minuteapgar_section" 
+  (isa "apgarscore_section"))
+(deftype "appearance_section" 
+  (isa "physicalexamination_section"))
+(deftype "ballardexam_section" 
+  (isa "physicalexamination_section"))
+(deftype "generalexam_section" 
+  (isa "physicalexamination_section"))
+(deftype "vitalsigns_section" 
+  (isa "physicalexamination_section"))
+(deftype "patienthistory_section" 
+  (isa "documentsection"))
+(deftype "reviewofsystems_section" 
+  (isa "patienthistory_section"))
+(deftype "thoraxreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "breastreview_section" 
+  (isa "thoraxreview_section"))
+(deftype "backreview_section" 
+  (isa "thoraxreview_section"))
+(deftype "chestreview_section" 
+  (isa "thoraxreview_section"))
+(deftype "vascularreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "pulmonaryreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "gastrointestinalreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "jaundicehistory_section" 
+  (isa "gastrointestinalreview_section"))
+(deftype "dysphagiareview_section" 
+  (isa "gastrointestinalreview_section"))
+(deftype "bowelhabits_section" 
+  (isa "gastrointestinalreview_section"))
+(deftype "nauseavomitingregurgitationreview_section" 
+  (isa "gastrointestinalreview_section"))
+(deftype "abdominalreview_section" 
+  (isa "gastrointestinalreview_section"))
+(deftype "musculoskeletalrheumatologicalreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "musculoskeletalreview_section" 
+  (isa "musculoskeletalrheumatologicalreview_section"))
+(deftype "jointreview_section" 
+  (isa "musculoskeletalreview_section"))
+(deftype "kneereview_section" 
+  (isa "jointreview_section"))
+(deftype "anklereview_section" 
+  (isa "jointreview_section"))
+(deftype "footreview_section" 
+  (isa "jointreview_section"))
+(deftype "lumbosacralspinereview_section" 
+  (isa "jointreview_section"))
+(deftype "lumbarspinereview_section" 
+  (isa "lumbosacralspinereview_section"))
+(deftype "sacralreview_section" 
+  (isa "lumbosacralspinereview_section"))
+(deftype "elbowreview_section" 
+  (isa "jointreview_section"))
+(deftype "cervicalspinereview_section" 
+  (isa "jointreview_section"))
+(deftype "wristreview_section" 
+  (isa "jointreview_section"))
+(deftype "handreview_section" 
+  (isa "jointreview_section"))
+(deftype "armreview_section" 
+  (isa "jointreview_section"))
+(deftype "hipreview_section" 
+  (isa "jointreview_section"))
+(deftype "dipreview_section" 
+  (isa "jointreview_section"))
+(deftype "metacarpalreview_section" 
+  (isa "jointreview_section"))
+(deftype "thoracicspinereview_section" 
+  (isa "jointreview_section"))
+(deftype "shoulderreview_section" 
+  (isa "jointreview_section"))
+(deftype "pipreview_section" 
+  (isa "jointreview_section"))
+(deftype "rheumatologicalreview_section" 
+  (isa "musculoskeletalrheumatologicalreview_section"))
+(deftype "hematologiclymphaticimmunologicreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "neuropsychreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "memoryreview_section" 
+  (isa "neuropsychreview_section"))
+(deftype "shorttermmemoryreview_section" 
+  (isa "memoryreview_section"))
+(deftype "longtermmemoryreview_section" 
+  (isa "memoryreview_section"))
+(deftype "psychiatricreview_section" 
+  (isa "neuropsychreview_section"))
+(deftype "behaviorreview_section" 
+  (isa "psychiatricreview_section"))
+(deftype "neuropsychiatricmedicationadministrationhistory_section" 
+  (isa "neuropsychreview_section"))
+(deftype "speechreview_section" 
+  (isa "neuropsychreview_section"))
+(deftype "sleepdisturbancereview_section" 
+  (isa "neuropsychreview_section"))
+(deftype "headachereview_section" 
+  (isa "neuropsychreview_section"))
+(deftype "neurologicreview_section" 
+  (isa "neuropsychreview_section"))
+(deftype "mentalstatusreview_section" 
+  (isa "neuropsychreview_section"))
+(deftype "dermatologicalreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "heentreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "facialreview_section" 
+  (isa "heentreview_section"))
+(deftype "entreview_section" 
+  (isa "heentreview_section"))
+(deftype "nosereview_section" 
+  (isa "entreview_section"))
+(deftype "oralcavity_section" 
+  (isa "entreview_section"))
+(deftype "throat_section" 
+  (isa "oralcavity_section"))
+(deftype "mouth_section" 
+  (isa "oralcavity_section"))
+(deftype "earreview_section" 
+  (isa "entreview_section"))
+(deftype "hearingreview_section" 
+  (isa "earreview_section"))
+(deftype "ophthalmologicreview_section" 
+  (isa "heentreview_section"))
+(deftype "oropharyngealreview_section" 
+  (isa "heentreview_section"))
+(deftype "mouthcavityreview_section" 
+  (isa "oropharyngealreview_section"))
+(deftype "headneckreview_section" 
+  (isa "heentreview_section"))
+(deftype "neckreview_section" 
+  (isa "headneckreview_section"))
+(deftype "headreview_section" 
+  (isa "headneckreview_section"))
+(deftype "eyeearnosethroatreview_section" 
+  (isa "heentreview_section"))
+(deftype "genitourinaryreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "genitalreview_section" 
+  (isa "genitourinaryreview_section"))
+(deftype "pelvic_section" 
+  (isa "genitalreview_section"))
+(deftype "lastmenstrualperiod_section" 
+  (isa "genitalreview_section"))
+(deftype "stds_section" 
+  (isa "genitalreview_section"))
+(deftype "femalegureview_section" 
+  (isa "genitalreview_section"))
+(deftype "menstrualstatus_section" 
+  (isa "genitalreview_section"))
+(deftype "malegureview_section" 
+  (isa "genitalreview_section"))
+(deftype "urinarytractreview_section" 
+  (isa "genitourinaryreview_section"))
+(deftype "endocrinemetabolicreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "endocrinereview_section" 
+  (isa "endocrinemetabolicreview_section"))
+(deftype "metabolicreview_section" 
+  (isa "endocrinemetabolicreview_section"))
+(deftype "hematologyreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "coagulationhistory_section" 
+  (isa "hematologyreview_section"))
+(deftype "infectiousdiseasereview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "hematologiconcologicreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "renalreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "cardiovascularreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "chestpainreview_section" 
+  (isa "cardiovascularreview_section"))
+(deftype "lymphaticreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "hematologiclymphaticreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "oncologicreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "immunologicreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "extremityreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "generalreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "allergylymphaticreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "congenitalreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "allergyreview_section" 
+  (isa "reviewofsystems_section"))
+(deftype "hospitalcourse_section" 
+  (isa "patienthistory_section"))
+(deftype "hospitalcoursebysystem_section" 
+  (isa "hospitalcourse_section"))
+(deftype "genitourinarycourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "genitalcourse_section" 
+  (isa "genitourinarycourse_section"))
+(deftype "menstrualstatuscourse_section" 
+  (isa "genitalcourse_section"))
+(deftype "stdscourse_section" 
+  (isa "genitalcourse_section"))
+(deftype "pelviccourse_section" 
+  (isa "genitalcourse_section"))
+(deftype "malegucourse_section" 
+  (isa "genitalcourse_section"))
+(deftype "femalegucourse_section" 
+  (isa "genitalcourse_section"))
+(deftype "urinarytractcourse_section" 
+  (isa "genitourinarycourse_section"))
+(deftype "fluidelectrolytenutritioncourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "fluidcourse_section" 
+  (isa "fluidelectrolytenutritioncourse_section"))
+(deftype "electrolytecourse_section" 
+  (isa "fluidelectrolytenutritioncourse_section"))
+(deftype "nutritioncourse_section" 
+  (isa "fluidelectrolytenutritioncourse_section"))
+(deftype "heentcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "ophthalmologiccourse_section" 
+  (isa "heentcourse_section"))
+(deftype "entcourse_section" 
+  (isa "heentcourse_section"))
+(deftype "earscourse_section" 
+  (isa "entcourse_section"))
+(deftype "hearingcourse_section" 
+  (isa "earscourse_section"))
+(deftype "nosecourse_section" 
+  (isa "entcourse_section"))
+(deftype "throatcourse_section" 
+  (isa "entcourse_section"))
+(deftype "headneckcourse_section" 
+  (isa "heentcourse_section"))
+(deftype "headcourse_section" 
+  (isa "headneckcourse_section"))
+(deftype "neckcourse_section" 
+  (isa "headneckcourse_section"))
+(deftype "oralcavitycourse_section" 
+  (isa "heentcourse_section"))
+(deftype "facecourse_section" 
+  (isa "heentcourse_section"))
+(deftype "musculoskeletalrheumatologicalcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "musculoskeletalcourse_section" 
+  (isa "musculoskeletalrheumatologicalcourse_section"))
+(deftype "jointscourse_section" 
+  (isa "musculoskeletalcourse_section"))
+(deftype "pipcourse_section" 
+  (isa "jointscourse_section"))
+(deftype "handcourse_section" 
+  (isa "jointscourse_section"))
+(deftype "anklescourse_section" 
+  (isa "jointscourse_section"))
+(deftype "elbowscourse_section" 
+  (isa "jointscourse_section"))
+(deftype "lumbosacralspinecourse_section" 
+  (isa "jointscourse_section"))
+(deftype "sacrumcourse_section" 
+  (isa "lumbosacralspinecourse_section"))
+(deftype "lumbarspinecourse_section" 
+  (isa "lumbosacralspinecourse_section"))
+(deftype "anklecourse_section" 
+  (isa "jointscourse_section"))
+(deftype "handscourse_section" 
+  (isa "jointscourse_section"))
+(deftype "dipcourse_section" 
+  (isa "jointscourse_section"))
+(deftype "kneescourse_section" 
+  (isa "jointscourse_section"))
+(deftype "wristscourse_section" 
+  (isa "jointscourse_section"))
+(deftype "feetcourse_section" 
+  (isa "jointscourse_section"))
+(deftype "mcpcourse_section" 
+  (isa "jointscourse_section"))
+(deftype "shouldercourse_section" 
+  (isa "jointscourse_section"))
+(deftype "thoracicspinecourse_section" 
+  (isa "jointscourse_section"))
+(deftype "armcourse_section" 
+  (isa "jointscourse_section"))
+(deftype "cervicalspinecourse_section" 
+  (isa "jointscourse_section"))
+(deftype "hipscourse_section" 
+  (isa "jointscourse_section"))
+(deftype "footcourse_section" 
+  (isa "musculoskeletalcourse_section"))
+(deftype "rheumatologicalcourse_section" 
+  (isa "musculoskeletalrheumatologicalcourse_section"))
+(deftype "infectiousdiseasecourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "dermcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "oncologycourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "fluidelectrolytenutritiongastrointestinalcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "neuropsychcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "psychiatriccourse_section" 
+  (isa "neuropsychcourse_section"))
+(deftype "behaviorcourse_section" 
+  (isa "psychiatriccourse_section"))
+(deftype "neurologicalcourse_section" 
+  (isa "neuropsychcourse_section"))
+(deftype "mentalstatuscourse_section" 
+  (isa "neuropsychcourse_section"))
+(deftype "vascularcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "generalcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "endocrinemetaboliccourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "metaboliccourse_section" 
+  (isa "endocrinemetaboliccourse_section"))
+(deftype "endocrinecourse_section" 
+  (isa "endocrinemetaboliccourse_section"))
+(deftype "gastrointestinalcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "hematologycourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "clottingcourse_section" 
+  (isa "hematologycourse_section"))
+(deftype "thoraxcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "pulmonarycourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "allergiescourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "lymphaticcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "cardiovascularcourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "immunologiccourse_section" 
+  (isa "hospitalcoursebysystem_section"))
+(deftype "hospitalcoursebylocation_section" 
+  (isa "hospitalcourse_section"))
+(deftype "nicucourse_section" 
+  (isa "hospitalcoursebylocation_section"))
+(deftype "micucourse_section" 
+  (isa "hospitalcoursebylocation_section"))
+(deftype "nurserycourse_section" 
+  (isa "hospitalcoursebylocation_section"))
+(deftype "emergencydepartmentcourse_section" 
+  (isa "hospitalcoursebylocation_section"))
+(deftype "clinicaltrend_section" 
+  (isa "hospitalcourse_section"))
+(deftype "familyandsocialhistory_section" 
+  (isa "patienthistory_section"))
+(deftype "familymedicalhistory_section" 
+  (isa "familyandsocialhistory_section"))
+(deftype "personalandsocialhistory_section" 
+  (isa "familyandsocialhistory_section"))
+(deftype "environmentalhistory_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "exposurehistory_section" 
+  (isa "environmentalhistory_section"))
+(deftype "livingsituation_section" 
+  (isa "environmentalhistory_section"))
+(deftype "watersource_section" 
+  (isa "environmentalhistory_section"))
+(deftype "substanceuse_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "recreationaldruguse_section" 
+  (isa "substanceuse_section"))
+(deftype "intravenousdruguse_section" 
+  (isa "recreationaldruguse_section"))
+(deftype "otherrecreationaldruguse_section" 
+  (isa "recreationaldruguse_section"))
+(deftype "ethanoluse_section" 
+  (isa "substanceuse_section"))
+(deftype "tobaccouse_section" 
+  (isa "substanceuse_section"))
+(deftype "oraltobaccouse_section" 
+  (isa "tobaccouse_section"))
+(deftype "smokinguse_section" 
+  (isa "tobaccouse_section"))
+(deftype "substanceabusetreatment_section" 
+  (isa "substanceuse_section"))
+(deftype "habits_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "exercisehabits_section" 
+  (isa "habits_section"))
+(deftype "safetyhabits_section" 
+  (isa "habits_section"))
+(deftype "occupationalhistory_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "occupationalenvironmentalhistory_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "infectiousdiseaseexposurehistory_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "insectandanimalexposurehistory_section" 
+  (isa "infectiousdiseaseexposurehistory_section"))
+(deftype "familyenviroment_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "psychologicalstressors_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "educationhistory_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "schoolperformance_section" 
+  (isa "educationhistory_section"))
+(deftype "religioushistory_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "sexualactivityhistory_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "diethistory_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "travelhistory_section" 
+  (isa "personalandsocialhistory_section"))
+(deftype "datetime_section" 
+  (isa "patienthistory_section"))
+(deftype "date_section" 
+  (isa "datetime_section"))
+(deftype "conceptiondate_section" 
+  (isa "date_section"))
+(deftype "dateofautopsy_section" 
+  (isa "date_section"))
+(deftype "dateofinjury_section" 
+  (isa "date_section"))
+(deftype "duedate_section" 
+  (isa "date_section"))
+(deftype "finalduedate_section" 
+  (isa "duedate_section"))
+(deftype "estimatedduedate_section" 
+  (isa "duedate_section"))
+(deftype "datedictated_section" 
+  (isa "date_section"))
+(deftype "reportdate_section" 
+  (isa "date_section"))
+(deftype "dateofexamination_section" 
+  (isa "date_section"))
+(deftype "dateofsurgery_section" 
+  (isa "date_section"))
+(deftype "dateofservice_section" 
+  (isa "date_section"))
+(deftype "datetranscribed_section" 
+  (isa "date_section"))
+(deftype "durationofrecording_section" 
+  (isa "date_section"))
+(deftype "dateofdeath_section" 
+  (isa "date_section"))
+(deftype "dateofbirth_section" 
+  (isa "date_section"))
+(deftype "dateofrequest_section" 
+  (isa "date_section"))
+(deftype "dateofadmission_section" 
+  (isa "date_section"))
+(deftype "dateofprocedure_section" 
+  (isa "date_section"))
+(deftype "dateofdischarge_section" 
+  (isa "date_section"))
+(deftype "time_section" 
+  (isa "datetime_section"))
+(deftype "timeofinjury_section" 
+  (isa "time_section"))
+(deftype "timeofarrival_section" 
+  (isa "time_section"))
+(deftype "timeofbirth_section" 
+  (isa "time_section"))
+(deftype "birthhistory_section" 
+  (isa "patienthistory_section"))
+(deftype "birthweight_section" 
+  (isa "birthhistory_section"))
+(deftype "birthheadcircumference_section" 
+  (isa "birthhistory_section"))
+(deftype "birthlength_section" 
+  (isa "birthhistory_section"))
+(deftype "pastmedicalhistory_section" 
+  (isa "patienthistory_section"))
+(deftype "hemetologiconcologichistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "hematologichistory_section" 
+  (isa "hemetologiconcologichistory_section"))
+(deftype "oncologichistory_section" 
+  (isa "hemetologiconcologichistory_section"))
+(deftype "reproductivehistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "gynecologichistory_section" 
+  (isa "reproductivehistory_section"))
+(deftype "sexualtransmitteddiseasehistory_section" 
+  (isa "gynecologichistory_section"))
+(deftype "previouspaphistory_section" 
+  (isa "gynecologichistory_section"))
+(deftype "menstrualhistory_section" 
+  (isa "gynecologichistory_section"))
+(deftype "menarcheage_section" 
+  (isa "menstrualhistory_section"))
+(deftype "contraceptionhistory_section" 
+  (isa "gynecologichistory_section"))
+(deftype "breasthistory_section" 
+  (isa "gynecologichistory_section"))
+(deftype "menopauseage_section" 
+  (isa "gynecologichistory_section"))
+(deftype "obstetrichistory_section" 
+  (isa "reproductivehistory_section"))
+(deftype "abortus" 
+  (isa "obstetrichistory_section"))
+(deftype "gravida" 
+  (isa "obstetrichistory_section"))
+(deftype "para" 
+  (isa "obstetrichistory_section"))
+(deftype "typeofdelivery_section" 
+  (isa "obstetrichistory_section"))
+(deftype "pregnancycomplications_section" 
+  (isa "obstetrichistory_section"))
+(deftype "deliverycomplications_section" 
+  (isa "obstetrichistory_section"))
+(deftype "growthdevelopment_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "finemotordevelopment_section" 
+  (isa "growthdevelopment_section"))
+(deftype "socialdevelopment_section" 
+  (isa "growthdevelopment_section"))
+(deftype "prenataldevelopment_section" 
+  (isa "growthdevelopment_section"))
+(deftype "speechdevelopment_section" 
+  (isa "growthdevelopment_section"))
+(deftype "grossmotordevelopment_section" 
+  (isa "growthdevelopment_section"))
+(deftype "pastsurgicalhistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "pastgisurgery_section" 
+  (isa "pastsurgicalhistory_section"))
+(deftype "pastanesthesiahistory_section" 
+  (isa "pastsurgicalhistory_section"))
+(deftype "outpatienthistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "cognitivehistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "geneticdiseases_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "gihistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "radiationtherapyorexposurehistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "childhooddiseasehistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "vascularmedicalhistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "priorhosptilization_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "chronicillnesses_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "bloodproducts_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "congenitaldiseasehistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "cardiachistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "seizurehistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "invasivediagnosticprocedurehistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "traumahistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "psychiatrichistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "injuryhistory_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "bloodtype_section" 
+  (isa "pastmedicalhistory_section"))
+(deftype "transporthistory_section" 
+  (isa "patienthistory_section"))
+(deftype "riskfactors_section" 
+  (isa "patienthistory_section"))
+(deftype "psychologicalriskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "homeriskfactors_section" 
+  (isa "psychologicalriskfactors_section"))
+(deftype "workriskfactors_section" 
+  (isa "psychologicalriskfactors_section"))
+(deftype "neurologicalriskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "cerebralvascularriskfactors_section" 
+  (isa "neurologicalriskfactors_section"))
+(deftype "epilepsyriskfactors_section" 
+  (isa "neurologicalriskfactors_section"))
+(deftype "traumariskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "dermriskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "giriskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "pulmonaryriskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "congenitalriskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "cardiacriskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "cancerriskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "abuseriskfactors_section" 
+  (isa "riskfactors_section"))
+(deftype "demographics_section" 
+  (isa "patienthistory_section"))
+(deftype "casenumber_section" 
+  (isa "demographics_section"))
+(deftype "age_section" 
+  (isa "demographics_section"))
+(deftype "estimatedgestationalage_section" 
+  (isa "age_section"))
+(deftype "egabydate_section" 
+  (isa "estimatedgestationalage_section"))
+(deftype "egabyexam_section" 
+  (isa "estimatedgestationalage_section"))
+(deftype "egabyultrasound_section" 
+  (isa "estimatedgestationalage_section"))
+(deftype "para_section" 
+  (isa "demographics_section"))
+(deftype "room_section" 
+  (isa "demographics_section"))
+(deftype "phonenumber_section" 
+  (isa "demographics_section"))
+(deftype "cellphonenumber_section" 
+  (isa "phonenumber_section"))
+(deftype "workphonenumber_section" 
+  (isa "phonenumber_section"))
+(deftype "homephonenumber_section" 
+  (isa "phonenumber_section"))
+(deftype "insurance_section" 
+  (isa "demographics_section"))
+(deftype "clinic_section" 
+  (isa "demographics_section"))
+(deftype "mrn_section" 
+  (isa "demographics_section"))
+(deftype "gravida_section" 
+  (isa "demographics_section"))
+(deftype "unit_section" 
+  (isa "demographics_section"))
+(deftype "ssn_section" 
+  (isa "demographics_section"))
+(deftype "patientname_section" 
+  (isa "demographics_section"))
+(deftype "gender_section" 
+  (isa "demographics_section"))
+(deftype "address_section" 
+  (isa "demographics_section"))
+(deftype "workaddress_section" 
+  (isa "address_section"))
+(deftype "homeaddress_section" 
+  (isa "address_section"))
+(deftype "emergencycontact_section" 
+  (isa "demographics_section"))
+(deftype "race_section" 
+  (isa "demographics_section"))
+(deftype "medications_section" 
+  (isa "patienthistory_section"))
+(deftype "medicationsbysituation_section" 
+  (isa "medications_section"))
+(deftype "medicationsoutsidehospital_section" 
+  (isa "medicationsbysituation_section"))
+(deftype "admissionmedications_section" 
+  (isa "medicationsbysituation_section"))
+(deftype "outpatientmedications_section" 
+  (isa "medicationsbysituation_section"))
+(deftype "labormedications_section" 
+  (isa "medicationsbysituation_section"))
+(deftype "dischargemedications_section" 
+  (isa "medicationsbysituation_section"))
+(deftype "postoperativemedications_section" 
+  (isa "medicationsbysituation_section"))
+(deftype "inpatientmedications_section" 
+  (isa "medicationsbysituation_section"))
+(deftype "medicationsattransfer_section" 
+  (isa "medicationsbysituation_section"))
+(deftype "currentmedications_section" 
+  (isa "medicationsbysituation_section"))
+(deftype "currentantibiotics_section" 
+  (isa "currentmedications_section"))
+(deftype "medicationsbytype_section" 
+  (isa "medications_section"))
+(deftype "immunosuppressantsmedications_section" 
+  (isa "medicationsbytype_section"))
+(deftype "alternativetherapies_section" 
+  (isa "medicationsbytype_section"))
+(deftype "chemotherapeutics_section" 
+  (isa "medicationsbytype_section"))
+(deftype "antibiotics_section" 
+  (isa "medicationsbytype_section"))
+(deftype "medicationhistory_section" 
+  (isa "medications_section"))
+(deftype "allergiesandadversereactions_section" 
+  (isa "patienthistory_section"))
+(deftype "medicationallergies_section" 
+  (isa "allergiesandadversereactions_section"))
+(deftype "contrastallergies_section" 
+  (isa "allergiesandadversereactions_section"))
+(deftype "environmentalallergies_section" 
+  (isa "allergiesandadversereactions_section"))
+(deftype "latexallergy_section" 
+  (isa "allergiesandadversereactions_section"))
+(deftype "foodallergies_section" 
+  (isa "allergiesandadversereactions_section"))
+(deftype "healthmaintenance_section" 
+  (isa "patienthistory_section"))
+(deftype "immunizations_section" 
+  (isa "healthmaintenance_section"))
+(deftype "childhoodimmunizations_section" 
+  (isa "immunizations_section"))
+(deftype "screeningtests_section" 
+  (isa "healthmaintenance_section"))
+(deftype "diabetesscreen_section" 
+  (isa "screeningtests_section"))
+(deftype "cancerscreeningtests_section" 
+  (isa "screeningtests_section"))
+(deftype "lipidscreen_section" 
+  (isa "screeningtests_section"))
+(deftype "osteoporosisscreen_section" 
+  (isa "screeningtests_section"))
+(deftype "historypresentillness_section" 
+  (isa "patienthistory_section"))
+(deftype "painhistory_section" 
+  (isa "historypresentillness_section"))
+(deftype "paininitiatingevent_section" 
+  (isa "painhistory_section"))
+(deftype "painalleviatingfactors_section" 
+  (isa "painhistory_section"))
+(deftype "paintemporalpattern_section" 
+  (isa "painhistory_section"))
+(deftype "pertinentclinicalfindings_section" 
+  (isa "historypresentillness_section"))
+(deftype "briefhistory_section" 
+  (isa "historypresentillness_section"))
+(deftype "otherissues_section" 
+  (isa "historypresentillness_section"))
+(deftype "historyofexposure_section" 
+  (isa "historypresentillness_section"))
+(deftype "subjective_section" 
+  (isa "historypresentillness_section"))
+(deftype "currentpregnancy_section" 
+  (isa "historypresentillness_section"))
+(deftype "rospmhfamilyhxsocialhx_section" 
+  (isa "patienthistory_section"))
+(deftype "admissiondate_section" 
+  (isa "patienthistory_section"))
+(deftype "consultationattending_section" 
+  (isa "admissiondate_section"))
+(deftype "service_section" 
+  (isa "admissiondate_section"))
+(deftype "admittingattending_section" 
+  (isa "admissiondate_section"))
+(deftype "diet_section" 
+  (isa "patienthistory_section"))
+(deftype "dischargediet_section" 
+  (isa "diet_section"))
+(deftype "condition_section" 
+  (isa "patienthistory_section"))
+(deftype "admissioncondition_section" 
+  (isa "condition_section"))
+(deftype "dischargecondition_section" 
+  (isa "condition_section"))
+(deftype "procedures_section" 
+  (isa "patienthistory_section"))
+(deftype "principalprocedures_section" 
+  (isa "procedures_section"))
+(deftype "surgicalprocedures_section" 
+  (isa "procedures_section"))
+(deftype "secondaryprocedures_section" 
+  (isa "procedures_section"))
+(deftype "chiefcomplaint_section" 
+  (isa "patienthistory_section"))
+(deftype "codestatus_section" 
+  (isa "patienthistory_section"))
+(deftype "patientsummary_section" 
+  (isa "patienthistory_section"))
+(deftype "livingwillcodestatus_section" 
+  (isa "patienthistory_section"))
+(deftype "pastmedicalhistoryandphysicalexamination_section" 
+  (isa "patienthistory_section"))
+(deftype "changestoadmissionnote_section" 
+  (isa "patienthistory_section"))
+(deftype "reasonforconsult_section" 
+  (isa "patienthistory_section"))
+(deftype "advanceddirectives_section" 
+  (isa "patienthistory_section"))
+(deftype "reasonforstudy_section" 
+  (isa "patienthistory_section"))
+(deftype "identifyinginformation_section" 
+  (isa "patienthistory_section"))
+(deftype "diagnoses_section" 
+  (isa "documentsection"))
+(deftype "psychiatricdiagnosticclassifications_section" 
+  (isa "diagnoses_section"))
+(deftype "axisiv_section" 
+  (isa "psychiatricdiagnosticclassifications_section"))
+(deftype "axisiii_section" 
+  (isa "psychiatricdiagnosticclassifications_section"))
+(deftype "axisi_section" 
+  (isa "psychiatricdiagnosticclassifications_section"))
+(deftype "axisv_section" 
+  (isa "psychiatricdiagnosticclassifications_section"))
+(deftype "globalassessmentfunctioning_section" 
+  (isa "axisv_section"))
+(deftype "pastyeargaf_section" 
+  (isa "globalassessmentfunctioning_section"))
+(deftype "currentgaf_section" 
+  (isa "globalassessmentfunctioning_section"))
+(deftype "axisii_section" 
+  (isa "psychiatricdiagnosticclassifications_section"))
+(deftype "finaldiagnosis_section" 
+  (isa "diagnoses_section"))
+(deftype "principlediagnosis_section" 
+  (isa "diagnoses_section"))
+(deftype "cytologicdiagnosis_section" 
+  (isa "diagnoses_section"))
+(deftype "otherdiagnosis_section" 
+  (isa "diagnoses_section"))
+(deftype "postprocedurediagnosis_section" 
+  (isa "diagnoses_section"))
+(deftype "diagnosisatdeath_section" 
+  (isa "diagnoses_section"))
+(deftype "dischargediagnosis_section" 
+  (isa "diagnoses_section"))
+(deftype "secondarydiagnoses_section" 
+  (isa "diagnoses_section"))
+(deftype "preprocedurediagnosis_section" 
+  (isa "diagnoses_section"))
+(deftype "admissiondiagnosis_section" 
+  (isa "diagnoses_section"))
+(deftype "orders_section" 
+  (isa "documentsection"))
+(deftype "assessmentandplan_section" 
+  (isa "documentsection"))
+(deftype "plan_section" 
+  (isa "assessmentandplan_section"))
+(deftype "patienteducation_section" 
+  (isa "plan_section"))
+(deftype "treatmentgoals_section" 
+  (isa "plan_section"))
+(deftype "analysis_section" 
+  (isa "assessmentandplan_section"))
+(deftype "findings_section" 
+  (isa "assessmentandplan_section"))
+(deftype "operativefindings_section" 
+  (isa "findings_section"))
+(deftype "assessment_section" 
+  (isa "assessmentandplan_section"))
+(deftype "summary_section" 
+  (isa "assessmentandplan_section"))
+(deftype "problemlist_section" 
+  (isa "documentsection"))
+(deftype "edproblem_section" 
+  (isa "problemlist_section"))
+(deftype "dischargeproblemlist_section" 
+  (isa "problemlist_section"))
+(deftype "addendum_section" 
+  (isa "documentsection"))
+(deftype "attendingaddendum_section" 
+  (isa "addendum_section"))
+(deftype "comment_section" 
+  (isa "documentsection"))
+(deftype "anchor" 
+  (isa "lexicon"))
+(deftype "tobacco_use" 
+  (isa "anchor"))
+(deftype "smoking" 
+  (isa "tobacco_use"))
+(deftype "smoking_waterpipe" 
+  (isa "smoking"))
+(defstringconstant ":SMOKING__WATERPIPE:" "<SMOKING_WATERPIPE>")
+(deftype "smoking_hashish" 
+  (isa "smoking"))
+(defstringconstant ":SMOKING__HASHISH:" "<SMOKING_HASHISH>")
+(deftype "freebasing" 
+  (isa "smoking"))
+(defstringconstant ":FREEBASING:" "<FREEBASING>")
+(deftype "smoking_pipe" 
+  (isa "smoking"))
+(defstringconstant ":SMOKING_PIPE__HISTORY_:" "<SMOKING_PIPE>")
+(deftype "smoking_hookah" 
+  (isa "smoking"))
+(defstringconstant ":SMOKING__HOOKAH:" "<SMOKING_HOOKAH>")
+(deftype "tobacco_smoking" 
+  (isa "smoking"))
+(defstringconstant ":TOBACCO_SMOKING:" "<TOBACCO_SMOKING>")
+(deftype "smoking_without_inhalation" 
+  (isa "smoking"))
+(defstringconstant ":SMOKING_WITHOUT_INHALATION:" "<SMOKING_WITHOUT_INHALATION>")
+(deftype "smoking_with_inhalation" 
+  (isa "smoking"))
+(defstringconstant ":SMOKING_WITH_INHALATION:" "<SMOKING_WITH_INHALATION>")
+(defstringconstant ":SMOKING:" "<SMOKING>")
+(deftype "electronic_cigarette_user" 
+  (isa "tobacco_use"))
+(deftype "vapor_cigarette_smoker" 
+  (isa "electronic_cigarette_user"))
+(defstringconstant ":VAPOR_CIGARETTE_SMOKER:" "<VAPOR_CIGARETTE_SMOKER>")
+(deftype "e-cigarette_smoker" 
+  (isa "electronic_cigarette_user"))
+(defstringconstant ":E_CIGARETTE_SMOKER:" "<E-CIGARETTE_SMOKER>")
+(defstringconstant ":ELECTRONIC_CIGARETTE_USER:" "<ELECTRONIC_CIGARETTE_USER>")
+(deftype "tobacco_user" 
+  (isa "tobacco_use"))
+(deftype "snuff_user" 
+  (isa "tobacco_user"))
+(defstringconstant ":SNUFF_USER:" "<SNUFF_USER>")
+(deftype "chews_tobacco" 
+  (isa "tobacco_user"))
+(defstringconstant ":CHEWS_TOBACCO:" "<CHEWS_TOBACCO>")
+(defstringconstant ":TOBACCO_USER:" "<TOBACCO_USER>")
+(deftype "dependence_tobacco" 
+  (isa "tobacco_use"))
+(defstringconstant ":DEPENDENCE__TOBACCO:" "<DEPENDENCE_TOBACCO>")
+(defstringconstant ":TOBACCO_USE:" "<TOBACCO_USE>")
+
+;; LEE CHANGED
+(deftype "tobacco" (isa "anchor" "action-argument"))
+
+(deftype "cigarette" 
+  (isa "tobacco"))
+(deftype "filter_cigarette" 
+  (isa "cigarette"))
+(defstringconstant ":FILTER_CIGARETTE:" "<FILTER_CIGARETTE>")
+(deftype "low_tar_cigarette" 
+  (isa "cigarette"))
+(defstringconstant ":LOW_TAR_CIGARETTE:" "<LOW_TAR_CIGARETTE>")
+(deftype "bidi" 
+  (isa "cigarette"))
+(defstringconstant ":BIDI:" "<BIDI>")
+(deftype "kretek" 
+  (isa "cigarette"))
+(defstringconstant ":KRETEK:" "<KRETEK>")
+(deftype "filterless_cigarette" 
+  (isa "cigarette"))
+(defstringconstant ":FILTERLESS_CIGARETTE:" "<FILTERLESS_CIGARETTE>")
+(deftype "mentholated_cigarette" 
+  (isa "cigarette"))
+(defstringconstant ":MENTHOLATED_CIGARETTE:" "<MENTHOLATED_CIGARETTE>")
+(deftype "very_low_nicotine_content_cigarette" 
+  (isa "cigarette"))
+(defstringconstant ":VERY_LOW_NICOTINE_CONTENT_CIGARETTE:" "<VERY_LOW_NICOTINE_CONTENT_CIGARETTE>")
+(defstringconstant ":CIGARETTE:" "<CIGARETTE>")
+(deftype "cigars" 
+  (isa "tobacco"))
+(deftype "cigarillo" 
+  (isa "cigars"))
+(defstringconstant ":CIGARILLO:" "<CIGARILLO>")
+(defstringconstant ":CIGARS:" "<CIGARS>")
+(deftype "pipe_tobacco" 
+  (isa "tobacco"))
+(defstringconstant ":PIPE_TOBACCO:" "<PIPE_TOBACCO>")
+(defstringconstant ":TOBACCO:" "<TOBACCO>")
+(deftype "smoker" 
+  (isa "anchor"))
+(deftype "cigarette_smoker" 
+  (isa "smoker"))
+(defstringconstant ":CIGARETTE_SMOKER:" "<CIGARETTE_SMOKER>")
+(defstringconstant ":SMOKER:" "<SMOKER>")
+(deftype "ex-tobacco_user" 
+  (isa "anchor"))
+(deftype "former_smoker" 
+  (isa "ex-tobacco_user"))
+(deftype "ex-smoker_for_more_than_1_year" 
+  (isa "former_smoker"))
+(defstringconstant ":EX_SMOKER_FOR_MORE_THAN_1_YEAR:" "<EX-SMOKER_FOR_MORE_THAN_1_YEAR>")
+(deftype "former_light_tobacco_smoker" 
+  (isa "former_smoker"))
+(defstringconstant ":FORMER_LIGHT_TOBACCO_SMOKER:" "<FORMER_LIGHT_TOBACCO_SMOKER>")
+(deftype "aggressive_ex-smoker" 
+  (isa "former_smoker"))
+(defstringconstant ":AGGRESSIVE_EX_SMOKER:" "<AGGRESSIVE_EX-SMOKER>")
+(deftype "ex-pipe_smoker" 
+  (isa "former_smoker"))
+(defstringconstant ":EX_PIPE_SMOKER:" "<EX-PIPE_SMOKER>")
+(deftype "ex-cigar_smoker" 
+  (isa "former_smoker"))
+(defstringconstant ":EX_CIGAR_SMOKER:" "<EX-CIGAR_SMOKER>")
+(deftype "ex-cigarette_smoker" 
+  (isa "former_smoker"))
+(defstringconstant ":EX_CIGARETTE_SMOKER:" "<EX-CIGARETTE_SMOKER>")
+(deftype "former_heavy_tobacco_smoker" 
+  (isa "former_smoker"))
+(defstringconstant ":FORMER_HEAVY_TOBACCO_SMOKER:" "<FORMER_HEAVY_TOBACCO_SMOKER>")
+(deftype "intolerant_ex-smoker" 
+  (isa "former_smoker"))
+(defstringconstant ":INTOLERANT_EX_SMOKER:" "<INTOLERANT_EX-SMOKER>")
+(deftype "tolerant_ex-smoker" 
+  (isa "former_smoker"))
+(defstringconstant ":TOLERANT_EX_SMOKER:" "<TOLERANT_EX-SMOKER>")
+(defstringconstant ":FORMER_SMOKER:" "<FORMER_SMOKER>")
+(defstringconstant ":EX_TOBACCO_USER:" "<EX-TOBACCO_USER>")
+
+;; LEE ADDED "action"
+(deftype "smoke" (isa "anchor" "action"))
+
+(deftype "cigarette_smoke" 
+  (isa "smoke"))
+(defstringconstant ":CIGARETTE_SMOKE:" "<CIGARETTE_SMOKE>")
+(defstringconstant ":SMOKE:" "<SMOKE>")
+(deftype "tobacco_non-user" 
+  (isa "anchor"))
+(deftype "non-smoker" 
+  (isa "tobacco_non-user"))
+(defstringconstant ":NON_SMOKER:" "<NON-SMOKER>")
+(defstringconstant ":TOBACCO_NON_USER:" "<TOBACCO_NON-USER>")
+(deftype "smoking_cessation_group" 
+  (isa "anchor"))
+(defstringconstant ":SMOKING_CESSATION_GROUP:" "<SMOKING_CESSATION_GROUP>")
+(deftype "current_smoker" 
+  (isa "anchor"))
+(defstringconstant ":CURRENT_SMOKER:" "<CURRENT_SMOKER>")
+(isanchorof "<ANCHOR>" "<ANNOTATION>")
+(haspseudo "<ANCHOR>" "<PSEUDOANCHOR>")
+(deftype "modifier" 
+  (isa "lexicon"))
+(deftype "numericmodifier" 
+  (isa "modifier"))
+(deftype "quantity" 
+  (isa "numericmodifier"))
+(deftype "duration_lt_12_months" 
+  (isa "quantity"))
+(defstringconstant ":DURATION_LT_12_MONTHS:" "<DURATION_LT_12_MONTHS>")
+(deftype "duration_lt_1_year" 
+  (isa "quantity"))
+(defstringconstant ":DURATION_LT_1_YEAR:" "<DURATION_LT_1_YEAR>")
+(deftype "duration_lt_52_weeks" 
+  (isa "quantity"))
+(defstringconstant ":DURATION_LT_52_WEEKS:" "<DURATION_LT_52_WEEKS>")
+(deftype "duration_gte_12_months" 
+  (isa "quantity"))
+(defstringconstant ":DURATION_GTE_12_MONTHS:" "<DURATION_GTE_12_MONTHS>")
+(deftype "duration_gte_1_year" 
+  (isa "quantity"))
+(defstringconstant ":DURATION_GTE_1_YEAR:" "<DURATION_GTE_1_YEAR>")
+(deftype "rangemodifier" 
+  (isa "numericmodifier"))
+(deftype "range_gte_1_year" 
+  (isa "rangemodifier"))
+(defstringconstant ":RANGE_GTE_1_YEAR:" "<RANGE_GTE_1_YEAR>")
+(deftype "range_lt_1_year" 
+  (isa "rangemodifier"))
+(defstringconstant ":RANGE_LT_1_YEAR:" "<RANGE_LT_1_YEAR>")
+(hasunit "<NUMERICMODIFIER>" "<UNIT>")
+(deftype "linguisticmodifier" 
+  (isa "modifier"))
+(deftype "experiencer" 
+  (isa "linguisticmodifier"))
+(deftype "familymember_experiencer" 
+  (isa "experiencer"))
+(defstringconstant ":FAMILYMEMBER_EXPERIENCER:" "<FAMILYMEMBER_EXPERIENCER>")
+(deftype "patient_experiencer" 
+  (isa "experiencer"))
+(defstringconstant ":PATIENT_EXPERIENCER:" "<PATIENT_EXPERIENCER>")
+(deftype "othermember_experiencer" 
+  (isa "experiencer"))
+(defstringconstant ":OTHERMEMBER_EXPERIENCER:" "<OTHERMEMBER_EXPERIENCER>")
+(deftype "temporality" 
+  (isa "linguisticmodifier"))
+(deftype "overlap_doctimerel" 
+  (isa "temporality"))
+(defstringconstant ":OVERLAP_DOCTIMEREL:" "<OVERLAP_DOCTIMEREL>")
+(deftype "before_doctimerel" 
+  (isa "temporality"))
+(defstringconstant ":BEFORE_DOCTIMEREL:" "<BEFORE_DOCTIMEREL>")
+(deftype "before-overlap_doctimerel" 
+  (isa "temporality"))
+(defstringconstant ":BEFORE_OVERLAP_DOCTIMEREL:" "<BEFORE-OVERLAP_DOCTIMEREL>")
+(deftype "after_doctimerel" 
+  (isa "temporality"))
+(defstringconstant ":AFTER_DOCTIMEREL:" "<AFTER_DOCTIMEREL>")
+(deftype "certainty" 
+  (isa "linguisticmodifier"))
+(deftype "probableexistence_certainty" 
+  (isa "certainty"))
+(defstringconstant ":PROBABLEEXISTENCE_CERTAINTY:" "<PROBABLEEXISTENCE_CERTAINTY>")
+(deftype "uncertain_certainty" 
+  (isa "certainty"))
+(defstringconstant ":UNCERTAIN_CERTAINTY:" "<UNCERTAIN_CERTAINTY>")
+(deftype "probablenegatedexistence_certainty" 
+  (isa "certainty"))
+(defstringconstant ":PROBABLENEGATEDEXISTENCE_CERTAINTY:" "<PROBABLENEGATEDEXISTENCE_CERTAINTY>")
+(deftype "definitenegatedexistence_certainty" 
+  (isa "certainty"))
+(defstringconstant ":DEFINITENEGATEDEXISTENCE_CERTAINTY:" "<DEFINITENEGATEDEXISTENCE_CERTAINTY>")
+(deftype "definiteexistence_certainty" 
+  (isa "certainty"))
+(defstringconstant ":DEFINITEEXISTENCE_CERTAINTY:" "<DEFINITEEXISTENCE_CERTAINTY>")
+(deftype "contextualaspect" 
+  (isa "linguisticmodifier"))
+(deftype "reinitiates_contextualaspect" 
+  (isa "contextualaspect"))
+(defstringconstant ":REINITIATES_CONTEXTUALASPECT:" "<REINITIATES_CONTEXTUALASPECT>")
+(deftype "terminates_contextualaspect" 
+  (isa "contextualaspect"))
+(defstringconstant ":TERMINATES_CONTEXTUALASPECT:" "<TERMINATES_CONTEXTUALASPECT>")
+(deftype "intermittent_contextualaspect" 
+  (isa "contextualaspect"))
+(defstringconstant ":INTERMITTENT_CONTEXTUALASPECT:" "<INTERMITTENT_CONTEXTUALASPECT>")
+(deftype "notapplicable_contextualaspect" 
+  (isa "contextualaspect"))
+(defstringconstant ":NOTAPPLICABLE_CONTEXTUALASPECT:" "<NOTAPPLICABLE_CONTEXTUALASPECT>")
+(deftype "novel_contextualaspect" 
+  (isa "contextualaspect"))
+(defstringconstant ":NOVEL_CONTEXTUALASPECT:" "<NOVEL_CONTEXTUALASPECT>")
+(deftype "initiates_contextualaspect" 
+  (isa "contextualaspect"))
+(defstringconstant ":INITIATES_CONTEXTUALASPECT:" "<INITIATES_CONTEXTUALASPECT>")
+(deftype "continues_contextualaspect" 
+  (isa "contextualaspect"))
+(defstringconstant ":CONTINUES_CONTEXTUALASPECT:" "<CONTINUES_CONTEXTUALASPECT>")
+(deftype "qualifier" 
+  (isa "modifier"))
+(deftype "unit" 
+  (isa "qualifier"))
+(deftype "days_unit" 
+  (isa "unit"))
+(deftype "years_unit" 
+  (isa "unit"))
+(deftype "weeks_unit" 
+  (isa "unit"))
+(deftype "months_unit" 
+  (isa "unit"))
+(hasexclusion "<MODIFIER>" "<MODIFIER>")
+(hasexclusion "<MODIFIER>" "<ANNOTATION>")
+(hasqualifier "<MODIFIER>" "<QUALIFIER>")
+(haspseudo "<MODIFIER>" "<PSEUDOMODIFIER>")
+(deftype "pseudo" 
+  (isa "lexicon"))
+(deftype "pseudoanchor" 
+  (isa "pseudo"))
+(deftype "smokeless_tobacco" 
+  (isa "pseudoanchor"))
+(deftype "mint_snuff" 
+  (isa "smokeless_tobacco"))
+(deftype "chewing_tobacco" 
+  (isa "smokeless_tobacco"))
+(deftype "snuff_tobacco" 
+  (isa "smokeless_tobacco"))
+(deftype "dissolvable_tobacco" 
+  (isa "smokeless_tobacco"))
+(deftype "passive_smoke_exposure" 
+  (isa "pseudoanchor"))
+(deftype "second_hand_cigarette_smoke" 
+  (isa "pseudoanchor"))
+(deftype "smokes_crack" 
+  (isa "pseudoanchor"))
+(deftype "pseudomodifier" 
+  (isa "pseudo"))
+(deftype "pseudohistorical" 
+  (isa "pseudomodifier"))
+(deftype "pseudonegation" 
+  (isa "pseudomodifier"))
+(deftype "pseudoyear" 
+  (isa "pseudomodifier"))
+(deftype "psuedoterminate" 
+  (isa "pseudomodifier"))
+(deftype "pseudoday" 
+  (isa "pseudomodifier"))
+(deftype "pseudofamily" 
+  (isa "pseudomodifier"))
+(deftype "pseudofuture" 
+  (isa "pseudomodifier"))
+(ispseudoof "<PSEUDO>" "<MODIFIER>")
+(deftype "closure" 
+  (isa "lexicon"))
+(deftype "but_group" 
+  (isa "closure"))
+(deftype "because_group" 
+  (isa "closure"))
+(deftype "secondaryto_group" 
+  (isa "closure"))
+(deftype "patient_group" 
+  (isa "closure"))
+(deftype "which_group" 
+  (isa "closure"))
+(deftype "compoundanchor" 
+  (isa "lexicon"))
+(isanchorof "<COMPOUNDANCHOR>" "<ANNOTATION>")
+(hascompoundargument5 "<COMPOUNDANCHOR>" "<ANCHOR>")
+(hascompoundargument5 "<COMPOUNDANCHOR>" "<COMPOUNDANCHOR>")
+(hascompoundargument4 "<COMPOUNDANCHOR>" "<ANCHOR>")
+(hascompoundargument4 "<COMPOUNDANCHOR>" "<COMPOUNDANCHOR>")
+(hascompoundargument3 "<COMPOUNDANCHOR>" "<ANCHOR>")
+(hascompoundargument3 "<COMPOUNDANCHOR>" "<COMPOUNDANCHOR>")
+(hascompoundargument2 "<COMPOUNDANCHOR>" "<ANCHOR>")
+(hascompoundargument2 "<COMPOUNDANCHOR>" "<COMPOUNDANCHOR>")
+(hascompoundargument "<COMPOUNDANCHOR>" "<ANCHOR>")
+(hascompoundargument1 "<COMPOUNDANCHOR>" "<ANCHOR>")
+(hascompoundargument1 "<COMPOUNDANCHOR>" "<COMPOUNDANCHOR>")
+(deftype "owl:Thing" 
+  (isa "owl"))
+
+)

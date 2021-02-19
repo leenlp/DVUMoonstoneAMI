@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:-0-2018/07/23 16:13:53") 
+  (specialized) 
+  (example-snippet "residential long term care options") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (bagofconcepts true) 
+  (words 
+    (":COMMUNITY-LIVING::OPTION-THING:"
+    ":SENIOR-LIVING::OPTION-THING:"
+    ":NURSING-HOME::OPTION-THING:"
+    ":ASSISTED-LIVING::OPTION-THING:"
+    ":GROUP-HOME::OPTION-THING:"
+    ":COMMUNITY-LIVING::OPTION-THING:")) 
+  (tests 
+    ("notneg" ?0))
+  (properties (directionality uncertain)))
+
+)

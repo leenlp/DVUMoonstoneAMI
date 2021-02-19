@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::SOB::2018/05/14 16:17:10") 
+  (specialized) 
+  (example-snippet "breathing difficulties") 
+  (sourceid "physiologic-difficulty-word-rule") 
+  (concept ":SOB:") 
+  (stype "<CHEST-SYMPTOM-THING>") 
+  (window 16.0) 
+  (words 
+    (":BREATHING:") 
+    (":DIFFICULTY:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

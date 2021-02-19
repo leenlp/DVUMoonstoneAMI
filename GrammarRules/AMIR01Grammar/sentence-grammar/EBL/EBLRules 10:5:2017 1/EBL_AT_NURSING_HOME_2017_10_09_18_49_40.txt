@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::AT-NURSING-HOME::2017/10/09 18:49:40") 
+  (specialized) 
+  (example-snippet "at the nursing home") 
+  (ordered true) 
+  (sourceid "pp-rule") 
+  (concept ":AT-NURSING-HOME:") 
+  (stype "<AT-PLACE-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":PREP:") 
+    (":NURSING-HOME:")) 
+  (properties 
+    (thing "?1")))
+
+)

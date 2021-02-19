@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DESIRE-THING-PREDICATE::2018/04/30 23:05:32") 
+  (specialized) 
+  (example-snippet "wanted to bring the patient home") 
+  (ordered true) 
+  (sourceid "desire-or-request-predicate") 
+  (concept ":DESIRE-THING-PREDICATE:") 
+  (stype "<DESIRE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":DESIRE:") 
+    (":TRANSPORT-PATIENT-PREDICATE:")) 
+  (properties 
+    (action "?0") 
+    (thing-or-predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PROVIDER-COMMUNICATE-WITH-FAMILY-SENTENCE::2017/12/15 23:20:47") 
+  (specialized) 
+  (example-snippet "I had a long talk with mom and the patient") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PROVIDER-COMMUNICATE-WITH-FAMILY-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":SELF:") 
+    (":INTERACT-WITH::FAMILY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (removeproperties directionality))
+
+)

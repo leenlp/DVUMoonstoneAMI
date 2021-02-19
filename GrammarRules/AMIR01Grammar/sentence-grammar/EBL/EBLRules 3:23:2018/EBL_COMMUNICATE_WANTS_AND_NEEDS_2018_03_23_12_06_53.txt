@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATE-WANTS-AND-NEEDS::2018/03/23 12:06:53") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "person-communicates-sentence-or-thing-predicate-rule") 
+  (concept ":COMMUNICATE-WANTS-AND-NEEDS:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":COMMUNICATE-AFFIRMATIVELY:") 
+    (":PATIENT::DESIRE::NEED:")) 
+  (properties 
+    (topic "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (removeproperties directionality))
+
+)

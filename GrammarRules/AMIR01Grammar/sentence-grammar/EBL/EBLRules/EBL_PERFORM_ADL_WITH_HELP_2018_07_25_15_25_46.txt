@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PERFORM-ADL-WITH-HELP::2018/07/25 15:25:46") 
+  (specialized) 
+  (example-snippet "walks with moderate assistance") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":PERFORM-ADL-WITH-HELP:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":WALKING:<ACTIVITY>" "<ADL-ACTIVITY>") 
+    (":PREP:")
+    (":SUPPORT:" ":MINIMAL-CONTACT-ASSISTANCE:" ":MAXIMAL-CONTACT-ASSISTANCE:" 
+	":TOTAL-ASSISTANCE:" ":PARTIAL-ASSISTANCE:" ":MODERATE-ASSISTANCE:"
+	":SUPERVISION:"))
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?2)))
+
+)

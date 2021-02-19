@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+;; WRONG- facility living does not connote family support
+  (ruleidXXX "BOC-:POSSIBLE-SUPPORT:-1-2017/12/08 11:56:06") 
+  (specialized) 
+  (example-snippet "she is  transferred back to assisted living in good condition") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-LIVES-IN-FACILITY:")) 
+  (tests (notneg ?0)))
+
+)

@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::CONTENT-OF-COMMUNICATION-THING::2018/04/09 15:35:05") 
+  (specialized) 
+  (example-snippet "what we are talking about") 
+  (ordered true) 
+  (sourceid "wh-sentence-transform-thing-rule") 
+  (concept ":CONTENT-OF-COMMUNICATION-THING:") 
+  (stype "<COMMUNICATION-THING>") 
+  (window 32.0) 
+  (words 
+    (":WHAT:") 
+    (":SELF:") 
+    (":IS:") 
+    (":DISCUSS:")) 
+  (properties 
+    (object "?0")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2) 
+    ("notneg" ?3)))
+
+)

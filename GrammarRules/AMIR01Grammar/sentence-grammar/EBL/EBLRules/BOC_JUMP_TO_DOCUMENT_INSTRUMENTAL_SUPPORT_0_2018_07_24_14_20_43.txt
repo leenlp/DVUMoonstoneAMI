@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/07/24 14:20:43") 
+  (specialized) 
+  (example-snippet "on adaptive  compensatory strategies patientfamily education") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PREP::POSSIBLE-SUPPORT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

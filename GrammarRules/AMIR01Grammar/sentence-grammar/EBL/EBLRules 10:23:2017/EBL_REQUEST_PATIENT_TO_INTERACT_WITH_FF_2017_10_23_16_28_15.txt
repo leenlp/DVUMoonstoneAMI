@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::REQUEST-PATIENT-TO-INTERACT-WITH-FF::2017/10/23 16:28:15") 
+  (specialized) 
+  (example-snippet "encouraged her to talk with her parents") 
+  (ordered true) 
+  (sourceid "person-communicates-sentence-or-thing-predicate-rule") 
+  (concept ":REQUEST-PATIENT-TO-INTERACT-WITH-FF:") 
+  (stype "<REQUEST-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":REQUEST:<ACTION>") 
+    (":PATIENT::INTERACT-WITH::FAMILY:")) 
+  (properties 
+    (topic "?1")))
+
+)

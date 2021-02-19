@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE::2020/01/09 13:05:02") 
+  (specialized) 
+  (example-snippet "does not take meds") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    ("does") 
+    (":TAKE-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("neg" ?1)) 
+  (removeproperties directionality))
+
+)

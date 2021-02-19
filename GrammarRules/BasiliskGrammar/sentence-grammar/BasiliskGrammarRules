@@ -1,0 +1,93 @@
+'(
+grammarrule
+
+((ruleid simple-np-rule)
+ (words ("#NOUN#"))
+ (ptype "#NP#"))
+
+((ruleid simple-ap-rule)
+ (words ("#ADJ#"))
+ (ptype "#AP#")
+ (juxtaposed true))
+
+((ruleid compound-np-rule)
+  (words ("#NOUN#") ("#NP#"))
+  (ptype "#NP#")
+  (juxtaposed true))
+
+((ruleid compound-ap-rule)
+ (words ("#ADJ#") ("#AP#"))
+ (ptype "#AP#")
+ (juxtaposed true))
+
+((ruleid ap-np-rule)
+ (words ("#AP#") ("#NP#"))
+ (ptype "#NP#")
+ (juxtaposed true))
+
+((ruleid det-np-rule)
+ (words ("#DET#") ("#NP#"))
+ (ptype "#NP#")
+ (juxtaposed true))
+
+((ruleid simple-pp-rule)
+ (words ("#PREP#") ("#NP#"))
+ (ptype "#PP#")
+ (juxtaposed true))
+
+((ruleid np-pp-rule)
+ (words ("#NP#") ("#PREP#") ("#NP#"))
+ (ptype "#NP#")
+ (juxtaposed true))
+
+((ruleid be-aux-rule)
+ (words ("be" "is" "am" "are" "aren\'t"))
+ (ptype "#BE-AUX#")
+ (juxtaposed true))
+
+((ruleid do-aux-rule)
+ (words ("do" "does" "don't" "doesn\'t"))
+ (ptype "#DO-AUX#")
+ (juxtaposed true))
+
+((ruleid can-aux-rule)
+ (words ("can" "could" "can\'t" "couldn\'t" "cannot"))
+ (ptype "#CAN-AUX#")
+ (juxtaposed true))
+
+((ruleid have-aux-rule)
+ (words ("have" "had" "has" "haven\'t" "hasn\'t" "hadn\'t"))
+ (ptype "#HAVE-AUX#")
+ (juxtaposed true))
+
+((ruleid single-aux-infl-rule)
+ (words ("#BE-AUX#" "#DO-AUX#" "#CAN-AUX#" "#HAVE-AUX#"))
+ (ptype "#INFL#")
+ (juxtaposed true))
+
+((ruleid could-have-infl-rule)
+ (words ("#CAN-AUX#") ("#HAVE-AUX#"))
+ (ptype "#INFL#")
+ (juxtaposed true))
+
+((ruleid intransitive-verb-phrase-rule)
+ (window 16)
+ (words ("#VERB#") ("#PP#"))
+ (ptype "#VP#")
+ (juxtaposed true))
+
+((ruleid transitive-verb-phrase-rule)
+ (window 16)
+ (words ("#VERB#") ("#NP#"))
+ (ptype "#VP#")
+ (juxtaposed true))
+
+((ruleid np-vp-s-rule)
+ (window 16)
+ (words ("#NP#") ("#VERB#") ("#NP#"))
+ (ptype "#SENTENCE#")
+ (juxtaposed true))
+
+
+
+)

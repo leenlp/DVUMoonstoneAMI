@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:LIVING-ALONE:-0-2018/06/08 12:27:37") 
+  (specialized) 
+  (example-snippet "she reports that she has relatives in Nashville with whom she could stay posttransplant") 
+  (concept ":LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-LIVE-WITH-PERSON-HYPOTHETICAL-SENTENCE:")) 
+  (properties (assertion hypothetical))
+  (tests 
+    ("notneg" ?0)))
+
+)

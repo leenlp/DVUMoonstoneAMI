@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-2-2018/07/23 17:13:25") 
+  (specialized) 
+  (example-snippet "increasing SOB") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":INCREASED::SOB:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

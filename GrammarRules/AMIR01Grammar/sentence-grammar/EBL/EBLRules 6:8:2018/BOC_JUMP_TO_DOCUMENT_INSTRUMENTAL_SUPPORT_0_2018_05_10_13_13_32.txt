@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/05/10 13:13:32") 
+  (specialized) 
+  (example-snippet "local shelter") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":LOCALIZED::SHELTER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-13-2018/07/09 14:34:45") 
+  (specialized) 
+  (example-snippet "deconditioning") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DECONDITIONING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

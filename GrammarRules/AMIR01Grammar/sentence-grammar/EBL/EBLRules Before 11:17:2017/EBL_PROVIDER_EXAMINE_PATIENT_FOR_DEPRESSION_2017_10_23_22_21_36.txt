@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PROVIDER-EXAMINE-PATIENT-FOR-DEPRESSION::2017/10/23 22:21:36") 
+  (specialized) 
+  (example-snippet "I will see him back in three weeks for the depression") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PROVIDER-EXAMINE-PATIENT-FOR-DEPRESSION:") 
+  (stype "<EXAMINE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":SELF:") 
+    (":EXAMINE-PATIENT-FOR-DEPRESSION:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::IN-MARGINAL-SUPPORT-FACILITY::2017/12/16 00:57:02") 
+  (specialized) 
+  (example-snippet "was in jail") 
+  (ordered true) 
+  (sourceid "is-pp-predicate-rule") 
+  (concept ":IN-MARGINAL-SUPPORT-FACILITY:") 
+  (stype "<LIVING-FACILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    ("@is-auxilliary-word-rule@") 
+    (":PREP::JAIL:")) 
+  (properties 
+    (predicate "?1")) 
+  (removeproperties directionality))
+
+)

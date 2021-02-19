@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-UNDERSTAND-SOMETHING::2017/10/05 16:42:26") 
+  (specialized) 
+  (example-snippet "Mom understands the admission process") 
+  (ordered true) 
+  (sourceid "person-action-thing-rule") 
+  (concept ":FF-UNDERSTAND-SOMETHING:") 
+  (stype "<FF-UNDERSTAND-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":UNDERSTAND::UNDEFINED-THING:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

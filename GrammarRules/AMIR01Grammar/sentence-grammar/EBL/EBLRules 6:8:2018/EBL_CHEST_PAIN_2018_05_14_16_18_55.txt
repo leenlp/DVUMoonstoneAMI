@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::CHEST-PAIN::2018/05/14 16:18:55") 
+  (specialized) 
+  (example-snippet "chest pain") 
+  (sourceid "health-condition-at-location-thing-rule") 
+  (concept ":CHEST-PAIN:") 
+  (stype "<CHEST-SYMPTOM-THING>") 
+  (window 16.0) 
+  (words 
+    (":ANATOMIC-CHEST:") 
+    (":PAIN:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (relations 
+    (location-of ?1 "?0")))
+
+)

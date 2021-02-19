@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-2-2018/06/11 18:22:41") 
+  (specialized) 
+  (example-snippet "his son who has stayed with him") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY-WHO-STAYS-WITH-PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

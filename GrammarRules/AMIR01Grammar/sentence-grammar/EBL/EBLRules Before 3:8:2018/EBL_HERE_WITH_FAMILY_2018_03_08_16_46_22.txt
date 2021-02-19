@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HERE-WITH-FAMILY::2018/03/08 16:46:22") 
+  (specialized) 
+  (example-snippet "is here this morning with her Mom") 
+  (ordered true) 
+  (sourceid "predicate-pp-rule") 
+  (concept ":HERE-WITH-FAMILY:") 
+  (stype "<AT-PLACE-WITH-PERSON-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":HERE::SPECIFIC-TIME:") 
+    (":WITH-FAMILY:<PREDICATE>")) 
+  (properties 
+    (predicate "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

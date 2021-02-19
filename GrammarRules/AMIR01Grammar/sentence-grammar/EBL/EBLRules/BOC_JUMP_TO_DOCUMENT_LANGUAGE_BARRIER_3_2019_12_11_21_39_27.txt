@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:-3-2019/12/11 21:39:27") 
+  (specialized) 
+  (example-snippet "is deaf") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":HAVE-LANGUAGE-BARRIER-PREDICATE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

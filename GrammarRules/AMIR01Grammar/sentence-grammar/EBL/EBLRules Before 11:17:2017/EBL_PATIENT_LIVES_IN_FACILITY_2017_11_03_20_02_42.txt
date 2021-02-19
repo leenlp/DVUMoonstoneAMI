@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-LIVES-IN-FACILITY::2017/11/03 20:02:42") 
+  (specialized) 
+  (example-snippet "he lives  in assisted living") 
+  (ordered true) 
+  (sourceid "EBL::PATIENT-LIVES-IN-ASSISTED-LIVING::2017/11/03 19:56:08") 
+  (concept ":PATIENT-LIVES-IN-FACILITY:") 
+  (stype "<LIVE-IN-FACILITY-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":LIVE-AT::PREP::ASSISTED-LIVING:" 
+	":LIVES-IN-ASSISTED-LIVING:"
+	":LIVES-IN-NURSING-HOME:"
+	":LIVES-IN-GROUP-HOME:"
+	)) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+
+
+)

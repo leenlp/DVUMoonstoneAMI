@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HELP-FROM-PROVIDER:-24-2018/07/19 20:22:11") 
+  (specialized) 
+  (example-snippet "Min A of therapist") 
+  (ordered true) 
+  (concept ":HELP-FROM-PROVIDER:") 
+  (stype "<THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":HELP::PREP::PROVIDER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

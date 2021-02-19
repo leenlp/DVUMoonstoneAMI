@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2018/06/11 18:13:32") 
+  (specialized) 
+  (example-snippet "she could stay with relatives in Nashvilleposttransplant") 
+  (sourceid "sentence-plus-time-rule_22977") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT-LIVE-WITH-FAMILY:") 
+    (":SPECIFIC-TIME:")) 
+  (properties 
+    (sentence "?0") 
+    (time "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)
+    ("hasPropertyValue" ?0 directionality hypothetical)))
+
+)

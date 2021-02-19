@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/06/25 18:48:59") 
+  (specialized) 
+  (example-snippet "secondary support person will most likely be her sister") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-CARE-PROVIDER::PERSON-POSSESSIVE::FF:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

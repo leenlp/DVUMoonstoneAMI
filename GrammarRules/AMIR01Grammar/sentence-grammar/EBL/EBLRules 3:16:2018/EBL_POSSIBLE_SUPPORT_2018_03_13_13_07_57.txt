@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2018/03/13 13:07:57") 
+  (specialized) 
+  (example-snippet "she is in foster care") 
+  (ordered true) 
+  (sourceid "BOC-person-at-place-rule-0-2017/10/09 22:00:50") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 16.0) 
+  (words 
+    (":PATIENT:") 
+    (":FOSTER-HOME:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

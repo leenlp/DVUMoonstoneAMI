@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-5-2018/07/09 16:00:08") 
+  (specialized) 
+  (example-snippet "limited by BLE pain") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":LIMITED-BY::PAIN:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

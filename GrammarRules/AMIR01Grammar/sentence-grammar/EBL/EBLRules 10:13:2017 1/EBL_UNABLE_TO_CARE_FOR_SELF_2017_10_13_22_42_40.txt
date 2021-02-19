@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-CARE-FOR-SELF::2017/10/13 22:42:40") 
+  (specialized) 
+  (example-snippet "unable to care for herself") 
+  (ordered true) 
+  (sourceid "state-predicate-predicate-rule") 
+  (concept ":UNABLE-TO-CARE-FOR-SELF:") 
+  (stype "<ADL-PROVISION-OF-SELF-CARE>") 
+  (window 16.0) 
+  (words 
+    (":INABILITY:<MODIFIER>") 
+    (":CARE-FOR-SELF:<PREDICATE>")) 
+  (properties 
+    (state "?0") 
+    (predicate "?1")) 
+  (tests 
+    (notneg ?0) 
+    (notneg ?1)))
+
+)

@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-r01-patient-live-with-family-sentence-rule-1-2017/10/09 18:46:43") 
+  (specialized) 
+  (example-snippet "patient lives with parents") 
+  (ordered true) 
+  (concept ":PATIENT-NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-SENTENCE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-LIVE-WITH-FAMILY:")))
+
+)

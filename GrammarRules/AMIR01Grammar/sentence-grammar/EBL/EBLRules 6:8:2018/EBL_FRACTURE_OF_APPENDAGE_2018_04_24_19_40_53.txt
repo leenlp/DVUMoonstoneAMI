@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FRACTURE-OF-APPENDAGE::2018/04/24 19:40:53") 
+  (specialized) 
+  (example-snippet "fracture of the lower arm") 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":FRACTURE-OF-APPENDAGE:") 
+  (stype "<ACCIDENT-THING>") 
+  (window 16.0) 
+  (words 
+    (":FRACTURE:") 
+    (":ANATOMIC-LOCATION:")) 
+  (properties 
+    (object "?0") 
+    (modifier (thing ?1))) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

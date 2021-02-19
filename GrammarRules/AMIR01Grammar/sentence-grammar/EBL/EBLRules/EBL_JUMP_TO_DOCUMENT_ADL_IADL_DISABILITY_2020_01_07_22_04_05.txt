@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY::2020/01/07 22:04:05") 
+  (specialized) 
+  (example-snippet "improved performance with FWW") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (window 32.0) 
+  (words 
+    (":IMPROVE:") 
+    (":PREP::ADL-DEVICE:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

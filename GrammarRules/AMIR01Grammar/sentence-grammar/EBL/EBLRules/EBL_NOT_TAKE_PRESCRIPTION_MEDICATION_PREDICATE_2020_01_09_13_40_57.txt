@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE::2020/01/09 13:40:57") 
+  (specialized) 
+  (example-snippet "decline to fill any prescriptions") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":DECLINE:") 
+    (":TAKE-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

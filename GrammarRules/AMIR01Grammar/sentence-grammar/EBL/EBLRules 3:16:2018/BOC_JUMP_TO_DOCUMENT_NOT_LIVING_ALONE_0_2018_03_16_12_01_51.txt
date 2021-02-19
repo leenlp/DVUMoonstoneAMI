@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:-0-2018/03/16 12:01:51") 
+  (specialized) 
+  (example-snippet "here at promise") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (stype "<UNDEFINED-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":HERE::PREP::NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

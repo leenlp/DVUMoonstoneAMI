@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-UNABLE-TO-MOVE-TO-OR-FROM-ADL-FACILITY::2018/03/16 16:42:24") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-UNABLE-TO-MOVE-TO-OR-FROM-ADL-FACILITY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":UNABLE-TO-MOVE-TO-ADL-FACILITY-WITHOUT-HELP:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

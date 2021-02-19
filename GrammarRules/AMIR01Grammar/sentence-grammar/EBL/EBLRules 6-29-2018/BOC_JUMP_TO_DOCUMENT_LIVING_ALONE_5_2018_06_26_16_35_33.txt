@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LIVING-ALONE:-5-2018/06/26 16:35:33") 
+  (specialized) 
+  (example-snippet "candidate for inpatient rehab") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LIVING-ALONE:") 
+  (bagofconcepts true) 
+  (words 
+    (":CANDIDATE::PREP::NURSING-HOME:" ":CANDIDATE::AT-NURSING-HOME:")) 
+  (properties (directionality uncertain))
+  (tests 
+    ("notneg" ?0)))
+
+)

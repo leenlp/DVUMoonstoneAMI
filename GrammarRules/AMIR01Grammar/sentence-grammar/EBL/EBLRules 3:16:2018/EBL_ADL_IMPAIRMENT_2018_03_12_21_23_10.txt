@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-IMPAIRMENT::2018/03/12 21:23:10") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":ADL-IMPAIRMENT:") 
+  (stype "<ADL-ABILITY>") 
+  (window 16.0) 
+  (words 
+    (":MODERATE:<PROPERTY>") 
+    (":FALL-RISK:<THING>")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

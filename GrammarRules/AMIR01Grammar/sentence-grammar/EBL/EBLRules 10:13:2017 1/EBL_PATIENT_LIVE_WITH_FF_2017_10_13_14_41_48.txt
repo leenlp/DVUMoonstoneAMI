@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-LIVE-WITH-FF::2017/10/13 14:41:48") 
+  (specialized) 
+  (example-snippet "she lives with her boyfriend and his father") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-LIVE-WITH-FF:") 
+  (stype "<LIVE-WITH-PERSON-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":LIVE-WITH-FF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

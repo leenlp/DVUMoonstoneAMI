@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-GIVE-CONSENT::2019/12/18 22:25:53") 
+  (specialized) 
+  (example-snippet "is unable to give consent") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":UNABLE-GIVE-CONSENT:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":UNABLE:") 
+    (":GIVE-CONSENT:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

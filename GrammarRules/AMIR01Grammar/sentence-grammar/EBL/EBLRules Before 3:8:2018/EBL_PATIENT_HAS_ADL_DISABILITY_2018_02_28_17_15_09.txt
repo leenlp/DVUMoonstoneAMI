@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HAS-ADL-DISABILITY::2018/02/28 17:15:09") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "passive-sentence-rule") 
+  (concept ":PATIENT-HAS-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":ADL-THERAPY:<THING>") 
+    (":IS::NEED:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1") 
+    (verb-form "passive")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

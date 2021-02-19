@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-COMMUNICATE-SOMETHING-SENTENCE::2017/10/05 12:48:06") 
+  (specialized) 
+  (example-snippet "dad said he would be admitted") 
+  (ordered true) 
+  (sourceid "communication-event-rule") 
+  (concept ":FAMILY-COMMUNICATE-SOMETHING-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    ("<COMMUNICATION-PREDICATE>")) 
+  (removeproperties directionality)
+  (properties 
+    (communication "true") 
+    (person "?0") 
+    (predicate "?1")))
+
+)

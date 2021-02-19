@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:FROM-ADL-PLACE-TO-ADL-PLACE:-17-2018/07/19 18:40:03") 
+  (specialized) 
+  (example-snippet "from bed to chair") 
+  (ordered true) 
+  (concept ":FROM-ADL-PLACE-TO-ADL-PLACE:") 
+  (stype "<AT-PLACE-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PREP::ADL-DESTINATION::PREP::ADL-DESTINATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

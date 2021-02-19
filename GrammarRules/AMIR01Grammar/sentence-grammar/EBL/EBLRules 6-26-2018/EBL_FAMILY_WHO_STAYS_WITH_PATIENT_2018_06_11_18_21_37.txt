@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-WHO-STAYS-WITH-PATIENT::2018/06/11 18:21:37") 
+  (specialized) 
+  (example-snippet "his son who has stayed with him") 
+  (ordered true) 
+  (sourceid "person-who-is-thing-or-event-rule_31750") 
+  (concept ":FAMILY-WHO-STAYS-WITH-PATIENT:") 
+  (stype "<FRIEND-OR-FAMILY>") 
+  (window 16.0) 
+  (words 
+    (":FAMILY:") 
+    ("who has") 
+    (":STAY-AT::PREP::PATIENT:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

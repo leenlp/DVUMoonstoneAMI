@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LIVES-IN-FACILITY::2017/11/03 20:01:41") 
+  (specialized) 
+  (example-snippet "lives  in assisted living") 
+  (sourceid "live-at-assisted-living-complex-rule") 
+  (concept ":LIVES-IN-FACILITY:") 
+  (stype "<LIVE-IN-FACILITY-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":LIVE-AT::ASSISTED-LIVING:")) 
+  (tests 
+    (notneg ?0)))
+
+)

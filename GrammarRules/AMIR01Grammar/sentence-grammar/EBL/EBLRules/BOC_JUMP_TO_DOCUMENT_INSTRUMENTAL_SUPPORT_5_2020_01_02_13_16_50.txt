@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-5-2020/01/02 13:16:50") 
+  (specialized) 
+  (example-snippet "supportive children") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":CARING::CHILDREN:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

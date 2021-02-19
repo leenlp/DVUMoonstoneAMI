@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PERSON-WITH-DEMENTIA::2018/04/23 19:26:33") 
+  (specialized) 
+  (example-snippet "demented 80yearold male") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":PERSON-WITH-DEMENTIA:") 
+  (stype "<MENTAL-IMPAIRMENT-THING>") 
+  (window 16.0) 
+  (words 
+    (":DEMENTED:") 
+    (":MALE:<THING>")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-INTERACT-WITH-FF::2018/02/19 12:49:04") 
+  (specialized) 
+  (example-snippet "she is walking  with a friend") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-INTERACT-WITH-FF:") 
+  (stype "<INTERACT-WITH-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PERSON:") 
+    (":ADL-ACTIVITY::WITH-FF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

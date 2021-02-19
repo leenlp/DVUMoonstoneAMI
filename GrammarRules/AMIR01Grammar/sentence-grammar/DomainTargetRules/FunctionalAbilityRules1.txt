@@ -1,0 +1,277 @@
+'(
+wordrule
+
+;; &&&&&
+;; 7/17/2018
+((ruleid support-in-header-plus-family-indicates-support-rule)
+ (concept ":PATIENT-HAS-ADL-DISABILITY:")
+ (words (":WITH-HELP:" ":NEED-HELP:" ":SUPERVISION:" ))
+ (tests (notneg ?0)
+ 		("headerContainsOneOf" ?0 (list "transfer" "equipment" "adl" "feeding" "grooming"
+ 				"bathing" "precaution" "dressing" "performance" "intervention" 
+ 				"treatment" "transfer"))
+ 		(not ("annotationContainedInHeader" ?0))))
+ 		
+;; 3/23/2018
+;; "goal:  able to walk without help"
+;; 6/18/2018 added:  "... Goal:  follow simplified commands"
+((ruleid goal-header-plus-positive-description-connotes-inability-rule)
+ (concept ":PATIENT-HAS-ADL-DISABILITY:")
+ (words (":PATIENT-DOES-NOT-HAVE-ADL-DISABILITY:" "<ADL-ACTIVITY>" 
+ 		":SIMPLE-PROPERTY::COMMAND:" ":INDEPENDENCE:" "<ADL-FURNITURE>"
+ 		":NEED-HELP:" ":SUPERVISION:"))
+ (tests (notneg ?0)
+ 		("headerContainsString" ?0 "goal")
+ 		(not ("annotationContainedInHeader" ?0))))
+ 		
+((ruleid gait-header-plus-supervision-connotes-inability-rule)
+ (concept ":PATIENT-HAS-ADL-DISABILITY:")
+ (words (":SUPERVISION:"))
+ (tests (notneg ?0)
+ 		("headerContainsString" ?0 "gait")
+ 		(not ("annotationContainedInHeader" ?0))))
+ 		
+((ruleid recommendation-header-plus-nursing-home-connotes-uncertain-living-alone-rule)
+ (concept ":LIVING-ALONE:")
+ (words (":NURSING-HOME:"))
+ (properties (directionality uncertain))
+ (tests (notneg ?0)
+ 		("headerContainsString" ?0 "recommend")))
+ 		
+((ruleid goal-header-plus-positive-description-connotes-inability-rule)
+ (concept ":PATIENT-HAS-ADL-DISABILITY:")
+ (words (":POOR:"))
+ (tests (notneg ?0)
+ 		("headerContainsString" ?0 "level of consciousness")))
+ 
+
+
+((ruleid patient-adl-difficulty-rule)
+ (concept ":ADL-DIFFICULTY-AMBULATING:")
+ (words ("%:ADL-DIFFICULTY-AMBULATING:%" "%:ADL-USES-CANE-WALKER:%"))
+ (tests (notneg ?0)))
+
+((ruleid help-with-adl-activity-rule)
+ (concept ":HELP-TO-PERFORM-ADL-ACTIVITY:")
+ (words (":HELP:") (":FOOD:" ":ADL-ACTIVITY:" ":BALANCE:"))
+ (tests (notneg ?0) (notneg ?1)))
+ 
+((ruleid difficulty-getting-to-adl-facility-rule)
+ (concept ":ADL-DIFFICULTY-AMBULATING:" )
+ (ordered true)
+ (words (":IMPAIRMENT:" ":INABILITY:") 
+ 		(":WALKING::ADL-FACILITY:" ":ADL-FACILITY:"))
+ (tests (notneg ?0) (notneg ?1)))
+
+ ;; 8/3/2016
+((ruleid not-ambulating-without-assistance-indicates-difficulty-ambulating-rule)
+ (concept ":ADL-DIFFICULTY-AMBULATING:" )
+ (words (":ADL-AMBULATES-WITHOUT-ASSISTANCE:" ":WALKING::ADL-FACILITY:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+
+((ruleidXXX no-difficulty-ambulating-indicates-ambulates-without-assistance-rule)
+ (concept ":ADL-AMBULATES-WITHOUT-ASSISTANCE:"  )
+ (words (":ADL-DIFFICULTY-AMBULATING:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+((ruleidXXX adl-activity-independent-header-rule)
+ (concept ":ADL-NO-ASSISTANCE-WITH-ADLS:")
+ (words (":INDEPENDENT:" ":CONTINENT:"))
+ (tests (and ("headerContainsOneOf" ?0 
+ 				("care" "self" "bowel" "bladder" "transfer" 
+ 					"mobility" "continence"))
+			 (notneg ?0))))
+			 
+((ruleid header-aids-boolean-rule-1)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-DIFFICULTY-AMBULATING:")
+ (words ("immobile"))
+ (tests ("headerContainsOneOf" ?0 ("gait" "transferring"))
+		("headerCoversSingleSentence" ?0)))
+
+((ruleid no-cane-walker-implies-no-disability-rule)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-USES-NO-CANE-WALKER:")
+ (words (":ADL-USES-CANE-WALKER:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+((ruleid walking-with-device-indicates-rule)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-DIFFICULTY-AMBULATING:")
+ (ordered true)
+ (words (":WALKING:") ("<ADL-DEVICE>"))
+ (tests (notneg ?0)))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+((ruleid perform-adl-activity-rule)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-ACTIVITY:")
+ (words ("@event-thing-rule@"))
+ (specialization (":DO:") (":ADL-ACTIVITY:")))
+
+;; 9/22/2015
+;; Note:  Change rules to general, then add specific activities as specializations
+ 
+;; Walking specializations
+((ruleid walking-impairment-rule)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-DIFFICULTY-AMBULATING:")
+ (words (":ADL-IMPAIRMENT:"))
+ (tests (hcr ?0 ":WALKING:")))
+ 
+((ruleidXXX walking-no-impairment-rule)
+ (concept ":ADL-AMBULATES-WITHOUT-ASSISTANCE:" )
+ (words (":ADL-NO-IMPAIRMENT:"))
+ (tests (notneg ?0) (hcr ?0 ":WALKING:")))
+
+ ;; E.G. "walks without help"
+ ;; 12/4/2016:  Need literal concept
+((ruleidXXX adl-activity-without-assistance-rule)
+(debug true)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-NO-IMPAIRMENT:")
+ (words (":ADL-ACTIVITY:" ":WALKING:") (":HELP:"))
+ (tests (notneg ?0) (neg ?1))
+ (removeproperties directionality))
+ 
+((ruleid negated-adl-activity-without-assistance-connotes-needs-assistance-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":ADL-NO-IMPAIRMENT:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+((ruleid notneg-adl-activity-notneg-impairment-rule)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (comment "e.g. inability to walk to the bathroom")
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":ADL-ACTIVITY:") (":IMPAIRMENT:" ":LACK:" ":INABILITY:"))
+ (tests (notneg ?0) (notneg ?1)))
+ 
+ ;; e.g. "walks with no difficulty"
+((ruleid adl-activity-negated-impairment-rule)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-NO-IMPAIRMENT:")
+ (words (":ADL-ACTIVITY:") (":IMPAIRMENT:" ":LACK:" ":INABILITY:"))
+ (tests (notneg ?0) (neg ?1))
+ (removeproperties directionality))
+ 
+ ((ruleid adl-device-denotes-difficulty-walking-rule)
+  ;; ;; (stype ?0)
+  (concept ":ADL-DIFFICULTY-AMBULATING:")
+  (words ("@person-event-rule@" "@event-thing-rule@"))
+  (tests (hcopvr ?0 "object" ":ADL-DEVICE:")))
+
+((ruleid negated-adl-activity-is-adl-impairment-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":DISABILITY:") (":ADL-ACTIVITY:")))
+ 
+;; e.g. "Needs brace to walk" 
+;; (Note:  Ordered, since event-thing-rule will pick up activity+device)
+((ruleidXXX device-used-in-adl-activity-suggests-impairment-rule)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-IMPAIRMENT:")
+ (ordered true)
+ (words (":ADL-DEVICE:") (":ADL-ACTIVITY:"))
+ (tests (notneg ?0)))
+
+((ruleid uses-cane-walker-etc-rule)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-USES-CANE-WALKER:")
+ (words ("@event-thing-rule@"))
+ (subpattern ("<EVENT>") (":ADL-CANE-WALKER:")))
+
+;; e.g. "brace when walking" (Need separate rule because "when" interferes with interstitial constraint.)
+((ruleid device-used-in-adl-activity-suggests-impairment-rule)
+ ;; ;; (stype "<COMPLEX-EVENT>")
+ (concept ":ADL-IMPAIRMENT:")
+ (ordered true)
+ (words (":ADL-DEVICE:") (":GENERAL-TIME:") (":ADL-ACTIVITY:"))
+ (tests (notneg ?0)))
+
+;;;;; BUCKET STUFF 9/29/2015  ;;;;;;
+
+((ruleid need-of-adl-device-suggests-adl-impairment-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":NEED:" ":NEED-CARE:"))
+ (tests ("containsAllConcepts" ?0 (":NEED:" ":ADL-DEVICE:")))
+ (not (neg ?0)))
+ 
+((ruleid inability-to-perform-adl-activity-connotes-disability-rule-1)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":NEED:" ":LACK:" ":IMPAIRMENT:" ":NEED-CARE:" ":NEED-SUPPORT:"))
+ (tests ("containsSomeConcepts" ?0 (":ADL-ACTIVITY:")))
+ (notneg ?0))
+
+((ruleid cane-walker-adl-impairment-rule)
+ (concept ":ADL-SUPPORT-DEVICE:")
+ (words (":WALKER:" ":CANE:" ":ADL-CANE-WALKER:")))
+ 
+((ruleidXXX cane-walker-wheelchair-denotes-difficulty-ambulating-rule)
+ (concept ":ADL-DIFFICULTY-AMBULATING:")
+ (words (":ADL-USES-CANE-WALKER-WHEELCHAIR:" ":ADL-USES-CANE-WALKER:" ":ADL-USES-WHEELCHAIR:"))
+ (tests (notneg ?0)))
+
+ 
+ ;; 3/12/2018:  Letting negation through to document level
+((ruleidXXX negated-difficulty-ambulating-denotes-no-difficulty-ambulating-rule)
+ (concept ":ADL-NO-DIFFICULTY-AMBULATING:")
+ (words (":ADL-DIFFICULTY-AMBULATING:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+((ruleidXXX negated-no-difficulty-ambulating-denotes-difficulty-ambulating-rule)
+ (concept ":ADL-DIFFICULTY-AMBULATING:")
+ (words (":ADL-NO-DIFFICULTY-AMBULATING:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 		  
+ ;; 12/8/2015
+((ruleid self-care-word-rule) 
+ (concept ":ADL-ACTIVITY:")
+ (words ("care") ("self"))
+ (tests (notneg ?0)))
+
+;; 8/3/2016
+((ruleid with-help-rule)
+ (concept ":WITH-HELP:")
+ (ordered true)
+ (words ("with") (":HELP:"))
+ (tests (notneg ?1)))
+ 
+((ruleid without-help-rule)
+ (concept ":WITHOUT-HELP:")
+ (ordered true)
+ (words ("without" "with no") (":HELP:"))
+ (tests (notneg ?1)))
+ 
+ ((ruleid help-with-adl-activity-rule)
+  (concept ":HELP-TO-PERFORM-ADL-ACTIVITY:")
+  (ordered true)
+  (words (":HELP:") (":FOOD:" ":ADL-ACTIVITY:" ":ADL-FACILITY:" ":WALKING:"))
+  (tests (notneg ?0) (notneg ?1)))
+  
+((ruleid need-help-with-adl-activity-rule)
+  (concept ":UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:")
+  (ordered true)
+  (words (":NEED:") (":HELP-TO-PERFORM-ADL-ACTIVITY:"))
+  (tests (notneg ?0) (notneg ?1)))
+  
+((ruleidXXX negated-sentence-no-adl-impairment-complex-pattern-rule)
+ ;; ;; (stype "<SENTENCE>")
+ (concept ":NO-ADL-IMPAIRMENT:")
+ (words (":PATIENT::HELP::WALKING::ADL-FACILITY:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+ ;; FALLS
+ 
+ ((ruleid fall-risk-word-rule) 
+  (concept ":FALL-RISK:") 
+  (words (":RISK-THING:" ":RISK-ACTION:") (":FALL:")))
+
+ 
+)

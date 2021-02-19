@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-PROVIDE-CARE-FOR-PATIENT::2018/03/28 20:02:16") 
+  (specialized) 
+  (example-snippet "Her husband reportedly gives her medication daily") 
+  (sourceid "sentence-plus-time-rule") 
+  (concept ":FF-PROVIDE-CARE-FOR-PATIENT:") 
+  (stype "<RECEIVE-SUPPORT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY::PROVIDE-CARE-FOR-PATIENT:") 
+    (":REGULARLY:")) 
+  (properties 
+    (sentence "?0") 
+    (time "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

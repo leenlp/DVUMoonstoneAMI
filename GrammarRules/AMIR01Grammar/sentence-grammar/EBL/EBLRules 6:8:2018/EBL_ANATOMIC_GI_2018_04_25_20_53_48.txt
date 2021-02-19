@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ANATOMIC-GI::2018/04/25 20:53:48") 
+  (specialized) 
+  (example-snippet "her bowels or bladder") 
+  (ordered true) 
+  (sourceid "general-thing-conjunct-rule") 
+  (concept ":ANATOMIC-GI:") 
+  (stype "<ANATOMIC-LOCATION>") 
+  (window 16.0) 
+  (flags conj) 
+  (words 
+    (":PERSON-POSSESSIVE::ANATOMIC-GI:") 
+    ("or") 
+    (":ANATOMIC-GI:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

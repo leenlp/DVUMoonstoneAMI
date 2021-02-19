@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ANATOMIC-APPENDAGE::2018/04/24 20:07:15") 
+  (specialized) 
+  (example-snippet "lower extremities") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":ANATOMIC-APPENDAGE:") 
+  (stype "<ANATOMIC-LOCATION>") 
+  (window 16.0) 
+  (words 
+    (":ANATOMIC-MODIFIER:<PROPERTY>") 
+    (":ANATOMIC-APPENDAGE:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

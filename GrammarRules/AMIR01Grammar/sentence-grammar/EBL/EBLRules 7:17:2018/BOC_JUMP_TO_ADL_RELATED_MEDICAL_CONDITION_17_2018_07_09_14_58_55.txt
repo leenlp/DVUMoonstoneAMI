@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-17-2018/07/09 14:58:55") 
+  (specialized) 
+  (example-snippet "painful with standing") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PAINFUL::ADL-ACTIVITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

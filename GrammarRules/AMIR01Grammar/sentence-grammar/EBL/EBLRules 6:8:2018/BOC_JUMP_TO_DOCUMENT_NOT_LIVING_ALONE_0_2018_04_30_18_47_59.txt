@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:-0-2018/04/30 18:47:59") 
+  (specialized) 
+  (example-snippet "local shelter") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":LOCALIZED::SHELTER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

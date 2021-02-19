@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:-1-2018/04/03 23:07:21") 
+  (specialized) 
+  (example-snippet "miss a dose") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":MISS-DOSE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

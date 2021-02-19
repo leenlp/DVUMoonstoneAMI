@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-1-2018/06/28 13:10:04") 
+  (specialized) 
+  (example-snippet "Transfers With assist") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

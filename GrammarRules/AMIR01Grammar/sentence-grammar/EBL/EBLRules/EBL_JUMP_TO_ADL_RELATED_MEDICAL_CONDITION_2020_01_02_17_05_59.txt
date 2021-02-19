@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-ADL-RELATED-MEDICAL-CONDITION::2020/01/02 17:05:59") 
+  (specialized) 
+  (example-snippet "fracture of the proximal right femur") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (window 16.0) 
+  (words 
+    (":FRACTURE:") 
+    (":PREP::ANATOMIC-LOCATION:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

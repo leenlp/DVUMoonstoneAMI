@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE_SUPPORT:-2-2018/06/16 14:08:40") 
+  (specialized) 
+  (example-snippet "His mother and stepfather have been informed of the patients discharge") 
+  (ordered true) 
+  (concept ":POSSIBLE_SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::COMMUNICATE-AFFIRMATIVELY::PREP::DISCHARGE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

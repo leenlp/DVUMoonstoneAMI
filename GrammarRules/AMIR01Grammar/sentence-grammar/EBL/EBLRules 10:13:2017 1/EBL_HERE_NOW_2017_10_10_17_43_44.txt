@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HERE-NOW::2017/10/10 17:43:44") 
+  (specialized) 
+  (example-snippet "here today") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":HERE-NOW:") 
+  (stype "<LOCATION-AT-TIME-PROPERTY>") 
+  (window 16.0) 
+  (words 
+    (":HERE:") 
+    (":SPECIFIC-TIME:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")))
+
+)

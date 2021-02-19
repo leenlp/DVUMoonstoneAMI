@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MEDICAL-CONDITION-CAUSING-ADL-DISABILITY::2018/04/25 18:15:43") 
+  (specialized) 
+  (example-snippet "decreased left sided movement") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:") 
+  (stype "<DISEASE-THING>") 
+  (window 16.0) 
+  (words 
+    (":DECREASED:<PROPERTY>") 
+    (":LOCALIZED-MOVEMENT:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

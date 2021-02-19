@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:FF-WITH-PATIENT:-1-2018/08/03 10:43:51") 
+  (specialized) 
+  (example-snippet "family was present") 
+  (ordered true) 
+  (concept ":FF-WITH-PATIENT:") 
+  (stype "<PERSON-WITH-PERSON-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF::HERE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

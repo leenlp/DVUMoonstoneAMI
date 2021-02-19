@@ -1,0 +1,36 @@
+'(
+wordrule
+
+((ruleid old-document-target-concept-list-rule)
+ (concept ?0)
+  (words (":PATIENT-IS-COMPLIANT:"
+  			":PERSON-IS-DEPRESSED:"
+  			":PERSON-HAS-DEMENTIA:" 
+  			":PATIENT-HAS-ADL-DISABILITY:" 
+  			":PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:"
+			":HAVE-SUPPORT:" 
+			":LIVING-ALONE:" 
+			":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:"
+			":PATIENT-IN-MARGINAL-SUPPORT-FACILITY:"
+			":PATIENT-IS-NONCOMPLIANT:"
+			
+			
+			;; 3/14/2018:  Concepts that jump to targets without forestalling
+			;; further literal processing
+			":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:"
+			":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:"
+			":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:"
+			":JUMP-TO-DOCUMENT-CAPTURE-RULE:"
+			":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:"
+			":JUMP-TO-DOCUMENT-DEPRESSION:"
+			":JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:"
+			":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:"
+			":JUMP-TO-DOCUMENT-DEMENTIA:"
+			
+			":CAPTURE-AT-DOCUMENT-CONCEPT:"
+		))
+ (actions ("applyModifierProperties" ?rule ?0))
+ (properties (contains-target true)))
+ 
+  
+)

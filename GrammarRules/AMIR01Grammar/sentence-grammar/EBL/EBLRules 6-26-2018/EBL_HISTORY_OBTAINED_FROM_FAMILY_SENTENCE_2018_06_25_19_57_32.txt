@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HISTORY-OBTAINED-FROM-FAMILY-SENTENCE::2018/06/25 19:57:32") 
+  (specialized) 
+  (example-snippet "history was obtained from mother") 
+  (ordered true) 
+  (sourceid "history-of-thing-rule") 
+  (concept ":HISTORY-OBTAINED-FROM-FAMILY-SENTENCE:") 
+  (stype "<HISTORY-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":HISTORY:") 
+    (":RECEIVE-THING-FROM-FAMILY:")) 
+  (properties 
+    (temporality "historical")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

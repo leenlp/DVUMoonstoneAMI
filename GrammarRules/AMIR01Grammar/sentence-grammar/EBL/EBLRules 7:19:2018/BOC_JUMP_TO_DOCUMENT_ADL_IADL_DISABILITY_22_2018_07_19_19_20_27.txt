@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-22-2018/07/19 19:20:27") 
+  (specialized) 
+  (example-snippet "requires very frequent redirection") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED::MAXIMALLY::THERAPY-PROMPT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

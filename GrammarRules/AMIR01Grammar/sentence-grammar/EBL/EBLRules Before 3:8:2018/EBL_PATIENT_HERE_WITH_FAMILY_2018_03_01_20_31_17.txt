@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HERE-WITH-FAMILY::2018/03/01 20:31:17") 
+  (specialized) 
+  (example-snippet "patient is here today with his mom") 
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":PATIENT-HERE-WITH-FAMILY:") 
+  (stype "<AT-PLACE-WITH-PERSON-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":PATIENT:") 
+    (":HERE-WITH-FAMILY:<PREDICATE>")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

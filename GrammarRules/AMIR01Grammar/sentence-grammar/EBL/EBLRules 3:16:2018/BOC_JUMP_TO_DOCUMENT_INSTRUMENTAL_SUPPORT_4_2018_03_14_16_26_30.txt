@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-4-2018/03/14 16:26:30") 
+  (specialized) 
+  (example-snippet "get a lot of help with medications") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":RECEIVE::PREP::HELP::PREP::PRESCRIPTION-MEDICATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

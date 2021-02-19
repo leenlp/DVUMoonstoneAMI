@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LEGAL-CONSENT-OBTAINED-FROM-FAMILY-SENTENCE::2018/03/15 17:19:50") 
+  (specialized) 
+  (example-snippet "Informed consent was obtained by the patient and her daughter") 
+  (ordered true) 
+  (sourceid "passive-sentence-rule") 
+  (concept ":LEGAL-CONSENT-OBTAINED-FROM-FAMILY-SENTENCE:") 
+  (stype "<LEGAL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":CONSENT:<THING>") 
+    (":RECEIVE::PATIENT-AND-FAMILY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1") 
+    (verb-form "passive")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

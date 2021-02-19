@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-3-2018/07/17 16:46:15") 
+  (specialized) 
+  (example-snippet "Wife has tried to get him to go to ER") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF::CAUSE::PATIENT::COME-TO-CLINIC:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

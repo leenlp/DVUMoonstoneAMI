@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-EAT-AT-NURSING-HOME::2017/11/02 11:07:24") 
+  (specialized) 
+  (example-snippet "patient takes her meals at the nursing home") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-EAT-AT-NURSING-HOME:") 
+  (stype "<PATIENT-PERFORM-ADL-IN-FACILITY>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":TAKE::FOOD::AT-NURSING-HOME:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

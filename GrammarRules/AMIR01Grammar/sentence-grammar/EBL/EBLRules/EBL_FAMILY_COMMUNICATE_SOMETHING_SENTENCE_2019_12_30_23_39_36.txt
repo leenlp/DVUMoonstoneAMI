@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-COMMUNICATE-SOMETHING-SENTENCE::2019/12/30 23:39:36") 
+  (specialized) 
+  (example-snippet "the patients wife does not feel the patientis at any risk") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FAMILY-COMMUNICATE-SOMETHING-SENTENCE:") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    (":DO::UNDERSTAND-SOMETHING-PREDICATE:" ":UNDERSTAND-SOMETHING-PREDICATE:")) 
+  (removeproperties directionality))
+
+)

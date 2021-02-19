@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-1-2018/06/11 17:02:53") 
+  (specialized) 
+  (example-snippet "join fellow church members") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":MEET-FF-PREDICATE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

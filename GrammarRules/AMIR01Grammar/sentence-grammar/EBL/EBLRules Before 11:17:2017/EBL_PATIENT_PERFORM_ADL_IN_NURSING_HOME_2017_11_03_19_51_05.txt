@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-PERFORM-ADL-IN-NURSING-HOME::2017/11/03 19:51:05") 
+  (specialized) 
+  (example-snippet "patient eats in the nursing home") 
+  (ordered true) 
+  (sourceid "BOC-person-predicate-sentence-rule-1-2017/11/03 19:50:19") 
+  (concept ":PATIENT-PERFORM-ADL-IN-NURSING-HOME:") 
+  (stype "<PERFORM-ADL-IN-FACILITY>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT::EATING::AT-NURSING-HOME:")))
+
+)

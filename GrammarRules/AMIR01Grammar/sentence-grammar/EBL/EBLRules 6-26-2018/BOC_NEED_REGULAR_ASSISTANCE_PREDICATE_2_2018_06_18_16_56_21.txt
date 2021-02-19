@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:NEED-REGULAR-ASSISTANCE-PREDICATE:-2-2018/06/18 16:56:21") 
+  (specialized) 
+  (example-snippet "Presently needs 24 hour assistance") 
+  (ordered true) 
+  (concept ":NEED-REGULAR-ASSISTANCE-PREDICATE:") 
+  (stype "<NEED-THING-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED::TIME-UNIT::PROVISION-OF-CARE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

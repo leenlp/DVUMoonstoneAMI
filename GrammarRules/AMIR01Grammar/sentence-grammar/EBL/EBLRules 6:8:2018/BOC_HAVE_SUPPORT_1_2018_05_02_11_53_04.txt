@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HAVE-SUPPORT:-1-2018/05/02 11:53:04") 
+  (specialized) 
+  (example-snippet "Followup will be as determined by the family") 
+  (ordered true) 
+  (concept ":HAVE-SUPPORT:") 
+  (stype "<RECEIVE-SUPPORT-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY-DECIDE-THING-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

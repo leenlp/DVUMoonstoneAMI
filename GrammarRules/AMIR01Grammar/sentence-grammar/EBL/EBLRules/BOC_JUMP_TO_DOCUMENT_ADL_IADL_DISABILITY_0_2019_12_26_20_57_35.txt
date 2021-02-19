@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-0-2019/12/26 20:57:35") 
+  (specialized) 
+  (example-snippet "patient is not felt to have decision making capacity") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::BELIEVE::PREP::COGNITIVE-ABILITY-THING:")) 
+  (tests 
+    ("neg" ?0)) 
+  (removeproperties directionality))
+
+)

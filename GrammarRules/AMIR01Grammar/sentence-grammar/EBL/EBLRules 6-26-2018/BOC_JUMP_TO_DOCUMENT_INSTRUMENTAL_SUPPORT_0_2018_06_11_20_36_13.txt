@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/06/11 20:36:13") 
+  (specialized) 
+  (example-snippet "daughters are still adjusting emotionally to the severity of her illness") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::IS::PREP::ILLNESS:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

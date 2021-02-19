@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DO-NOT-STOP-TAKING-MEDICATION-INSTRUCTION::2020/01/09 14:02:09") 
+  (specialized) 
+  (example-snippet "do not stop taking this medication") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":DO-NOT-STOP-TAKING-MEDICATION-INSTRUCTION:") 
+  (stype "<GIVE-TAKE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":DO:") 
+    (":STOP-TAKING-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("neg" ?1)) 
+  (removeproperties directionality))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PROVIDE-CARE-FOR-PATIENT::2018/03/07 17:22:18") 
+  (specialized) 
+  (example-snippet "take care of her") 
+  (sourceid "provide-care-with-patient-needs-rule") 
+  (concept ":PROVIDE-CARE-FOR-PATIENT:") 
+  (stype "<PROVISION-OF-CARE>") 
+  (window 16.0) 
+  (ordered true)
+  (words 
+    (":PROVISION-OF-CARE:") 
+    (":PATIENT:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

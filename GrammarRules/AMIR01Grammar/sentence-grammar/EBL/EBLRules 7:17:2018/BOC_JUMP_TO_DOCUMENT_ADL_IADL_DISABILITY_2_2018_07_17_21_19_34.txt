@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-2-2018/07/17 21:19:34") 
+  (specialized) 
+  (example-snippet "assist pt to transfer back tobed") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (bagofconcepts true) 
+  (words 
+    (":HELP::PATIENT::TRANSFER::PREP::BED:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

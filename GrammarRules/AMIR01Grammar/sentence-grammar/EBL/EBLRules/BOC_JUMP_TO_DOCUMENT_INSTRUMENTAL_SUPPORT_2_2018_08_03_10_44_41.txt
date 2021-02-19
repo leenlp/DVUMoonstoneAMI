@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-2-2018/08/03 10:44:41") 
+  (specialized) 
+  (example-snippet "family was present") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-WITH-PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

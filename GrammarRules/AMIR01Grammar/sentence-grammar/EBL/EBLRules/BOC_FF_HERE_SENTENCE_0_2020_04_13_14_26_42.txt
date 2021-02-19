@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:FF-HERE-SENTENCE:-0-2020/04/13 14:26:42") 
+  (specialized) 
+  (example-snippet "family is present") 
+  (ordered true) 
+  (concept ":FF-HERE-SENTENCE:") 
+  (stype "<PERSON-WITH-PERSON-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF::HERE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

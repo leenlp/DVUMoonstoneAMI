@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-MOVE-TO-OR-FROM-ADL-FACILITY::2018/03/16 14:01:25") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "person-thing-thing-rule") 
+  (concept ":PATIENT-MOVE-TO-OR-FROM-ADL-FACILITY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":PATIENT:") 
+    (":MOVE-TO-OR-FROM-ADL-FACILITY:<ACTION>")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

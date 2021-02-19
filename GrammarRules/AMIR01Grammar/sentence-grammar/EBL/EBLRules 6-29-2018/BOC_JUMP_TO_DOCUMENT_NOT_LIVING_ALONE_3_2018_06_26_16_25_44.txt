@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:-3-2018/06/26 16:25:44") 
+  (specialized) 
+  (example-snippet "admitted from rehab facility") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":ADMIT-TO-LIVING-FACILITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

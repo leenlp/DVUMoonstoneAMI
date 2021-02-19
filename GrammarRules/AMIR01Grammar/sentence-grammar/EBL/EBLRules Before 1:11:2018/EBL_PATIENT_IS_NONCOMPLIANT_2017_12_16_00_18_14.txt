@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-IS-NONCOMPLIANT::2017/12/16 00:18:14") 
+  (specialized) 
+  (example-snippet "patient had been noncompliant with medications") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-IS-NONCOMPLIANT:") 
+  (stype "<BEHAVIOR-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":NONCOMPLIANCE:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (removeproperties directionality))
+
+)

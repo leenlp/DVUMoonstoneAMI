@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:-17-2018/07/25 17:03:36") 
+  (specialized) 
+  (example-snippet "unable to complete selfcare tasks without minmod assistance") 
+  (ordered true) 
+  (concept ":UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":UNABLE::ABLE-TO-PERFORM-ADL-WITHOUT-HELP:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

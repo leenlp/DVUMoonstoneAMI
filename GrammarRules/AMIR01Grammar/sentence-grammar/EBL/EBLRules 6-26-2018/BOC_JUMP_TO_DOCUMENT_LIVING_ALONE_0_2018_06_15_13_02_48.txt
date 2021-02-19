@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LIVING-ALONE:-0-2018/06/15 13:02:48") 
+  (specialized) 
+  (example-snippet "his stay here at Promise") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":RESIDE-AT-FACILITY-THING:")) 
+  (properties (directionality negated))
+  (tests 
+    ("notneg" ?0)))
+
+)

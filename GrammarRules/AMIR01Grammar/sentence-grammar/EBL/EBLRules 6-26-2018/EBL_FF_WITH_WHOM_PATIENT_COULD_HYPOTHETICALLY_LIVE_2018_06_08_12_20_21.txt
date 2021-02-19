@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-WITH-WHOM-PATIENT-COULD-HYPOTHETICALLY-LIVE::2018/06/08 12:20:21") 
+  (specialized) 
+  (example-snippet "relatives in Nashville with whom she could stay posttransplant") 
+  (ordered true) 
+  (sourceid "person-with-whom-clause-thing-rule_47106") 
+  (concept ":FF-WITH-WHOM-PATIENT-COULD-HYPOTHETICALLY-LIVE:") 
+  (stype "<LIVING-WITH-PERSON-THING>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    ("with whom") 
+    (":PATIENT::ABLE::LIVE-AT::SPECIFIC-TIME:"
+    	":PATIENT::ABLE::LIVE-AT:")) 
+  (properties 
+    (person "?0") 
+    (sentence "?2")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

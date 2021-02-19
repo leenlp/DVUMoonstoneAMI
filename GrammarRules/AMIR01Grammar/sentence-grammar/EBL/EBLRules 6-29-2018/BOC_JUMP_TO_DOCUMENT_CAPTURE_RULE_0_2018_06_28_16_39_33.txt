@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-CAPTURE-RULE:-0-2018/06/28 16:39:33") 
+  (specialized) 
+  (example-snippet "Task notcompleted") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":TASK-NOT-COMPLETED:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

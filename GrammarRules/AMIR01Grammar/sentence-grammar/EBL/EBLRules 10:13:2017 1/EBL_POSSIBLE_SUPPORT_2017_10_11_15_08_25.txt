@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2017/10/11 15:08:25") 
+  (specialized) 
+  (example-snippet "She comes here today with a friend") 
+  (ordered true) 
+  (sourceid "EBL::PATIENT-TRAVEL-WITH-FF::2017/10/10 18:08:45") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":TRAVEL-WITH-FF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

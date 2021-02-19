@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-6-2018/06/27 21:36:05") 
+  (specialized) 
+  (example-snippet "sons play a very minor role in caregiving") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::MINIMAL::HELP:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

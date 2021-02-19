@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ANATOMIC-LOCATION::2018/04/25 14:58:01") 
+  (specialized) 
+  (example-snippet "his right forearm") 
+  (ordered true) 
+  (sourceid "possessive-thing-rule") 
+  (concept ":ANATOMIC-LOCATION:") 
+  (stype "<ANATOMIC-LOCATION>") 
+  (window 8.0) 
+  (words 
+    (":PERSON-POSSESSIVE:") 
+    (":ANATOMIC-LOCATION:")) 
+  (properties 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

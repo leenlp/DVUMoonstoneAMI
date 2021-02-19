@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ANATOMIC-MODIFIER::2018/04/25 15:01:53") 
+  (specialized) 
+  (example-snippet "distal upper") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":ANATOMIC-MODIFIER:") 
+  (stype "<ANATOMY-MODIFIER>") 
+  (window 16.0) 
+  (words 
+    (":ANATOMIC-MODIFIER:<PROPERTY>") 
+    (":ANATOMIC-MODIFIER:<THING>")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

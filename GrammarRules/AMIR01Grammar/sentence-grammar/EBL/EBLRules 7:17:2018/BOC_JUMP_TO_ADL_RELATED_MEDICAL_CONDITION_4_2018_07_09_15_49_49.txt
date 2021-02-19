@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-4-2018/07/09 15:49:49") 
+  (specialized) 
+  (example-snippet "difficulty sequencing higher level tasks and multistep tasks") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DIFFICULTY::COGNITIVE-ABILITY-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-RETURN-TO-OR-LIVE-AT-HOME::2017/12/16 12:55:07") 
+  (specialized) 
+  (example-snippet "he lives at home with mother") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:") 
+  (stype "<LIVE-AT-HOME-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":LIVE-AT-HOME-WITH-FAMILY:" ":RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

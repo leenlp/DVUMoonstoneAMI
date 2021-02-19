@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-WITH-PATIENT::2018/06/25 21:59:01") 
+  (specialized) 
+  (example-snippet "significant other visits") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-WITH-PATIENT:") 
+  (stype "<PERSON-WITH-PERSON-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    (":VISIT:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

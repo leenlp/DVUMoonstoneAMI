@@ -1,0 +1,631 @@
+'(
+wordrule
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LIVING ALONE RULES
+
+((ruleidXXX r01-not-living-alone-means-negated-living-alone-rule) 
+  (example-snippet "lives with her mom") 
+  (ordered true) 
+  (concept ":LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (window 32.0) 
+  (words (":NOT-LIVING-ALONE:"))
+  (tests (not ("isPossibleUncertainOrHypothetical" ?0)))
+  (properties (directionality negated)))
+
+
+
+((ruleid r01-live-with-family-predicate-rule) 
+  (specialized) 
+  (example-snippet "lives with her mom") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":LIVE-WITH-FAMILY:") 
+  (stype "<LIVE-WITH-PERSON-PREDICATE>") 
+  (window 32.0) 
+  (words (":LIVE-AT:") (":FAMILY:" "<FAMILY>")) 
+  (properties (action "?0") (object "?1")))
+  
+((ruleid r01-patient-live-with-family-sentence-rule) 
+  (specialized) 
+  (example-snippet "she lives with her mom") 
+  (ordered true) 
+  (sourceid "person-action-thing-rule") 
+  (concept ":PATIENT-LIVE-WITH-FAMILY:") 
+  (stype "<LIVE-WITH-PERSON-SENTENCE>") 
+  (window 32.0) 
+  (words (":PATIENT:") (":LIVE-WITH-FAMILY:")) 
+  (properties (subject "?0") (predicate "?1")))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LIVING FACILITY RULES
+((ruleid lives-in-nursing-home-predicate-rule) 
+  (specialized) 
+  (example-snippet "lives in a nursing home") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":LIVES-IN-NURSING-HOME:") 
+  (stype "<LIVE-IN-FACILITY-PREDICATE>") 
+  (window 32.0) 
+  (words(":LIVE-AT:") (":NURSING-HOME:")) 
+  (properties (action "?0") (object "?1")))
+    
+    
+((ruleid patient-lives-in-nursing-home-sentence-rule) 
+  (specialized) 
+  (example-snippet "He lives in a nursing home") 
+  (ordered true) 
+  (sourceid "person-action-thing-rule") 
+  (concept ":PATIENT-LIVES-IN-NURSING-HOME:") 
+  (stype "<LIVE-IN-FACILITY-SENTENCE>") 
+  (window 32.0) 
+  (words (":PATIENT:") (":LIVES-IN-NURSING-HOME:")) 
+  (properties (subject "?0") (predicate "?1")))
+
+((ruleid communication-about-thing-predicate-rule) 
+  (complex-concept)
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":AFFIRMATIVE-COMMUNICATION:") 
+    ("<THING>")) 
+  (properties 
+    (action "?0") 
+    (object "?1")))
+    
+((ruleid communicate-with-family-sentence-rule) 
+  (specialized) 
+  (example-snippet "mother was advised about signs of disease") 
+  (ordered true) 
+  (sourceid "passive-communication-event-rule") 
+  (concept ":FAMILY-COMMUNICATE-WITH-PROVIDER-SENTENCE:") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    ("was advised" "advised about") 
+    ("<THING>")) 
+  (properties 
+    (communication "true") 
+    (person "?0") 
+    (topic "?2") 
+    (voice "passive")))
+    
+;; Diseases
+((ruleid disease-for-time-length-rule)
+ (concept ?0)
+ (words ("<DISEASE-THING>") ("<TIME-EXPRESSION>"))
+ (relations (time ?0 ?1)))
+ 
+((ruleid disease-thing-because-of-disease-thing-rule)
+ (stype ?0)
+ (complex-concept)
+ (ordered true)
+ (words ("<HEALTH-THING>") (":BECAUSE-OF:") ("<HEALTH-THING>"))
+ (relations (due-to ?0 ?2)))
+
+((ruleid general-medical-condition-rule)
+ (concept ":MEDICAL-CONDITION:")
+ (words (":UMLS-DISEASE-CONDITION:" ":DISEASE:")))
+ 
+((ruleid general-disease-catchall-word-rule)
+ (concept ":DISEASE:")
+ (words ("high blood cholesterol" ":FEVER:" ":DYSPNEA:")))
+ ((ruleid general-adl-pathological-behavior-catchall-word-rule)
+ (concept ":ADL-PATHOLOGIC-BEHAVIOR:")
+ (words ("repetitive questioning")))
+ 
+((ruleid headache-word-rule-1)
+ (concept ":HEADACHE:")
+ (words ("head ache" "headaches" "headache" "headaches" "migraine" 
+ 		"migraines")))
+ 
+((ruleid pain-word-rule)
+ (concept ":PAIN:")
+ (words ("pain" "pains" "ache" "aches")))
+
+((ruleid pain-word-rule)
+ (concept ":PAINFUL:")
+ (words ("painful")))
+ 
+((ruleid expression-of-pain-rule)
+ (concept ":PAIN:")
+ (ordered true)
+ (words (":EXPRESSION:") (":PAIN:")))
+ 
+((ruleid shortness-of-breath-word-rule)
+ (concept ":SOB:")
+ (words ("shortness of breath" "dyspnea" "sob" "sob/fatigue")))
+ 
+((ruleid medical-condition-or-absent-condition-not-causing-adl-disability-word-rule-1)
+ (concept ":MEDICAL-CONDITION-NOT-CAUSING-ADL-DISABILITY:")
+ (words ("no acute distress")))
+ 
+((ruleid symptom-expression-word-rule)
+ (concept ":SYMPTOM:")
+ (words ("sign" "signs" "symptom" "symptoms" "signs and symptoms")))
+ 
+;; 3/12/2018
+((ruleid disease-problem-or-symptom-rule)
+ (concept ?0)
+ (words ("<DISEASE-THING>") (":SYMPTOM:" ":PROBLEM:")))
+ 
+((ruleid disease-at-anatomic-location-rule)
+ (concept ?0)
+ (words ("<DISEASE-THING>" "<INJURY-THING>") (":ANATOMIC-LOCATION:"))
+ (relations (location-of ?0 ?1)))
+ 
+((ruleid degree-of-disease-rule)
+;; (concept ?1) -- Before 7/9/2018
+ (complex-concept)
+ (words ("<QUALITY-PROPERTY>") ("<DISEASE-THING>"))
+ (relations (quality-of ?1 ?0)))
+ 
+((ruleid injury-word-rule)
+ (concept ":INJURY:")
+ (words ("injury")))
+
+((ruleid umls-disease-integration-rule)
+ (concept ":UMLS-DISEASE-CONDITION:")
+ (words ("<DISEASE OR SYNDROME>" 
+ 			"<PATHOLOGIC FUNCTION>" 
+ 			"<ACQUIRED ABNORMALITY>"
+ 			"<INJURY OR POISONING>"
+ 			"<CELL OR MOLECULAR DYSFUNCTION>"
+ 			"<EXPERIMENTAL MODEL OF DISEASE>"
+ 			"<ANATOMICAL ABNORMALITY>"
+ 			"<MENTAL OR BEHAVIORAL DYSFUNCTION>"
+ 			"<CONGENITAL ABNORMALITY>")))
+ 			
+((ruleid anatomic-location-impairment-word-rule-1)
+ (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")
+ (words ("<ANATOMIC-LOCATION>") ("<POOR-PHYSICAL-STATE-THING>"))
+ (relations (modifies ?0 ?1)))
+ 
+((ruleid anatomic-location-disease-word-rule)
+ (complex-concept)
+ (words ("<ANATOMIC-LOCATION>") ("<DISEASE-THING>"))
+ (relations (location-of ?1 ?0)))
+ 
+((ruleid basic-anatomic-location-word-rule)
+ (concept ":ANATOMIC-LOCATION:")
+ (words ("back" "side")))
+ 
+((ruleid anatomic-appendage-word-rule)
+ (concept ":ANATOMIC-APPENDAGE:")
+ (words ("extremity" "extremities" "tibial plateau" "tibia" "femur" 
+ 		"fibula" "extremities" "lue" "rue" "bue" "rle" "lle" "ble"
+ 		"bilateral upper extremity" "right upper extremity" "left upper extremity" 
+ 		"left side" "right side")))
+ 		
+((ruleid hand-word-rule)
+ (concept ":HAND:")
+ (words ("hand" "hands" "arm" "arms" "forearm" "Handed")))
+ 
+((ruleid foot-word-rule)
+ (concept ":FOOT:")
+ (words ("foot" "feet" "leg" "legs" "calf")))
+ 
+((ruleid hand-feet-appendage-rule)
+ (concept ":ANATOMIC-APPENDAGE:")
+ (words (":HAND:" ":FOOT:")))
+ 
+((ruleid anatomic-gi-word-rule)
+ (concept ":ANATOMIC-GI:")
+ (words ("lower tract" "bowel" "bowels" "bladder" "b/b")))
+ 
+((ruleid anatomic-chest-word-rule)
+ (concept ":ANATOMIC-CHEST:")
+ (words ("chest")))
+ 
+((ruleid brain-word-rule)
+ (concept ":BRAIN:")
+ (words ("brain")))
+ 
+((ruleid head-word-rule)
+ (concept ":ANATOMY-HEAD:")
+ (words ("head")))
+ 
+((ruleid ptsd-thing-rule)
+ (concept ":PTSD:")
+ (words ("ptsd" "post traumatic stress disorder" 
+ 		"post-traumatic stress disorder")))
+ 
+((ruleid sided-anatomic-location-word-rule-1)
+ (concept ":ANATOMIC-LOCATION:")
+ (words (":ANATOMIC-MODIFIER:") ("<ANATOMIC-LOCATION>"))
+ (relations (modifies ?0 ?1)))
+ 
+((ruleid anatomy-modifier-word-rule)
+ (concept ":ANATOMIC-MODIFIER:")
+ (words ("left" "left side" "left sided" "left-sided"
+ 		"right" "right side" "right sided" "right-sided"
+ 		"proximal" "distal" "upper" "lower")))
+ 
+((ruleid composite-anatomy-modifier-rule)
+ (concept ":ANATOMIC-MODIFIER:")
+ (words (":ANATOMIC-MODIFIER:") (":ANATOMIC-MODIFIER:")))
+ 
+((ruleid health-condition-at-location-thing-rule)
+ (stype ?1)
+ (complex-concept)
+ (words ("<ANATOMIC-LOCATION>") ("<HEALTH-THING>"))
+ (relations (location-of ?1 ?0)))
+ 
+((ruleid various-medical-therapy-types-word-rule)
+ (concept ":MEDICAL-THERAPY:")
+ (words (":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:") 
+ 		(":THERAPY:" ":TREATMENT:")))
+ 		
+((ruleid pt-therapy-exercise-thing-rule)
+ (concept ":PHYSICAL-THERAPY-EXERCISE:")
+ (words ("shoulder flexion")))
+ 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LANGUAGE BARRIER RULES
+
+((ruleid primary-foreign-language-indicates-uncertain-english-skill-rule)
+ (concept ":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:")
+ (words (":PATIENT-PRIMARY-FOREIGN-LANGUAGE-SENTENCE:"))
+ (properties (directionality uncertain)))
+ 
+;; Translation / language-related rules
+((ruleid translator-word-rule)
+ (concept ":TRANSLATOR:")
+ (words ("translator" "interpreter")))
+ 
+((ruleid translat-action-word-rule)
+ (concept ":TRANSLATE:")
+ (words ("translate" "translating" "translates" "translated")))
+ 
+((ruleid language-barrier-thing-word-rule)
+ (concept ":LANGUAGE-BARRIER:")
+ (words ("language barrier")))
+
+((ruleid translat-action-word-rule)
+ (concept ":TRANSLATE-TO-ENGLISH-PREDICATE:")
+ (words ("to") (":TRANSLATE:"))
+ (tests (notneg ?1)))
+
+((ruleid primary-language-word-rule)
+ (concept ":PRIMARY-LANGUAGE:")
+ (words ("primary language")))
+ 
+((ruleid english-language-word-rule)
+ (concept ":ENGLISH:")
+ (words ("english")))
+ 
+((ruleid non-english-language-word-rule)
+ (concept ":NON-ENGLISH:")
+ (words ("non-english" "non english" "foreign language")))
+ 
+((ruleid spanish-language-word-rule)
+ (concept ":SPANISH:")
+ (words ("spanish")))
+ 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; MEDICAL COMPLIANCE RULES
+
+((ruleid compliance-with-medication-thing-rule)
+ (concept ":COMPLIANCE-WITH-TREATMENT:")
+ (words (":COMPLIANCE:") ("<MEDICATION-THING>" "<TREATMENT-THING>")))
+ 
+((ruleid noncompliance-with-medication-thing-rule)
+ (concept ":NONCOMPLIANCE-WITH-TREATMENT:")
+ (words (":NONCOMPLIANCE:") ("<MEDICATION-THING>" "<TREATMENT-THING>")))
+ 
+((ruleid compliance-thing-word-rule)
+ (concept ":COMPLIANCE:")
+ (words ("compliance")))
+ 
+((ruleid noncompliance-thing-word-rule)
+ (concept ":NONCOMPLIANCE:")
+ (words ("noncompliance" "non compliance" "non-compliance")))
+ 
+((ruleid compliant-property-word-rule)
+ (concept ":COMPLIANT:")
+ (words ("compliant" "med compliant" "medication compliant")))
+ 
+((ruleid noncompliant-property-word-rule)
+ (concept ":NONCOMPLIANT:")
+ (words ("noncompliant" "non-compliant" "non compliant")))
+ 
+((ruleid off-meds-rule)
+ (concept ":OFF-MEDS:")
+ (ordered true)
+ (words ("off") (":PRESCRIPTION-MEDICATION:")))
+ 
+((ruleid prescription-medication-rule)
+  (concept ":PRESCRIPTION-MEDICATION:")
+  (words ("medications" "medication" "meds" "medicine" "home meds" 
+  		"home medications"
+		"prescription medication" "prescription medications" 
+		"prescription drugs" "pills" "pain medications" "prescription" "prescriptions"
+		"statin" "antiplatelet" "inhaler" "inhalers" "zoloft" "blood thinner")))
+		
+((ruleid specific-prescription-types-rule)
+ (concept ":PRESCRIPTION-MEDICATION:")
+ (words ("statin" "antiplatelet" "inhaler" "inhalers" "zoloft")))
+				
+((ruleid otc-medication-rule)
+  (concept ":OTC-MEDICATION:")
+  (ordered true)
+  (words (":OTC:")
+  		 ("med" "meds" "medication" "medications" "pills" "products")))
+  		 
+((ruleid over-the-counter-word-rule)
+  (concept ":OTC:")
+  (words ("otc" "over-the-counter" "over the counter")))
+  
+((ruleid specific-prescription-medication-rule)
+  (concept ":PRESCRIPTION-MEDICATION:")
+  (words ("ntg" "acetominophen" "vicodin" "ibuprofen" "aspirin" "metformin" 
+  			"xanax" "sinemet" "asa" "haldol" "tamoxifen" "aderall" "xanax"
+  			"lortab")))
+  			
+  			
+  			
+((ruleid dose-thing-word-rule)
+ (concept ":DOSE:")
+ (words ("dose")))
+ 
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Perceptual / neurological
+
+((ruleid perceptual-mode-thing-word-rule)
+ (concept ":PERCEPTION-MODE-THING:")
+ (words ("sight" "vision" "hearing" "visual acuity")))
+ 
+
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;; MEDICAL CONDITIONS CAUSING ADL DISABILITY
+
+((ruleid flashback-word-rule)
+ (concept ":FLASHBACK:")
+ (words ("flashback" "flashbacks")))
+ 
+((ruleid nightmare-word-rule)
+ (concept ":NIGHTMARE:")
+ (words ("nightmare" "nightmares")))
+ 
+((ruleid dream-word-rule)
+ (concept ":DREAM:")
+ (words ("dream" "dreams")))
+
+((ruleid insomnia-word-rule)
+ (concept ":INSOMNIA:")
+ (words ("insomnia" "sleeplessness")))
+  
+((ruleid fatigue-thing-word-rule)
+ (concept ":FATIGUE:")
+ (words ("fatigue" "tiredness" "neurofatigue" )))
+ 
+((ruleid fatigued-property-word-rule)
+ (concept ":FATIGUED:")
+ (words ("fatigued" "tired")))
+ 
+((ruleid dizziness-thing-word-rule)
+ (concept ":DIZZINESS:")
+ (words ("dizziness")))
+ 
+((ruleid dizzy-property-word-rule)
+ (concept ":DIZZY:")
+ (words ("dizzy")))
+ 
+((ruleid anger-mood-thing-rule)
+ (concept ":ANGER:")
+ (words ("anger" "irritation")))
+ 
+((ruleid angry-mood-property-rule)
+ (concept ":ANGRY:")
+ (words ("angry" "irritated")))
+
+ ((ruleid medical-condition-causing-adl-disability-word-rule-1)
+ (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")
+ (tests (not ("headerContainsOneOf" ?0 (list "family" "history"))))
+ (words (
+ 		"ataxic gait"
+ 		"chronic lung disease"
+ 		"huntington" "huntington disease" "huntington's disease" 
+ 		"parkinson's disease" "parkinson disease" "parkinson"
+ 		"parkinson's" "parkinsons" "parkinsonism"
+ 		"meniere's disease" "catatonia"
+ 		"cerebral palsy"
+ 		"chorea"
+ 		"foot drop" "footdrop" 
+ 		;;"dysphagia" "swallowing dysfunction" "difficulty in swallowing" 
+ 		;;	"difficulty swallowing" 
+ 		"hemiparesis" "hemiplegic" "hemiplegia" "quadriplegic" "quadriplegia"
+ 		"seizure disorder" 
+ 		
+ 		;; Added these 1/2/2019
+ 			"nstemi" "stemi"
+ 			"respiratory failure" "resp failure" "cardiogenic shock"
+ 			"ckd" "mi" "lvad" "acute coronary syndrome" "ami" "acs" "acute mi"
+ 			"afib" "a-fib" "lami" ":STROKE:" "chf" "cad" "icm" "sepsis" "cirrhosis" 
+ 			"cirrhotic"
+ 			"neurogenic bladder" "heart failure" "hf" "adhf"  "encephalopathy"
+ 			"liver disease" " coronary artery bypass grafting" "ischemia" "ischemic"
+ 			"copd" "spine surgery" "radiculopathy" "hydrocephalus" "kidney failure"
+ 			"hip arthroplasty" "mitral regurgitation" "emphysema")))
+ 			
+((ruleid hemorrhage-medical-condition-rule)
+ (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")	
+ (words ("intracranial") 
+ 		(":BLEED:" "hemorrhage")))
+ 		
+((ruleid bone-fracture-medical-condition-rule)
+ (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")	
+ (words ("hip" "femoral" "femur" "knee" "shoulder") 
+ 		("fracture" "arthroplasty" "replacement")))
+ 		
+((ruleid adl-disability-due-to-medical-condition-predicate-rule)
+ (concept ":HAVE-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:")
+ (ordered true)
+ (words ("<HEALTH-THING>" ":HAVE-ADL-DISABILITY:" ":HAVE-ADL-IMPAIRMENT:" 
+ 		":UNABLE-TO-PERFORM-ADL:") 
+ 		("secondary to" "because of" "due to" "since" "therefore" "caused by" 
+ 			"causing" "related to" "as a result of" "resulting from"
+ 			"because" "since" "d/t") 
+ 		("<HEALTH-THING>" "<DISEASE-THING>")))
+ 		
+
+;; e.g. "afebrile at home"
+((ruleid medical-condition-at-place-rule)
+ (stype ?0)
+ (concept ?0)
+ (ordered true)
+ (words (":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:") ("<PLACE>"))
+ (relations (location-of ?0 ?1)))
+ 
+((ruleidXXX general-medical-condition-word-rule)
+ (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")
+ (words ("acute problems" 
+ 		"acute medical problems" "medical problems")))
+ 		
+((ruleid amputation-thing-word-rule)
+ (concept ":AMPUTATION:")
+ (words ("amputation")))
+
+((ruleid gi-tract-medical-condition-word-rule)
+ (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")
+ (ordered true)
+ (words ("lower tract") ("obstructive") 
+ 		("problem" "problems" "symptom" "symptoms")))
+ 		
+((ruleid psychological-condition-word-rule)
+ (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")
+ (words ("paranoid delusions"  "psychosis" "delusions"
+ 			;;; "hallucinations" 
+ 			)))
+  
+((ruleid fracture-thing-word-rule)
+ (concept ":FRACTURE:")
+ (words ("fracture" "fractures" "dislocation" "dislocations" "orif")))
+
+((ruleid nerve-condition-modes-word-rule-1)
+ (concept ":NERVE-CONDUCTION-LOSS:")
+ (ordered true)
+ (words ("vibratory" "proprioceptive") (":LOSS:")))
+
+((ruleid nerve-condition-modes-word-rule-2)
+ (concept ":NERVE-CONDUCTION-LOSS:")
+ (words ("proprioception" "nerve conduction") (":LOSS:" ":DECREASED:" ":DEFICIT:")))
+
+((ruleid weak-state-word-rule)
+ (concept ":WEAK:")
+ (words ("weak" "too weak")))
+ 
+((ruleid weakness-thing-word-rule)
+ (concept ":WEAKNESS:")
+ (words ("weakness" "muscle weakness" "lightheadedness")))
+ 
+((ruleid strength-thing-word-rule)
+ (concept ":STRENGTH:")
+ (words ("strength" "endurance")))
+ 
+((ruleid hypotonic-word-rule)
+ (concept ":HYPOTONIC:")
+ (words ("hypotonic" "low muscle tone" "flaccid")))
+ 
+((ruleid numbness-thing-word-rule)
+ (concept ":NUMBNESS:")
+ (words ("numbness")))
+ 
+((ruleid ill-state-word-rule)
+ (concept ":ILL:")
+ (words ("ill" "sick" "too ill" "too sick")))
+ 
+((ruleid illness-thing-word-rule)
+ (concept ":ILLNESS:")
+ (words ("illness" "sickness")))
+ 
+((ruleid stroke-word-rule)
+ (concept ":STROKE:")
+ (words ("stroke" "strokes" "cerebral infarct")))
+ 
+((ruleid general-sign-symptom-disease-word-rule)
+ (concept ":DISEASE:")
+ (words ("fever" "cancer" "chronic lung disease" "diabetes")))
+ 
+((ruleid obstructive-symptom-disease-word-rule)
+ (concept ":OBSTRUCTION:")
+ (words ("obstructive" "obstruction")))
+ 
+((ruleid incontinence-symptom-disease-word-rule)
+ (concept ":INCONTINENCE:")
+ (words ("incontinence" "incontinent" 
+ 		"urinary incontinence" "urge incontinence")))
+ 		
+((ruleid typed-incontinence-rule)
+ (concept ":INCONTINENCE:")
+ (ordered true)
+ (words ("urinary" "rectal") ("incontinence" "incontinent" )))
+ 
+ ((ruleid feeding-tube-rule) 
+  (concept ":FEEDING-TUBE:")
+  (words ("feed" "feeds" "feeding" "gi" "ng" "j" "dht" "ogt") ("tube")))
+ 
+((ruleid bladder-bowel-control-rule)
+ (concept ":TOILETING:")
+ (words (":ANATOMIC-GI:") ("control")))
+ 		
+;; 6/26/2018 Test result phrase rules
+((ruleid task-not-completed-word-rule)
+ (concept ":TASK-NOT-COMPLETED:")
+ (words ("task not completed" "not applicable")))
+ 
+((ruleid not-applicable-result-word-rule)
+ (concept ":NOT-APPLICABLE:")
+ (words ("not applicable" "n/a")))
+ 
+((ruleid unable-to-assess-word-rule)
+ (concept ":UNABLE-TO-ASSESS:")
+ (words ("unable to assess")))
+ 
+((ruleid blood-lab-types-rule)
+ (concept ":BLOOD-LAB-TYPE:")
+ (words ("bg" "blood glucose" "inr")))
+ 
+((ruleid neurological-property-rule)
+ (concept ":NEUROLOGICAL:")
+ (words ("neurological")))
+ 
+((ruleid heart-function-measure-thing-rule)
+ (concept ":HEART-FUNCTION-MEASURE:")
+ (words ("rvef" "lv function" "ejection fraction" "ef" "rv" "RV systolic function")))
+ 
+ ":VAD-DEVICE:" ":VAD-TEAM:"
+ 
+((ruleid government-financial-benefit-thing-word-rule)
+ (concept ":VAD-THING:")
+ (ordered true)
+ (words ("vad") ("device" "team" "process")))
+ 
+((ruleid government-financial-benefit-thing-word-rule)
+ (concept ":GOVERNMENT-BENEFIT-THING:")
+ (words ("ssi" 
+ 		;; "vad" 
+ 		"low income housing")))
+ 
+((ruleid government-financial-benefit-thing-word-rule-2)
+ (concept ":GOVERNMENT-BENEFIT-THING:")
+ (words (":GOVERNMENT-BENEFIT-THING:") (":BENEFIT:")))
+ 
+((ruleid government-financial-benefit-thing-word-rule-3)
+ (concept ":GOVERNMENT-BENEFIT-THING:")
+ (words (":GOVERNMENT-BENEFIT-THING:") (":REGULARLY:")))
+ 
+((ruleid government-financial-benefit-requirement-thing-word-rule-3)
+ (concept ":GOVERNMENT-BENEFIT-THING-REQUIREMENT:")
+ (words (":GOVERNMENT-BENEFIT-THING:") ("requirement" "requirements")))
+    
+)
+
+    
+    

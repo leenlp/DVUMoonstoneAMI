@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:-2-2018/04/09 14:50:00") 
+  (specialized) 
+  (example-snippet "interpreter is provided") 
+  (ordered true) 
+  (concept ":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-USE-TRANSLATOR-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

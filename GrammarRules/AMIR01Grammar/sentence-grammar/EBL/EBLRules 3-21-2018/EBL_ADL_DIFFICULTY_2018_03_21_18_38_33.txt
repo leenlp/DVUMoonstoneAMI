@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-DIFFICULTY::2018/03/21 18:38:33") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":ADL-DIFFICULTY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":PROBLEM:<PROPERTY>") 
+    (":SPEAKING:<THING>")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

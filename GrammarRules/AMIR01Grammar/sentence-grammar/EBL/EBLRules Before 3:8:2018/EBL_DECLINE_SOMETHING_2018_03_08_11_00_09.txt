@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DECLINE-SOMETHING::2018/03/08 11:00:09") 
+  (specialized) 
+  (example-snippet "declined additional treatment") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":DECLINE-SOMETHING:") 
+  (stype "<REQUEST-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":DECLINE:<ACTION>") 
+    (":TREATMENT:<THING>")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

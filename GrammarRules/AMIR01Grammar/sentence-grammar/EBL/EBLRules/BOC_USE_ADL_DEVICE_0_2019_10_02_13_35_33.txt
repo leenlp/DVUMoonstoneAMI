@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:USE-ADL-DEVICE:-0-2019/10/02 13:35:33") 
+  (specialized) 
+  (example-snippet "the use of a walker") 
+  (ordered true) 
+  (concept ":USE-ADL-DEVICE:") 
+  (stype "<USE-ADL-DEVICE>") 
+  (bagofconcepts true) 
+  (words 
+    (":USE::PREP::ADL-CANE-WALKER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

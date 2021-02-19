@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-FAMILY-PREDICATE::2019/12/31 00:03:48") 
+  (specialized) 
+  (example-snippet "Provided instructions to  wife") 
+  (ordered true) 
+  (sourceid "action-thing-pp-rule") 
+  (concept ":COMMUNICATION-WITH-FAMILY-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":PROVIDE:") 
+    (":EDUCATION:") 
+    (":PREP::FF:")) 
+  (properties 
+    (action "?0") 
+    (first-object "?1") 
+    (pp-object "[thing, ?2]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::REQUEST-SOMETHING::2017/10/19 17:58:10") 
+  (specialized) 
+  (example-snippet "requested transfer to Medical Center") 
+  (ordered true) 
+  (sourceid "person-communicates-sentence-or-thing-predicate-rule") 
+  (concept ":REQUEST-SOMETHING:") 
+  (stype "<REQUEST-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":REQUEST:<THING>") 
+    (":MOVE-TO::PREP::MEDICAL-FACILITY:")) 
+  (properties 
+    (topic "?1")))
+
+)

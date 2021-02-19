@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/03/14 16:52:05") 
+  (specialized) 
+  (example-snippet "discussion with family") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":DISCUSSION::PREP::FF:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

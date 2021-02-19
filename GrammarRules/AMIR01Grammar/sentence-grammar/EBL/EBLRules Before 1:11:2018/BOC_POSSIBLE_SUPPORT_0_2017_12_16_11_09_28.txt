@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-0-2017/12/16 11:09:28") 
+  (specialized) 
+  (example-snippet "he is here with family") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-HERE-WITH-FAMILY:")) 
+  (removeproperties directionality))
+
+)

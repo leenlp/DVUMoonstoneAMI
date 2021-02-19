@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-ADL-DISABILITY::2018/03/17 00:03:26") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "action-property-rule") 
+  (concept ":HAVE-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":NEED:<ACTION>") 
+    (":INTUBATED:")) 
+  (properties 
+    (action "?0") 
+    (property "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

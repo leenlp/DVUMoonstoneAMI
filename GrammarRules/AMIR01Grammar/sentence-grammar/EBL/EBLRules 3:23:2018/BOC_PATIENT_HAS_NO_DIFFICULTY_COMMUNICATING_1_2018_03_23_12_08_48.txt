@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-HAS-NO-DIFFICULTY-COMMUNICATING:-1-2018/03/23 12:08:48") 
+  (specialized) 
+  (ordered true) 
+  (concept ":PATIENT-HAS-NO-DIFFICULTY-COMMUNICATING:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-COMMUNICATE-WANTS-AND-NEEDS:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

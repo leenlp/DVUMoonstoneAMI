@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::PATIENT-UNABLE-TO-CARE-FOR-SELF::2017/10/14 01:04:59-0-2017/10/14 01:25:45") 
+  (specialized) 
+  (example-snippet "she is too weak to care for herself") 
+  (ordered true) 
+  (concept ":PATIENT-HAS-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-UNABLE-TO-CARE-FOR-SELF:")))
+
+)

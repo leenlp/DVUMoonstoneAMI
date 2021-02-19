@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TRAVEL-TO-CLINIC-WITH-FF::2018/03/13 22:49:04") 
+  (specialized) 
+  (example-snippet "came to the hospital later that day with her mom") 
+  (ordered true) 
+  (sourceid "predicate-pp-rule") 
+  (concept ":TRAVEL-TO-CLINIC-WITH-FF:") 
+  (stype "<TRAVEL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":COME-TO-CLINIC::TIME-UNIT:") 
+    (":WITH-FF:<PREDICATE>")) 
+  (properties 
+    (predicate "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

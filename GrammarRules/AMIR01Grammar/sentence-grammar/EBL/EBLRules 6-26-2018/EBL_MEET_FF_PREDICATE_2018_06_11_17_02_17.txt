@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MEET-FF-PREDICATE::2018/06/11 17:02:17") 
+  (specialized) 
+  (example-snippet "join fellow church members") 
+  (ordered true) 
+  (sourceid "action-thing-rule_17766") 
+  (concept ":MEET-FF-PREDICATE:") 
+  (stype "<MOVE-TO-OR-FROM-LOCATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":MEET:") 
+    (":CHURCH:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

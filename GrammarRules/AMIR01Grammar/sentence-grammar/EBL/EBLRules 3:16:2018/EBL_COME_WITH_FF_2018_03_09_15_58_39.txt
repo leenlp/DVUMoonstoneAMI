@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COME-WITH-FF::2018/03/09 15:58:39") 
+  (specialized) 
+  (example-snippet "presents to the office today with his mom") 
+  (ordered true) 
+  (sourceid "predicate-pp-rule") 
+  (concept ":COME-WITH-FF:") 
+  (stype "<TRAVEL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":COME-TO-CLINIC::SPECIFIC-TIME:") 
+    (":WITH-FF:<PREDICATE>")) 
+  (properties 
+    (predicate "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

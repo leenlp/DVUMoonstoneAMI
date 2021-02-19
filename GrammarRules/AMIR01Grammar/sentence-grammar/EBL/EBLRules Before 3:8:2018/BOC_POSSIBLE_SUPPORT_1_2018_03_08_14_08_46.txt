@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-1-2018/03/08 14:08:46") 
+  (specialized) 
+  (example-snippet "She is currently walking for 20 minutes four or five days out of the week with a friend") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-INTERACT-WITH-PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

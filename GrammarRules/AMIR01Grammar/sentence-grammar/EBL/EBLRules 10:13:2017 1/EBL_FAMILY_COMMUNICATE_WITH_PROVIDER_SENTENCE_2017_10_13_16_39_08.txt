@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-COMMUNICATE-WITH-PROVIDER-SENTENCE::2017/10/13 16:39:08") 
+  (specialized) 
+  (example-snippet "His parent spoke with a local physician") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FAMILY-COMMUNICATE-WITH-PROVIDER-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":INTERACT-WITH::PROVIDER:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

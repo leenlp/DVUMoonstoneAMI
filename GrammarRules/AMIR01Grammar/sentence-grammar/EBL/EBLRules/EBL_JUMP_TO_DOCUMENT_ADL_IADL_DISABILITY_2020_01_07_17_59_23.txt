@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY::2020/01/07 17:59:23") 
+  (specialized) 
+  (example-snippet "ambulating better") 
+  (ordered true) 
+  (sourceid "action-manner-predicate-rule") 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (window 16.0) 
+  (words 
+    (":ADL-ACTIVITY:") 
+    (":BETTER:" ":POOR:" ":POORLY:" ":DEFICIT:")) 
+  (properties 
+    (action "?0") 
+    (manner "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

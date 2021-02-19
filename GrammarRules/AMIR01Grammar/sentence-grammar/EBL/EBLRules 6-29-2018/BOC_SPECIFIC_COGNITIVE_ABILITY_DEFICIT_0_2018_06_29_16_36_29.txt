@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:SPECIFIC-COGNITIVE-ABILITY-DEFICIT:-0-2018/06/29 16:36:29") 
+  (specialized) 
+  (example-snippet "memory deficit") 
+  (ordered true) 
+  (concept ":SPECIFIC-COGNITIVE-ABILITY-DEFICIT:") 
+  (stype "<ADL-ACTIVITY>") 
+  (bagofconcepts true) 
+  (words 
+    (":SPECIFIC-COGNITIVE-ABILITY-THING::DEFICIT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

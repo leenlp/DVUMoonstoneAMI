@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-person-at-place-rule-0-2017/10/09 22:00:50") 
+  (specialized) 
+  (example-snippet "he is in foster care") 
+  (ordered true) 
+  (concept ":PATIENT-NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-SENTENCE>") 
+  (window 16.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT:") 
+    (":FOSTER-HOME:")))
+
+)

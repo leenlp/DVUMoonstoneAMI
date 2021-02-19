@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-NOT-LIVING-ALONE::2017/10/25 20:31:39") 
+  (specialized) 
+  (example-snippet "female from the nursing home with several days") 
+  (sourceid "EBL::PATIENT-LIVES-IN-FACILITY::2017/10/25 20:30:38") 
+  (concept ":PATIENT-NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FEMALE::AT-NURSING-HOME:") 
+    (":AT-TIME:<MODIFIER>")) 
+  (properties 
+    (sentence "?0") 
+    (time "?1")))
+
+)

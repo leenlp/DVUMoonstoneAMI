@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-7-2018/07/19 13:56:18") 
+  (specialized) 
+  (example-snippet "unable to focus") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":UNABLE::FOCUS-ACTION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ORIENTATION-TO-TIME-AND-PLACE::2018/03/16 20:32:18") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":ORIENTATION-TO-TIME-AND-PLACE:") 
+  (stype "<COGNITIVE-ABILITY-THING>") 
+  (window 16.0) 
+  (words 
+    (":COGNITIVE-ABILITY-THING:") 
+    (":PREP::TIME-AND-PLACE:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

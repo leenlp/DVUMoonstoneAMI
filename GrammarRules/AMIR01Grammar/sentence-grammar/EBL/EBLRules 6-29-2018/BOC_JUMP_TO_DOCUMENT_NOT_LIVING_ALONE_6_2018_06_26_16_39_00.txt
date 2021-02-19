@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:-6-2018/06/26 16:39:00") 
+  (specialized) 
+  (example-snippet "brought in by EMS from assisted living") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":TRANSPORT-PATIENT-FROM-LIVING-FACILITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

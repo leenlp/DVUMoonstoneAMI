@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LACK-SUPPORT::2017/11/03 23:07:23") 
+  (specialized) 
+  (example-snippet "cannot take care of her") 
+  (ordered true) 
+  (sourceid "pre-negation-context-rule-file") 
+  (concept ":HAVE-SUPPORT:") 
+  (window 8.0) 
+  (words 
+    (":PRE-NEGATION-WORD:") 
+    (":HELP::PATIENT:")) 
+  (properties 
+    (child "?1") 
+     (directionality "negated")
+    ) 
+  (tests 
+    (notneg ?1) 
+    (not 
+      ("firstWordBeginsWithUppercase" ?1))))
+
+)

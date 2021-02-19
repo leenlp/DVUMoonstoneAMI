@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:-1-2018/05/10 12:47:30") 
+  (specialized) 
+  (example-snippet "from XYZ Nursing Home") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PREP::PSEUDONYM::NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

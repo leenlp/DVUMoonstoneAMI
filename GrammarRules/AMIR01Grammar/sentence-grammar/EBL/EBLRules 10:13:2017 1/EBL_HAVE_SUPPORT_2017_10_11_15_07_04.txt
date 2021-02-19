@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-SUPPORT::2017/10/11 15:07:04") 
+  (specialized) 
+  (example-snippet "Mom said he did seem to get better") 
+  (ordered true) 
+  (sourceid "EBL::FAMILY-COMMUNICATE-SOMETHING-SENTENCE::2017/10/05 11:30:07") 
+  (concept ":HAVE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":COMMUNICATION-PREDICATE:")) 
+  (properties 
+    (communication "true") 
+    (person "?0") 
+    (predicate "?1")) 
+  (removeproperties directionality))
+
+)

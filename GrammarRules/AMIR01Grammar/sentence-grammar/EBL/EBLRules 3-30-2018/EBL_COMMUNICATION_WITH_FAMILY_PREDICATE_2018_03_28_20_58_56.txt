@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-FAMILY-PREDICATE::2018/03/28 20:58:56") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":COMMUNICATION-WITH-FAMILY-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":COMMUNICATE-AFFIRMATIVELY:") 
+    (":FOSTER-PARENT:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

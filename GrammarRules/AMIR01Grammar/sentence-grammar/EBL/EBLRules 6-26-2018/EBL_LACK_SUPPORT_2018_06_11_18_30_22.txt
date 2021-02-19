@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LACK-SUPPORT::2018/06/11 18:30:22") 
+  (specialized) 
+  (example-snippet "family not able to provide support") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule_41381") 
+  (concept ":LACK-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":ABLE::PROVIDE::HELP:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (removeproperties directionality)
+  (tests 
+    ("notneg" ?0) 
+    ("neg" ?1)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TRAVEL-TO-CLINIC::2018/03/13 22:38:37") 
+  (specialized) 
+  (example-snippet "went to the hospital") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":TRAVEL-TO-CLINIC:") 
+  (stype "<MOVE-TO-OR-FROM-LOCATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":GO:<ACTION>" ":COME:<ACTION>") 
+    (":PREP::MEDICAL-FACILITY:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

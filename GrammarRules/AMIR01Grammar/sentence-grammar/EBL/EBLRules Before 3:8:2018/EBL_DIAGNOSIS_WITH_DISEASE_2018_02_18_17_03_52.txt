@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DIAGNOSIS-WITH-DISEASE::2018/02/18 17:03:52") 
+  (specialized) 
+  (example-snippet "diagnosed with high blood cholesterol") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":DIAGNOSIS-WITH-DISEASE:") 
+  (stype "<DIAGNOSIS-WITH-DISEASE>") 
+  (window 32.0) 
+  (words 
+    (":DIAGNOSIS:<ACTION>") 
+    (":PREP::DISEASE:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

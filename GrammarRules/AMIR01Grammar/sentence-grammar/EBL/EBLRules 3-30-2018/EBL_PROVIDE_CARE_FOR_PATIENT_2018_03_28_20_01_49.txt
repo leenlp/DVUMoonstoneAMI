@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PROVIDE-CARE-FOR-PATIENT::2018/03/28 20:01:49") 
+  (specialized) 
+  (example-snippet "gives her medication") 
+  (ordered true) 
+  (sourceid "action-thing-thing-rule") 
+  (concept ":PROVIDE-CARE-FOR-PATIENT:") 
+  (stype "<RECEIVE-SUPPORT-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":PROVIDE:") 
+    (":PATIENT:") 
+    (":PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (action "?0") 
+    (first-object "?1") 
+    (second-object "?2")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

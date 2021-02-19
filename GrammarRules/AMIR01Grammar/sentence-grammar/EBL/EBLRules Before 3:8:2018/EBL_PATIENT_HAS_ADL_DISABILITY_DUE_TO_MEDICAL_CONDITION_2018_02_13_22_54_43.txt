@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION::2018/02/13 22:54:43") 
+  (specialized) 
+  (example-snippet "He has no complaints of dysphagia") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PERSON:") 
+    (":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

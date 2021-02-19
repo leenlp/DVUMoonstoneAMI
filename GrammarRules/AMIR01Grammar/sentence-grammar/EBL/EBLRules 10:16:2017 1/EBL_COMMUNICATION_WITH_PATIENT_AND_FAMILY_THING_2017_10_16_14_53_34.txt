@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-PATIENT-AND-FAMILY-THING::2017/10/16 14:53:34") 
+  (specialized) 
+  (example-snippet "discussion with the patient and his wife") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":COMMUNICATION-WITH-PATIENT-AND-FAMILY-THING:") 
+  (stype "<COMMUNICATION-THING>") 
+  (window 16.0) 
+  (words 
+    (":DISCUSSION:") 
+    (":PREP::PATIENT-AND-FAMILY:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")))
+
+)

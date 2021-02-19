@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::FAMILY-LIVE-WITH-PATIENT::2017/11/20 11:50:45-0-2017/11/20 11:51:15") 
+  (specialized) 
+  (example-snippet "Father lives with patient") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY-LIVE-WITH-PATIENT:")))
+
+)

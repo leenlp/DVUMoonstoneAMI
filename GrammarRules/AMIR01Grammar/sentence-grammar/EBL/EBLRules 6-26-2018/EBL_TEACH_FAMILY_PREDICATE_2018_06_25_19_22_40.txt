@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TEACH-FAMILY-PREDICATE::2018/06/25 19:22:40") 
+  (specialized) 
+  (example-snippet "educate family") 
+  (ordered true) 
+  (sourceid "person-communicates-sentence-or-thing-predicate-rule") 
+  (concept ":TEACH-FAMILY-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":TEACH:") 
+    (":FAMILY:")) 
+  (properties 
+    (topic "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (removeproperties directionality))
+
+)

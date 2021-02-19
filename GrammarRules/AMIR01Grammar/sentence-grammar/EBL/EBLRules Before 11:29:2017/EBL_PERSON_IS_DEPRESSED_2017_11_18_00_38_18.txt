@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PERSON-IS-DEPRESSED::2017/11/18 00:38:18") 
+  (specialized) 
+  (example-snippet "he is depressed") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PERSON-IS-DEPRESSED:") 
+  (stype "<DEPRESSION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    ("<PERSON>") 
+    (":DEPRESSED:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

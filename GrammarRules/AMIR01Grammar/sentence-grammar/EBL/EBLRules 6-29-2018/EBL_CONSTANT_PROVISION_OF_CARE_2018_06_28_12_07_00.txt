@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::CONSTANT-PROVISION-OF-CARE::2018/06/28 12:07:00") 
+  (specialized) 
+  (example-snippet "24 hour assistance") 
+  (sourceid "predicate-plus-time-rule") 
+  (concept ":CONSTANT-PROVISION-OF-CARE:") 
+  (stype "<PROVISION-OF-CARE>") 
+  (window 32.0) 
+  (words 
+    (":PROVISION-OF-CARE:<PREDICATE>") 
+    (":TWENTY-FOUR-HOUR:")) 
+  (properties 
+    (predicate "?0") 
+    (time "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

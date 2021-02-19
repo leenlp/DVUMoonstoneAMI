@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNDERSTAND-SOMETHING-PREDICATE::2018/05/10 11:22:33") 
+  (specialized) 
+  (example-snippet "feels this may have had some factor on her worsening depression") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":UNDERSTAND-SOMETHING-PREDICATE:") 
+  (stype "<UNDERSTAND-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":BELIEVE:") 
+    ("<PREDICATE>")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

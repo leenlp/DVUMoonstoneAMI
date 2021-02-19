@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-11-2019/12/11 17:58:41") 
+  (specialized) 
+  (example-snippet "physical therapy for his back") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":OCCUPATIONAL-THERAPY::PREP::ANATOMIC-LOCATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

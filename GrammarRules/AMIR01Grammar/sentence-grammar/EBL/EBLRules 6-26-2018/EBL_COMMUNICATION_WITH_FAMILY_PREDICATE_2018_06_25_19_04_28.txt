@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-FAMILY-PREDICATE::2018/06/25 19:04:28") 
+  (specialized) 
+  (example-snippet "discussed the anesthetic plan including options and risks with the patientguardian") 
+  (ordered true) 
+  (sourceid "person-communicates-sentence-or-thing-predicate-rule") 
+  (concept ":COMMUNICATION-WITH-FAMILY-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":DISCUSS:") 
+    (":PLAN-THING::PREP::FF-CARE-PROVIDER:")) 
+  (properties 
+    (topic "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (removeproperties directionality))
+
+)

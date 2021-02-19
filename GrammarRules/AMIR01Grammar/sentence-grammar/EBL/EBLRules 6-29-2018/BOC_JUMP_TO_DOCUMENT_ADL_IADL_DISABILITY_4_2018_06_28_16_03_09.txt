@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-4-2018/06/28 16:03:09") 
+  (specialized) 
+  (example-snippet "min assist x2 sit to stand") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":MINIMAL::HELP-TO-PERFORM-ADL-ACTIVITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

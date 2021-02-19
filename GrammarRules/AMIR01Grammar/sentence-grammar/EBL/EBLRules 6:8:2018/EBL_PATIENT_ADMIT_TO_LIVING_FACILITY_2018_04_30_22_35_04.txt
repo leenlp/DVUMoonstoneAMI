@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-ADMIT-TO-LIVING-FACILITY::2018/04/30 22:35:04") 
+  (specialized) 
+  (example-snippet "he has been admitted to nursing home") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-ADMIT-TO-LIVING-FACILITY:") 
+  (stype "<ADMIT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":ADMIT-TO-LIVING-FACILITY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

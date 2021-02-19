@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-WHO-HAS-POA::2017/10/16 15:14:47") 
+  (specialized) 
+  (example-snippet "daughter in law who has the power of attorney") 
+  (ordered true) 
+  (sourceid "person-who-is-thing-or-event-rule") 
+  (concept ":FAMILY-WHO-HAS-POA:") 
+  (stype "<LEGAL-THING-ACTION>") 
+  (window 16.0) 
+  (words 
+    (":FF:") 
+    ("who has") 
+    (":POA:<THING>")))
+
+)

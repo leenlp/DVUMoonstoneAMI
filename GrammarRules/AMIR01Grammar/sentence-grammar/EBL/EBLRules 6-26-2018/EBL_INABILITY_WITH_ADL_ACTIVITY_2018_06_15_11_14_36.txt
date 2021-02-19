@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::INABILITY-WITH-ADL-ACTIVITY::2018/06/15 11:14:36") 
+  (specialized) 
+  (example-snippet "his inability to relate well") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule_3165") 
+  (concept ":INABILITY-WITH-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 32.0) 
+  (words 
+    (":INABILITY:") 
+    (":COMMUNICATE-AFFIRMATIVELY::GOOD:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

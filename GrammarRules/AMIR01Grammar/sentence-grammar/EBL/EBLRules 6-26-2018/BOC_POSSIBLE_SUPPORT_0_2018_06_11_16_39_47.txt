@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-0-2018/06/11 16:39:47") 
+  (specialized) 
+  (example-snippet "pt seen in her hospital room with her twodaughters") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::EXAMINE::PREP::MEDICAL-FACILITY::WITH-FF:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NEED-ADL-DEVICE::2019/10/02 13:49:35") 
+  (specialized) 
+  (example-snippet "relies on the use of a walker") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":NEED-ADL-DEVICE:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":NEED-ACTION:") 
+    (":USE-ADL-DEVICE:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

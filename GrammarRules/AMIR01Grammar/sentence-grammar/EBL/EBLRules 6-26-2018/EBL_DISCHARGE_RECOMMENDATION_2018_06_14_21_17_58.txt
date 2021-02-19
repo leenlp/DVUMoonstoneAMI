@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DISCHARGE-RECOMMENDATION::2018/06/14 21:17:58") 
+  (specialized) 
+  (example-snippet "Discharge recommendations") 
+  (ordered true) 
+  (sourceid "action-thing-rule_9358") 
+  (concept ":DISCHARGE-RECOMMENDATION:") 
+  (stype "<RECOMMENDATION-THING>") 
+  (window 32.0) 
+  (words 
+    (":DISCHARGE:") 
+    (":RECOMMENDATION:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-ADL-DISABILITY::2018/03/16 21:34:42") 
+  (specialized)  
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":HAVE-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":SPEAKING:") 
+    (":DYSARTHRIC:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-COMMUNICATE-SOMETHING-SENTENCE::2018/05/10 11:31:37") 
+  (specialized) 
+  (example-snippet "Husband has stated that the patient is depressed") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-imperfect-tense-rule") 
+  (concept ":FAMILY-COMMUNICATE-SOMETHING-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    ("@have-word-rule@") 
+    (":COMMUNICATION-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?2") 
+    (tense "imperfect")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LIVING-ALONE:-0-2018/06/27 11:02:12") 
+  (specialized) 
+  (example-snippet "require inpatient psychiatric hospitalization") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (properties (directionality uncertain))
+  (words 
+    (":NEED::INPATIENT-TREATMENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

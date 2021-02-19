@@ -1,0 +1,146 @@
+'(
+tagrule
+ 
+ ;;;;;;;
+ ;; 11/13/2017:  Test narrowing target from ?interpreted to Thing or Predicate
+ 
+ ;; 10/28/2017 TEST OF TRANSFORMATIVE RULE
+ ((ruleidXXX pre-negation-conjunct-transformation)
+  (concept ?0)
+  (stype ?0)
+  (words ("@pre-negation-context-rule-file@"))
+  (contextlexicon 
+    	 ("category=definiteNegatedExistence" "en (sv) action=forward"))
+  (tests ("isConjunctX" (child ?0)))
+  (action ("createConjunctWithDistributedModifiers" ?0 ?rule)))
+
+((ruleid pre-negation-context-rule-file)
+  (concept ?1)
+  (stype ?1)
+  (ordered true)
+  (window 16)
+  (words (":PRE-NEGATION-WORD:") 
+		("<PREDICATE>" "<THING>" "<PROPERTY>" "<STATE>"
+		))
+
+  (contextlexicon 
+    ("category=definiteNegatedExistence" "en (sv) action=forward"))
+  (stopword 
+    ("_BUT_" "_PRESENTATION_" "_AND_" "_REMAIN_" "_ETIOLOGY_"))
+  (properties (child ?1) (directionality negated))
+  (tests (not ("firstWordBeginsWithUppercase" ?1))))
+		 
+;; 2/10/2018
+((ruleid pre-negation-disease-rule-file)
+  (ordered true)
+  (window 64)
+  (words (":PRE-NEGATION-WORD:") 
+  		("<DISEASE-THING>" "<PHYSICAL-STATE-THING>" 
+  		"<PHYSICAL-STATE>"
+  		"<BEHAVIOR-SENTENCE">
+  		":ADL-DIFFICULTY-AMBULATING:" "<MENTAL-IMPAIRMENT>" 
+  		"<MENTAL-IMPAIRMENT-THING>"
+  		"<HEALTH-THING>"
+  		":DYSPHAGIA:" ":DYSARTHRIA:"
+  		":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:"
+  		;; "<UNDEFINED>" ;; REMOVED 7/13/2018:  THIS NEGATES "JUMP-TO" CLAUSES!!!
+  		;; "<ADL-ACTIVITY>"	 -- 3/21/2018 
+  		;; "<ABILITY>"
+  		))
+  (stopword 
+    ("_BUT_" "_PRESENTATION_" "_AND_" "_REMAIN_" "_ETIOLOGY_"))
+  (actions ("applyModifierProperties" ?rule ?1))
+  (properties (directionality negated))
+  (tests (notneg ?1))
+  )
+	
+((ruleid pre-negation-word-rule)
+ (concept ":PRE-NEGATION-WORD:")
+ (words ("denies" "denied" "never" "no" "not" "without" "w/o" "can't" "never" 
+ 			"don't" "doesn't" "no longer" "negative for" 
+ 			"none" "does not feel" "does not believe" "do not feel" "do not believe"
+ 			;; "hardly"
+ 		;; ?filestring  -- 11/13/2017.  Multi-word phrases interfere with parse tree construction
+ 		))
+ (contextlexicon 
+    ("category=definiteNegatedExistence" "en (sv) action=forward")))
+    
+
+;; 11/18/2017
+((ruleidXXX pre-negation-context-conjunct-rule)
+  (concept ?1)
+  (stype ?1)
+  (ordered true)
+  (window 32)
+  (words (":PRE-NEGATION-WORD:") ("<THING>"))
+  (tests ("isConjunct" ?1) 
+  		(notneg ?1) 
+  		(not ("firstWordBeginsWithUppercase" ?1)))
+  (actions ("applyModifierPropertiesToConjunct" ?rule ?1))
+  (properties (directionality negated)))
+	
+((ruleid pre-negation-word-rule)
+ (concept ":PRE-NEGATION-WORD:")
+ (words ("never" "no" "not" "without" "w/o" "can't" "never" "don't" "doesn't"
+ 		  "with no"
+ 		
+ 		;; 3/2/2018- Insinuating negation into negative communication sentence
+ 		":COMMUNICATE-NEGATIVELY:"	
+ 		
+ 		;; ?filestring  -- 11/13/2017.  Multi-word phrases interfere with parse tree construction
+ 		))
+ (contextlexicon 
+    ("category=definiteNegatedExistence" "en (sv) action=forward")))
+ 
+	
+((ruleid question-answer-negation-rule)
+  (concept ?0)
+  (ordered true)
+  (words 
+	("<PREDICATE>" "<THING>" "<SENTENCE>")  ;; 11/13/2017
+	;; (?interpreted) 
+	("no" "false" "unknown" 
+	;; "0"  -- Removed 6/26/2018
+	)) 
+  
+  ;; 7/15/2016
+  (actions ("applyModifierProperties" ?rule ?0))
+  (properties (directionality negated))
+  (tests ("usesCombinedHeaderSentence" ?sentence)))
+  
+ ;; 1/8/2020
+((ruleid possible-thing-or-property-rule)
+  (concept ?1)
+  (ordered true)
+  (words 
+  	("possible" "possibly" "maybe" "chance")
+	("<PREDICATE>" "<THING>"))
+  (actions ("applyModifierProperties" ?rule ?1))
+  (properties (directionality possible))) 
+	
+((ruleid post-affirmation-context-rule) 
+  (concept ?0)
+  (ordered true)
+  (words 
+	("<PREDICATE>" "<THING>" "<SENTENCE>") 
+	;; (?interpreted) 
+	("yes" "true")) 
+  (stopword 
+    ("_BUT_" "_PRESENTATION_" "_AND_" "_REMAIN_" "_ETIOLOGY_")) 
+  (properties 
+    ("directionality" "affirmed")))
+    
+((ruleid post-disease-context-rule) 
+  (concept ?0)
+  (ordered true)
+  (words 
+	("<DISEASE-THING>" "<PHYSICAL-STATE-THING>" 
+  		":ADL-DIFFICULTY-AMBULATING:" ":ADL-IMPAIRMENT:") 
+	("resolved"))
+  (stopword 
+    ("_BUT_" "_PRESENTATION_" "_AND_" "_REMAIN_" "_ETIOLOGY_")) 
+  (properties 
+    ("directionality" "negated")))
+	
+
+)

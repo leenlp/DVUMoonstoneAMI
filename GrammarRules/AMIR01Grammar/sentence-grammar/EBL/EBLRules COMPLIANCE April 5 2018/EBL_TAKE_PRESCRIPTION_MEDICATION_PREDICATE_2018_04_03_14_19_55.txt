@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TAKE-PRESCRIPTION-MEDICATION-PREDICATE::2018/04/03 14:19:55") 
+  (specialized) 
+  (example-snippet "taking her medicine") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":TAKE-PRESCRIPTION-MEDICATION-PREDICATE:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":TAKE:") 
+    (":PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

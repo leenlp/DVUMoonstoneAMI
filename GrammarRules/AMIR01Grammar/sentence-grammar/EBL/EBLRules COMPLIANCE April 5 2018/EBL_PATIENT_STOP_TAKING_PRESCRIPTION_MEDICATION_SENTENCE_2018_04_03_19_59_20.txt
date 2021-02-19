@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-STOP-TAKING-PRESCRIPTION-MEDICATION-SENTENCE::2018/04/03 19:59:20") 
+  (specialized) 
+  (example-snippet "she had stopped taking her medicine") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-imperfect-tense-rule") 
+  (concept ":PATIENT-STOP-TAKING-PRESCRIPTION-MEDICATION-SENTENCE:") 
+  (stype "<GIVE-TAKE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    ("@have-word-rule@") 
+    (":STOP-TAKING-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?2") 
+    (tense "imperfect")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

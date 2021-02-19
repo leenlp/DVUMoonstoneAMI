@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:FF-INTERACT-WITH-PATIENT:-21-2018/06/25 22:03:15") 
+  (specialized) 
+  (example-snippet "daughter must call him") 
+  (ordered true) 
+  (concept ":FF-INTERACT-WITH-PATIENT:") 
+  (stype "<INTERACT-WITH-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF::NEED::INTERACT-WITH::PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

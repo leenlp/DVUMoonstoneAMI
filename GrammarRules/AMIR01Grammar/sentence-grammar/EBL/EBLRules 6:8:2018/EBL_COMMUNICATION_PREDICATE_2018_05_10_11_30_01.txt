@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-PREDICATE::2018/05/10 11:30:01") 
+  (specialized) 
+  (example-snippet "stated that the patient is depressed") 
+  (ordered true) 
+  (sourceid "person-communicates-sentence-or-thing-predicate-rule") 
+  ;;(concept ":COMMUNICATION-PREDICATE:") 
+  (complex-concept)
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":COMMUNICATE-AFFIRMATIVELY:") 
+    ("<PREDICATE>")) 
+  (properties 
+    (topic "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (removeproperties directionality))
+
+)

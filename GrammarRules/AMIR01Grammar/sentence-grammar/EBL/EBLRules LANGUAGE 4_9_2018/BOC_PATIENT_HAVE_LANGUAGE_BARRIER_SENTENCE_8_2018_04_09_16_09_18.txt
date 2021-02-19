@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:-8-2018/04/09 16:09:18") 
+  (specialized) 
+  (example-snippet "The patient seems to understand our conversation fairly well") 
+  (ordered true) 
+  (concept ":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-UNDERSTAND-CONVERSATION-WELL-SENTENCE:" 
+     ":UNDERSTAND-CONVERSATION-WELL-PREDICATE:")) 
+  (properties (directionality uncertain))
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-PATIENT-AND-FAMILY-PREDICATE::2018/05/10 13:14:25") 
+  (specialized) 
+  (example-snippet "discussed these issues at length with the patient and with his son") 
+  (ordered true) 
+  (sourceid "person-communicates-sentence-or-thing-predicate-rule") 
+  (concept ":COMMUNICATION-WITH-PATIENT-AND-FAMILY-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":DISCUSS:") 
+    (":PATIENT-AND-FAMILY:")) 
+  (properties 
+    (topic "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (removeproperties directionality))
+
+)

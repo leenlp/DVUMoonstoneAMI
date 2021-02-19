@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-TRANSPORT-PATIENT::2017/10/05 11:10:11") 
+  (specialized) 
+  (example-snippet "mom brings the patient") 
+  (ordered true) 
+  (sourceid "person-action-thing-rule") 
+  (concept ":FF-TRANSPORT-PATIENT:") 
+  (stype "<TRANSPORTATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":TRANSPORT-PATIENT-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

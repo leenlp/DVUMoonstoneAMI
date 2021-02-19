@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::REQUESTED-TO-INTERACT-WITH-FF::2017/10/23 18:22:03") 
+  (specialized) 
+  (example-snippet "was encouraged to talk with her family") 
+  (ordered true) 
+  (sourceid "passive-action-state-predicate-rule") 
+  (concept ":REQUESTED-TO-INTERACT-WITH-FF:") 
+  (stype "<REQUEST-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    ("@is-auxilliary-word-rule@") 
+    (":ENCOURAGE::INTERACT-WITH::FAMILY:")) 
+  (properties 
+    (predicate "?1") 
+    (verb-form "passive")) 
+  (tests 
+    ("hasNestedFirstEDFormActionWord" ?1)))
+
+)

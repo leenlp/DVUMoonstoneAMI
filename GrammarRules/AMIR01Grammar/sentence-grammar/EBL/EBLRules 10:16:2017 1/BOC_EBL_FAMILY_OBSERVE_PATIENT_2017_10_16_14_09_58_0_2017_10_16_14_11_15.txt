@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::FAMILY-OBSERVE-PATIENT::2017/10/16 14:09:58-0-2017/10/16 14:11:15") 
+  (specialized) 
+  (example-snippet "his mom is going to keep an eye on him") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY-OBSERVE-PATIENT:")))
+
+)

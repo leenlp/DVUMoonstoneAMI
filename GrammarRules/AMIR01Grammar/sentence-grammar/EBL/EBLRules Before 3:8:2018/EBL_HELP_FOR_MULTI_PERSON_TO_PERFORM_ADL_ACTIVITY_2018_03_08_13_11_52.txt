@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HELP-FOR-MULTI-PERSON-TO-PERFORM-ADL-ACTIVITY::2018/03/08 13:11:52") 
+  (specialized) 
+  (example-snippet "to assist both of them in healthier eating") 
+  (ordered true) 
+  (sourceid "infinitive-phrase-predicate-rule") 
+  (concept ":HELP-FOR-MULTI-PERSON-TO-PERFORM-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 32.0) 
+  (words 
+    ("to") 
+    (":HELP::MULTI-PERSON::PREP::ADL-ACTIVITY:")) 
+  (properties 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

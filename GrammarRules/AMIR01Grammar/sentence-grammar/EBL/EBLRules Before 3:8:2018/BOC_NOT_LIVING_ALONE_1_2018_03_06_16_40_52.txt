@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:NOT-LIVING-ALONE:-1-2018/03/06 16:40:52") 
+  (specialized) 
+  (example-snippet "household stressors with both of her children") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":EVIDENCE-OF-NOT-LIVING-ALONE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-communicate-with-family-sentence-rule-1-2017/10/12 15:25:45") 
+  (specialized) 
+  (example-snippet "Mother was advised regarding signs and symptoms of increased respiratory distress") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY-COMMUNICATE-WITH-PROVIDER-SENTENCE:")))
+
+)

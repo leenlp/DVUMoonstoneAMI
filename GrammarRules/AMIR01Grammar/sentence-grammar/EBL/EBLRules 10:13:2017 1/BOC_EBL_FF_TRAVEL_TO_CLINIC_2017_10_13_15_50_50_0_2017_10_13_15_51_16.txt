@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::FF-TRAVEL-TO-CLINIC::2017/10/13 15:50:50-0-2017/10/13 15:51:16") 
+  (specialized) 
+  (example-snippet "Mom returned to the clinic today") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":FF-TRAVEL-TO-CLINIC:")))
+
+)

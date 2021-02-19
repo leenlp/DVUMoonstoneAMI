@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-4-2018/07/17 16:54:30") 
+  (specialized) 
+  (example-snippet "wife noticed he was having difficulty") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF::OBSERVE::PERSON::DIFFICULTY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

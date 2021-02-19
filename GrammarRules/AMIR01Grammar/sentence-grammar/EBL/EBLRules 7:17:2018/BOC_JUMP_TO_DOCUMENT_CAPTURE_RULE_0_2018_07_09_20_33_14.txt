@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-CAPTURE-RULE:-0-2018/07/09 20:33:14") 
+  (specialized) 
+  (example-snippet "severely depressed RVEF") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":MAXIMALLY::DEPRESSED::HEART-FUNCTION-MEASURE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-14-2018/06/25 20:46:24") 
+  (specialized) 
+  (example-snippet "supported by family") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PROVISION-OF-CARE::PREP::FF:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

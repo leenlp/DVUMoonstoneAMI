@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NO-HELP-TO-MOVE-TO-ADL-FACILITY::2018/01/11 22:44:42") 
+  (specialized) 
+  (example-snippet "no help to walk to the bathroom") 
+  (ordered true) 
+  (sourceid "pre-negation-context-rule-file") 
+  (concept ":NO-HELP-TO-MOVE-TO-ADL-FACILITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":HELP-TO-MOVE-TO-ADL-FACILITY:")) 
+  (tests 
+    (neg ?0))
+  (removeproperties directionality))
+
+)

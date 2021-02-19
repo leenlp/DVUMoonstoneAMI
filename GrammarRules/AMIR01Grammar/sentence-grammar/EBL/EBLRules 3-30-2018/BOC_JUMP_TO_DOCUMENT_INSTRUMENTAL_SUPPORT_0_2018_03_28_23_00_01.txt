@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/03/28 23:00:01") 
+  (specialized) 
+  (example-snippet "given to the patients wife") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":GIVE-THING-TO-FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

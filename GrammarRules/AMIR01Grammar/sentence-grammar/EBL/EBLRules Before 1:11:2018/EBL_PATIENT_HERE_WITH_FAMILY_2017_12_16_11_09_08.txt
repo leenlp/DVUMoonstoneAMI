@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HERE-WITH-FAMILY::2017/12/16 11:09:08") 
+  (specialized) 
+  (example-snippet "he is here with family") 
+  (ordered true) 
+  (sourceid "thing-is-pp-rule") 
+  (concept ":PATIENT-HERE-WITH-FAMILY:") 
+  (stype "<AT-PLACE-WITH-PERSON-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":PATIENT:") 
+    ("@is-auxilliary-word-rule@") 
+    (":HERE-WITH-FAMILY:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?2")))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PROVIDER-CARE-FOR-FAMILY-MEMBER::2018/03/08 18:27:23") 
+  (specialized) 
+  (example-snippet "I have been taking care of her husband") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PROVIDER-CARE-FOR-FAMILY-MEMBER:") 
+  (stype "<RECEIVE-SUPPORT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":SELF:") 
+    (":POSSIBLE-SUPPORT:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

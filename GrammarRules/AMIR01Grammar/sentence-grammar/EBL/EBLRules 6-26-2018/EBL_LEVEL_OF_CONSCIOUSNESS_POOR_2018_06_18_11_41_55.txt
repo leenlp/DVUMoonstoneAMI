@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LEVEL-OF-CONSCIOUSNESS-POOR::2018/06/18 11:41:55") 
+  (specialized) 
+  (example-snippet "Level of Consciousness response level is poor") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":LEVEL-OF-CONSCIOUSNESS-POOR:") 
+  (stype "<COGNITIVE-ABILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":LEVEL-OF-CONSCIOUSNESS:") 
+    (":POOR:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

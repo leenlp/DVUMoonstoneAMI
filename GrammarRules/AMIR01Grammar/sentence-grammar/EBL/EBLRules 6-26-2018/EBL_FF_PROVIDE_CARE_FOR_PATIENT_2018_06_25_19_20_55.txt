@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-PROVIDE-CARE-FOR-PATIENT::2018/06/25 19:20:55") 
+  (specialized) 
+  (example-snippet "wife assists with ADLs including dressing and sponge bath") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-PROVIDE-CARE-FOR-PATIENT:") 
+  (stype "<RECEIVE-SUPPORT-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    (":HELP-TO-PERFORM-ADL-ACTIVITY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-8-2018/06/25 20:27:10") 
+  (specialized) 
+  (example-snippet "mother walked in the room") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::WALKING::PREP::ROOM:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-FAMILY-THING::2018/06/25 17:01:34") 
+  (specialized) 
+  (example-snippet "husbands report") 
+  (ordered true) 
+  (sourceid "person-thing-thing-rule") 
+  (concept ":COMMUNICATION-WITH-FAMILY-THING:") 
+  (stype "<COMMUNICATION-THING>") 
+  (window 16.0) 
+  (words 
+    (":FAMILY:") 
+    (":COMMUNICATION:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

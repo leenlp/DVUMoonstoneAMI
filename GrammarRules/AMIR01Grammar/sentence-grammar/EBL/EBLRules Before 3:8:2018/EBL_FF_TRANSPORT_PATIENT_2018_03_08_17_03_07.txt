@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-TRANSPORT-PATIENT::2018/03/08 17:03:07") 
+  (specialized) 
+  (example-snippet "friend helped him get to the clinic") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-TRANSPORT-PATIENT:") 
+  (stype "<TRANSPORTATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    (":HELP::PATIENT::MOVE-TO-FACILITY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

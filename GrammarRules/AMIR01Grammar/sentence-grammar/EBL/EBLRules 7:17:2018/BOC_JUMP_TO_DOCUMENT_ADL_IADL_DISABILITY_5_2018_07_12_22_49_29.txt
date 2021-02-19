@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-5-2018/07/12 22:49:29") 
+  (specialized) 
+  (example-snippet "requiring assistance with functional mobility ADLs") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED::PROVISION-OF-CARE::PREP::FUNCTIONAL-MOBILITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

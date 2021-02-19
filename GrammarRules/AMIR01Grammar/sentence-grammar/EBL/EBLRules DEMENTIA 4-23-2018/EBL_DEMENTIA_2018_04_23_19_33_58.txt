@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DEMENTIA::2018/04/23 19:33:58") 
+  (specialized) 
+  (example-snippet "mild dementia") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":DEMENTIA:") 
+  (stype "<MENTAL-IMPAIRMENT-THING>") 
+  (window 16.0) 
+  (words 
+    ("<QUALITY-PROPERTY>") 
+    (":DEMENTIA:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

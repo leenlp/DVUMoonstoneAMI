@@ -1,0 +1,21 @@
+'(
+wordrule
+
+((ruleid undefined-thing-rule)
+ (concept ":UNDEFINED-THING:")
+ (words ("admission process")))
+ 
+((ruleid undefined-predicate-rule)
+ (concept ":UNDEFINED-PREDICATE:")
+ (words ("xx")))
+ 
+((ruleid undefined-property-rule)
+ (concept ":UNDEFINED-PROPERTY:")
+ (words ("xx")))
+ 
+((ruleid undefined-manner-rule)
+ (concept ":UNDEFINED-MANNER:")
+ (words ("xx")))
+ 
+
+)

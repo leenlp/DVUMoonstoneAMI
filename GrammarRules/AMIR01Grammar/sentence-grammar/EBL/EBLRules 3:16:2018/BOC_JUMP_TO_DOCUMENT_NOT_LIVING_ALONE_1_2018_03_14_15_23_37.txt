@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:-1-2018/03/14 15:23:37") 
+  (specialized) 
+  (example-snippet "do urinalysis at xyz") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (stype "<UNDEFINED-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":DO::MEDICAL-PROCEDURE::AT-NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

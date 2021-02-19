@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DEPRESSION::2017/11/18 00:57:58") 
+  (specialized) 
+  (example-snippet "family depression") 
+  (sourceid "person-thing-thing-rule") 
+  (concept ":DEPRESSION:") 
+  (stype "<DEPRESSION>") 
+  (window 16.0) 
+  (words 
+    (":MULTI-FAMILY:") 
+    (":DEPRESSION:<THING>")) 
+  (tests 
+    (notneg ?1)))
+
+)

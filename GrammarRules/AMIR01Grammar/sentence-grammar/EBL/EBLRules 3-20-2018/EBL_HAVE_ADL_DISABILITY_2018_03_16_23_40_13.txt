@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-ADL-DISABILITY::2018/03/16 23:40:13") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":HAVE-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":ADL-ACTIVITY:" "<ADL-ACTIVITY>")  ;; added type 12/28/2019 for "balance deficit"
+    (":DEFICIT:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

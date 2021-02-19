@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::PATIENT-LIVE-WITH-FF::2017/10/13 14:41:48-0-2017/10/13 14:42:51") 
+  (specialized) 
+  (example-snippet "she lives with her boyfriend and his father") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-LIVE-WITH-FF:"
+	":PATIENT-RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:" 
+	":PATIENT-LIVE-WITH-FRIENDS:" 
+	":PATIENT-LIVE-WITH-PERSON:" 
+	":PATIENT-LIVE-WITH-FAMILY:" 
+	":FAMILY-LIVE-WITH-PATIENT:"))
+  (tests (not ("hasPropertyValue" ?0 directionality hypothetical))))
+
+)

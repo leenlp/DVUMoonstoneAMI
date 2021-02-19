@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:REFER-TO-SOMEONE:-0-2018/03/10 01:14:16") 
+  (specialized) 
+  (example-snippet "refer to ENT") 
+  (ordered true) 
+  (concept ":REFER-TO-SOMEONE:") 
+  (stype "<REFER-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":REFER::PREP::PROVIDER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

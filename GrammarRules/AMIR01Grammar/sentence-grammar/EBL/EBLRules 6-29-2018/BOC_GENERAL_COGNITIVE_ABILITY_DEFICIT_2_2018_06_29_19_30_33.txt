@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:GENERAL-COGNITIVE-ABILITY-DEFICIT:-2-2018/06/29 19:30:33") 
+  (specialized) 
+  (example-snippet "cognitive impairment") 
+  (ordered true) 
+  (concept ":GENERAL-COGNITIVE-ABILITY-DEFICIT:") 
+  (stype "<COGNITIVE-ABILITY-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":GENERAL-COGNITIVE-ABILITY-THING::IMPAIRMENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::INTERACT-WITH-FF::2018/02/19 12:35:11") 
+  (specialized) 
+  (example-snippet "walking 20 minutes four or five days out of the week at a moderate pace with a friend") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":INTERACT-WITH-FF:") 
+  (stype "<INTERACT-WITH-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ADL-ACTIVITY:<ACTION>") 
+    (":FF:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

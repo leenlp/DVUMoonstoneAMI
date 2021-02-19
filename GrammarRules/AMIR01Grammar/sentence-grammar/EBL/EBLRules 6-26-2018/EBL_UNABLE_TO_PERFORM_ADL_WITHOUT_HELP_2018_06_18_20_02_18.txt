@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-PERFORM-ADL-WITHOUT-HELP::2018/06/18 20:02:18") 
+  (specialized) 
+  (example-snippet "is unable to perform the above tasks without assistance") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":UNABLE:<PROPERTY>") 
+    (":DO::GENERAL-ADL-TASK::HELP:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("neg" ?1))
+  (removeproperties directionality))
+
+)

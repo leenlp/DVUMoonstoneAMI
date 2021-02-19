@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-1-2018/03/08 11:01:23") 
+  (specialized) 
+  (example-snippet "the patients family declined additional treatment") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-DECLINE-SOMETHING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

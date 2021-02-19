@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+;; 10/18/2017 Note:  I edited this to allow multiple adl activities. It
+;; no longer specifically means eating only...
+  (ruleid "EBL::PATIENT-LIVES-IN-NURSING-HOME::2017/10/09 18:50:06") 
+  (specialized) 
+  (example-snippet "she eats at the nursing home") 
+  (ordered true) 
+  (sourceid "person-action-thing-rule") 
+  (concept ":PATIENT-PERFORM-ADL-IN-NURSING-HOME:") 
+  (window 32.0) 
+  (words 
+    (":PERSON:") 
+    (":ADL-ACTIVITY:")
+    (":AT-NURSING-HOME:")) 
+  (properties 
+    (subject "?0") 
+    (activity ?1)
+    (pp "?2")))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LACK-SUPPORT::2018/01/12 15:36:47") 
+  (specialized) 
+  (example-snippet "she is not in a position to help her disabled husband") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":LACK-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":PERSON:") 
+    (":ISNT::PREP::POSSIBLE-SUPPORT:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-person-predicate-sentence-rule-0-2017/11/03 22:42:05") 
+  (specialized) 
+  (example-snippet "he lives in a household of drug users") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::LIVE-AT::PREP::DRUG-USER-HOUSEHOLD:")))
+
+)

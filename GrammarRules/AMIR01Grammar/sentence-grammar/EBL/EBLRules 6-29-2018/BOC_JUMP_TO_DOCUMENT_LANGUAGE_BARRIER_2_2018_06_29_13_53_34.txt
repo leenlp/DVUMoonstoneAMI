@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:-2-2018/06/29 13:53:34") 
+  (specialized) 
+  (example-snippet "to translate") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":TRANSLATE-TO-ENGLISH-PREDICATE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

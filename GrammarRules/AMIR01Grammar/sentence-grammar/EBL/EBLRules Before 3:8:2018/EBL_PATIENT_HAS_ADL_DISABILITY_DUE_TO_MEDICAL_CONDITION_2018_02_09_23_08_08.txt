@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION::2018/02/09 23:08:08") 
+  (specialized) 
+  (example-snippet "He has left arm weakness") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PERSON:") 
+    (":ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+)

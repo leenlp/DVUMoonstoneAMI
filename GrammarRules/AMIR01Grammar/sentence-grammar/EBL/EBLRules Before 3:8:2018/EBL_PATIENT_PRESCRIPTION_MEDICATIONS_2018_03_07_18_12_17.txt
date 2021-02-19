@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-PRESCRIPTION-MEDICATIONS::2018/03/07 18:12:17") 
+  (specialized) 
+  (example-snippet "her pain medications") 
+  (ordered true) 
+  (sourceid "person-thing-thing-rule") 
+  (concept ":PATIENT-PRESCRIPTION-MEDICATIONS:") 
+  (stype "<MEDICATION-THING>") 
+  (window 16.0) 
+  (words 
+    (":PATIENT:") 
+    (":PRESCRIPTION-MEDICATION:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

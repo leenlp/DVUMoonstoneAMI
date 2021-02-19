@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::RECEIVE-CONSENT-FROM-FAMILY::2018/04/27 22:01:24") 
+  (specialized) 
+  (example-snippet "Consent obtained from the patients daughter") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":RECEIVE-CONSENT-FROM-FAMILY:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":CONSENT:") 
+    (":RECEIVE::PREP::PATIENTS-FAMILY:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

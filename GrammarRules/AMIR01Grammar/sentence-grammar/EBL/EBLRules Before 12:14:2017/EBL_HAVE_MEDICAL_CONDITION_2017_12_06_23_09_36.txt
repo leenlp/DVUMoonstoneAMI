@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-MEDICAL-CONDITION::2017/12/06 23:09:36") 
+  (specialized) 
+  (example-snippet "denied auditory hallucinations") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":HAVE-MEDICAL-CONDITION:") 
+  (stype "<MEDICAL-CONDITION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":COMMUNICATE-NEGATIVELY:") 
+    (":MEDICAL-CONDITION:")) 
+  (properties 
+    (directionality negated)
+    (action "?0") 
+    (object "?1")) 
+  (tests (notneg ?0)))
+
+)

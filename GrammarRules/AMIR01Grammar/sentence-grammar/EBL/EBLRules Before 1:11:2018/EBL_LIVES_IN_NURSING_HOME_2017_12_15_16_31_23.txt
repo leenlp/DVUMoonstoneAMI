@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LIVES-IN-NURSING-HOME::2017/12/15 16:31:23") 
+  (specialized) 
+  (example-snippet "Living in nursing home") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":LIVES-IN-NURSING-HOME:") 
+  (stype "<LIVE-IN-FACILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":LIVE-AT:") 
+    (":PREP::NURSING-HOME:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (removeproperties directionality))
+
+)

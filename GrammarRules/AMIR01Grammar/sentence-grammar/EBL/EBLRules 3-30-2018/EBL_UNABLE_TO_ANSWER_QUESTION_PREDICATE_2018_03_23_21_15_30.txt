@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-ANSWER-QUESTION-PREDICATE::2018/03/23 21:15:30") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":UNABLE-TO-ANSWER-QUESTION-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":UNABLE:<PROPERTY>") 
+    (":ANSWER-QUESTION-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

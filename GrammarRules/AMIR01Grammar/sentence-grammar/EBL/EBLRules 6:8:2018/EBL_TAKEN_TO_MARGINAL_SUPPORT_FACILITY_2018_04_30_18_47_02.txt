@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TAKEN-TO-MARGINAL-SUPPORT-FACILITY::2018/04/30 18:47:02") 
+  (specialized) 
+  (example-snippet "taken to the local shelter") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":TAKEN-TO-MARGINAL-SUPPORT-FACILITY:") 
+  (stype "<LIVING-FACILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":TAKE:") 
+    (":PREP::LOCALIZED::SHELTER:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

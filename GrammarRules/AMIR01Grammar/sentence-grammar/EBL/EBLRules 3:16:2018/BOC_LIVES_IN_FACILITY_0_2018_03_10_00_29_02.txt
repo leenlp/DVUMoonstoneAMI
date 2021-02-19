@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:LIVES-IN-FACILITY:-0-2018/03/10 00:29:02") 
+  (specialized) 
+  (example-snippet "now is in a nursing facility") 
+  (ordered true) 
+  (concept ":LIVES-IN-FACILITY:") 
+  (stype "<LIVE-IN-FACILITY-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":LIVES-IN-NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

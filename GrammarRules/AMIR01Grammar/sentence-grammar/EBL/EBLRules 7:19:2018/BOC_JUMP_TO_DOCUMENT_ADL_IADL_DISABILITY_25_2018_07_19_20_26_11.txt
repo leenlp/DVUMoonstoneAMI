@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-25-2018/07/19 20:26:11") 
+  (specialized) 
+  (example-snippet "Max A of therapist") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":HELP-FROM-PROVIDER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

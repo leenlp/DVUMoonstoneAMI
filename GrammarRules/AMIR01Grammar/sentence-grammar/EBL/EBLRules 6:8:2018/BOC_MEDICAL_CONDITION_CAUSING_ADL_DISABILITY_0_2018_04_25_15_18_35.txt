@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:-0-2018/04/25 15:18:35") 
+  (specialized) 
+  (example-snippet "Cognitive Linguistic Impairment") 
+  (ordered true) 
+  (concept ":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:") 
+  (stype "<DISEASE-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":COGNITIVE-ABILITY-THING::IMPAIRMENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

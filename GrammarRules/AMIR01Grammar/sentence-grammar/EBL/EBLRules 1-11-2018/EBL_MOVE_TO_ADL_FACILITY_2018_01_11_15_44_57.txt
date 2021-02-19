@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MOVE-TO-ADL-FACILITY::2018/01/11 15:44:57") 
+  (specialized) 
+  (example-snippet "to walk to bathroom") 
+  (ordered true) 
+  (sourceid "infinitive-phrase-predicate-rule") 
+  (concept ":MOVE-TO-ADL-FACILITY:") 
+  (stype "<ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    ("to") 
+    (":ADL-ACTIVITY::PREP::ADL-FACILITY:")) 
+  (properties 
+    (predicate "?1")))
+
+)

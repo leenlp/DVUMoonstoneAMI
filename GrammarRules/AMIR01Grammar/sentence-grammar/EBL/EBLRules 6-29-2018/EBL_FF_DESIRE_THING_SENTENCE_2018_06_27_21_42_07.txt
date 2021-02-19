@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-DESIRE-THING-SENTENCE::2018/06/27 21:42:07") 
+  (specialized) 
+  (example-snippet "Daughter and pt want to go") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-DESIRE-THING-SENTENCE:") 
+  (stype "<DESIRE-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT-AND-FAMILY:") 
+    (":DESIRE::GO:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

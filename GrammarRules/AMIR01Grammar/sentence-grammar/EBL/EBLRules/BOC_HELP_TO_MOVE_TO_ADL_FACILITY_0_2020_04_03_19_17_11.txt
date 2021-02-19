@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HELP-TO-MOVE-TO-ADL-FACILITY:-0-2020/04/03 19:17:11") 
+  (specialized) 
+  (example-snippet "help to get to the bathroom") 
+  (ordered true) 
+  (concept ":HELP-TO-MOVE-TO-ADL-FACILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":HELP::PREP::MOVE-TO::PREP::ADL-ROOM:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

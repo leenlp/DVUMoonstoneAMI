@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/06/27 15:38:21") 
+  (specialized) 
+  (example-snippet "sons and a sister that are involved in her care") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::INVOLVED-IN-CARE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

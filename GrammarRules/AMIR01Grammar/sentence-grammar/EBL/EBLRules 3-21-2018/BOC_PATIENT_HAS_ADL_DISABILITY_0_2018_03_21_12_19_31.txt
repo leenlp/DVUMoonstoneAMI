@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-HAS-ADL-DISABILITY:-0-2018/03/21 12:19:31") 
+  (specialized)  
+  (ordered true) 
+  (concept ":PATIENT-HAS-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-LIVES-INDEPENDENTLY:")) 
+  (tests 
+    ("notneg" ?0))
+  (properties (directionality negated)))
+
+)

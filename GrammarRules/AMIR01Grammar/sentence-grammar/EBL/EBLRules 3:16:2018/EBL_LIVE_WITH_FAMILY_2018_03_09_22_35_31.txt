@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleidXXX "EBL::LIVE-WITH-FAMILY::2018/03/09 22:35:31") 
+  (specialized) 
+  (example-snippet "return home to her parents") 
+  (ordered true) 
+  (sourceid "EBL::RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY::2017/10/23 18:37:13") 
+  (concept ":LIVE-WITH-FAMILY:") 
+  (stype "<LIVE-WITH-PERSON-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":MOVE-TO:") 
+    (":HOME:") 
+    (":PREP::FAMILY:")) 
+  (properties 
+    (action "?0") 
+    (first-object "?1") 
+    (pp-object "[thing, ?2]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

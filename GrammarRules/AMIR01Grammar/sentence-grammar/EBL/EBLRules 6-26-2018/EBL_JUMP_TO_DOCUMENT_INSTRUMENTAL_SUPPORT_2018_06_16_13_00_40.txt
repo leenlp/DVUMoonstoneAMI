@@ -1,0 +1,26 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT::2018/06/16 13:00:40") 
+  (specialized) 
+  (example-snippet "Husband has stated that her chorea becomes better when she takes Haldo") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-imperfect-tense-rule") 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    ("have" "has") 
+    (":COMMUNICATE-AFFIRMATIVELY:")
+    ("<SENTENCE>"))
+  (properties 
+    (subject "?0") 
+    (predicate "?2") 
+    (tense "imperfect")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

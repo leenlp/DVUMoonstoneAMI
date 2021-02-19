@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:COGNITIVE-ABILITY-THING:-1-2019/12/18 22:31:01") 
+  (specialized) 
+  (example-snippet "decision making capacity") 
+  (ordered true) 
+  (concept ":COGNITIVE-ABILITY-THING:") 
+  (stype "<COGNITIVE-ABILITY-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":DECISION::ABILITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

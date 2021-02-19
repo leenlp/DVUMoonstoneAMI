@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HAVE-SUPPORT:-7-2018/06/27 21:37:03") 
+  (specialized) 
+  (example-snippet "daughter has been very helpful and attentive to him") 
+  (ordered true) 
+  (concept ":HAVE-SUPPORT:") 
+  (stype "<RECEIVE-SUPPORT-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::MAXIMALLY::CARING::WITH-PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

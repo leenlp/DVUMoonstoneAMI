@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-17-2018/06/25 21:39:11") 
+  (specialized) 
+  (example-snippet "Visiting dtr") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":VISIT::FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

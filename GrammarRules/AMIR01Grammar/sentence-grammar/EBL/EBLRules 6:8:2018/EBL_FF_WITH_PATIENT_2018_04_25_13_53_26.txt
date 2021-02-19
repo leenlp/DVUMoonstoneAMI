@@ -1,0 +1,24 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-WITH-PATIENT::2018/04/25 13:53:26") 
+  (specialized) 
+  (example-snippet "patient is interviewed with husband") 
+  (ordered true) 
+  (sourceid "thing-is-pp-rule") 
+  (concept ":FF-WITH-PATIENT:") 
+  (stype "<PERSON-WITH-PERSON-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":IS:") 
+    (":WITH-FF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?2")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

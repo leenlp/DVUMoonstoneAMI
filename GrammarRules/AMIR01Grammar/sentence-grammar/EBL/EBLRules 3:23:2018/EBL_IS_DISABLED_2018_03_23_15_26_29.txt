@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::IS-DISABLED::2018/03/23 15:26:29") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "have-thing-predicate-rule") 
+  (concept ":IS-DISABLED:") 
+  (stype "<ADL-ABILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    ("@have-word-rule@") 
+    ("<QUALITY-PROPERTY>")
+    (":DISABILITY:"))
+  (properties 
+    (object "?2")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

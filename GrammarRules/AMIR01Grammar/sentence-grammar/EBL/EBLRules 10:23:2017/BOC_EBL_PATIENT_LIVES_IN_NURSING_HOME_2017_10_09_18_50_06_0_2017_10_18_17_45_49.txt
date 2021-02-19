@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::PATIENT-LIVES-IN-NURSING-HOME::2017/10/09 18:50:06-0-2017/10/18 17:45:49") 
+  (specialized) 
+  (example-snippet "she eats in the nursing home") 
+  (ordered true) 
+  (concept ":PATIENT-LIVES-IN-NURSING-HOME:") 
+  (stype "<LIVE-IN-FACILITY-SENTENCE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-PERFORM-ADL-IN-NURSING-HOME:")))
+
+)

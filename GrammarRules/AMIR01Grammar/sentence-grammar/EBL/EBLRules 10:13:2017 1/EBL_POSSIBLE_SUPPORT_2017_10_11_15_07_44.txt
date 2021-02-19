@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2017/10/11 15:07:44") 
+  (specialized) 
+  (example-snippet "his family denied any sign or symptom") 
+  (ordered true) 
+  (sourceid "person-action-thing-rule") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":NEGATIVE-COMMUNICATION::SYMPTOM::SYMPTOM:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LIVE-WITH-FF::2018/03/10 00:13:43") 
+  (specialized) 
+  (example-snippet "lives with his girlfriend") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":LIVE-WITH-FF:") 
+  (stype "<LIVE-WITH-PERSON-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":LIVE-AT:") 
+    (":FRIEND:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

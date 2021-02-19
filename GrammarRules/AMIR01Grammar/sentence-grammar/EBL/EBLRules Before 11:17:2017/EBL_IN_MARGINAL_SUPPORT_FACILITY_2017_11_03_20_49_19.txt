@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::IN-MARGINAL-SUPPORT-FACILITY::2017/11/03 20:49:19") 
+  (specialized) 
+  (example-snippet "was taken to the local shelter") 
+  (ordered true) 
+  (sourceid "passive-action-state-predicate-rule") 
+  (concept ":IN-MARGINAL-SUPPORT-FACILITY:") 
+  (stype "<LIVING-FACILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    ("@is-auxilliary-word-rule@") 
+    (":TAKE::PREP::SHELTER:")) 
+  (properties 
+    (predicate "?1") 
+    (verb-form "passive")) 
+  (tests 
+    ("hasNestedFirstEDFormActionWord" ?1)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POOR-TOLERANCE::2018/07/19 16:08:33") 
+  (specialized) 
+  (example-snippet "decreased upright actIvity tolerance") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":POOR-TOLERANCE:") 
+  (stype "<POOR-PHYSICAL-STATE-THING>") 
+  (window 16.0) 
+  (words 
+    (":DECREASED:") 
+    (":TOLERANCE:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

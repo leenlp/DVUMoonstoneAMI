@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2018/06/11 13:39:38") 
+  (specialized) 
+  (example-snippet "get help from family and friends") 
+  (ordered true) 
+  (sourceid "action-thing-rule_10552") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    ("get") 
+    (":HELP::FF:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")
+    (directionality uncertain))
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

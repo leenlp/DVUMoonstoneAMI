@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TAKE-PUBLIC-TRANSPORT-PREDICATE::2020/04/20 17:07:00") 
+  (specialized) 
+  (example-snippet "took a taxi") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":TAKE-PUBLIC-TRANSPORT-PREDICATE:") 
+  (stype "<TRAVEL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":TAKE:") 
+    (":PUBLIC-TRANSPORTATION:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

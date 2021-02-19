@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+;; shouldn't be recording negated ADL disabilities
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-CAPTURE-RULE:-6-2018/07/19 13:47:45") 
+  (specialized) 
+  (example-snippet "doesnt require assistance with activities of daily living") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-CAPTURE-RULE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":HAVE-ADL-DISABILITY:")) 
+  (tests 
+    ("neg" ?0))
+  (removeproperties directionality))
+
+)

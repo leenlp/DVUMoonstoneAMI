@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-2-2018/07/25 15:07:00") 
+  (specialized) 
+  (example-snippet "impaired problem solving") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") ;; Changed to adl 12/19/2019
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":IMPAIRED::SPECIFIC-COGNITIVE-ABILITY-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

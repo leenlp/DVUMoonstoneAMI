@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DISCHARGE-HOME-TO-LIVE-WITH-FAMILY::2018/03/07 12:56:29") 
+  (specialized) 
+  (example-snippet "discharged to return home to her parents") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":DISCHARGE-HOME-TO-LIVE-WITH-FAMILY:") 
+  (stype "<DISCHARGE-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":DISCHARGE:<ACTION>") 
+    (":RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

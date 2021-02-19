@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DEFICIT::2018/03/16 23:11:34") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":DEFICIT:") 
+  (stype "<ABSENCE>") 
+  (window 16.0) 
+  (words 
+    (":MAXIMALLY:<PROPERTY>") 
+    (":DEFICIT:<THING>")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

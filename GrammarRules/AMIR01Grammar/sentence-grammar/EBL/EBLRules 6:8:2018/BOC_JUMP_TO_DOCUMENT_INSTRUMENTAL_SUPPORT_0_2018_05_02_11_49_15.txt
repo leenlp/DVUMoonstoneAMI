@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/05/02 11:49:15") 
+  (specialized) 
+  (example-snippet "accompanied by her power of attorney") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":ACCOMPANY::POA:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

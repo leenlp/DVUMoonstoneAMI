@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POOR-COMPLIANCE-WITH-TREATMENT::2018/04/03 16:53:27") 
+  (specialized) 
+  (example-snippet "poor compliance with obstructive sleep apnea therapy") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":POOR-COMPLIANCE-WITH-TREATMENT:") 
+  (stype "<BEHAVIOR-THING>") 
+  (window 16.0) 
+  (words 
+    (":POOR:<PROPERTY>") 
+    (":COMPLIANCE-WITH-TREATMENT:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

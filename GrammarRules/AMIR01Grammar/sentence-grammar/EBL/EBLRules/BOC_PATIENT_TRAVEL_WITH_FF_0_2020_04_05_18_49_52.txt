@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-TRAVEL-WITH-FF:-0-2020/04/05 18:49:52") 
+  (specialized) 
+  (example-snippet "she came to the clinic with her friend") 
+  (ordered true) 
+  (concept ":PATIENT-TRAVEL-WITH-FF:") 
+  (stype "<TRAVEL-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::TRAVEL-TO-CLINIC-WITH-FF:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

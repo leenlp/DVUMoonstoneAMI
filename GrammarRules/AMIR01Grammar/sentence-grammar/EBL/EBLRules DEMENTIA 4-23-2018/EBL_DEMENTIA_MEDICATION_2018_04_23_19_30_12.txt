@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DEMENTIA-MEDICATION::2018/04/23 19:30:12") 
+  (specialized) 
+  (example-snippet "dementia medications") 
+  (sourceid "disease-medication-thing") 
+  (concept ":DEMENTIA-MEDICATION:") 
+  (stype "<MEDICATION-THING>") 
+  (window 16.0) 
+  (words 
+    (":DEMENTIA:") 
+    (":PRESCRIPTION-MEDICATION:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (relations 
+    (medication-for ?0 "?1")))
+
+)

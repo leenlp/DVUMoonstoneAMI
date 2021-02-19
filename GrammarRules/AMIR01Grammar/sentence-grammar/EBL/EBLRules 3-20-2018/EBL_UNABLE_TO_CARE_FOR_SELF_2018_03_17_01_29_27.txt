@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-CARE-FOR-SELF::2018/03/17 01:29:27") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "state-thing-rule") 
+  (concept ":UNABLE-TO-CARE-FOR-SELF:") 
+  (stype "<ADL-PROVISION-OF-SELF-CARE>") 
+  (window 16.0) 
+  (words 
+    (":UNABLE:<STATE>") 
+    (":CARE-FOR-SELF:<THING>")) 
+  (properties 
+    (state "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

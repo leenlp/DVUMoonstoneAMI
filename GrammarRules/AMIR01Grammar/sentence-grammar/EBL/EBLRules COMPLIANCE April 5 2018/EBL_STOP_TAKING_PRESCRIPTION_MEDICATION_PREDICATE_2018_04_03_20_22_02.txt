@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::STOP-TAKING-PRESCRIPTION-MEDICATION-PREDICATE::2018/04/03 20:22:02") 
+  (specialized) 
+  (example-snippet "stopped the metformin") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":STOP-TAKING-PRESCRIPTION-MEDICATION-PREDICATE:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":STOP:") 
+    (":PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

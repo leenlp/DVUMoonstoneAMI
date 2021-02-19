@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-9-2018/07/09 16:46:20") 
+  (specialized) 
+  (example-snippet "limited UE ROM") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DEFICIT::RANGE-OF-MOTION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

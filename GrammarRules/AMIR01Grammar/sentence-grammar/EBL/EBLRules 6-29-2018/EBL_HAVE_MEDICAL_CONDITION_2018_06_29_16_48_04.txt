@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-MEDICAL-CONDITION::2018/06/29 16:48:04") 
+  (specialized) 
+  (example-snippet "currently presents with cognitive deficits") 
+  (ordered true) 
+  (sourceid "modified-time-expression-rule") 
+  (concept ":HAVE-MEDICAL-CONDITION:") 
+  (stype "<MEDICAL-CONDITION-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":CURRENTLY:") 
+    (":DISPLAYS-SOMETHING-ACTION::MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (relations 
+    (time-modifier ?* "?0") 
+    (event ?* "?1")))
+
+)

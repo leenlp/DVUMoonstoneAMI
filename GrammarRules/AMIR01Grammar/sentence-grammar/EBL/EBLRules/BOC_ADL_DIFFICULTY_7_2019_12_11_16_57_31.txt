@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:ADL-DIFFICULTY:-7-2019/12/11 16:57:31") 
+  (specialized) 
+  (example-snippet "trouble eating") 
+  (ordered true) 
+  (concept ":ADL-DIFFICULTY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (bagofconcepts true) 
+  (words 
+    (":DIFFICULTY::EATING-FOOD:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

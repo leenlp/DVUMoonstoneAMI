@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-PATIENT-THING::2019/12/30 23:45:44") 
+  (specialized) 
+  (example-snippet "discussions she has had with her children") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":COMMUNICATION-WITH-PATIENT-THING:") 
+  (stype "<COMMUNICATION-THING>") 
+  (window 32.0) 
+  (words 
+    (":COMMUNICATION:") 
+    (":PATIENT::FF:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

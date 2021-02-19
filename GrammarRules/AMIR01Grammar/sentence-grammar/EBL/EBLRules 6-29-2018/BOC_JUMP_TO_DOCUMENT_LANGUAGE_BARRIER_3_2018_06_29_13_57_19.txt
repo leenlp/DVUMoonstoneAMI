@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:-3-2018/06/29 13:57:19") 
+  (specialized) 
+  (example-snippet "language barrier") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":LANGUAGE-BARRIER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

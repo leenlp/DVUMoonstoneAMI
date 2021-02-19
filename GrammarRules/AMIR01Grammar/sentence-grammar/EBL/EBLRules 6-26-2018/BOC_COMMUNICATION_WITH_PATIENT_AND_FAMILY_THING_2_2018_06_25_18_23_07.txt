@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:COMMUNICATION-WITH-PATIENT-AND-FAMILY-THING:-2-2018/06/25 18:23:07") 
+  (specialized) 
+  (example-snippet "patientcaregiver education") 
+  (ordered true) 
+  (concept ":COMMUNICATION-WITH-PATIENT-AND-FAMILY-THING:") 
+  (stype "<COMMUNICATION-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-CARE-PROVIDER::EDUCATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

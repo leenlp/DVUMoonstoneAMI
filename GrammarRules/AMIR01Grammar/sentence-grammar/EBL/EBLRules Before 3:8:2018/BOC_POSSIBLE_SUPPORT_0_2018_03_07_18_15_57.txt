@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:POSSIBLE-SUPPORT:-0-2018/03/07 18:15:57") 
+  (specialized) 
+  (example-snippet "He had a box of her pain medications") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (bagofconcepts true) 
+  (words 
+    (":PERSON-HAVE-PATIENT-MEDICATIONS:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

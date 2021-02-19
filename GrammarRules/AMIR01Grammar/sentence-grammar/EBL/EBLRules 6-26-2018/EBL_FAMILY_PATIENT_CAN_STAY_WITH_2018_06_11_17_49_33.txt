@@ -1,0 +1,24 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-PATIENT-CAN-STAY-WITH::2018/06/11 17:49:33") 
+  (specialized) 
+  (example-snippet "relatives in Nashville with whomshe could stay posttransplant") 
+  (ordered true) 
+  (sourceid "person-with-whom-clause-thing-rule_6173") 
+  (concept ":FAMILY-PATIENT-CAN-STAY-WITH:") 
+  (stype "<FRIEND-OR-FAMILY>") 
+  (window 32.0) 
+  (words 
+    (":FF:") 
+    ("with whom") 
+    (":PATIENT::LIVE-AT::SPECIFIC-TIME:")) 
+  (properties 
+    (person "?0") 
+    (sentence "?2")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

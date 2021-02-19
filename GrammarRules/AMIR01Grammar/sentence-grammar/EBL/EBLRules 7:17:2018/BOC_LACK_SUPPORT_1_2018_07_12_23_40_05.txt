@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:LACK-SUPPORT:-1-2018/07/12 23:40:05") 
+  (specialized) 
+  (example-snippet "family cannot provide support") 
+  (ordered true) 
+  (concept ":LACK-SUPPORT:") 
+  (stype "<LACK-SUPPORT-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::UNABLE::PROVIDE::PROVISION-OF-CARE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2018/03/10 16:01:39") 
+  (specialized) 
+  (example-snippet "was referred to Community Mental Health Agencies") 
+  (sourceid "access-to-community-service-gatekeeper-rule") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 16.0) 
+  (words 
+    (":ACCESS-TO-COMMUNITY-SERVICES:<PREDICATE>")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

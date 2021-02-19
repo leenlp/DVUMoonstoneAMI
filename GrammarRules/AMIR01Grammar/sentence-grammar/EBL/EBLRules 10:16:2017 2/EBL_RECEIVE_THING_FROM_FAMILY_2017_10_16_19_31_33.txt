@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::RECEIVE-THING-FROM-FAMILY::2017/10/16 19:31:33") 
+  (specialized) 
+  (example-snippet "was obtained from the family") 
+  (ordered true) 
+  (sourceid "passive-action-thing-predicate-rule") 
+  (concept ":RECEIVE-THING-FROM-FAMILY:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    ("@is-auxilliary-word-rule@") 
+    (":RECEIVE:") 
+    (":PREP::FAMILY:")) 
+  (properties 
+    (action "?1") 
+    (predicate "?2") 
+    (verb-form "passive")) 
+  (tests 
+    ("isEDFormActionWord" ?1)))
+
+)

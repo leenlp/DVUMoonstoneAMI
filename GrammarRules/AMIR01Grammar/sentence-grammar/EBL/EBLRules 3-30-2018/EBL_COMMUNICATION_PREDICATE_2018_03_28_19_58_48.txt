@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-PREDICATE::2018/03/28 19:58:48") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":COMMUNICATION-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":COMMUNICATE-AFFIRMATIVELY:") 
+    (":TRANSPORT-PATIENT-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

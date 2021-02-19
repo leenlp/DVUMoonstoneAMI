@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-LIVES-IN-NURSING-HOME:-0-2018/03/23 11:11:28") 
+  (specialized) 
+  (ordered true) 
+  (concept ":PATIENT-LIVES-IN-NURSING-HOME:") 
+  (stype "<LIVE-IN-FACILITY-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-EAT-AT-NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,815 @@
+'(smoking-ontology
+
+(deftype root (isroot))
+
+(deftype action (isa root))
+(deftype predicate (isa root))
+(deftype thing (isa root))
+(deftype property (isa root))
+(deftype modifier (isa root))
+(deftype manner (isa root))
+(deftype state (isa root))
+(deftype sentence (isa root))
+(deftype pp (isa root))
+
+(deftype sentence-modifier (isa root))
+
+(deftype time (isa root))
+(deftype number (isa root))
+(deftype conjunct (isa root))
+(deftype sentence-conjunct (isa conjunct))
+(defstringconstant ":BECAUSE-OF:" "<SENTENCE-CONJUNCT>")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Semantics
+
+(deftype semantic-action (isa action))
+(deftype semantic-predicate (isa predicate))
+(deftype semantic-sentence (isa sentence))
+(defstringconstant ":INDETERMINATE-SENTENCE:" "<SEMANTIC-SENTENCE>")
+(deftype semantic-state (isa state))
+(deftype semantic-property (isa property))
+(deftype semantic-modifier (isa modifier))
+(deftype semantic-thing (isa thing))
+(deftype semantic-manner (isa manner))
+
+(deftype semantic-time (isa time))
+(deftype semantic-number (isa number))
+
+(deftype existence (isa semantic-state 
+	semantic-modifier semantic-property semantic-thing))
+(deftype presence (isa existence))
+(deftype absence (isa existence))
+
+(defstringconstant ":LACK:" ":DEFICIT:" ":LOSS:" "<ABSENCE>")
+
+;; MOVE (transitive and intransitive)-RELATED TYPES
+
+(deftype receive-therapy-predicate (isa semantic-predicate))
+(defstringconstant ":RECEIVE-THERAPY:" ":RECEIVE-THERAPY-AT-HOME:" ":RECEIVE-THERAPY-AT-FACILITY:" "<RECEIVE-THERAPY-PREDICATE>")
+
+(deftype receive-therapy-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-RECEIVE-THERAPY:" ":PATIENT-RECEIVE-THERAPY-AT-HOME:" ":PATIENT-RECEIVE-THERAPY-AT-FACILITY:" "<RECEIVE-THERAPY-SENTENCE>")
+
+(deftype grammar-modified-sentence (isa grammar-sentence))
+(deftype according-to-person-sentence (isa grammar-modified-sentence))
+
+(deftype being-at-sentence (isa semantic-sentence))
+(deftype person-at-place-sentence (isa being-at-sentence))
+(defstringconstant ":PATIENT-AT-HOME:" ":PATIENT-AT-FACILITY:" 
+	":FF-AT-FACILITY:" ":PATIENT-AT-FACILITY:" ":FF-AT-FACILITY:" 
+	":PERSON-AT-PLACE:" "<PERSON-AT-PLACE-SENTENCE>")
+(deftype person-with-person-sentence (isa being-at-sentence))
+(defstringconstant ":FF-WITH-PATIENT:" ":FF-AT-BEDSIDE:" 
+	"<PERSON-WITH-PERSON-SENTENCE>")
+
+
+;;;;;
+;; Things
+(deftype semantic-thing (isa thing))
+(deftype semantic-action (isa action))
+
+;; e.g. goodness, weakness
+(deftype semantic-state-thing (isa semantic-thing))
+
+(deftype behavior-action (isa semantic-action))
+(defstringconstant ":DO:" ":ALLOW:" ":FORCE:" ":OVERDOSE-ACTION:" 
+	":ABUSE-ACTION:" "<BEHAVIOR-ACTION>")
+(deftype behavior-sentence (isa semantic-sentence))
+(deftype behavior (isa behavior-thing behavior-property behavior-action 
+	behavior-predicate))
+
+(deftype person (isa semantic-thing))
+(deftype person-property (isa semantic-property))
+(defstringconstant ":PARENTAL:" ":FAMILIAL:" "<PERSON-PROPERTY>")
+(deftype patient (isa person))
+(defstringconstant ":PATIENT:" "<PATIENT>")
+(defstringconstant ":PATIENT-AND-FAMILY:" ":PATIENT-AND-SPOUSE:" "<PERSON>")
+(defstringconstant ":SOMEONE:" ":PERSON:" ":SELF:" ":MULTI-PERSON:" "<PERSON>")
+(deftype non-patient (isa person))
+(defstringconstant ":NON-PATIENT:" ":NO-ONE:" "<NON-PATIENT>")
+(deftype friend-or-family (isa non-patient))
+(defstringconstant ":FF:" ":FRIEND:" ":FAMILY:" ":COMPANION:" ":CHILDREN:" 
+	":PATIENTS-FAMILY:" ":FAMILY-PATIENT-CAN-STAY-WITH:" 		
+	":FAMILY-WHO-STAYS-WITH-PATIENT:"
+	"<FRIEND-OR-FAMILY>")
+(deftype family (isa friend-or-family))
+(deftype multi-family (isa family))
+(defstringconstant ":MULTI-FAMILY:" ":PARENTS:" ":CHILDREN:" ":GRANDPARENTS:" 
+	":SIBLINGS:" "<MULTI-FAMILY>")
+(deftype single-family (isa family))
+(defstringconstant ":NON-SPOUSE-SINGLE-FAMILY:" ":SPOUSE:" ":PARENT:" 
+":MOTHER:" ":FATHER:" ":SIGNIFICANT-OTHER:" ":CHILD:" ":BROTHER:" ":SISTER:" ":COUSIN:" ":GRANDCHILD:" ":STEPCHILD" ":SON:" ":DAUGHTER:" ":SINGLE-FAMILY:" ":FOSTER-PARENT:" "<SINGLE-FAMILY>")
+(deftype neighbor (isa person))
+(defstringconstant ":NEIGHBOR:" "<NEIGHBOR>")
+(deftype housewife (isa person))
+(deftype gendered-person (isa person semantic-property))
+(defstringconstant ":MALE:" ":FEMALE:" "<GENDERED-PERSON>")
+(defstringconstant ":HOUSEWIFE:" "<HOUSEWIFE>")
+(deftype medical-provider (isa non-patient))
+(defstringconstant ":PROVIDER:" ":NURSE:" ":DOCTOR:" ":THERAPIST:" "SOCIAL-WORKER:" "<MEDICAL-PROVIDER>")
+(deftype care-provider (isa non-patient))
+(defstringconstant ":CAREGIVER:" "<CARE-PROVIDER>")
+(deftype ff-care-provider (isa care-provider))
+(defstringconstant ":FF-CARE-PROVIDER:" "<FF-CARE-PROVIDER>")
+
+(deftype place (isa semantic-thing))
+(deftype sameplace (isa place))
+(deftype otherplace (isa place))
+(deftype facility (isa place))
+(deftype living-facility (isa facility))
+(defstringconstant ":NURSING-HOME:" ":ASSISTED-LIVING:" ":GROUP-HOME:"  
+	":COMMUNITY-LIVING:" ":SENIOR-LIVING:" ":HOSPICE:" "<LIVING-FACILITY>")
+
+(deftype living-space (isa place))
+(defstringconstant ":LIVING-SPACE:" ":HOUSEHOLD:" "<LIVING-SPACE>")
+(deftype home (isa living-space))
+(defstringconstant ":HOME:" "<HOME>")
+(deftype patient-home (isa home))
+(defstringconstant ":PATIENT-HOME:" "<PATIENT-HOME>")
+(deftype ff-home (isa home))
+(defstringconstant ":FAMILY-HOME:" "<FAMILY-HOME>")
+(deftype other-home (isa home))
+(defstringconstant ":OTHER-HOME:" ":DRUG-USER-HOUSEHOLD:" "<OTHER-HOME>")
+(deftype non-home-living-space (isa living-space))
+(defstringconstant ":NON-HOME-LIVING-SPACE:" ":FOSTER-HOME:" 
+	"<NON-HOME-LIVING-SPACE>")
+(deftype marginal-living-space (isa living-space))
+(defstringconstant ":MARGINAL-LIVING-SPACE:" "<MARGINAL-LIVING-SPACE>")
+
+
+(deftype location-property (isa semantic-property 
+		semantic-state semantic-thing))
+(defstringconstant ":HERE:" ":THERE:" "<LOCATION-PROPERTY>")
+(deftype location-at-time-property (isa location-property))
+(defstringconstant ":HERE-NOW:" "<LOCATION-AT-TIME-PROPERTY>")
+
+(deftype alone-property (isa semantic-property semantic-state))
+(defstringconstant ":ALONE:" "<ALONE-PROPERTY>")
+
+(deftype exam-thing (isa semantic-thing))
+(defstringconstant ":EXAM:" "<EXAM-THING>")
+(deftype examine-action (isa semantic-action semantic-thing))
+(defstringconstant ":EXAMINE:" ":EXAMINATION:" ":WATCH:" ":OBSERVE:" ":REVIEW-FOR:" "<EXAMINE-ACTION>")
+(deftype examine-predicate (isa semantic-predicate))
+(defstringconstant ":EXAMINE-PATIENT:" "<EXAMINE-PREDICATE>")
+(deftype examine-patient-for-reason (isa examine-predicate))
+(defstringconstant ":EXAMINE-PATIENT-AT-TIME-FOR-REASON:" 
+	":EXAMINE-PATIENT-FOR-REASON:" 
+	":EXAMINE-PATIENT-FOR-DEPRESSION:"
+	"<EXAMINE-PATIENT-FOR-REASON>")
+(deftype examine-sentence (isa semantic-sentence))
+(deftype provider-examine-patient-for-reason (isa examine-sentence))
+(defstringconstant ":PROVIDER-EXAMINE-PATIENT-FOR-REASON:" 
+	":PROVIDER-EXAMINE-PATIENT-FOR-DEPRESSION:" 
+	"<PROVIDER-EXAMINE-PATIENT-FOR-REASON>")
+	
+(deftype refer-thing (isa semantic-thing))
+(defstringconstant ":REFERRAL:" "<REFER-THING>")
+(deftype refer-action (isa semantic-action))
+(defstringconstant ":REFER:" "<REFER-ACTION>")
+(deftype refer-predicate (isa semantic-predicate))
+(defstringconstant ":REFER-TO-SOMEONE:" ":REFERRED-BY-SOMEONE:"
+	"<REFER-PREDICATE>")
+(deftype refer-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-REFERRED-BY-SOMEONE:" 	
+	":PATIENT-REFERRED-TO-SOMEONE:" ":PROVIDER-REFER-PATIENT-TO-SOMEONE:" 
+	"<REFER-SENTENCE>")
+	
+(deftype diagnosis (isa semantic-thing semantic-action))
+(deftype diagnosis-with-disease (isa semantic-thing semantic-predicate))
+(defstringconstant ":DIAGNOSIS:" "<DIAGNOSIS>")
+(defstringconstant ":DIAGNOSIS-WITH-DISEASE:" "<DIAGNOSIS-WITH-DISEASE>")
+
+(defstringconstant ":NUMBER:" "<SEMANTIC-NUMBER>")
+
+(deftype support-system-thing (isa semantic-thing semantic-property semantic-predicate))
+(defstringconstant ":SUPPORT-SYSTEM:" ":SUPPORT:")
+
+(deftype quality-property (isa semantic-property semantic-manner))
+(deftype poor-quality-property (isa quality-property))
+(defstringconstant ":POOR:" ":POORLY:" ":BAD-CONDITION:" 
+	"<POOR-QUALITY-PROPERTY>")
+(deftype good-quality-property (isa quality-property))
+(defstringconstant ":GOOD:" ":WELL:"  ":GOOD-CONDITION:" 
+	"<GOOD-QUALITY-PROPERTY>")
+(deftype absent-quality-property (isa quality-property))
+(defstringconstant ":ABSENT:" "<ABSENT-QUALITY-PROPERTY>")
+(deftype minimal-quality-property (isa quality-property))
+(defstringconstant ":MINIMAL:" ":MINIMALLY:" "<MINIMAL-QUALITY-PROPERTY>")
+(deftype moderate-quality-property (isa quality-property))
+(defstringconstant ":MODERATE:" ":MODERATELY:" "<MODERATE-QUALITY-PROPERTY>")
+(deftype maximal-quality-property (isa quality-property))
+(defstringconstant ":MAXIMAL:" ":MAXIMALLY:" ":TRAUMATIC:" 
+	"<MAXIMAL-QUALITY-PROPERTY>")
+(deftype local-quality-property (isa quality-property))
+(defstringconstant ":LOCALIZED:" "<LOCAL-QUALITY-PROPERTY>")
+(deftype general-quality-property (isa quality-property))
+(defstringconstant ":GENERALIZED:" "<GENERAL-QUALITY-PROPERTY>")
+(deftype increased-quality-property (isa quality-property))
+(defstringconstant ":INCREASED:" "<INCREASED-QUALITY-PROPERTY>")
+(deftype decreased-quality-property (isa quality-property))
+(defstringconstant ":DECREASED:" "<DECREASED-QUALITY-PROPERTY>")
+
+(deftype decide-action (isa semantic-action))
+(defstringconstant ":DECIDE:" "<DECIDE-ACTION>")
+(deftype decision-thing (isa semantic-action))
+(defstringconstant ":DECISION:" "<DECISION-THING>")
+(deftype decision-predicate (isa semantic-predicate))
+(defstringconstant ":DECISION-PREDICATE:" ":DECIDE-THING-PREDICATE:" 
+	":DECIDE-BY-FAMILY-PREDICATE:" "<DECISION-PREDICATE>")
+(deftype decision-sentence (isa semantic-sentence))
+(defstringconstant ":DECISION-SENTENCE:" ":FAMILY-DECIDE-THING-SENTENCE:" "<DECISION-SENTENCE>")
+	
+(deftype give-take-action (isa semantic-action))
+(deftype give-take-predicate (isa semantic-predicate))
+(deftype give-take-sentence (isa semantic-sentence))
+(defstringconstant ":RECEIVE:" ":GIVE:" ":PROVIDE:" ":TAKE:" 
+	":MISS:" "<GIVE-TAKE-ACTION>")
+(defstringconstant ":RECEIVE-THING-FROM-PERSON:" 
+	":GIVE-THING-TO-PERSON:"
+	":RECEIVE-THING-FROM-FAMILY:" ":GIVE-THING-TO-FAMILY:"
+	":GIVE-CONSENT:"
+	":RECEIVE-CONSENT-FROM-FAMILY:" ":GIVE-CONSENT-TO-PROVIDER:"
+	":RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE:"
+	":NOT-RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE:"
+	":TAKE-PRESCRIPTION-MEDICATION-PREDICATE:"
+	":NOT-TAKE-PRESCRIPTION-MEDICATION-PREDICATE:"
+	":STOP-TAKING-PRESCRIPTION-MEDICATION-PREDICATE:"
+	"<GIVE-TAKE-PREDICATE>")
+(defstringconstant ":PROVIDER-RECEIVE-CONSENT-FROM-FAMILY:" 
+	":PERSON-RECEIVE-THING-FROM-PERSON:" 
+	":PERSON-GIVE-THING-TO-PERSON:"	
+	":PERSON-GIVE-THING-TO-FAMILY:"		
+	":FAMILY-GIVE-CONSENT:"
+	":PATIENT-RECEIVE-PRESCRIPTION-MEDICATION-SENTENCE:"
+	":PATIENT-NOT-RECEIVE-PRESCRIPTION-MEDICATION-SENTENCE:"
+	":PATIENT-TAKE-PRESCRIPTION-MEDICATION-SENTENCE:"
+	":PATIENT-NOT-TAKE-PRESCRIPTION-MEDICATION-SENTENCE:"
+	":PATIENT-STOP-TAKING-PRESCRIPTION-MEDICATION-SENTENCE:"
+	"<GIVE-TAKE-SENTENCE>")
+
+(deftype give-take-thing (isa semantic-thing))
+(defstringconstant ":GIFT:" ":RECEIPT:" "<GIVE-TAKE-ACTION>")
+
+;; 2/23/2018:  Time is binding to abstract rule patterns outside those that
+;; explicitly reference time
+(deftype time-expression (isa semantic-time))
+;;(deftype time-expression 
+;;     (isa semantic-modifier semantic-property semantic-thing))
+	
+(deftype time-modifier (isa time-expression))
+(deftype time-unit (isa time-expression))
+(deftype date (isa time-expression))
+(deftype time-duration (isa time-expression))
+(defstringconstant ":GENERAL-TIME:" ":REGULARLY:" ":CURRENTLY:" 
+	":PER-TIME-UNIT:" ":AT-TIME:" "<TIME-MODIFIER>")
+(defstringconstant ":TIME-UNIT:" "<TIME-UNIT>")
+(defstringconstant ":DATE:" ":TIME:" ":GENERAL-TIME:" ":SPECIFIC-TIME:" ":NOW:"
+	":DECADE-AGE:" "<TIME-EXPRESSION>")
+	
+(deftype temporal-duration-property (isa semantic-property))
+(defstringconstant ":LONG-TERM:" ":SHORT-TERM:" ":CONSTANT:" 
+	":INTERMITTENT:" "<TEMPORAL-DURATION-PROPERTY>")
+
+(deftype visit-action (isa behavior semantic-thing))
+(defstringconstant ":VISIT:" "<VISIT-ACTION>")
+
+(deftype history-thing (isa semantic-thing semantic-property))
+(defstringconstant ":HISTORY:" ":FAMILY-HISTORY:" ":CURRENT-HISTORY:" ":SOCIAL-HISTORY:" ":HISTORY-OF-DISEASE:" ":FAMILY-HISTORY-OF-DISEASE:" "<HISTORY-THING>")
+
+
+(deftype involvement-thing (isa semantic-thing behavior semantic-state))
+(defstringconstant ":INVOLVED:" "<INVOLVEMENT-THING>")
+
+(deftype health-thing (isa semantic-thing))
+(defstringconstant ":HEALTH-CONDITION:" "<HEALTH-THING>")
+(deftype health-action (isa semantic-action))
+(deftype health-property (isa semantic-property))
+(deftype health-manner (isa semantic-manner))
+(deftype health-predicate (isa semantic-predicate))
+(deftype health-sentence (isa semantic-sentence))
+	
+(deftype disease-thing (isa health-thing))
+(defstringconstant ":DISEASE:" ":MEDICAL-CONDITION:" ":DISEASE-AT-TIME:" 
+	":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:"
+	":MEDICAL-CONDITION-NOT-NECESSARILY-CAUSING-ADL-DISABILITY:" 
+	":OBSTRUCTION:" ":INCONTINENCE:" 
+	":NERVE-CONDUCTION-LOSS:" "<DISEASE-THING>")
+(deftype disease-property-or-manner (isa health-property health-manner))
+(deftype medical-condition-predicate (isa health-predicate))
+(deftype medical-condition-sentence (isa health-sentence))
+(defstringconstant ":HAVE-MEDICAL-CONDITION:" "<MEDICAL-CONDITION-PREDICATE>")
+(defstringconstant ":PERSON-HAVE-MEDICAL-CONDITION:" 
+	":PATIENT-HAVE-MEDICAL-CONDITION:" ":FAMILY-HAVE-MEDICAL-CONDITION:"
+	"<MEDICAL-CONDITION-SENTENCE>")
+	
+(deftype syndrome-thing (isa disease-thing))
+(deftype brain-syndrome-thing (isa syndrome-thing))
+(defstringconstant ":ATTENTION-DEFICIT-DISORDER:" ":PTSD:" 
+	"<BRAIN-SYNDROME-THING>")
+	
+(deftype symptom (isa disease-thing))
+(deftype symptom-property-or-manner (isa disease-property-or-manner))
+(defstringconstant ":SYMPTOM:" ":FEVER:" ":PAIN:" ":FATIGUE:" ":DIZZINESS:" 
+	"<SYMPTOM>")
+(defstringconstant ":PAINFUL:" ":FATIGUED:" ":DIZZY:" 
+	"<SYMPTOM-PROPERTY-OR-MANNER>")
+(deftype head-symptom-thing (isa symptom))
+(defstringconstant ":HEADACHE:" "<HEAD-SYMPTOM-THING>")
+(deftype chest-symptom-thing (isa symptom))
+(defstringconstant ":SOB:" ":CHEST-PAIN:" "<CHEST-SYMPTOM-THING>")
+
+(deftype exam-finding-thing (isa health-thing))
+(defstringconstant ":FINDING:" "<EXAM-FINDING-THING>")
+
+(deftype treatment-thing (isa health-thing))
+(defstringconstant ":THERAPY:" ":TREATMENT:" ":PHYSICAL-THERAPY:" 
+	":SPEECH-THERAPY:" ":MEDICAL-THERAPY:" "<TREATMENT-THING>")
+(deftype treatment-living-situation-thing (isa treatment-thing))
+(deftype inpatient-treatment-thing (isa treatment-living-situation-thing))
+(defstringconstant ":INPATIENT-TREATMENT:" "<INPATIENT-TREATMENT-THING>")
+(deftype surgery-thing (isa treatment-thing))
+(defstringconstant ":AMPUTATION:" "<SURGERY-THING>")
+(deftype treatment-action (isa health-action))
+(defstringconstant ":TREAT:" "<TREATMENT-ACTION>")
+(deftype treatment-property (isa health-property health-manner))
+(defstringconstant ":THERAPEUTIC:" "<TREATMENT-PROPERTY>")
+(deftype treatment-living-situation-property (isa treatment-property))
+(defstringconstant ":INPATIENT:" "<TREATMENT-LIVING-SITUATION-PROPERTY>")
+(deftype treatment-predicate (isa health-predicate health-thing))
+(defstringconstant ":NEED-TREATMENT:" ":TREAT-DISEASE:" "<TREATMENT-PREDICATE>")
+(deftype treatment-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-NEED-TREATMENT:" ":DISEASE-NEED-TREATMENT:" 
+	":PATIENT-NEED-TREATMENT-FOR-DISEASE:"
+	"<TREATMENT-SENTENCE>")
+
+(deftype evaluation-thing-action-predicate 
+	(isa semantic-thing semantic-action semantic-predicate))
+(defstringconstant ":EVALUATE:" ":EVALUATION:" ":EVALUATION-FOR-THING:" 
+	":EVALUATION-FOR-DEPRESSION:" "<EVALUATION-THING-ACTION-PREDICATE>")
+(deftype evaluation-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-EVALUATED-FOR-THING:" 
+	":PATIENT-EVALUATED-FOR-DEPRESSION:" "<EVALUATION-SENTENCE>")
+	
+;; 6/15/2018:  Evaluation, diagnosis, recommendation etc should be under a single header.  
+;; I will start with recommendation and hopefully move others here later.
+(deftype evaluation-thing (isa semantic-thing))
+(deftype recommendation-thing (isa evaluation-thing))
+(defstringconstant ":RECOMMENDATION:" ":DISCHARGE-RECOMMENDATION:" "<RECOMMENDATION-THING>")
+(deftype evaluation-action (isa semantic-action))
+(deftype recommendation-action (isa evaluation-action))
+(defstringconstant ":RECOMMEND:" "<RECOMMENDATION-ACTION>")
+	
+(deftype substance-thing (isa semantic-thing))
+(defstringconstant ":ALCOHOL:" ":TOBACCO:" "<SUBSTANCE-THING>")
+(deftype substance-predicate (isa semantic-predicate))
+(deftype substance-sentence (isa semantic-sentence))
+(deftype medication-thing (isa substance-thing))
+(defstringconstant ":PRESCRIPTION-MEDICATION:" 
+	":DEMENTIA-MEDICATION:"
+	":PATIENT-PRESCRIPTION-MEDICATIONS:" ":ILLICIT-DRUG:" 
+	":DOSE:"
+	"<MEDICATION-THING>")
+(deftype medication-predicate (isa substance-predicate))
+(defstringconstant ":OFF-MEDS:" ":MISS-DOSE:" "<MEDICATION-PREDICATE>")
+(deftype medication-sentence (isa substance-sentence))
+(defstringconstant ":PERSON-HAVE-PATIENT-MEDICATIONS:" ":PATIENT-MISS-DOSE:" 
+	"<MEDICATION-SENTENCE>")
+(deftype medical-thing (isa semantic-thing))
+(deftype medical-property (isa semantic-property))
+(deftype medical-procedure-property (isa semantic-property))
+(deftype medical-procedure (isa medical-thing))
+(defstringconstant ":MEDICAL-PROCEDURE:" 
+	":MECHANICAL-VENTILATION:" ":INTUBATION:" "<MEDICAL-PROCEDURE>")
+(defstringconstant ":MEDICAL-PROCEDURE-PROPERTY:" 
+	":VENTILATED:" ":INTUBATED:" "<MEDICAL-PROCEDURE-PROPERTY>")
+(deftype medical-measurement (isa medical-thing))
+
+
+(deftype medical-procedure-property-state (isa medical-thing))
+
+(deftype medication-user (isa person))
+(defstringconstant ":DRUG-USER:" "<MEDICATION-USER>")
+(defstringconstant ":MEDICAL-MEASUREMENT:" "<MEDICAL-MEASUREMENT>")
+
+(deftype physical-activity-thing (isa behavior))
+(defstringconstant ":PHYSICAL-ACTIVITY:" ":PHYSICAL-EXERCISE:" ":SEX:" "<PHYSICAL-ACTIVITY-THING>")
+
+(deftype appropriateness (isa semantic-state semantic-property))
+(defstringconstant ":APPROPRIATE:" ":INAPPROPRIATE:" "<APPROPRIATENESS>")
+
+(deftype possibly 
+	(isa semantic-state semantic-manner))
+(defstringconstant ":POSSIBLY:" ":PROBABLY:" ":LIKELY:" "<POSSIBLY>")
+
+(deftype possibility (isa semantic-thing))
+(defstringconstant ":POSSIBILITY:" ":PROBABILITY:" ":RISK:" "<POSSIBILITY>")
+
+(deftype observe-action-thing (isa semantic-action semantic-thing))
+(defstringconstant ":OBSERVE:" "<OBSERVE-ACTION-THING>")
+(deftype observe-thing-predicate (isa semantic-predicate))
+(defstringconstant ":OBSERVE-PATIENT:" "<OBSERVE-THING-PREDICATE>")
+(deftype person-observe-thing-sentence (isa semantic-sentence))
+(defstringconstant ":FAMILY-OBSERVE-PATIENT:" 
+	"<PERSON-OBSERVE-THING-SENTENCE>")
+
+(deftype question-answer (isa semantic-thing semantic-action))
+(defstringconstant ":QUESTION:" ":ANSWER:" "<QUESTION-ANSWER>")
+
+;; Actions
+(deftype appear-action (isa semantic-action))
+(defstringconstant ":APPEAR:" ":PRESENT-APPEARANCE:" "<APPEAR-ACTION>")
+
+(deftype start-stop-action (isa semantic-action))
+(defstringconstant ":START:" ":STOP:" "<START-STOP-ACTION>")
+
+(deftype task-thing (isa semantic-thing))
+(deftype task-action (isa semantic-action))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Functional status types
+
+;; Need
+(deftype need-predicate (isa semantic-predicate))
+(deftype need-thing (isa semantic-thing))
+(defstringconstant ":NEED-THING:" ":PATIENT-NEED:" ":WANTS-AND-NEEDS:" "<NEED-THING>")
+(deftype need-action (isa semantic-action))
+(defstringconstant ":NEED-ACTION:" "<NEED-ACTION>")
+(deftype need-property (isa semantic-property))
+(deftype need (isa need-thing need-action need-property))
+(deftype need-thing-predicate (isa need-predicate))
+(defstringconstant ":NEED-REGULAR-ASSISTANCE-PREDICATE:" "<NEED-THING-PREDICATE>")
+(deftype need-thing-to-do-thing-predicate (isa need-thing-predicate))
+
+;; 4/1/2018 I need to break needs apart cleanly into things and actions.
+;; Need a way to quickly identify which rules contain a given concept, type or
+;; string in its pattern or concept.
+(deftype need-action-thing (isa semantic-action semantic-thing ))
+(defstringconstant ":NEED:" ":NO-NEEDS:" "<NEED-ACTION-THING>") 
+
+;; Added predicate 4/1/2018
+(deftype use-action-thing 
+	(isa semantic-action semantic-thing semantic-predicate ))
+(defstringconstant ":USE:" "<USE-ACTION-THING>")
+
+;; Help
+(deftype help-predicate (isa semantic-predicate))
+(deftype help-thing (isa semantic-thing))
+(deftype help-action (isa semantic-action))
+(deftype help (isa help-thing help-action))
+(deftype help-thing-predicate (isa help-predicate))
+(deftype help-thing-to-do-thing-predicate (isa help-thing-predicate))
+(defstringconstant ":HELP:" "<HELP>")
+
+;; Functional status
+(deftype functional-status-sentence (isa semantic-sentence))
+(deftype functional-status-thing (isa semantic-thing))
+(deftype functional-status-action (isa semantic-action))
+(deftype functional-status-predicate (isa semantic-predicate))
+(deftype functional-status-property (isa semantic-property))
+(deftype functional-status-manner (isa semantic-manner))
+(deftype functional-status-state (isa semantic-state))
+
+(deftype physical-state (isa functional-status-state))
+(defstringconstant ":WEAK:" ":ILL:" ":STRONG:" "<PHYSICAL-STATE>")
+(deftype physical-state-thing (isa functional-status-thing))
+(deftype poor-physical-state-thing (isa physical-state-thing))
+(defstringconstant ":WEAKNESS:" ":ILLNESS:" ":NUMBNESS:" 
+	":DEFICIT-IN-PHYSICAL-STATE-THING:" "<POOR-PHYSICAL-STATE-THING>")
+(deftype good-physical-state-thing (isa physical-state-thing))
+(defstringconstant ":STRENGTH:" ":WELLNESS:" "<GOOD-PHYSICAL-STATE-THING>")
+	
+;; ANATOMIC LOCATION
+(deftype anatomy-modifier (isa semantic-thing semantic-property))
+(deftype anatomic-location (isa semantic-thing))
+(defstringconstant ":ANATOMIC-LOCATION:" ":ADL-ANATOMY:" 
+	":ANATOMIC-APPENDAGE:" ":ANATOMIC-GI:" 
+	"<ANATOMIC-LOCATION>")
+(deftype head-anatomic-location (isa anatomic-location))
+(defstringconstant ":ANATOMY-HEAD:" "<HEAD-ANATOMIC-LOCATION>")
+(deftype gi-anatomic-location (isa anatomic-location))
+(defstringconstant ":ANATOMIC-GI:" "<GI-ANATOMIC-LOCATION>")
+(deftype chest-anatomic-location (isa anatomic-location))
+(defstringconstant ":ANATOMIC-CHEST:" "<CHEST-ANATOMIC-LOCATION>")
+(deftype cns-anatomic-location (isa anatomic-location))
+(deftype brain-thing (isa cns-anatomic-location))
+(defstringconstant ":BRAIN:" "<BRAIN-THING>")
+	
+(deftype "difficulty" (isa semantic-thing semantic-property))
+(defstringconstant ":DIFFICULTY:" ":PROBLEM:" ":FAILURE:" ":EASE:" 
+	"<DIFFICULTY>")
+
+(deftype time-and-place-thing (isa semantic-thing))
+(defstringconstant ":TIME-AND-PLACE:" ":SITUATION:" "<TIME-AND-PLACE-THING>")
+
+(deftype complexity-property (isa semantic-property))
+(defstringconstant ":SIMPLE-PROPERTY:" ":COMPLEX-PROPERTY:" "<COMPLEXITY-PROPERTY>")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Grammar
+
+;; Grammar types
+(deftype grammar-sentence (isa sentence))
+(deftype grammar-predicate (isa predicate))
+(deftype grammar-thing (isa thing))
+(deftype grammar-state (isa state))
+(deftype grammar-manner (isa manner))
+(deftype grammar-property (isa property))
+
+(deftype grammar-time (isa time))
+
+;; Grammar predicates
+(deftype grammar-predicate-pp-predicate (isa grammar-predicate))
+(deftype grammar-passive-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-thing-predicate (isa grammar-predicate))
+(deftype grammar-action-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-pp-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-pp-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-manner-predicate (isa grammar-predicate))
+(deftype grammar-is-pp-predicate (isa grammar-predicate))
+(deftype grammar-is-state-predicate (isa grammar-predicate))
+(deftype grammar-isnt-state-predicate (isa grammar-predicate))
+
+(deftype grammar-action-state-thing-infinitive-predicate 
+	(isa grammar-predicate))
+
+
+;; Grammar sentences
+(deftype grammar-conjunct-sentence (isa grammar-sentence))
+(deftype grammar-passive-sentence (isa grammar-sentence))
+(deftype grammar-thing-is-state-sentence (isa grammar-sentence))
+(deftype grammar-thing-isnt-state-sentence (isa grammar-sentence))
+(deftype grammar-person-predicate-sentence (isa grammar-sentence))
+(deftype grammar-person-have-thing-sentence (isa grammar-sentence))
+(deftype grammar-thing-is-pp-sentence (isa grammar-sentence))
+(deftype grammar-thing-pp-sentence (isa grammar-sentence))
+
+;; Grammar predicates
+(deftype grammar-passive-predicate (isa grammar-predicate))
+
+;; Grammar states
+(deftype grammar-state-pp (isa grammar-state))  ;; "alone at home"
+(deftype grammar-state-predicate (isa grammar-state))
+(deftype grammar-action-state (isa grammar-state))  ;; "live alone"
+(deftype grammar-state-action-thing (isa grammar-state))
+(deftype grammar-state-action-thing-pp (isa grammar-state))
+
+;; Grammar things
+(deftype grammar-thing-pp-thing (isa grammar-thing))
+
+;; PP
+(defstringconstant ":PP:" "<PP>")
+
+(deftype grammar-modifier-thing (isa grammar-modifier grammar-thing)) ;; 2 bedroom, 2 bedroom home
+
+(deftype grammar-conjunct (isa conjunct))
+(defstringtype ":CONJ:" ":BUT:" ":SENTENCE-CONJUNCT:" "<GRAMMAR-CONJUNCT>")
+
+;; (deftype context-word (isa property state)) -- Only use this in negation rule, not as state or property
+(defstringconstant ":PRE-NEGATION-WORD:" "<CONTEXT-WORD>")
+
+(deftype wh-word (isa sentence-modifier))
+(defstringconstant ":WHAT:" ":WHO:" ":WHERE:" ":WHY:" "<WH-WORD>")
+
+;; Meta grammar items
+(deftype meta-grammar (isa root))
+(deftype meta-grammar-thing (isa meta-grammar))
+(deftype meta-grammar-property (isa meta-grammar))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; FROM MELISSA'S OWL ONTOLOGY:
+
+;; Substance-use-related
+(deftype substance-action (isa semantic-action))
+(deftype substance-thing (isa semantic-thing))
+(deftype substance-property (isa semantic-property))
+(deftype substance-predicate (isa semantic-predicate))
+(deftype substance-sentence (isa semantic-sentence))
+(deftype substance-user-thing (isa person))
+
+(defstringconstant ":USE-SUBSTANCE-ACTION:" "<SUBSTANCE-ACTION>")
+(defstringconstant ":SUBSTANCE-USE-THING:" "<SUBSTANCE-THING>")
+(deftype "tobacco-use-thing" (isa "substance-use-thing"))
+(deftype "smoking-thing" (isa "tobacco-use-thing"))
+(defstringconstant ":SMOKING-THING:" ":SMOKING-WATERPIPE:" ":SMOKING-HASHISH:" ":FREEBASING:" ":SMOKING-PIPE-HISTORY:" ":SMOKING-HOOKAH:" ":SMOKING-WITHOUT-INHALATION:" ":SMOKING-WITH-INHALATION:" "<SMOKING-THING>")
+
+
+(deftype "smoking-with-inhalation" (isa "smoking-thing"))
+(defstringconstant ":SMOKING-WITH-INHALATION:" "<SMOKING-WITH-INHALATION>")
+(defstringconstant ":SMOKING:" "<SMOKING>")
+(deftype "electronic-cigarette-user" (isa "tobacco-use-thing"))
+(deftype "vapor-cigarette-smoker" (isa "electronic-cigarette-user"))
+(defstringconstant ":VAPOR-CIGARETTE-SMOKER:" "<VAPOR-CIGARETTE-SMOKER>")
+(deftype "e-cigarette-smoker" (isa "electronic-cigarette-user"))
+(defstringconstant ":E-CIGARETTE-SMOKER:" "<E-CIGARETTE-SMOKER>")
+(defstringconstant ":ELECTRONIC-CIGARETTE-USER:" "<ELECTRONIC-CIGARETTE-USER>")
+(deftype "tobacco-user" (isa person))
+(deftype "snuff-user" (isa "tobacco-user"))
+(defstringconstant ":SNUFF-USER:" "<TOBACCO-USER>")
+(deftype "chews-tobacco" (isa "tobacco-user"))
+(defstringconstant ":CHEWS-TOBACCO:" "<TOBACCO-PREDICATE>")
+(defstringconstant ":TOBACCO-USER:" "<TOBACCO-USER>")
+(deftype "dependence-tobacco" (isa "tobacco-use-thing"))
+(defstringconstant ":DEPENDENCE-TOBACCO:" "<DEPENDENCE-TOBACCO>")
+(defstringconstant ":TOBACCO-USE:" "<TOBACCO-USE>")
+
+(deftype "cigarette" (isa "tobacco"))
+(deftype "filter-cigarette" (isa "cigarette"))
+(defstringconstant ":FILTER-CIGARETTE:" "<FILTER-CIGARETTE>")
+(deftype "low-tar-cigarette" (isa "cigarette"))
+(defstringconstant ":LOW-TAR-CIGARETTE:" "<LOW-TAR-CIGARETTE>")
+(deftype "bidi" (isa "cigarette"))
+(defstringconstant ":BIDI:" "<BIDI>")
+(deftype "kretek" (isa "cigarette"))
+(defstringconstant ":KRETEK:" "<KRETEK>")
+(deftype "filterless-cigarette" (isa "cigarette"))
+(defstringconstant ":FILTERLESS-CIGARETTE:" "<FILTERLESS-CIGARETTE>")
+(deftype "mentholated-cigarette" (isa "cigarette"))
+(defstringconstant ":MENTHOLATED-CIGARETTE:" "<MENTHOLATED-CIGARETTE>")
+(deftype "very-low-nicotine-content-cigarette" (isa "cigarette"))
+(defstringconstant ":VERY-LOW-NICOTINE-CONTENT-CIGARETTE:" "<VERY-LOW-NICOTINE-CONTENT-CIGARETTE>")
+(defstringconstant ":CIGARETTE:" "<CIGARETTE>")
+(deftype "cigars" (isa "tobacco"))
+(deftype "cigarillo" (isa "cigars"))
+(defstringconstant ":CIGARILLO:" "<CIGARILLO>")
+(defstringconstant ":CIGARS:" "<CIGARS>")
+(deftype "pipe-tobacco" (isa "tobacco"))
+(defstringconstant ":PIPE-TOBACCO:" "<PIPE-TOBACCO>")
+(defstringconstant ":TOBACCO:" "<TOBACCO>")
+(deftype "smoker" (isa "anchor"))
+(deftype "cigarette-smoker" (isa "smoker"))
+(defstringconstant ":CIGARETTE-SMOKER:" "<CIGARETTE-SMOKER>")
+(defstringconstant ":SMOKER:" "<SMOKER>")
+(deftype "ex-tobacco-user" (isa "anchor"))
+(deftype "former-smoker" (isa "ex-tobacco-user"))
+(deftype "ex-smoker-for-more-than-1-year" (isa "former-smoker"))
+(defstringconstant ":EX-SMOKER-FOR-MORE-THAN-1-YEAR:" "<EX-SMOKER-FOR-MORE-THAN-1-YEAR>")
+(deftype "former-light-tobacco-smoker" (isa "former-smoker"))
+(defstringconstant ":FORMER-LIGHT-TOBACCO-SMOKER:" "<FORMER-LIGHT-TOBACCO-SMOKER>")
+(deftype "aggressive-ex-smoker" (isa "former-smoker"))
+(defstringconstant ":AGGRESSIVE-EX-SMOKER:" "<AGGRESSIVE-EX-SMOKER>")
+(deftype "ex-pipe-smoker" (isa "former-smoker"))
+(defstringconstant ":EX-PIPE-SMOKER:" "<EX-PIPE-SMOKER>")
+(deftype "ex-cigar-smoker" (isa "former-smoker"))
+(defstringconstant ":EX-CIGAR-SMOKER:" "<EX-CIGAR-SMOKER>")
+(deftype "ex-cigarette-smoker" (isa "former-smoker"))
+(defstringconstant ":EX-CIGARETTE-SMOKER:" "<EX-CIGARETTE-SMOKER>")
+(deftype "former-heavy-tobacco-smoker" (isa "former-smoker"))
+(defstringconstant ":FORMER-HEAVY-TOBACCO-SMOKER:" "<FORMER-HEAVY-TOBACCO-SMOKER>")
+(deftype "intolerant-ex-smoker" (isa "former-smoker"))
+(defstringconstant ":INTOLERANT-EX-SMOKER:" "<INTOLERANT-EX-SMOKER>")
+(deftype "tolerant-ex-smoker" (isa "former-smoker"))
+(defstringconstant ":TOLERANT-EX-SMOKER:" "<TOLERANT-EX-SMOKER>")
+(defstringconstant ":FORMER-SMOKER:" "<FORMER-SMOKER>")
+(defstringconstant ":EX-TOBACCO-USER:" "<EX-TOBACCO-USER>")
+
+;; LEE ADDED "action"
+(deftype "smoke" (isa "anchor" "action"))
+
+(deftype "cigarette-smoke" (isa "smoke"))
+(defstringconstant ":CIGARETTE-SMOKE:" "<CIGARETTE-SMOKE>")
+(defstringconstant ":SMOKE:" "<SMOKE>")
+(deftype "tobacco-non-user" (isa "anchor"))
+(deftype "non-smoker" (isa "tobacco-non-user"))
+(defstringconstant ":NON-SMOKER:" "<NON-SMOKER>")
+(defstringconstant ":TOBACCO-NON-USER:" "<TOBACCO-NON-USER>")
+(deftype "smoking-cessation-group" (isa "anchor"))
+(defstringconstant ":SMOKING-CESSATION-GROUP:" "<SMOKING-CESSATION-GROUP>")
+(deftype "current-smoker" (isa "anchor"))
+(defstringconstant ":CURRENT-SMOKER:" "<CURRENT-SMOKER>")
+(isanchorof "<ANCHOR>" "<ANNOTATION>")
+(haspseudo "<ANCHOR>" "<PSEUDOANCHOR>")
+(deftype "modifier" (isa "lexicon"))
+(deftype "numericmodifier" (isa "modifier"))
+(deftype "quantity" (isa "numericmodifier"))
+(deftype "duration-lt-12-months" (isa "quantity"))
+(defstringconstant ":DURATION-LT-12-MONTHS:" "<DURATION-LT-12-MONTHS>")
+(deftype "duration-lt-1-year" (isa "quantity"))
+(defstringconstant ":DURATION-LT-1-YEAR:" "<DURATION-LT-1-YEAR>")
+(deftype "duration-lt-52-weeks" (isa "quantity"))
+(defstringconstant ":DURATION-LT-52-WEEKS:" "<DURATION-LT-52-WEEKS>")
+(deftype "duration-gte-12-months" (isa "quantity"))
+(defstringconstant ":DURATION-GTE-12-MONTHS:" "<DURATION-GTE-12-MONTHS>")
+(deftype "duration-gte-1-year" (isa "quantity"))
+(defstringconstant ":DURATION-GTE-1-YEAR:" "<DURATION-GTE-1-YEAR>")
+(deftype "rangemodifier" (isa "numericmodifier"))
+(deftype "range-gte-1-year" (isa "rangemodifier"))
+(defstringconstant ":RANGE-GTE-1-YEAR:" "<RANGE-GTE-1-YEAR>")
+(deftype "range-lt-1-year" (isa "rangemodifier"))
+(defstringconstant ":RANGE-LT-1-YEAR:" "<RANGE-LT-1-YEAR>")
+(hasunit "<NUMERICMODIFIER>" "<UNIT>")
+(deftype "linguisticmodifier" (isa "modifier"))
+(deftype "experiencer" (isa "linguisticmodifier"))
+(deftype "familymember-experiencer" (isa "experiencer"))
+(defstringconstant ":FAMILYMEMBER-EXPERIENCER:" "<FAMILYMEMBER-EXPERIENCER>")
+(deftype "patient-experiencer" (isa "experiencer"))
+(defstringconstant ":PATIENT-EXPERIENCER:" "<PATIENT-EXPERIENCER>")
+(deftype "othermember-experiencer" (isa "experiencer"))
+(defstringconstant ":OTHERMEMBER-EXPERIENCER:" "<OTHERMEMBER-EXPERIENCER>")
+(deftype "temporality" (isa "linguisticmodifier"))
+(deftype "overlap-doctimerel" (isa "temporality"))
+(defstringconstant ":OVERLAP-DOCTIMEREL:" "<OVERLAP-DOCTIMEREL>")
+(deftype "before-doctimerel" (isa "temporality"))
+(defstringconstant ":BEFORE-DOCTIMEREL:" "<BEFORE-DOCTIMEREL>")
+(deftype "before-overlap-doctimerel" (isa "temporality"))
+(defstringconstant ":BEFORE-OVERLAP-DOCTIMEREL:" "<BEFORE-OVERLAP-DOCTIMEREL>")
+(deftype "after-doctimerel" (isa "temporality"))
+(defstringconstant ":AFTER-DOCTIMEREL:" "<AFTER-DOCTIMEREL>")
+(deftype "certainty" (isa "linguisticmodifier"))
+(deftype "probableexistence-certainty" (isa "certainty"))
+(defstringconstant ":PROBABLEEXISTENCE-CERTAINTY:" "<PROBABLEEXISTENCE-CERTAINTY>")
+(deftype "uncertain-certainty" (isa "certainty"))
+(defstringconstant ":UNCERTAIN-CERTAINTY:" "<UNCERTAIN-CERTAINTY>")
+(deftype "probablenegatedexistence-certainty" (isa "certainty"))
+(defstringconstant ":PROBABLENEGATEDEXISTENCE-CERTAINTY:" "<PROBABLENEGATEDEXISTENCE-CERTAINTY>")
+(deftype "definitenegatedexistence-certainty" (isa "certainty"))
+(defstringconstant ":DEFINITENEGATEDEXISTENCE-CERTAINTY:" "<DEFINITENEGATEDEXISTENCE-CERTAINTY>")
+(deftype "definiteexistence-certainty" (isa "certainty"))
+(defstringconstant ":DEFINITEEXISTENCE-CERTAINTY:" "<DEFINITEEXISTENCE-CERTAINTY>")
+(deftype "contextualaspect" (isa "linguisticmodifier"))
+(deftype "reinitiates-contextualaspect" (isa "contextualaspect"))
+(defstringconstant ":REINITIATES-CONTEXTUALASPECT:" "<REINITIATES-CONTEXTUALASPECT>")
+(deftype "terminates-contextualaspect" (isa "contextualaspect"))
+(defstringconstant ":TERMINATES-CONTEXTUALASPECT:" "<TERMINATES-CONTEXTUALASPECT>")
+(deftype "intermittent-contextualaspect" (isa "contextualaspect"))
+(defstringconstant ":INTERMITTENT-CONTEXTUALASPECT:" "<INTERMITTENT-CONTEXTUALASPECT>")
+(deftype "notapplicable-contextualaspect" (isa "contextualaspect"))
+(defstringconstant ":NOTAPPLICABLE-CONTEXTUALASPECT:" "<NOTAPPLICABLE-CONTEXTUALASPECT>")
+(deftype "novel-contextualaspect" (isa "contextualaspect"))
+(defstringconstant ":NOVEL-CONTEXTUALASPECT:" "<NOVEL-CONTEXTUALASPECT>")
+(deftype "initiates-contextualaspect" (isa "contextualaspect"))
+(defstringconstant ":INITIATES-CONTEXTUALASPECT:" "<INITIATES-CONTEXTUALASPECT>")
+(deftype "continues-contextualaspect" (isa "contextualaspect"))
+(defstringconstant ":CONTINUES-CONTEXTUALASPECT:" "<CONTINUES-CONTEXTUALASPECT>")
+(deftype "qualifier" (isa "modifier"))
+(deftype "unit" (isa "qualifier"))
+(deftype "days-unit" (isa "unit"))
+(deftype "years-unit" (isa "unit"))
+(deftype "weeks-unit" (isa "unit"))
+(deftype "months-unit" (isa "unit"))
+(hasexclusion "<MODIFIER>" "<MODIFIER>")
+(hasexclusion "<MODIFIER>" "<ANNOTATION>")
+(hasqualifier "<MODIFIER>" "<QUALIFIER>")
+(haspseudo "<MODIFIER>" "<PSEUDOMODIFIER>")
+(deftype "pseudo" (isa "lexicon"))
+(deftype "pseudoanchor" (isa "pseudo"))
+(deftype "smokeless-tobacco" (isa "pseudoanchor"))
+(deftype "mint-snuff" (isa "smokeless-tobacco"))
+(deftype "chewing-tobacco" (isa "smokeless-tobacco"))
+(deftype "snuff-tobacco" (isa "smokeless-tobacco"))
+(deftype "dissolvable-tobacco" (isa "smokeless-tobacco"))
+(deftype "passive-smoke-exposure" (isa "pseudoanchor"))
+(deftype "second-hand-cigarette-smoke" (isa "pseudoanchor"))
+(deftype "smokes-crack" (isa "pseudoanchor"))
+(deftype "pseudomodifier" (isa "pseudo"))
+(deftype "pseudohistorical" (isa "pseudomodifier"))
+(deftype "pseudonegation" (isa "pseudomodifier"))
+(deftype "pseudoyear" (isa "pseudomodifier"))
+(deftype "psuedoterminate" (isa "pseudomodifier"))
+(deftype "pseudoday" (isa "pseudomodifier"))
+(deftype "pseudofamily" (isa "pseudomodifier"))
+(deftype "pseudofuture" (isa "pseudomodifier"))
+(ispseudoof "<PSEUDO>" "<MODIFIER>")
+(deftype "closure" (isa "lexicon"))
+(deftype "but-group" (isa "closure"))
+(deftype "because-group" (isa "closure"))
+(deftype "secondaryto-group" (isa "closure"))
+(deftype "patient-group" (isa "closure"))
+(deftype "which-group" (isa "closure"))
+
+;; Annotation-related types
+
+(deftype annotation-thing (isa thing))
+(deftype finding (isa annotation-thing))
+(deftype "current-smoker-mention" (isa "finding"))
+(deftype "explicit-current-smoker-mention" (isa "current-smoker-mention"))
+(deftype "history-of-smoker-mention-lt-1-year" (isa "current-smoker-mention"))
+(deftype "smoking-cessation-group-mention" (isa "current-smoker-mention"))
+(deftype "just-quit-smoking-mention" (isa "current-smoker-mention"))
+(deftype "smoking-started-or-reinitiated-mention" (isa "current-smoker-mention"))
+(deftype "history-of-smoker-mention" (isa "current-smoker-mention"))
+(deftype "history-of-smoking-but-continues-mention" (isa "history-of-smoker-mention"))
+(deftype "smoker-mention-with-duration" (isa "current-smoker-mention"))
+(deftype "smoker-mention" (isa "current-smoker-mention"))
+(deftype "non-smoker-mention" (isa "finding"))
+(deftype "negated-smoking-mention" (isa "non-smoker-mention"))
+(deftype "non-user-mention" (isa "non-smoker-mention"))
+(deftype "past-smoker-mention" (isa "finding"))
+(deftype "quit-smoking-mention" (isa "past-smoker-mention"))
+(deftype "smoking-stopped-for-1-year-or-greater-mention" (isa "quit-smoking-mention"))
+(deftype "history-of-smoker-before-only-mention" (isa "past-smoker-mention"))
+(deftype "negated-current-smoker-mention" (isa "past-smoker-mention"))
+(deftype "history-of-smoker-mention-gt-1-yr" (isa "past-smoker-mention"))
+(deftype "ex-user-for-1-year-or-greater-mention" (isa "past-smoker-mention"))
+(deftype "non-smoker-document" (isa "finding"))
+(deftype "unknown-smoker-mention" (isa "finding"))
+(deftype "past-smoker-document" (isa "finding"))
+(deftype "current-smoker-document" (isa "finding"))
+(deftype "entity" (isa "annotation"))
+  
+
+
+)

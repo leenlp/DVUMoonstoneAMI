@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-3-2019/12/30 23:37:40") 
+  (specialized) 
+  (example-snippet "he reported to his wife") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-COMMUNICATE-WITH-FAMILY-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

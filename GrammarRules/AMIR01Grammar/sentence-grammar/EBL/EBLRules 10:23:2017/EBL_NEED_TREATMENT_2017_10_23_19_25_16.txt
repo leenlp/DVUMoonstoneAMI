@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NEED-TREATMENT::2017/10/23 19:25:16") 
+  (specialized) 
+  (example-snippet "needs to be treated") 
+  (ordered true) 
+  (sourceid "action-to-predicate-rule") 
+  (concept ":NEED-TREATMENT:") 
+  (stype "<TREATMENT-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":NEED:<ACTION>") 
+    (":TREATMENT:")) 
+  (properties 
+    (action "?0") 
+    (predicate "?1")) 
+  (tests 
+    (notneg ?0) 
+    (notneg ?1)))
+
+)

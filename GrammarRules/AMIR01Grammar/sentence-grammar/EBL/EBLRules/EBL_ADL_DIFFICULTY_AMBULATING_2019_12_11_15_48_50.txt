@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-DIFFICULTY-AMBULATING::2019/12/11 15:48:50") 
+  (specialized) 
+  (example-snippet "difficulty walking") 
+  ;; (ordered true) 
+  (sourceid "state-thing-rule") 
+  (concept ":ADL-DIFFICULTY-AMBULATING:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":DIFFICULT:") 
+    (":WALKING:")) 
+  (properties 
+    (state "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

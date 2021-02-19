@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/08/13 13:00:15") 
+  (specialized) 
+  (example-snippet "Patient did not have a ride home") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::DO::TRANSPORTATION:")) 
+  (tests 
+    ("neg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:-2-2018/02/09 14:59:54") 
+  (specialized) 
+  (example-snippet "patient is mentally challenged") 
+  (ordered true) 
+  (concept ":PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-MENTALLY-IMPAIRED:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

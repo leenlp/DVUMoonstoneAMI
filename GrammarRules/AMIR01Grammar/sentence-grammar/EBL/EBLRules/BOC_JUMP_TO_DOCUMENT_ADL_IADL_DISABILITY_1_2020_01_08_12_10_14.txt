@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-1-2020/01/08 12:10:14") 
+  (specialized) 
+  (example-snippet "Transfers and Gait training with fww") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":TRANSFER::EDUCATION::PREP::ADL-CANE-WALKER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

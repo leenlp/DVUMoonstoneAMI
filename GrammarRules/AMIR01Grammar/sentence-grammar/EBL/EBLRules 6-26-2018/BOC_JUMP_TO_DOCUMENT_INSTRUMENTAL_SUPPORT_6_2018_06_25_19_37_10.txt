@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-6-2018/06/25 19:37:10") 
+  (specialized) 
+  (example-snippet "Patients family needs training") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::NEED::EDUCATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

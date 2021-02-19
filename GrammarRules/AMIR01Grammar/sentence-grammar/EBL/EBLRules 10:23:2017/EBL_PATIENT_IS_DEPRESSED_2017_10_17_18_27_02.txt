@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-IS-DEPRESSED::2017/10/17 18:27:02") 
+  (specialized) 
+  (example-snippet "patient has a history of depression versus bipolar disorder") 
+  (ordered true) 
+  (sourceid "person-have-thing-rule") 
+  (concept ":PATIENT-IS-DEPRESSED:") 
+  (stype "<DEPRESSION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    ("@have-word-rule@") 
+    (":DEPRESSION::DEPRESSION:")) 
+  (properties 
+    (subject "?0") 
+    (object "?2")))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HAVE-SUPPORT:-0-2018/03/01 11:08:48") 
+  (specialized) 
+  (example-snippet "mom states she have no dyspnea") 
+  (ordered true) 
+  (concept ":HAVE-SUPPORT:") 
+  (stype "<RECEIVE-SUPPORT-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY-COMMUNICATE-SOMETHING-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

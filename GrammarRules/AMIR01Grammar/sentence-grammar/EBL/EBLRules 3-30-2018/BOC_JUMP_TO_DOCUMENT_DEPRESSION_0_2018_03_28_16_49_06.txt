@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-DEPRESSION:-0-2018/03/28 16:49:06") 
+  (specialized) 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-DEPRESSION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":APPEAR::DEPRESSED:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

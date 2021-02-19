@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-2-2018/06/27 20:54:49") 
+  (specialized) 
+  (example-snippet "NOT have 24 hour assistance at home") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PROVISION-OF-CARE::PREP::HOME:")) 
+  (tests 
+    ("neg" ?0)))
+
+)

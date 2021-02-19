@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:CAPTURE-AT-DOCUMENT-CONCEPT:-2-2018/04/26 17:24:29") 
+  (specialized) 
+  (example-snippet "history of stroke") 
+  (ordered true) 
+  (concept ":CAPTURE-AT-DOCUMENT-CONCEPT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":MEDICAL-CONDITION-NOT-NECESSARILY-CAUSING-ADL-DISABILITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

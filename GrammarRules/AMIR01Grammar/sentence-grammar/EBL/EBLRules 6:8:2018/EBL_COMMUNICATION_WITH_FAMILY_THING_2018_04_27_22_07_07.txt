@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-FAMILY-THING::2018/04/27 22:07:07") 
+  (specialized) 
+  (example-snippet "consultation with the mother") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":COMMUNICATION-WITH-FAMILY-THING:") 
+  (stype "<COMMUNICATION-THING>") 
+  (window 16.0) 
+  (words 
+    (":DISCUSSION:") 
+    (":PREP::PARENT:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

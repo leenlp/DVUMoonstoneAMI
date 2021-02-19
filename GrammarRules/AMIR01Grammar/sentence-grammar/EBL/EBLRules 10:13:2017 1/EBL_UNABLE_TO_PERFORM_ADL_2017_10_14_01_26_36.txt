@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-PERFORM-ADL::2017/10/14 01:26:36") 
+  (specialized) 
+  (example-snippet "too weak to take care of herself") 
+  (ordered true) 
+  (sourceid "state-predicate-predicate-rule") 
+  (concept ":UNABLE-TO-PERFORM-ADL:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":WEAK:") 
+    (":CARE::SELF:")) 
+  (properties 
+    (state "?0") 
+    (predicate "?1")) 
+  (tests 
+    (notneg ?0) 
+    (notneg ?1)))
+
+)

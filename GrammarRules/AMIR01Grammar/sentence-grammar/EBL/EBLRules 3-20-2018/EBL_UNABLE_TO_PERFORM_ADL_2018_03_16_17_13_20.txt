@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNABLE-TO-PERFORM-ADL::2018/03/16 17:13:20") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "state-thing-rule") 
+  (concept ":UNABLE-TO-PERFORM-ADL:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":UNABLE:") 
+    (":ADL-ACTIVITY:")) 
+  (properties 
+    (state "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-UNDERSTAND-SOMETHING::2018/03/07 17:57:10") 
+  (specialized) 
+  (example-snippet "patient understands as well as her husband") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-UNDERSTAND-SOMETHING:") 
+  (stype "<FF-UNDERSTAND-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":UNDERSTAND::SPOUSE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

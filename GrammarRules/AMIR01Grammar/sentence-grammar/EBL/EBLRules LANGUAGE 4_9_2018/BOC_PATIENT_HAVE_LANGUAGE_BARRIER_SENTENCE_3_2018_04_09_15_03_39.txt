@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:-3-2018/04/09 15:03:39") 
+  (specialized) 
+  (example-snippet "He speaks a little English") 
+  (ordered true) 
+  (concept ":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-SPEAKS-IMPERFECT-ENGLISH-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

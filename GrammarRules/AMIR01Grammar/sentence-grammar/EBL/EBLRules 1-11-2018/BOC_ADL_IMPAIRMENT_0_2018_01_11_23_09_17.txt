@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:ADL-IMPAIRMENT:-0-2018/01/11 23:09:17") 
+  (specialized) 
+  (example-snippet "patient cannot walk to the bathroom without help") 
+  (ordered true) 
+  (concept ":ADL-IMPAIRMENT:") 
+  (stype "<ADL-ABILITY>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:"))
+  (tests (notneg ?0)))
+
+)

@@ -1,0 +1,150 @@
+'(
+wordrule
+
+
+((ruleid time-unit-before-event-thing-rule)
+ (stype "<TIME-EXPRESSION>")
+ (concept ?0)
+ (words ("<TIME-DURATION>") 
+ 		("prior to" "before") 
+ 		("<THING>" "<PREDICATE>" "<SENTENCE>")))
+
+((ruleid date-range-rule-1)
+ (stype "<DATE>")
+ (concept ?0)
+ (ordered true)
+ (words ("<DATE>") ("to" "through" "until") ("<DATE>")))
+
+((ruleid time-duration-expression-rule)
+ (stype "<TIME-EXPRESSION>")
+ (concept ?0)
+ (words ("<TIME-DURATION>" "<DATE>")))
+ 
+((ruleid single-time-modifier-can-be-time-expression-rule)
+ (stype "<TIME-EXPRESSION>")
+ (concept ?0)
+ (words ("<TIME-MODIFIER>")))
+  
+((ruleid specific-time-combination-rule-1)
+ (concept ":SPECIFIC-TIME:")
+ (words (":NUMBER:") (":SPECIFIC-TIME:")))
+  
+;; e.g. "five years"
+((ruleid time-number-rule)
+ (concept ?1)
+ (juxtaposed true)
+ (words ("<NUMBER>") ("<TIME-DURATION>")))
+ 
+;; 3/1/2018
+((ruleid modified-time-unit-rule)
+ (concept ?1)
+ (ordered true)
+ (words ("<TIME-MODIFIER>") (":TIME-UNIT:"))
+ (properties (modifier ?0) (time-unit ?1)))
+
+((ruleid modified-time-duration-rule)
+ (stype "<TIME-DURATION>")
+ (concept ?1)
+ (words ("<TIME-MODIFIER>") ("<TIME-DURATION>")))
+
+;; "currently drinks alcohol"
+;; Changed from Sentence to Predicate 3/8/2018
+;; 6/18/2018:  Added Thing
+((ruleid modified-time-expression-rule)
+ (stype "<PREDICATE>")
+ ;; (concept ?1) -- REMOVED 6/28/2018:  "Needs 24 hour assistance marked as ":HELP:"
+ (complex-concept)
+ (ordered true)
+ (words ("<TIME-MODIFIER>") ("<ACTION>" "<PREDICATE>" "<THING>"))
+ (relations (time-modifier ?* ?0) (event ?* ?1)))
+
+((ruleid per-time-unit-rule-1)
+ (concept ":PER-TIME-UNIT:")
+ (words ("per") (":TIME-UNIT:")))
+ 
+((ruleid compound-time-unit-rule)
+ (concept ?0)
+ (ordered true)
+ (words (":TIME-UNIT:") (":PREP:") (":TIME-UNIT:")))
+ 
+((ruleid prep-time-unit-rule)
+ (concept ?1)
+ (words (":PREP:") (":TIME-UNIT:")))
+ 
+;; TEST, 3/7/2018
+((ruleid test-compound-time-unit-rule)
+ (concept ":TIME-UNIT:")
+ (ordered true)
+ (words (":TIME-UNIT:") (":TIME-UNIT:")))
+ 
+ ;;;;;;;;;;;;;;;;;;;;
+;; Word rules
+
+((ruleid specific-time-rule-1)
+  (concept ":SPECIFIC-TIME:")
+  (words ("now" "today" "tomorrow" "yesterday" "yesterday morning" 
+  		"yesterday afternoon" "this morning" "this afternoon" 
+  		"4-5pm" "after work" "post-transplant")))
+  		
+((ruleid at-present-time-modifier-word-rule)
+  (concept ":CURRENTLY:")
+  (words ("present" "presently" "currently")))
+  		
+((ruleid specific-time-rule-2)
+  (concept ":SPECIFIC-TIME:")
+  (ordered true)
+  (words ("next" "previous" "last") ("day" "week" "evening")))
+
+((ruleid number-time-unit-rule)
+ (concept ":TIME-UNIT:")
+ (ordered true)
+ (pattern (":NUMBER:") (":TIME-UNIT:"))
+ (properties (number ?0) (time-unit ?1)))
+ 
+;; "weekly", "per year"
+((ruleid time-unit-rule) 
+  (concept ":TIME-UNIT:")
+  (words 
+    ("years" "year" "day" "days" "days of the week" "day of the week" 
+    "days out of the week"
+    "night" "nights" "night of the week" "nights of the week"
+	"week" "weeks" "month" "months" "hour" "hours" "hours of the day"
+	"minute" "minutes")))
+
+;; 6/11/2015
+((ruleid temporal-regularity-rule) 
+  (stype "<TIME-MODIFIER>")
+  (concept ":REGULARLY:")
+  (words 
+    ("monthly" "every month" "daily" "every day" "nightly" "every night" 
+	"weekly" "every week" "hourly" "every hour" "regularly" "frequently" 
+	 "always" "weekend" "weekends"))
+  (properties (frequency regular)))
+  
+((ruleid occasional-temporal-rule) 
+  (stype "<TIME-MODIFIER>")
+  (concept ":SOMETIMES:")
+  (words 
+    ("sometimes" "occasionally" "on occasion"))
+  (properties (frequency sometimes)))
+  
+((ruleid twenty-four-hour-time-rule) 
+  (concept ":TWENTY-FOUR-HOUR:")
+  (words 
+    ("24 hour" "24-hour" "24H")))
+
+((ruleid time-modifier-rule) 
+  (stype "<TIME-MODIFIER>")
+  (concept ":GENERAL-TIME:")
+  (words 
+    ("since" "ago" "until" "lasting until" "last" "lasting" 
+	"lasting up to" "until" "when" "current" "currently" "occasionally" 
+	"frequently" "infrequently" "occasionally" "regularly" "continually"
+	"later than" "up to" "recently" "at this time" "at present" "presently"
+	"last" "previous" "at times")))
+
+((ruleid at-pace-time-word-rule)
+ (concept ":TIME-UNIT:")
+ (words ("moderate pace" "quickly" "slowly")))
+
+)

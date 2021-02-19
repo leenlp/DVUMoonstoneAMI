@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-2-2019/12/30 18:14:43") 
+  (specialized) 
+  (example-snippet "he and his significant other drove") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-AND-FAMILY::DRIVE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-r01-live-with-family-predicate-rule-2-2017/10/09 22:06:39") 
+  (specialized) 
+  (example-snippet "lives with parents") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":LIVE-WITH-FAMILY:" ":LIVE-WITH-FF:")))
+
+)

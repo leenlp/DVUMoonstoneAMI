@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2018/06/16 13:31:51") 
+  (specialized) 
+  (example-snippet "he was discharged from recovery room in the care of his mother") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":DISCHARGE::PREP::HELP::PREP::FAMILY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

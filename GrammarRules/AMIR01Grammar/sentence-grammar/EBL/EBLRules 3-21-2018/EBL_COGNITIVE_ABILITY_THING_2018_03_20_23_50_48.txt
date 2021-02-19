@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COGNITIVE-ABILITY-THING::2018/03/20 23:50:48") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":COGNITIVE-ABILITY-THING:") 
+  (stype "<COGNITIVE-ABILITY-THING>") 
+  (window 16.0) 
+  (words 
+    (":COGNITIVE-ABILITY-MODE:") 
+    (":COGNITIVE-ABILITY-THING:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

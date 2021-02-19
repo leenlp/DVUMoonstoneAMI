@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-LIVE-WITH-PATIENT::2018/03/07 21:17:57") 
+  (specialized) 
+  (example-snippet "two of them live alone") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FAMILY-LIVE-WITH-PATIENT:") 
+  (stype "<LIVE-WITH-PERSON-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":MULTI-PERSON:") 
+    (":LIVING-ALONE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

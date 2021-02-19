@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2020/01/15 12:39:00") 
+  (specialized) 
+  (example-snippet "family provides adequate car") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF::PROVIDE::GOOD::CARE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HAS-ADL-DISABILITY::2018/01/12 00:47:08") 
+  (specialized) 
+  (example-snippet "patient remained disorganized") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-HAS-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":DISORGANIZATION:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

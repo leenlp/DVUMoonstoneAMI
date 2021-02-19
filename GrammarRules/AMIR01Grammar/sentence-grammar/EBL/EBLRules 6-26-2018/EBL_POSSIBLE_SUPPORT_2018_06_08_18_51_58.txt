@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE_SUPPORT::2018/06/08 18:51:58") 
+  (specialized) 
+  (example-snippet "sister  Margaret Canada  may be secondary caregiver") 
+  (ordered true) 
+  (sourceid "person-thing-thing-rule_2293") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (window 16.0) 
+  (words 
+    (":FAMILY:") 
+    (":CAREGIVER:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)
+    ("hasPropertyValue" ?1 directionality hypothetical)))
+
+)

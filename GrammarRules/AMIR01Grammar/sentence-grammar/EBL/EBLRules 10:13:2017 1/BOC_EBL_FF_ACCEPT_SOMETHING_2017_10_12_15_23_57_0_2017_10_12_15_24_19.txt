@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::FF-ACCEPT-SOMETHING::2017/10/12 15:23:57-0-2017/10/12 15:24:19") 
+  (specialized) 
+  (example-snippet "mom is comfortable with bulb suctioning") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":FF-ACCEPT-SOMETHING:")))
+
+)

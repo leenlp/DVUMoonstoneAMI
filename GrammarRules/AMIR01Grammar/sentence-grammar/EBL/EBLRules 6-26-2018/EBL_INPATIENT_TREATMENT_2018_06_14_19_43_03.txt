@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::INPATIENT-TREATMENT::2018/06/14 19:43:03") 
+  (specialized) 
+  (example-snippet "inpatient psychiatric hospitalization") 
+  (ordered true) 
+  (sourceid "property-thing-rule_7819") 
+  (concept ":INPATIENT-TREATMENT:") 
+  (stype "<INPATIENT-TREATMENT-THING>") 
+  (window 16.0) 
+  (words 
+    (":INPATIENT:<PROPERTY>") 
+    (":ADMISSION:<THING>")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

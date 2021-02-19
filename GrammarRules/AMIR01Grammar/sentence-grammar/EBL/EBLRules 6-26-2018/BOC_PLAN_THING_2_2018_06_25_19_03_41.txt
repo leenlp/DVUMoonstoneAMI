@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PLAN-THING:-2-2018/06/25 19:03:41") 
+  (specialized) 
+  (example-snippet "plan including options and risks") 
+  (ordered true) 
+  (concept ":PLAN-THING:") 
+  (stype "<PLAN-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":PLAN-ACTION::RISK-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

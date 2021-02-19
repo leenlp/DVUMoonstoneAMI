@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LEAVE-ADL-DEVICE-SOMEWHERE::2018/03/22 17:49:40") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":LEAVE-ADL-DEVICE-SOMEWHERE:") 
+  (stype "<USE-ADL-DEVICE>") 
+  (window 32.0) 
+  (words 
+    (":LEAVE:") 
+    (":ADL-DEVICE::PREP::HOME:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

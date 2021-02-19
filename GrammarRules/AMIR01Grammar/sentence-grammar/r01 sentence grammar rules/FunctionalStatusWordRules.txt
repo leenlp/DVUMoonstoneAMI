@@ -1,0 +1,647 @@
+'(
+wordrule
+
+((ruleid psychosocial-support-word-rule)
+ (concept ":PSYCHOSOCIAL-SUPPORT:")
+ (words ("psychosocial support")))
+ 
+((ruleid hand-foot-placement-word-rule)
+ (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:")
+ (words ("GOOD:" ":BETTER:" ":POOR:") (":HAND:" ":FOOT:") (":PLACEMENT:")))
+ 
+((ruleid minimal-contact-assistance-word-rule)
+ (concept ":MINIMAL-CONTACT-ASSISTANCE:")
+ (words ("minimal contact assistance" "sba" "standby assistance" "minimal assist" 
+ 			"minimal assistance" "min assist" "mod 2")))
+ 			
+((ruleid physical-therapy-word-rule)
+ (concept ":PHYSICAL-THERAPY:")
+ (words ("physical therapy" "physical therapist" "in-home pt" "rehab services" 
+ 		"skilled pt"
+		;; "rehab stay" 
+		"in-home therapy"
+		;; Every occurrence of "pt" gets mistaken for physical therapy...
+		;; "pt"  
+ )))
+ 
+;; 6/8/2018:  "he would benefit from a stay in rehab"
+((ruleid stay-at-rehab-thing)
+ (concept ":RESIDE-AT-FACILITY-THING:")
+ (ordered true)
+ (words ("stay") ("rehab" "<LIVING-FACILITY>")))
+
+((ruleid occupational-therapy-word-rule)
+ (concept ":OCCUPATIONAL-THERAPY:")
+ (words ("occupational therapy" "occupational therapist" "ot" "physical therapy" 
+ 			"post acute care" "pt/ot")))
+ 
+((ruleid therapy-word-rule)
+ (concept ":SPEECH-THERAPY:")
+ (words ("speech therapy")))
+ 
+((ruleid therapy-prompt-word-rule)
+ (concept ":THERAPY-PROMPT:")
+ (words ("prompt" "prompts" "cue" "cues" "direction" "directions" "redirection")))
+
+((ruleid general-therapy-word-rule)
+ (concept ":THERAPY:")
+ (words ("therapy" "treatment")))
+ 
+((ruleid independent-word-rule)
+ (concept ":INDEPENDENT:")
+ (words ("independent")))
+
+ ;; Before 12/8/2015
+((ruleid fall-rule-1)
+ (concept ":FALL:")
+ (words ("fall" "fell" "falling" "falls" "fallen" "falling spells")))
+
+((ruleid accident-rule-1)
+ (concept ":ACCIDENT:")
+ (words ("accident" "accidents")))
+
+((ruleid cane-walker-general-word-rule)
+ (concept ":ADL-CANE-WALKER:")
+ (words ("walker" "crutch" "crutches" "cane" "crutches/cane" "crutches/cane(s)/walker" 
+		"walker/cane" "w/c" "c/w" "quad cane" "gait belt" "fww")))
+		
+((ruleid other-adl-device-word-rule)
+ (concept ":ADL-DEVICE:")
+ (words ("hearing aid" "hearing aids" "assistive device" "assist device"
+ 		  "magnifier" "magnifying glass" "bed side commode" "bedside commode")))
+		
+((ruleid need-adl-device-phrase-rule)
+ (concept ":NEED-ADL-DEVICE:")
+ (words ("wheelchair bound")))
+		
+((ruleid wheelchair-general-word-rule)
+ (concept ":ADL-WHEELCHAIR:")
+ (words ("wheelchair" "wheel chair"  "scooter" )))
+			
+((ruleid general-iadl-rule)
+ (stype "<IADL-ACTIVITY>")
+ (concept ":IADL-ACTIVITY:")
+ (words (":HOMEMAKING:" "iadl" "iadls")))
+
+((ruleid contact-guard-assist-help-word-rule)
+ (concept ":SUPERVISION:")
+ (words ("contact guard assist" "contact assist" "guard assist" 
+ 		"supervision" "close supervision")))
+ 
+((ruleid speaking-word-rule)
+ (concept ":SPEAKING:")
+ (words ("speak" "speaking" "speech" "communicate" 
+ 		"communicates" ":EXPRESSION:" 
+ 		;; "answer" -- 7/25/2018:  "did not answer" does not imply ADL
+ 		"talk" "speak in sentences" "say her name" "say his name")))
+ 		
+((ruleid object-identification-word-rule)
+ (concept ":OBJECT-IDENTIFICATION:")
+ (words ("identify numbers")))
+ 		
+((ruleid tell-name-rule)
+ (concept ":SPEAKING:")
+ (ordered true)
+ (words ("tell") ("name" "his name" "her name")))
+ 		
+((ruleid expression-word-rule)
+ (concept ":EXPRESSION:")
+ (words ("expression")))
+ 
+((ruleid positional-action-word-rule)
+ (concept ":POSITIONAL-ACTION:")
+ (words ("sit" "sitting" "stand" "standing" "stand up" "supine"
+ 			"supine to sit" "supine to sitting" "sit to stand" "stand to sit"
+ 			"sitting to standing" "standing to sitting"
+ 			"seated" "assume upright posture" "up")))
+		
+((ruleid adl-walking-rule)
+ (concept ":WALKING:")
+ (words ("walk" "walking" "walks" "walked" 
+ 		;; "gait"
+		":AMBULATE:"
+		;; "full weight bearing"
+		)))
+		
+((ruleid gait-word-rule)
+ (concept ":GAIT:")
+ (words ("gait")))
+		
+((general-lack-of-ability-word-rule)
+ (concept ":UNABLE:")
+ (words (":DISABILITY:" ":INABILITY:" ":UNABLE:" ":LACK:")))
+
+((ruleid disability-thing-word-rule-1)
+ (concept ":DISABILITY:")
+ (words ("disability" "debilitation" "debility")))
+ 
+((ruleid disabled-property-word-rule-1)
+ (concept ":DISABLED:")
+ (words ("disabled")))
+ 
+((ruleid deconditioning-thing-word-rule-1)
+ (concept ":DECONDITIONING:")
+ (words ("deconditioning" "deconditioning/weakness" "deconditioning/fatigue")))
+ 
+((ruleid retirement-benefit-source-word-rule)
+ (concept ":DISABILITY-BENEFIT:")
+ (words ("social security" "ss" "ssi" ":RETIREMENT:") (":DISABILITY:")))
+
+((ruleid combined-retirement-disability-benefit-thing-word-rule)
+ (concept ":DISABILITY-BENEFIT:")
+ (ordered true)
+ (words (":DISABILITY:") (":BENEFIT:")))
+
+((ruleid retirement-thing-word)
+ (concept ":RETIREMENT:")
+ (words ("retirement")))
+ 
+((ruleid benefit-thing-word)
+ (concept ":BENEFIT:")
+ (words ("benefit" "benefits")))
+ 
+((ruleid insurance-benefit-thing-word)
+ (concept ":BENEFIT:")
+ (words ("insurance plan")))
+ 
+((ruleid adl-ambulatory-rule) 
+ (concept ":AMBULATE:")
+ (words ("ambulating" "ambulate" "ambulates" 
+		"ambulated" "ambulatory" "ambulalated" "ambulation")))
+		
+((ruleid adl-non-ambulatory-rule) 
+ (concept ":UNABLE-TO-WALK:")
+ (words ("non-ambulatory" "non ambulatory")))
+		
+((ruleid continent-word-rule)
+ (concept ":CONTINENT:")
+ (words ("continent")))
+ 
+((ruleid bathroom-use-word-rule)
+ (concept ":BATHROOM-USE:")
+ (words ("bathroom use" "toileting" 
+ 	;; "void" "voiding" -- Inability to void is condition, not ADL
+ 	)))
+
+;; "walking ability"
+((ruleid adl-activity-skills-rule-1)
+ (concept ":ADL-ACTIVITY:")
+ (words (":ADL-ACTIVITY:")
+	("skill" "skills" "ability" "abilities")))
+	
+	
+((ruleid independent-living-word-rule)
+ (concept ":INDEPENDENT-LIVING:")
+ (words ("independent living" "lives independently")))
+ 
+((ruleid adl-activity-absent-word-pre-rule) 
+  (concept ?1) 
+  (ordered true)
+  (words 
+    (":UNABLE:")
+    ("<ADL-ACTIVITY>")) 
+  (properties 
+    (directionality negated)))
+    
+((ruleid adl-activity-absent-word-post-rule) 
+  (concept ?0) 
+  (ordered true)
+  (words 
+    ("<ADL-ACTIVITY>") 
+    (":ABSENT:")) 
+  (properties 
+    (directionality negated)))
+	
+((ruleid adl-activity-word-rule)
+ (concept ":ADL-ACTIVITY:")
+ (words ("adl" "adls" "adl's" "adl completion" 
+ 			;; "baseline function" 
+ 			"ald" "i/adls" "self care" "self-care")))
+
+((ruleid adl-toileting-rule)
+ (concept ":TOILETING:")
+ (words ("toileting" "bathroom use" "toilet transfer")))
+
+((ruleid adl-dressing-rule-1)
+ (concept ":DRESSING:")
+ (words ("dress" "dressing" "getting dressed" "get dressed")))
+ 
+((ruleid wheelchair-transfer-rule-1)
+ (concept ":WHEELCHAIR-TRANSFER:")
+ (words (":ADL-WHEELCHAIR:") (":TRANSFER:")))
+ 
+((ruleid adl-transfer-rule-1)
+ (concept ":TRANSFER:")
+ (words ("transfer" "transfers" "transfer back" "oobtc")))
+ 
+((ruleid adl-dressing-rule-2)
+ (concept ":DRESSING:")
+ (ordered true)
+ (words (":DRESSING:") (":SELF:" "himself" "herself")))
+
+((ruleid adl-hygiene-rule)
+ (concept ":HYGIENE:")
+ (words ("groom" "grooming" "hygiene" "bath" "bathe" "bathing" "bathes" "take a bath" 
+			"shower" "showers"
+			"oral care" "dental care" "dental hygiene" "toilet hygiene")))
+
+((ruleid eat-food-rule)
+ (concept ":EATING-FOOD:")
+ (ordered true)
+ (words (":EAT:") (":FOOD:")))
+ 
+((ruleid eat-word-rule)
+ (concept ":EAT:")
+ (words ("eat" "eats" "eating" "ate" )))
+ 
+((ruleid adl-feeding-self-word-rule)
+ (concept ":EATING-FOOD:")
+ (ordered true)
+ (words ("feed" "feeding") ("himself" "herself" "self")))
+ 
+((ruleid meals-word-rule)
+ (concept ":FOOD:")
+ (words ("meals" "meal" "food" "diet" "lunch" "evening meal")))
+ 
+((ruleid adl-feeding-simple-word-rule)
+ (concept ":EATING-FOOD:")
+ (words ("feeding" "eating" "swallowing")))
+
+((ruleid iadl-homemaking-rule-1)
+ (concept ":HOMEMAKING:")
+ (words ("homemaking")))
+
+((ruleid iadl-chores-rule-1)
+ (stype "<IADL-ACTIVITY>")
+ (concept ":CHORES:")
+ (words ("chore" "chores" "dishes" "washing" "washing clothes" "cleaning" "shopping" "cooking")))
+ 
+((ruleid cooking-word-rule-1)
+ (stype "<ADL-ACTIVITY>")
+ (concept ":COOKING:")
+ (words ("cook" "cooks" "cook meals" "cooks meals" 
+ 			"prepare meals" "prepares meals")))
+ 			
+((ruleid prepare-word-rule)
+ (concept ":PREPARE:")
+ (words ("prepare" "prepares" "preparing")))
+  
+((ruleid iadl-meals-rule-1)
+ (concept ":FOOD:")
+ (words ("meal" "meals" "dinner")))
+ 
+((ruleid adl-furniture-word-rule)
+ (concept ":ADL-FURNITURE:")
+ (words (":BED:" ":CHAIR:" ":COUCH:" ":FURNITURE:")))
+
+((ruleid adl-general-furniture-word-rule)
+ (concept ":FURNITURE:")
+ (words ("furniture" "mattress")))
+ 
+((ruleid adl-furniture-bed-rule)
+ (concept ":BED:")
+ (words ("bed")))
+
+((ruleid adl-furniture-chair-rule)
+ (concept ":CHAIR:")
+ (words ("chair" "couch")))
+
+((ruleid adl-fixture-toilet-rule)
+ (concept ":TOILET:")
+ (words ("urinal" "toilet" "commode")))
+
+((ruleid adl-fixture-bath-rule)
+ (concept ":BATH:")
+ (words ("bath" "shower" "tub" "bathtub")))
+
+((ruleid sleeping-rule-1)
+ (concept ":SLEEPING:")
+ (words ("sleep" "sleeps" "slept" "sleeping")))
+ 
+((ruleid insomnia-word-rule-1)
+ (concept ":ADL-INSOMNIA:")
+ (words ("insomnia")))
+ 
+((ruleid insomnia-word-rule-2)
+ (concept ":ADL-INSOMNIA:")
+ (words (":DIFFICULTY:" ":INABILITY:" ":UNABLE:") (":SLEEPING:")))
+
+;; 3/21/2018
+((ruleid adl-destination-word-rule)
+ (concept ":ADL-DESTINATION:")
+ (words ("<ADL-OBJECT>" "<ADL-ROOM>")))
+ 
+((ruleid adl-rooms-rule)
+(concept ":ADL-ROOM:")
+ (words ("bath room" "bathroom" ":BEDROOM:" "kitchen" "classroom" )))
+ 
+((ruleid adl-rooms-rule)
+ (concept ":BEDROOM:")
+ (words ("bed room" "bedroom" "br")))
+ 
+((ruleid room-thing-word-rule)
+ (concept ":ROOM:")
+ (words ("room")))
+ 
+((ruleid adl-facility-rule)
+ (concept ":ADL-FACILITY:")
+ (words (":TOILET:" ":BATH:" ":SHOWER-THING:")))
+
+((ruleid adl-facility-rule)
+ (concept ":ADL-FURNITURE:")
+ (words (":BED:" ":CHAIR:" ":COUCH:")))
+ 
+ 
+ 
+;; 3/21/2018: TEST- THIS IS WAY TOO BROAD- THIS IS FOR PICKING UP THE HUGE RANGE
+;; OF SENTENCES WHERE THE WORDS ARE GENERALLY UNKNOWN FROM PREVIOUS TRAINING
+((ruleidXXX unable-to-do-something-rule)
+ (concept ":UNABLE-TO-DO-SOMETHING:")
+ (ordered true)
+ (words (":UNABLE:" ":INABILITY:") 
+ 		("<THING>" "<PREDICATE>" "<ACTION>")))
+ 
+((ruleid impairment-word-rule)
+ (concept ":IMPAIRMENT:")
+ (words ("impairment" "impairments""loss"
+ 		"unsteadiness" "instability" "instabilities" "deficit" "deficits")))
+ 		
+((ruleid impaired-word-rule)
+ (concept ":IMPAIRED:")
+ (words ("paralytic" "paretic" "hemiparetic" 
+ 		"hemiplegic" "paraplegic" "quadriplegic"
+ 		"impaired" "unsteady" "unstable" "abnormal")))
+
+((ruleid steady-word-rule)
+ (concept ":NO-IMPAIRMENT:")
+ (words ("steady")))
+ 
+((ruleid adl-therapy-word-rule)
+ (concept ":ADL-THERAPY:")
+ (words ("gait" ":FUNCTIONAL-MOBILITY:" ":BED-MOBILITY:" 
+ 			":BALANCE:" ":POSITIONAL-BALANCE-THING:") 
+ 		("training" "therapy" "assistance")))
+ 
+((ruleid adl-functional-mobility-word-rule)
+ (concept ":FUNCTIONAL-MOBILITY:")
+ (words ("functional mobility" "bed mobility")))
+ 
+((ruleid general-adl-activity-word-rule)
+ (concept ":ADL-ACTIVITY:")
+ (words ("activities of daily living" "daily living activities")))
+
+((ruleid adl-activity-type-rule)
+ (stype "<ADL-ACTIVITY>")
+ (concept ":ADL-ACTIVITY:")
+ (words (":WALKING:" ":AMBULATE:" ":BATHROOM-USE:" ":TOILETING:" ":DRESSING:"  
+			":HYGIENE:" ":CHORES:" ":COOKING:" ":SPEAKING:"
+			":EATING-FOOD:" ":POSITIONAL-ACTION:"
+			":ADL-SLEEPING:" ":TRANSFER:"
+			;; ":SLEEPING:" -- 3/21/2018:  not annotated in gold standard
+			;; ":EATING:" ;; 3/12/2018:  Eating usually mentioned wrt appetite
+		)))
+		
+((ruleid sleeping-adl-related-phrase-rule)
+ (concept ":ADL-SLEEPING:")
+ (words ("bed mobility")))
+ 
+((ruleid adl-utility-item-rule)
+ (concept ":ADL-OBJECT:")
+ (words ("soap" "shampoo")))
+
+ ;; Cognitive abilities
+((ruleid special-cognitive-ability-deficit-rule)
+ (concept ":SPECIAL-COGNITIVE-ABILITY-DEFICIT:")
+ (words (":SPECIAL-COGNITIVE-ABILITY-THING:") (":DEFICIT:")))
+ 
+((ruleid general-cognitive-ability-deficit-rule)
+ (concept ":GENERAL-COGNITIVE-ABILITY-DEFICIT:")
+ (words (":GENERAL-COGNITIVE-ABILITY-THING:") (":DEFICIT:")))
+ 
+((ruleid rating-scale-thing-rule)
+ (concept ":RATING-SCALE:")
+ (words ("mattis dementia rating scale")))
+ 
+((ruleid memory-loss-thing-rule)
+ (concept ":MEMORY-LOSS:")
+ (words ("memory loss")))
+ 
+((ruleid short-term-memory-loss-thing-rule)
+ (concept ":SHORT-TERM-MEMORY-LOSS:")
+ (ordered true)
+ (words (":SHORT-TERM:") (":MEMORY-LOSS:")))
+ 
+((ruleid conditions-causing-cognitive-ability-deficit-rule)
+ (concept ":ATTENTION-DEFICIT-DISORDER:")
+ (words ("attention deficit disorder" 
+ 		"attention deficit hyperactivity disorder" "adhd")))
+ 
+((ruleid cognitive-ability-word-rule-1)
+ (concept ":COGNITIVE-ABILITY-THING:")
+ (words (":MEMORY-THING:" ":UNDERSTAND-THING:" ":FOCUS-THING:" 
+ 			":ORIENT-THING:" ":LANGUAGE-SKILL-THING:")))
+ 
+((ruleid cognitive-ability-word-rule-2)
+ (concept ":COGNITIVE-ABILITY-THING:")
+ (ordered true)
+ (words (":COGNITIVE-ABILITY-MODE:") (":COGNITIVE-ABILITY-THING:")))
+ 
+;;;;;
+((ruleid cognitive-ability-action-word-rule)
+ (concept ":COGNITIVE-ABILITY-ACTION:")
+ (words (":MEMORY-ACTION:" ":UNDERSTAND-ACTION:" ":FOCUS-ACTION:" 
+ 			":ORIENT-ACTION:" ":LANGUAGE-SKILL-ACTION:")))
+ 			
+((ruleid cognitive-skill-action-word-rule)
+ (concept ":LANGUAGE-SKILL-ACTION:")
+ (words ("read" "write" "spell")))
+
+((ruleid cognitive-skill-thing-word-rule)
+ (concept ":LANGUAGE-SKILL-THING:")
+ (words ("reading" "writing" "spelling" "word finding" ":SPEAKING:")))
+ 
+((ruleid language-skill-characteristic-thing-word-rule)
+ (concept ":LANGUAGE-SKILL-THING:")
+ (words ("prosody")))
+
+((ruleid focus-action-word-rule)
+ (concept ":FOCUS-ACTION:")
+ (words ("concentrate" "focus" "aware")))
+ 
+((ruleid focus-thing-word-rule)
+ (concept ":FOCUS-THING:")
+ (words  ("concentration" "focus" "attention" "awareness")))
+ 
+((ruleid understand-action-word-rule)
+ (concept ":UNDERSTAND-ACTION:")
+ (words ("comprehend" "understand")))
+ 
+((ruleid understand-thing-word-rule)
+ (concept ":UNDERSTAND-THING:")
+ (words ("comprehension" "understanding")))
+
+((ruleid remember-action-word-rule)
+ (concept ":MEMORY-ACTION:")
+ (words ("remember" "recall")))
+
+((ruleid remember-thing-word-rule)
+ (concept ":MEMORY-THING:")
+ (words ("memory" "recall")))
+ 
+((ruleid orient-action-word-rule)
+ (concept ":ORIENT-ACTION:")
+ (words ("orient" "orients" "orienting" "oriented")))
+ 
+((ruleid orient-thing-word-rule)
+ (concept ":ORIENT-THING:")
+ (words ("orientation")))
+ 
+((ruleid tolerance-thing-word-rule)
+ (concept ":TOLERANCE:")
+ (words ("tolerance")))
+
+((ruleid tolerate-action-word-rule)
+ (concept ":TOLERATE:")
+ (words ("tolerate")))
+
+
+;;;;;
+
+((ruleid orient-to-time-and-place-predicate-rule)
+ (concept ":ORIENT-TO-TIME-AND-PLACE:")
+ (words (":ORIENT-ACTION:" ":ORIENT-THING:") (":TIME-AND-PLACE:")))
+ 
+((ruleid level-of-consciousness-thing-rule)
+ (concept ":LEVEL-OF-CONSCIOUSNESS:")
+ (words ("level of consciousness" "loc")))
+ 
+((ruleid cognitive-ability-mode-word-rule)
+ (concept ":COGNITIVE-ABILITY-MODE:")
+ (words ("auditory" "visual" "receptive" "expressive" "verbal" 
+ 		"proprioceptive")))
+ 		
+;; General rule for diminution of functional, cognitive and perceptual
+;; ability, e.g. "nerve conduction loss"
+((ruleid functional-status-ability-state-general-rule)
+ (stype ?0)
+ (complex-concept)
+ (words ("<FUNCTIONAL-STATUS-ABILITY>" "<PHYSICAL-STATE>" 
+ 			":SPECIFIC-COGNITIVE-ABILITY-THING:" 
+ 			":GENERAL-COGNITIVE-ABILITY-THING:"
+ 			":PREP::SPECIFIC-COGNITIVE-ABILITY-THING:" 
+ 			":PERCEPTION-MODE-THING:" ":PREP::PERCEPTION-MODE-THING:" 
+ 			":NEUROLOGICAL-ABILITY-THING:" ":PREP::NEUROLOGICAL-ABILITY-THING:"
+ 			":MEMORY-ACTION:" ":UNDERSTAND-ACTION:" ":FOCUS-ACTION:" 
+ 			":ORIENT-ACTION:" ":LANGUAGE-SKILL-ACTION:"
+ 			"<COGNITIVE-ABILITY-ACTION>" "<COGNITIVE-ABILITY-THING>")
+ 		("<ADL-ABILITY-THING>" "<PHYSICAL-STATE-THING>" "<ABSENCE>" 
+ 		":IMPAIRMENT:" ":PROBLEM:" ":DECREASED:" ":IMPAIRED:" ":UNABLE:"
+ 		"<POOR-QUALITY-PROPERTY>" "<GENERAL-QUALITY-PROPERTY>")))
+ 		
+;; 6/18/2018, e.g. "unable to focus"
+;; 7/19/2018- This is subsumed by functional-status-ability-state-general-rule
+((ruleidXXX unable-to-perform-cognitive-ability-action-rule)
+ (complex-concept)
+ (ordered-true)
+ (words (":UNABLE:") 
+ 		("<COGNITIVE-ABILITY-ACTION>" "<COGNITIVE-ABILITY-THING>")))
+ 		
+ 
+((ruleidXXX unable-to-perform-learned-cognitive-ability-action-rule)
+ (complex-concept)
+ (ordered-true)
+ (words (":UNABLE:") 
+ 		(":MEMORY-ACTION:" ":UNDERSTAND-ACTION:" ":FOCUS-ACTION:" 
+ 			":ORIENT-ACTION:" ":LANGUAGE-SKILL-ACTION:")))
+ 
+((ruleid dysarthric-property-word-rule)
+ (concept ":DYSARTHRIC:")
+ (words ("dysarthric")))
+ 
+((ruleid dysarthria-property-word-rule)
+ (concept ":DYSARTHRIA:")
+ (words ("dysarthria")))
+ 
+((ruleid aphasic-property-word-rule)
+ (concept ":APHASIC:")
+ (words ("aphasic")))
+ 
+((ruleid aphasia-property-word-rule)
+ (concept ":APHASIA:")
+ (words ("aphasia" "aphasias" "dysphasia")))
+ 
+((ruleid neurological-ability-word-rule-1)
+ (concept ":NEUROLOGICAL-ABILITY-THING:")
+ (words ("coordination" "balance")))
+ 
+((ruleid deficit-word-rule)
+ (concept ":DEFICIT:")
+ (words ("deficit" "deficits" "deficient" "defective" "limited" 
+ 			"unintelligible")))
+
+((ruleid ventilation-thing-word-rule)
+ (concept ":MECHANICAL-VENTILATION:")
+ (words ("mechanical ventilation")))
+ 
+((ruleid ventilation-property-word-rule)
+ (concept ":VENTILATED:")
+ (words ("ventilated" "ventillated")))
+
+((ruleid intubated-property-word-rule)
+ (concept ":INTUBATED:")
+ (words ("intubated")))
+ 
+((ruleid examination-word-rule)
+ (concept ":EXAM:")
+ (words ("exam" "examination" "test" "testing" "evaluation" "eval")))
+ 
+((ruleid examination-mode-plus-test-rule)
+ (concept ":EXAM:")
+ (ordered true)
+ (words (":EXAM-MODE:") (":EXAM:")))
+ 
+((ruleid examination-mode-property-rule)
+ (concept ":EXAM-MODE:")
+ (words ("neurocognitive")))
+ 
+((ruleid minimal-contact-assistance-word-rule)
+ (concept ":MINIMAL-CONTACT-ASSISTANCE:")
+ (words ("minimal contact assistance" "sba" "standby assistance")))
+ 
+((ruleid toileting-is-bathroom-use-rule)
+ (concept ":BATHROOM-USE:")
+ (words (":TOILETING:")))
+ 
+((ruleid bladder-control-is-toileting-rule)
+ (concept ":TOILETING:")
+ (words ("bladder") ("control")))
+ 
+((ruleid range-of-motion-thing-word-rule)
+ (concept ":RANGE-OF-MOTION:")
+ (words ("rom" "arom" "range of motion" "range-of-motion")))
+ 
+((ruleid limited-by-health-thing-rule)
+ (complex-concept)
+ (ordered true)
+ (words (":LIMITED-BY:") ("<HEALTH-THING>")))
+ 
+((ruleid safe-property-word-rule)
+ (concept ":SAFE:")
+ (words ("safe")))
+ 
+((ruleid static-property-word-rule)
+ (concept ":STATIC:")
+ (words ("static")))
+ 
+((ruleid dynamic-property-word-rule)
+ (concept ":DYNAMIC:")
+ (words ("dynamic")))
+ 
+((ruleid balance-thing-word-rule)
+ (concept ":BALANCE:")
+ (words ("balance")))
+
+ 
+)
+
+

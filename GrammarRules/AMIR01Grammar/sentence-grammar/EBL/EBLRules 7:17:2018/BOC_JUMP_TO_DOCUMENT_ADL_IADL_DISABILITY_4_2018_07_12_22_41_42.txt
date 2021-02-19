@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-4-2018/07/12 22:41:42") 
+  (specialized) 
+  (example-snippet "requiring transfer back to supine") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED::TRANSFER::POSITIONAL-ACTION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

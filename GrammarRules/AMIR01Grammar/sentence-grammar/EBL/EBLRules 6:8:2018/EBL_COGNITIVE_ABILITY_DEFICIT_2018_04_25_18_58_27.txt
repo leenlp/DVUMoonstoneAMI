@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COGNITIVE-ABILITY-DEFICIT::2018/04/25 18:58:27") 
+  (specialized) 
+  (example-snippet "difficulty remembering names") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":COGNITIVE-ABILITY-DEFICIT:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 32.0) 
+  (words 
+    (":INABILITY:") 
+    (":REMEMBER::THINGS-TO-REMEMBER:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

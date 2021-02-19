@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::INVOLVED-IN-CARE::2018/06/11 18:27:51") 
+  (specialized) 
+  (example-snippet "involved in patients care") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule_38322") 
+  (concept ":INVOLVED-IN-CARE:") 
+  (stype "<PROVISION-OF-CARE>") 
+  (window 16.0) 
+  (words 
+    (":INVOLVED:<THING>") 
+    (":PREP::PROVISION-OF-CARE:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

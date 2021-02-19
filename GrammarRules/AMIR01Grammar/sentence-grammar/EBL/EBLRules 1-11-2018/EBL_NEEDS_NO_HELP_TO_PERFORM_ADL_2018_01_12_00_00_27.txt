@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NEEDS-NO-HELP-TO-PERFORM-ADL::2018/01/12 00:00:27") 
+  (specialized) 
+  (example-snippet "needs no help to walk to the bathroom") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":NEEDS-NO-HELP-TO-PERFORM-ADL:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":NEED:<ACTION>") 
+    (":NO-HELP-TO-MOVE-TO-ADL-FACILITY:"
+	":NO-HELP-TO-PERFORM-ADL:")) 
+  (properties 
+    (action "?0") 
+    (object "?1"))
+  (tests (notneg ?0) (notneg ?1)))
+
+)

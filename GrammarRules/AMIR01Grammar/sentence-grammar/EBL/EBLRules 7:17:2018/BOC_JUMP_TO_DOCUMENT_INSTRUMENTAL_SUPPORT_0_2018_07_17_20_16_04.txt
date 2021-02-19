@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+;; Removed 8/3/2018.  Annotators aren't NOW regarding VAD as support-related
+  (ruleidXXX "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/07/17 20:16:04") 
+  (specialized) 
+  (example-snippet "VAD device") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":VAD-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

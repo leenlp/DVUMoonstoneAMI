@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::START-USING-ADL-DEVICE::2018/03/22 18:17:16") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":START-USING-ADL-DEVICE:") 
+  (stype "<USE-ADL-DEVICE>") 
+  (window 16.0) 
+  (words 
+    (":START:") 
+    (":USE::ADL-DEVICE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

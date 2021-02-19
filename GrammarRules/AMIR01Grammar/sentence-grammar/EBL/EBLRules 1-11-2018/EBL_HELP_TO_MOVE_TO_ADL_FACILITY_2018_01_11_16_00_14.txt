@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HELP-TO-MOVE-TO-ADL-FACILITY::2018/01/11 16:00:14") 
+  (specialized) 
+  (example-snippet "help to walk to bathroom") 
+  (ordered true) 
+  (sourceid "action-to-predicate-rule") 
+  (concept ":HELP-TO-MOVE-TO-ADL-FACILITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":HELP:") 
+    (":PREP::MOVE-TO-ADL-FACILITY:")) 
+  (properties 
+    (action "?0") 
+    (predicate "?1"))
+  (tests (notneg ?0) (notneg ?1)))
+
+)

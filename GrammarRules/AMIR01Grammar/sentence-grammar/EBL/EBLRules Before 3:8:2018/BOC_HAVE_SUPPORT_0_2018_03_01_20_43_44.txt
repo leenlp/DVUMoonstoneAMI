@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HAVE-SUPPORT:-0-2018/03/01 20:43:44") 
+  (specialized) 
+  (example-snippet "She comes here today with a friend") 
+  (ordered true) 
+  (concept ":HAVE-SUPPORT:") 
+  (stype "<RECEIVE-SUPPORT-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-HERE-WITH-FF:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

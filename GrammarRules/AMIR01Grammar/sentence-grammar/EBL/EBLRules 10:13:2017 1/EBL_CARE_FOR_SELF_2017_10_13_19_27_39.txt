@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::CARE-FOR-SELF::2017/10/13 19:27:39") 
+  (specialized) 
+  (example-snippet "care for herself") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":CARE-FOR-SELF:") 
+  (stype "<PROVISION-OF-SELF-CARE>") 
+  (window 32.0) 
+  (words 
+    (":CARE:") 
+    (":PREP::SELF:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")))
+
+)

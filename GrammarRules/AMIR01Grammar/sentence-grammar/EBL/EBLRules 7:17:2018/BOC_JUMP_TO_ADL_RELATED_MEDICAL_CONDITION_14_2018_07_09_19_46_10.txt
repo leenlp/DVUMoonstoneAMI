@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-14-2018/07/09 19:46:10") 
+  (specialized) 
+  (example-snippet "long term memory loss") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":LONG-TERM::MEMORY-LOSS:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MOVE-TO-FACILITY::2018/03/13 13:19:49") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":MOVE-TO-FACILITY:") 
+  (stype "<MOVE-TO-OR-FROM-LOCATION-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":LIKELY:<STATE>") 
+    (":MOVE-TO-FACILITY:")) 
+  (properties 
+    (directionality hypothetical)
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

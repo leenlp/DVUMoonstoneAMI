@@ -1,0 +1,18 @@
+'(
+wordrule
+(
+  (ruleid "EBL::AT-TIME::2017/10/23 22:12:45") 
+  (specialized) 
+  (example-snippet "in three weeks") 
+  (ordered true) 
+  (sourceid "pp-rule") 
+  (concept ":AT-TIME:") 
+  (stype "<TIME-MODIFIER>") 
+  (window 16.0) 
+  (words 
+    (":PREP:") 
+    (":TIME-UNIT:<THING>")) 
+  (properties 
+    (thing "?1")))
+
+)

@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+;; Removed 3/28/2018:  Matching "mother, sister and her"
+  (ruleidXXX "EBL::POSSIBLE-SUPPORT::2017/10/16 13:07:47") 
+  (specialized) 
+  (example-snippet "The patients family and she") 
+  (ordered true) 
+  (sourceid "general-thing-thing-conjunct-rule") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 16.0) 
+  (flags conj) 
+  (words 
+    (":FAMILY:") 
+    ("@conjunct-word-rule@") 
+    (":PATIENT:")))
+
+)

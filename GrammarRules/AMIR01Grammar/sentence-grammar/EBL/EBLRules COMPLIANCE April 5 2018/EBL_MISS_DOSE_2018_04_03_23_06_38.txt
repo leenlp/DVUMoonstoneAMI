@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MISS-DOSE::2018/04/03 23:06:38") 
+  (specialized) 
+  (example-snippet "miss a dose") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":MISS-DOSE:") 
+  (stype "<MEDICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":MISS:") 
+    (":DOSE:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

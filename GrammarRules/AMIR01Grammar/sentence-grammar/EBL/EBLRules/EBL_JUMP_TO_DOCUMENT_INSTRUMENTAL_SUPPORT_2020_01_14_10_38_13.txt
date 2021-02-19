@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT::2020/01/14 10:38:13") 
+  (specialized) 
+  (example-snippet "depended on her mother") 
+  (ordered true) 
+  (sourceid "dependent-on-ff-predicate-rule") 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (window 16.0) 
+  (words 
+    (":DEPEND-ACTION:") 
+    (":WITH-FF:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

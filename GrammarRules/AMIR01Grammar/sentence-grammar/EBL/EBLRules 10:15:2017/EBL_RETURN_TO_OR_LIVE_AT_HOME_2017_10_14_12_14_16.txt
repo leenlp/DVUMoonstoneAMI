@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::RETURN-TO-OR-LIVE-AT-HOME::2017/10/14 12:14:16") 
+  (specialized) 
+  (example-snippet "discharged to return home to her parents") 
+  (ordered true) 
+  (sourceid "action-to-predicate-rule") 
+  (concept ":RETURN-TO-OR-LIVE-AT-HOME:") 
+  (stype "<LIVE-AT-HOME-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":DISCHARGE:") 
+    (":RETURN-TO-OR-LIVE-AT-HOME:")) 
+  (properties 
+    (action "?0") 
+    (predicate "?1")) 
+  (tests 
+    (notneg ?0) 
+    (notneg ?1)))
+
+)

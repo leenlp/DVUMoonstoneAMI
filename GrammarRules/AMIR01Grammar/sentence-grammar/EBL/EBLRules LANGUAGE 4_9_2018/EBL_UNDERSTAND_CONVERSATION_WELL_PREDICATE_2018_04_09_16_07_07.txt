@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::UNDERSTAND-CONVERSATION-WELL-PREDICATE::2018/04/09 16:07:07") 
+  (specialized) 
+  (example-snippet "seems to understand our conversation fairly well") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":UNDERSTAND-CONVERSATION-WELL-PREDICATE:") 
+  (stype "<UNDERSTAND-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":APPEAR:") 
+    (":UNDERSTAND-CONVERSATION-WELL-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

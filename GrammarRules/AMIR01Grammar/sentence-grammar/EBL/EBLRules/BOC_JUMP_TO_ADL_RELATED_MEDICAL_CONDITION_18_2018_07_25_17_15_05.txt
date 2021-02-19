@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-18-2018/07/25 17:15:05") 
+  (specialized) 
+  (example-snippet "could not move his left side") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":UNABLE::MOVE::ANATOMIC-APPENDAGE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-11-2018/07/19 15:42:54") 
+  (specialized) 
+  (example-snippet "Patient reports multiple falls") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::COMMUNICATE-AFFIRMATIVELY::FALL:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:ADL-ACTIVITY:-20-2018/07/19 19:18:10") 
+  (specialized) 
+  (example-snippet "taskssuch as dressing grooming and feeding") 
+  (ordered true) 
+  (concept ":ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (bagofconcepts true) 
+  (words 
+    (":GENERAL-ADL-TASK::ADL-ACTIVITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY::2018/01/12 00:11:07") 
+  (specialized) 
+  (example-snippet "need of help walking to the bathroom") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 32.0) 
+  (words 
+    (":NEED:<ACTION>") 
+    (":PREP::HELP-TO-MOVE-TO-ADL-FACILITY:"
+	":PREP::HELP-TO-PERFORM-ADL-ACTIVITY:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]"))
+ (tests (notneg ?1)))
+
+)

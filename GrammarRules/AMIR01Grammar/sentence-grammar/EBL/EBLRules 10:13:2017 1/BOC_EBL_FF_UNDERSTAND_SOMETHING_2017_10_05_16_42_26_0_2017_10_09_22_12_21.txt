@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::FF-UNDERSTAND-SOMETHING::2017/10/05 16:42:26-0-2017/10/09 22:12:21") 
+  (specialized) 
+  (example-snippet "Mom understands the admission process") 
+  (ordered true) 
+  (concept ":HAVE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":FF-UNDERSTAND-SOMETHING:")))
+
+)

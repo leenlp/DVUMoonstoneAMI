@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-0-2018/07/03 13:26:38") 
+  (specialized) 
+  (example-snippet "discharged to return home to her parents") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DISCHARGE-HOME-TO-LIVE-WITH-FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

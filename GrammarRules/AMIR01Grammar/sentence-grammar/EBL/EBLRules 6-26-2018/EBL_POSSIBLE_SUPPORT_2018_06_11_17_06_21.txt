@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2018/06/11 17:06:21") 
+  (specialized) 
+  (example-snippet "primary caregiver posttransplant will be her youngest daughter") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule_20841") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":FF-CARE-PROVIDER:") 
+    (":SPECIFIC-TIME::FAMILY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

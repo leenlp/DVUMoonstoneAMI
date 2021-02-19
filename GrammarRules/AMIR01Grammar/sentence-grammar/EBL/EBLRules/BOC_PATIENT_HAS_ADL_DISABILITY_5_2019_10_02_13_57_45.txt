@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-HAS-ADL-DISABILITY:-5-2019/10/02 13:57:45") 
+  (specialized) 
+  (example-snippet "he relies on the use of a walker") 
+  (ordered true) 
+  (concept ":PATIENT-HAS-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-NEEDS-ADL-DEVICE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

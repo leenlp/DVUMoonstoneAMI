@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-19-2018/07/19 19:03:54") 
+  (specialized) 
+  (example-snippet "required mod A of 2 to complete transfer from bed to chair") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED::MODERATE::COMPLETE-PROPERTY::MOVE-TO-OR-FROM-ADL-DESTINATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

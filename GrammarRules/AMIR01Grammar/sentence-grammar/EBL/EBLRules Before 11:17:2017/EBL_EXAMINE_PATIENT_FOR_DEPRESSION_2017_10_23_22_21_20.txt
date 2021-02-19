@@ -1,0 +1,24 @@
+'(
+wordrule
+(
+  (ruleid "EBL::EXAMINE-PATIENT-FOR-DEPRESSION::2017/10/23 22:21:20") 
+  (specialized) 
+  (example-snippet "see him back in three weeks for the depression") 
+  (ordered true) 
+  (sourceid "action-thing-thing-rule") 
+  (concept ":EXAMINE-PATIENT-FOR-DEPRESSION:") 
+  (stype "<EXAMINE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":EXAMINE:<ACTION>") 
+    (":PATIENT:") 
+    (":AT-TIME::PREP::DEPRESSION:")) 
+  (properties 
+    (action "?0") 
+    (first-object "?1") 
+    (second-object "?2")) 
+  (tests 
+    (not 
+      ("isEDFormActionWord" ?0))))
+
+)

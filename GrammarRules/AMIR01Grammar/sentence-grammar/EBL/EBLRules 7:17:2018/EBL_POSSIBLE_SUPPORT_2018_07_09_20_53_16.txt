@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::POSSIBLE-SUPPORT::2018/07/09 20:53:16") 
+  (specialized) 
+  (example-snippet "family is able to arrange 24 hour assist") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":FAMILY:") 
+    (":ABLE::CONSTANT-PROVISION-OF-CARE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

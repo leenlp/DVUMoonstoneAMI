@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-TRAVEL-WITH-FF::2017/10/10 18:08:45") 
+  (specialized) 
+  (example-snippet "she comes here today with her friend") 
+  (ordered true) 
+  (sourceid "person-action-thing-rule") 
+  (concept ":PATIENT-TRAVEL-WITH-FF:") 
+  (stype "<TRAVEL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":TRAVEL-WITH-FF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")))
+
+)

@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION::2018/02/19 20:13:39") 
+  (specialized) 
+  (example-snippet "patient endorsed paranoid delusions") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":COMMUNICATE-AFFIRMATIVELY::MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

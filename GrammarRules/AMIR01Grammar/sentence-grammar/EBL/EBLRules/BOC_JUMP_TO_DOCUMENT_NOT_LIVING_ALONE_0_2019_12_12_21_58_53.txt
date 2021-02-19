@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:-0-2019/12/12 21:58:53") 
+  (specialized) 
+  (example-snippet "He lives in Spanish Fork area with his wife") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::LIVE-AT::PREP::CITY::WITH-FF:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

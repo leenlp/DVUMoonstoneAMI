@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-1-2018/06/25 17:13:49") 
+  (specialized) 
+  (example-snippet "husband who is able to provide 24 hour supervisionassistance") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-WHO-PROVIDES-HELP-TO-PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

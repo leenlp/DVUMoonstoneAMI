@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADMITTED-FROM-LIVING-FACILITY::2018/02/28 18:24:33") 
+  (specialized) 
+  (example-snippet "brought down by way of ambulance from XYZ Nursing Home") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":ADMITTED-FROM-LIVING-FACILITY:") 
+  (stype "<ADMIT-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ACCOMPANY:") 
+    (":PREP::NURSING-HOME:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

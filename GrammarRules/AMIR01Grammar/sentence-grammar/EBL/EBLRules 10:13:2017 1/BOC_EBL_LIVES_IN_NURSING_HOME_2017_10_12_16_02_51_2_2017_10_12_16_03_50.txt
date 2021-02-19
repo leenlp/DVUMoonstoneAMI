@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleidXXX "BOC-EBL::LIVES-IN-NURSING-HOME::2017/10/12 16:02:51-2-2017/10/12 16:03:50") 
+  (specialized) 
+  (example-snippet "now is in nursing facility") 
+  (ordered true) 
+  (concept ":NOT-LIVING-ALONE:") 
+  (stype "<LIVING-ALONE-PREDICATE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":LIVES-IN-NURSING-HOME:" ":LIVES-IN-FACILITY:")))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-DEMENTIA:-5-2018/04/23 19:30:20") 
+  (specialized) 
+  (example-snippet "dementia medications") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-DEMENTIA:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DEMENTIA-MEDICATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

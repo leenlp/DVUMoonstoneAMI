@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LOCALIZED-MOVEMENT::2018/04/25 18:14:31") 
+  (specialized) 
+  (example-snippet "left sided movement") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":LOCALIZED-MOVEMENT:") 
+  (stype "<MOVE-THING>") 
+  (window 16.0) 
+  (words 
+    (":ANATOMIC-MODIFIER:<PROPERTY>") 
+    (":MOVEMENT:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

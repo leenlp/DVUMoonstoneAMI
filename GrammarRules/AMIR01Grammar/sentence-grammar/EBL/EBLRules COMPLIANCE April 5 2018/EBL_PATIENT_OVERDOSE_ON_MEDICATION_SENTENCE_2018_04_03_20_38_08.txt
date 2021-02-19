@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-OVERDOSE-ON-MEDICATION-SENTENCE::2018/04/03 20:38:08") 
+  (specialized) 
+  (example-snippet "he overdosed on haldol") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-OVERDOSE-ON-MEDICATION-SENTENCE:") 
+  (stype "<BEHAVIOR-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":OVERDOSE-ON-MEDICATION-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

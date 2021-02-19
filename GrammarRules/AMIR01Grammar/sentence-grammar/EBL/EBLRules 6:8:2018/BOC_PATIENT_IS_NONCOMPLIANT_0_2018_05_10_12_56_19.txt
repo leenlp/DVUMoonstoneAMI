@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:PATIENT-IS-NONCOMPLIANT:-0-2018/05/10 12:56:19") 
+  (specialized) 
+  (example-snippet "She is not going take to any further tamoxifen") 
+  (ordered true) 
+  (concept ":PATIENT-IS-NONCOMPLIANT:") 
+  (stype "<BEHAVIOR-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-TAKE-PRESCRIPTION-MEDICATION-SENTENCE:")) 
+  (tests 
+    ("neg" ?0)))
+
+)

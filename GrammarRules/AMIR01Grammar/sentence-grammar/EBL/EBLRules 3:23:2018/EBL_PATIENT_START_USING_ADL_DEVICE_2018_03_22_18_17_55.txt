@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-START-USING-ADL-DEVICE::2018/03/22 18:17:55") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-START-USING-ADL-DEVICE:") 
+  (stype "<PATIENT-USE-ADL-DEVICE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":START-USING-ADL-DEVICE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

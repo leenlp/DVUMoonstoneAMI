@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT::2020/01/02 15:56:10") 
+  (specialized) 
+  (example-snippet "debriefing with patient and spouse") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (window 16.0) 
+  (words 
+    (":EDUCATION:") 
+    (":PREP::PATIENT-AND-FAMILY:" ":PATIENT-AND-FAMILY:" "<FAMILY>")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

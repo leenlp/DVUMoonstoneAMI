@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-3-2019/12/11 15:15:57") 
+  (specialized) 
+  (example-snippet "Pt will need post acute care") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::NEED::OCCUPATIONAL-THERAPY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

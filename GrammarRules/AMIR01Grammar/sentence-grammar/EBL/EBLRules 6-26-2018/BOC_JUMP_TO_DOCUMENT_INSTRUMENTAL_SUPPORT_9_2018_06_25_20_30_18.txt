@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-9-2018/06/25 20:30:18") 
+  (specialized) 
+  (example-snippet "Met with pts daughter in a separate room") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":MEET::PREP::FF::PREP::ROOM:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

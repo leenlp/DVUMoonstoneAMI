@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-UNDERSTAND-CONVERSATION-WELL-SENTENCE::2018/04/09 16:07:28") 
+  (specialized) 
+  (example-snippet "The patient seems to understand our conversation fairly well") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PATIENT-UNDERSTAND-CONVERSATION-WELL-SENTENCE:") 
+  (stype "<UNDERSTAND-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":UNDERSTAND-CONVERSATION-WELL-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

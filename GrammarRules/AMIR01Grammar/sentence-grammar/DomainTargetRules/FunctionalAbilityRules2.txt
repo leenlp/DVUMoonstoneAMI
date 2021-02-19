@@ -1,0 +1,242 @@
+'(
+wordrule
+
+;; "Equipment owned by patient:  walker"
+((ruleid moving-header-with-assistance-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":ADL-CANE-WALKER:"))
+ (tests ("headerContainsOneOf" ?0 (list "equipment" "equipment"))))
+ 										
+;; "minimal assistance needed"
+((ruleid moderate-assist-needed-for-adl-therapy-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":TOTAL-ASSISTANCE:" ":MINIMAL-CONTACT-ASSISTANCE:")
+ 		(":NEED:")))
+ 
+;; "Moving from bed to chair: total"
+((ruleid moving-header-with-assistance-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":TOTAL-ASSISTANCE:" ":MINIMAL-CONTACT-ASSISTANCE:" 
+ 			;; ":COMPLETE-PROPERTY:" 
+ 			":UNABLE:"))
+ (tests ("headerContainsOneOf" ?0 (list "mov" "transfer" "walk" "ambul" "climb" "turn" 
+ 										"sit"))))
+ 
+((ruleidXXX living-in-nursing-home-indicates-functional-disability-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words ("<LIVE-IN-FACILITY-PREDICATE>"))
+ (tests (notneg ?0)))
+ 
+((ruleid nursing-home-in-header-plus-body-indicates-adl-difficulty-rule)
+ (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:")
+ (words (":REHAB-CLINIC:"))
+ (tests (notneg ?0)
+ 		("headerContainsOneOf" ?0 (list "snf" "contact" "discharge" "admission" "admit"
+ 									"facility" ))
+ 		(not ("sentenceContainsOneOf" ?0 (list "if " "may " " vs ")))))
+ 		
+;; right left neglect
+((ruleid right-left-neglect-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (ordered true)
+ (words ("right" "r" "left" "l") ("neglect")))
+ 
+;; 12/28/2019:  Guess that non-negated mention of therapy indicates impairment
+((ruleid nonnegated-treatment-indicates-impairment-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":ADL-THERAPY:"))
+ (tests (notneg ?0)))
+ 									
+((ruleid treatment-activities-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":ADL-THERAPY:"))
+ (tests ("headerContainsOneOf" ?0 (list "treatment" "training" "intervention" 
+ 									"assess" "plan" "assist"))))
+  
+;; "pt would benefit from skilled pt"
+((ruleid benefit-from-pt-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (ordered true)
+ (words (":BENEFIT:") (":PHYSICAL-THERAPY:" ":OCCUPATIONAL-THERAPY:")))
+ 
+ ;; "Moving from lying on back to sitting:  unable"
+((ruleid moving-header-inability-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":UNABLE:" ":INABILITY:"))
+ (tests ("headerContainsOneOf" ?0 (list "mov" "sitting" "standing"))))
+ 
+((ruleid gait-walking-problem-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":GAIT:" ":WALKING:" ":FUNCTIONAL-MOBILITY:" ":MOVEMENT:" ":KINEMATICS:") 
+ 		(":DIFFICULT:" "DIFFICULTY:" ":PROBLEM:" ":IMPAIRED:" ":IMPAIRMENT:")))
+ 
+((ruleid medical-name-for-adl-impairment-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words ("apraxia")))
+ 		
+((ruleid feeding-route-tube-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (":FEEDING-TUBE:"))
+ (tests ("headerContainsOneOf" ?0 (list "route" "route"))
+ 		(notneg ?0)))
+ 		
+((ruleid limited-mobility-with-header-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words ("<MINIMAL-QUALITY-PROPERTY>" "<MODERATE-QUALITY-PROPERTY>" 
+ 		":MINIMAL-CONTACT-ASSISTANCE:" ":ADL-SUPPORT-DEVICE:"))
+ (tests ("headerContainsOneOf" ?0 (list "mobility" "contact" "gait" "transfer" "adl"))
+ 		(notneg ?0)))
+ 
+((ruleid need-header-plus-therapy-indicates-disability-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (ordered true)
+ (words ("<ADL-DEVICE>" "<ADL-THERAPY>"  ":ADL-IMPAIRMENT:" 
+ 			":REHAB-CLINIC:" ":FACILITY-VEHICLE:" ":OCCUPATIONAL-THERAPY:" 
+ 			":PHYSICAL-THERAPY:"
+ 			;; "<LIVING-FACILITY>[ONLY]"  ;; Removed 1/13/2020
+ 			))
+ (tests ("headerContainsOneOf" ?0 (list "need" "admi" "discharge" "refer" "contact" 
+ 										"dme" "next" "recommend"))
+ 		(not ("sentenceContainsOneOf" ?0 (list "if" "if")))
+ 		(notneg ?0)))
+ 
+((ruleid certain-adl-devices-indicates-functional-disability-rule)
+ (concept ":ADL-IMPAIRMENT:")
+ (words (
+ 		;; ":FEEDING-TUBE:" 
+ 		"contact guard assist" 
+ 	))
+ (tests (notneg ?0)))
+ 
+
+((ruleid adl-impairment-rule-1)
+ (concept ":ADL-IMPAIRMENT:")
+ (ordered true)
+ (words (":NEED-HELP:" ":INABILITY:" ":ADL-IMPAIRMENT:") 
+ 		(":ADL-ACTIVITY:" ":ADL-FACILITY" ":MOVE-TO-ADL-FACILITY:"))
+ (tests (notneg ?0) (notneg ?1)))
+
+;; General ADL Activities
+((ruleid general-adl-activity-rule)
+ (concept ":ADL-ACTIVITY:")
+ (words (":ADL-ACTIVITY:" ":WALKING:"))
+ (tests (notneg ?0)))
+ 
+ ;; 7/25/2018:  Too general to be considered an ADL task.
+((ruleidXXX general-task-word-rule)
+ (concept ":GENERAL-ADL-TASK:")
+ (words ("task" "tasks" "functional task" "functional tasks")))
+ 
+;; AbsentNeed
+((ruleid absent-need-rule-1)
+ (concept ":ABSENT-NEED:")
+ (words (":NEED:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+ ;; AbsentInability
+((ruleid absent-difficulty-rule)
+ (concept ":ABSENT-INABILITY:")
+ (ordered true)
+ (words (":INABILITY:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+ ;; AbsentADLActivity
+((ruleid absent-adl-activity-rule-1)
+ (concept ":NO-ADL-ACTIVITY:")
+ (words (":ADL-ACTIVITY:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+ ;; AbsentADLActivity
+((ruleid absent-adl-activity-rule-2)
+ (concept ":NO-ADL-ACTIVITY:")
+ (ordered true)
+ (words (":LACK:" ":INABILITY:") (":ADL-ACTIVITY:"))
+ (tests (notneg ?0) (notneg ?1)))
+ 
+ ;; AbsentADLDevice
+((ruleid absent-adl-device-rule)
+ (concept ":NO-ADL-DEVICE:")
+ (ordered true)
+ (words (":ADL-DEVICE:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+((ruleid adl-device-general-rule)
+ (concept ":ADL-DEVICE:")
+ (words (":ADL-WHEELCHAIR:" ":ADL-CANE-WALKER:"))
+ (tests (notneg ?0)))
+ 
+ ;; AbsentHelp
+((ruleid absent-help-rule-1)
+ (concept ":NO-HELP:")
+ (words (":HELP:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+
+ ;; AbsentHelp
+((ruleid absent-help-rule-2)
+ (concept ":NO-HELP:")
+ (ordered true)
+ (words (":LACK:") (":HELP:"))
+ (tests (notneg ?0) (notneg ?1)))
+ 
+;; NeedHelp
+((ruleid need-help-rule)
+ (concept ":NEED-HELP:")
+ (ordered true)
+ (words (":NEED:") (":HELP:"))
+ (tests (notneg ?0) (notneg ?1)))
+
+;; Help with ADLActivity or ADLActivity with Help
+((ruleid help-with-adl-activity-rule)
+ (concept ":HELP-WITH-ADL-ACTIVITY:")
+ (words (":HELP:") (":ADL-ACTIVITY:"))
+ (tests (notneg ?0) (notneg ?1)))
+
+;; InabilityADLActivity
+((ruleid inability-with-adl-activity-rule-1)
+ (concept ":INABILITY-WITH-ADL-ACTIVITY:")
+ (ordered true)
+ (words (":INABILITY:" ":LACK:") (":ADL-ACTIVITY:"))
+ (tests (notneg ?0) (notneg ?1)))
+ 
+ ;; 12/28/2019 FP problem:  "no bathing" does not mean "unable to bathe".
+((ruleidXXX inability-with-adl-activity-rule-2)
+ (concept ":INABILITY-WITH-ADL-ACTIVITY:")
+ (words (":ADL-ACTIVITY:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+;; InabilityADLFacility
+((ruleid inability-with-adl-facility-rule-1)
+ (concept ":INABILITY-WITH-ADL-FACILITY:")
+ (ordered true)
+ (words (":INABILITY:" ":LACK:") (":ADL-FACILITY:"))
+ (tests (notneg ?0) (notneg ?1)))
+ 
+; InabilityADLActivity
+((ruleid inability-with-adl-facility-rule-2)
+ (concept ":INABILITY-WITH-ADL-FACILITY:")
+ (words (":ADL-FACILITY:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+;; WalkADLFacility
+((ruleid move-to-adl-facility-rule)
+ (concept ":MOVE-TO-ADL-FACILITY:")
+ (ordered true)
+ (words (":MOVE-TO:" ":WALK:" ":WALKING:") (":ADL-FACILITY:"))
+ (tests (notneg ?0) (notneg ?1)))
+
+;; WalkADLFacility
+((ruleid move-to-adl-facility-rule)
+ (concept ":MOVE-TO-ADL-FACILITY:")
+ (ordered true)
+ (words (":MOVE-TO:" ":WALK:" ":WALKING:") (":ADL-FACILITY:"))
+ (tests (notneg ?0) (notneg ?1)))
+
+
+)

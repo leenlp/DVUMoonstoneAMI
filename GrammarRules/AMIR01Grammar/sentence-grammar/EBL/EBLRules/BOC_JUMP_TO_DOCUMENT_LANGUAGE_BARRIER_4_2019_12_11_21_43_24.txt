@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:-4-2019/12/11 21:43:24") 
+  (specialized) 
+  (example-snippet "Patient is from India") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT::IS::PREP::FOREIGN-COUNTRY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

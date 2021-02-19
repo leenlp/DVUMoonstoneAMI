@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:FF-PROVIDE-CARE-FOR-PATIENT:-3-2018/06/25 19:17:32") 
+  (specialized) 
+  (example-snippet "wife assists with sliding transfer") 
+  (ordered true) 
+  (concept ":FF-PROVIDE-CARE-FOR-PATIENT:") 
+  (stype "<RECEIVE-SUPPORT-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":FAMILY::HELP::PREP::TRANSFER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

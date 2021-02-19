@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TRANSPORT-PATIENT-FROM-LIVING-FACILITY::2018/06/26 16:38:38") 
+  (specialized) 
+  (example-snippet "brought in by EMS from assisted living") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":TRANSPORT-PATIENT-FROM-LIVING-FACILITY:") 
+  (stype "<MOVE-THING-TO-OR-FROM-LOCATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":BRING:") 
+    (":PREP::ASSISTED-LIVING:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:-1-2018/06/29 13:48:01") 
+  (specialized) 
+  (example-snippet "nonenglish speaking") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NON-ENGLISH::SPEAKING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

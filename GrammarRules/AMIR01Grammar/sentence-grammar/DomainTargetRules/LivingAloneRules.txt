@@ -1,0 +1,285 @@
+'(
+wordrule
+
+;;;;;;;;;
+;; Living alone
+
+((ruleid referral-to-snf-possible-not-live-alone-rule)
+ (concept ":NOT-LIVING-ALONE:")
+ (ordered true)
+ (words ("ready to") (":LIVES-IN-NURSING-HOME:" ":LIVES-IN-FACILITY:"))
+ (properties (directionality possible)))
+ 
+
+((ruleid ready-to-return-to-facility-rule)
+ (concept ":NOT-LIVING-ALONE:")
+ (ordered true)
+ (words ("ready to") (":LIVES-IN-NURSING-HOME:" ":LIVES-IN-FACILITY:"))
+ (properties (directionality possible)))
+
+((ruleid "BOC-EBL::LIVES-IN-NURSING-HOME::2017/10/12 16:02:51-2-2017/10/12 16:03:50") 
+  (example-snippet "now is in nursing facility") 
+  (concept ":NOT-LIVING-ALONE:") 
+  (words (":LIVES-IN-NURSING-HOME:" ":LIVES-IN-FACILITY:"))
+  (tests (not ("sentenceContainsOneOf" ?0 (list "may " "like " "versus" "vs " "vs. " 
+ 										"contact" "decision" "recommend")))))
+    
+((ruleid uncertainty-about-nursing-home-rule)
+ (concept ":NOT-LIVING-ALONE:" 
+ ;; ":JUMP-TO-DOCUMENT-LIVING-ALONE:"
+ )
+ 
+ (words (":NURSING-HOME:" ":REHAB-CLINIC:" ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:" 
+ 			":JUMP-TO-DOCUMENT-LIVING-ALONE:" ":LIVES-IN-NURSING-HOME:" 
+ 			":LIVES-IN-FACILITY:"))
+ (tests (or ("sentenceContainsOneOf" ?0 (list "may " "like " "versus" "vs " "vs. " 
+ 										"contact" "decision" "recommend"))
+ 			("headerContainsOneOf" ?0 (list "decision" "recommend" "contact" "refer"))))
+ (properties (directionality possible)))
+ 
+((ruleid family-living-at-home-suggests-not-living-alone-rule)
+ (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:")
+ (ordered true)
+ (words (":FF:") (":LIVE-AT-HOME:" ":LIVE-AT::PREP::HOME:")))
+ 
+((ruleid living-with-family-with-household-header-indicates-not-living-alone-rule)
+ (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:")
+ (words (":FAMILY:" ":CHILDREN:" ":FAMILY-LIVE-WITH:" 
+ 			":LIVE-WITH-FF:" ":LIVE-WITH-FAMILY:"
+ 			":LIVE-WITH-PERSON:" ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:"))
+ (tests ("headerContainsOneOf" ?0 (list "household" "marital" "living" "relation"))))
+ 
+((ruleid living-together-rule)
+ (concept ":LIVE-WITH-FF:")
+ (ordered true)
+ (words (":LIVE-AT:") (":TOGETHER:")))
+ 
+((ruleid nursing-home-in-header-plus-body-indicates-not-living-alone-rule)
+ (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:")
+ (words (;; ":NURSING-HOME:" 
+ 			":REHAB-CLINIC:"))
+ (tests (notneg ?0)
+ 		("headerContainsOneOf" ?0 (list "snf" "contact" "discharge" "admission" "admit"
+ 									"facility" ))
+ 		(not ("sentenceContainsOneOf" ?0 (list "if" "may" "vs")))))
+ 									
+((ruleid living-independently-at-home-suggests-living-alone-rule)
+ (concept ":JUMP-TO-DOCUMENT-LIVING-ALONE:")
+ (words (":INDEPENDENT-LIVING:") (":HOME:")))
+ 									
+((ruleid discharge-home-with-family-indicates-not-living-alone-rule)
+ (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:")
+ (words (":HOME::WITH-FF:" ":RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:" 
+ 		":LIVE-AT-HOME-WITH-FAMILY:"))
+ (tests (notneg ?0)
+ 		("headerContainsOneOf" ?0 (list "discharge" "discharge" ))))
+
+((ruleid planned-nursing-home-in-indicates-uncertain-living-alone-rule)
+ (concept ":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:")
+ (words (":NURSING-HOME:"))
+ (tests (notneg ?0)
+ 		("headerContainsString" ?0 "plan"))
+ (properties (directionality possible)))
+
+
+;; 8/31/2016:  "He lives at home alone" should produce 2 concepts
+((ruleid living-at-home-alone-with-two-targets-rule)
+  (stype ?0)
+  (concept ":LIVING-ALONE:")
+  (ordered true)
+  (words (":LIVE-AT-HOME:") (":ALONE:"))
+  (tests (notneg ?0)))
+ 
+((ruleid complex-rule-living-alone-rule)
+ (specialized)
+ (concept ":LIVING-ALONE:" )
+ (words (":LIVE-AT::LIVING-SPACE::LIVING-ALONE:" 
+ 		":LIVE-AT::LIVING-ALONE:" ":LIVE-AT::PATIENT::LIVING-ALONE:"
+ 		":LIVE-AT::LIVING-ALONE::LIVING-SPACE:"
+ 		":LIVE-AT::LIVING-SPACE::ALONE:"
+ 		":LIVE-AT::ALONE::LIVING-SPACE:"
+ 		":LIVE-AT::ALONE::HOME:"
+ 		":LIVE-AT::ALONE:"
+ 		":LIVE-AT::ALONE::MARRIAGE:"
+ 		":LIVE-AT::ALONE::PATIENT:"
+		
+		":ALONE::OWN-HOME:"
+
+ 		":LIVE-AT::HOME::ALONE:"
+ 		":LIVE-AT::HOME::LIVING-ALONE:"
+ 		":LIVING-ALONE::LIVING-SPACE:" ":LIVING-ALONE::HOME:"
+ 		":MARRIAGE::LIVING-ALONE:"
+ 		":LIVING-ALONE::COGNITIVE-IMPAIRMENT:"
+ 		":LIVE-AT::ALONE::COGNITIVE-IMPAIRMENT:"
+ 		":LIVE-AT::LIVING-ALONE::MARRIAGE:"
+ 		":LIVE-AT::ALONE::STREET:"
+		
+		":PATIENT::LIVE-AT::LIVING-SPACE::LIVING-ALONE:" 
+ 		":PATIENT:LIVE-AT::LIVING-ALONE:" ":PATIENT:LIVE-AT::PATIENT::LIVING-ALONE:"
+ 		":PATIENT:LIVE-AT::LIVING-ALONE::LIVING-SPACE:"
+ 		":PATIENT:LIVE-AT::LIVING-SPACE::ALONE:"
+ 		":PATIENT:LIVE-AT::ALONE::LIVING-SPACE:"
+ 		":PATIENT:LIVE-AT::ALONE::HOME:"
+ 		":PATIENT:LIVE-AT::ALONE:"
+ 		":PATIENT:LIVE-AT::ALONE::MARRIAGE:"
+ 		":PATIENT:LIVE-AT::ALONE::PATIENT:"
+
+ 		":PATIENT:LIVE-AT::HOME::ALONE:"
+ 		":PATIENT:LIVE-AT::HOME::LIVING-ALONE:"
+ 		":PATIENT:LIVING-ALONE::LIVING-SPACE:" ":PATIENT:LIVING-ALONE::HOME:"
+ 		":PATIENT:MARRIAGE::LIVING-ALONE:"
+ 		":PATIENT:LIVING-ALONE::COGNITIVE-IMPAIRMENT:"
+ 		":PATIENT:LIVE-AT::ALONE::COGNITIVE-IMPAIRMENT:"
+ 		":PATIENT:LIVE-AT::LIVING-ALONE::MARRIAGE:"
+ 		":PATIENT:LIVE-AT::ALONE::STREET:"
+		
+		":PATIENT::LIVING-ALONE:"
+		
+		":SOCIAL-HISTORY::LIVING-ALONE:"
+		))
+ (tests (notneg ?0)))
+ 		
+ ;; e.g. "lives alone w/o adequate support"
+((ruleid complex-living-alone-support-rule)
+ (specialized)
+ (concept ":LIVING-ALONE:" )
+ (words (":LIVING-ALONE::SUPPORT:"
+ 		":LIVING-ALONE::CARE:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+ ;; e.g. "no one lives with this patient"
+((ruleid no-one-living-with-patient-connotes-living-alone-rule)
+ (concept ":LIVING-ALONE:")
+ (ordered true)
+ (words 
+	(":NO-ONE:") (":LIVE-AT:") (":PATIENT:")))
+	
+((ruleid living-alone-rule-1)
+ (concept ":LIVING-ALONE:")
+ (ordered true)
+ (words (":LIVE-AT:") (":ALONE:"))
+ (tests (notneg ?0)))
+ 
+((ruleid header-lives-alone-boolean-rule)
+ (concept ":LIVING-ALONE:")
+ (words (":HEADER-TRUE:" ":HEADER-FALSE:"))
+ (tests ("headerContainsString" ?0 "lives alone")
+		("headerCoversSingleWord" ?0))
+ (properties (directionality (if (neg ?0) "negated" "affirmed"))))
+ 
+ ;;;;;;;;;;;;;;;;;;;;;;
+ ;; NOT LIVING ALONE
+ 
+ ;; 3/10/2018:  Don't need to convert negated LivingAlone to NotLivingAlone.  It
+ ;; just gets changed back later...
+ ((ruleidXXX not-living-alone-base-rule)
+  (stype ?0)
+  (concept ":NOT-LIVING-ALONE:")
+  (words (":LIVING-ALONE:"))
+  (tests (neg ?0))
+  (removeproperties directionality))
+ 
+ ;; 8/30/2016.  Fixing "son lives at home"-type sentences.
+((ruleid family-lives-at-patients-home-rule)
+ (stype "<SENTENCE>")
+ (concept ":NOT-LIVING-ALONE:")
+ (ordered true)
+ (words (":FAMILY:") 
+		(":RETURN-TO-OR-LIVE-AT-HOME:"
+		":LIVE-AT-HOME:"))
+ (tests (notneg ?1) (or (hcr ?1 ":LIVING-SPACE:") (hcr ?1 ":HOME:"))
+		(not (hcr ?1 ":LIVING-ALONE:"))))
+
+ 
+;; 7/15/2016
+((ruleid living-at-home-with-family-indicates-not-living-alone-rule)
+ (concept ":NOT-LIVING-ALONE:")
+ (words (":LIVE-AT-HOME:"))
+ (tests (notneg ?0)
+		("propertyValueContainsStringRecursive" ?0 "object" ":FAMILY:")))
+
+((ruleid lives-with-means-not-living-alone-rule-1)
+ (concept ":NOT-LIVING-ALONE:")
+ (words (":LIVE-WITH-PERSON:"))
+ (tests (notneg ?0)))
+ 
+
+;; if the patient lives with someone else, he does not live alone
+((ruleid lives-with-someone-means-not-living-alone-rule-1)
+  (concept ":NOT-LIVING-ALONE:")
+  (ordered true)
+  (words (":LIVE-AT:" ":SLEEP:") 
+		("-PREP-") 
+		(":FAMILY:" ":FRIEND:"))
+ (tests (notneg ?0)))
+		
+;; e.g. "daughter lives with this patient"
+((ruleid person-living-with-patient-connotes-not-living-alone-rule)
+ (concept ":NOT-LIVING-ALONE:")
+ (ordered true)
+ (words 
+	(":FRIEND:" ":FAMILY:")
+	(":LIVE-AT:") (":PATIENT:"))
+ (tests (notneg ?1) (not (atctv ?* ("near" "mile" "close")))))
+	
+;; 3/10/2018:  REMOVED.  WANT LivingAlone IN THE FINAL RESULT
+((ruleidXXX negated-living-alone-is-not-living-alone-rule)
+ (concept ":NOT-LIVING-ALONE:")
+ (words (":LIVING-ALONE:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+((ruleid person-at-patients-home-indicates-not-living-alone-rule)
+ (concept ":NOT-LIVING-ALONE:")
+ (words (":PERSON-AT-PATIENTS-HOME:"))
+ (notneg ?0))
+ 
+((ruleid patient-and-spouse-reside-together-indicates-not-living-alone-rule)
+ (concept ":NOT-LIVING-ALONE:")
+ (ordered true)
+ (words ("@patient-and-spouse-conjunct-rule@") (":LIVE-AT:")))
+
+((ruleid person-in-patients-home-connotes-not-living-alone-rule)
+ (concept ":NOT-LIVING-ALONE:")
+ (ordered true)
+ (words (":NON-PATIENT-PERSON:")
+		("-PREP-") 
+		(":LIVING-SPACE:")))
+		
+((ruleid living-alone-with-family-means-not-living-alone-rule)
+ (concept ":NOT-LIVING-ALONE:")
+ (words (":LIVING-ALONE::FAMILY:" 
+		":LIVING-ALONE::SPOUSE:" 
+ 		":LIVING-ALONE::FRIEND:" 
+		":LIVING-ALONE::LIVING-SPACE::FAMILY:" 
+ 		":LIVING-ALONE::LIVING-SPACE::FRIEND:"
+ 		":LIVE-AT::FRIEND:" ":LIVE-AT::LIVING-SPACE::FAMILY:" 
+ 		":LIVE-AT::LIVING-SPACE::FRIEND:" 
+ 		":LIVE-AT::HOME::SINGLE-FAMILY-MEMBERS:"
+ 		":LIVE-AT::FAMILY::ADL-FACILITY:"
+ 		":LIVE-AT::HOME::NOT-LIVING-ALONE:"
+ 		":LIVE-AT::ADL-FACILITY::LIVING-SPACE:"  ;; "lives in two bedroom home"
+		
+		":PATIENT::LIVING-ALONE::FAMILY:" 
+		":PATIENT::LIVING-ALONE::SPOUSE:" 
+ 		":PATIENT::LIVING-ALONE::FRIEND:" 
+		":PATIENT::LIVING-ALONE::LIVING-SPACE::FAMILY:" 
+ 		":PATIENT::LIVING-ALONE::LIVING-SPACE::FRIEND:"
+ 		":PATIENT::LIVE-AT::FRIEND:" ":PATIENT::LIVE-AT::LIVING-SPACE::FAMILY:" 
+ 		":PATIENT::LIVE-AT::FAMILY:" ":PATIENT::LIVE-AT::NON-PATIENT-PERSON:"
+ 		":PATIENT::LIVE-AT::LIVING-SPACE::FRIEND:" 
+ 		":PATIENT::LIVE-AT::HOME::SINGLE-FAMILY-MEMBERS:"
+ 		":PATIENT::LIVE-AT::FAMILY::ADL-FACILITY:"
+ 		":PATIENT::LIVE-AT::HOME::NOT-LIVING-ALONE:"
+ 		":PATIENT::LIVE-AT::PROVIDER:"  ;; e.g. "live with his wife who is provider"
+ 		":PATIENT::LIVE-AT::ADL-FACILITY::LIVING-SPACE:"  ;; "lives in two bedroom home"
+		
+		":PERSON::LIVE-AT::PATIENT:"  ;; "she has been living with this patient
+		
+		":FAMILY::LIVE-AT::PATIENT::LIVING-SPACE:"
+		":PATIENT::NOT-LIVING-ALONE:"
+ 		))
+ (tests (notneg ?0)))
+ 
+)

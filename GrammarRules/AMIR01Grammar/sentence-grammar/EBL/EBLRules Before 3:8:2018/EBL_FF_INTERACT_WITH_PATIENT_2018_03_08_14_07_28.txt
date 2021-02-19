@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-INTERACT-WITH-PATIENT::2018/03/08 14:07:28") 
+  (specialized) 
+  (example-snippet "she is walking for 20 minutes four or five days out of the week  with a friend") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":FF-INTERACT-WITH-PATIENT:") 
+  (stype "<INTERACT-WITH-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":ADL-ACTIVITY::TIME-UNIT::WITH-FF:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

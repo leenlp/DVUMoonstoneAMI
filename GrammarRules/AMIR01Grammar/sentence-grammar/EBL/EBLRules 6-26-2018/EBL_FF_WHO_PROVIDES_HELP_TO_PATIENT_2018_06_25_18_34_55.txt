@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-WHO-PROVIDES-HELP-TO-PATIENT::2018/06/25 18:34:55") 
+  (specialized) 
+  (example-snippet "brother who assists with dressing bathing and transfers") 
+  (ordered true) 
+  (sourceid "person-who-is-thing-or-event-rule") 
+  (concept ":FF-WHO-PROVIDES-HELP-TO-PATIENT:") 
+  (stype "<FRIEND-OR-FAMILY>") 
+  (window 16.0) 
+  (words 
+    (":FF:") 
+    ("who") 
+    (":HELP::PREP::ADL-ACTIVITY:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LIVES-IN-FACILITY::2018/03/01 19:48:13") 
+  (specialized) 
+  (example-snippet "eat the evening meal at the nursing home") 
+  (ordered true) 
+  (sourceid "action-thing-pp-rule") 
+  (concept ":LIVES-IN-FACILITY:") 
+  (stype "<LIVE-IN-FACILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ADL-ACTIVITY:<ACTION>") 
+    (":PATIENT-NEED:<THING>") 
+    (":AT-NURSING-HOME:<PP>")) 
+  (properties 
+    (action "?0") 
+    (first-object "?1") 
+    (pp-object "[thing, ?2]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

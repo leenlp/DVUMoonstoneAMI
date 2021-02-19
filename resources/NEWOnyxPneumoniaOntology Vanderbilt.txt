@@ -1,0 +1,608 @@
+'(new-onyx-pneumonia-ontology
+
+(deftype root (isroot))
+
+(deftype action (isa root))
+(deftype predicate (isa root))
+(deftype thing (isa root))
+(deftype property (isa root))
+(deftype modifier (isa root))
+(deftype manner (isa root))
+(deftype state (isa root))
+(deftype sentence (isa root))
+(deftype pp (isa root))
+
+(deftype sentence-modifier (isa root))
+
+;; For constants introduced in grammar rules, without specified type
+(deftype undefined (isa root))  
+
+(deftype time (isa root))
+(deftype number (isa root))
+(deftype conjunct (isa root))
+(deftype sentence-conjunct (isa conjunct))
+(defstringconstant ":BECAUSE-OF:" "<SENTENCE-CONJUNCT>")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Semantics
+
+(deftype semantic-action (isa action))
+(deftype semantic-predicate (isa predicate))
+(deftype semantic-sentence (isa sentence))
+(defstringconstant ":INDETERMINATE-SENTENCE:" "<SEMANTIC-SENTENCE>")
+(deftype semantic-state (isa state))
+(deftype semantic-property (isa property))
+(deftype semantic-modifier (isa modifier))
+(deftype semantic-thing (isa thing))
+(deftype semantic-manner (isa manner))
+
+(deftype semantic-time (isa time))
+(deftype semantic-number (isa number))
+
+;; For phrases we don't need to define, but need to recognize.  Use this in 
+;; grammar rules when not sure where the constant should go.  Place the constant 
+;; properly later.
+
+(deftype undefined-thing (isa semantic-thing))
+(deftype undefined-predicate (isa semantic-predicate))
+(deftype undefined-property (isa semantic-property))
+(deftype undefined-manner (isa semantic-manner))
+(defstringconstant ":UNDEFINED-THING:"  "<UNDEFINED-THING>")
+(defstringconstant ":UNDEFINED-PREDICATE:" "<UNDEFINED-PREDICATE>")
+(defstringconstant ":UNDEFINED-PROPERTY:" "<UNDEFINED-PROPERTY>")
+(defstringconstant ":UNDEFINED-MANNER:" "<UNDEFINED-MANNER>")
+
+(deftype pronoun-thing (isa semantic-thing))
+(defstringconstant ":PRONOUN-THING:" ":SUBJECT-SINGLE-PRONOUN-THING:" 
+	":OBJECT-SINGLE-PRONOUN-THING:" ":SUBJECT-PLURAL-PRONOUN-THING:" 
+	":OBJECT-PLURAL-PRONOUN-THING:" "<PRONOUN-THING>")
+
+(deftype pronoun-person (isa pronoun-thing))
+(defstringconstant ":PRONOUN-PERSON:" ":SUBJECT-SINGLE-PRONOUN-PERSON:" 
+	":SUBJECT-SINGLE-PRONOUN-PERSON:" ":SUBJECT-PLURAL-PRONOUN-PERSON:" 	
+	":OBJECT-PLURAL-PRONOUN-PERSON:" "<PRONOUN-PERSON>")
+
+;; 3/13/2018:  TEST- constants to permit jumping to document-level conclusion 
+;; without further literal processing, e.g. 
+;; ":DO::MEDICAL-PROCEDURE::AT-NURSING-HOME:" 
+;; (defstringconstant "<UNDEFINED>")
+
+(deftype existence (isa semantic-state 
+	semantic-modifier semantic-property))
+;; (defstringconstant ":THERE-IS:" "<EXISTENCE>")
+(deftype presence (isa existence))
+(defstringconstant ":ABSENT:" ":HISTORY:" ":PRESENT:" "<PRESENCE>")
+(deftype absence (isa existence))
+(defstringconstant ":ABSENT:" ":LACK:" ":DEFICIT:" ":LOSS:" "<ABSENCE>")
+(deftype historical-presence (isa presence))
+(defstringconstant ":HISTORY:" "<HISTORICAL-PRESENCE>")
+
+(deftype change-in-state-property 
+	(isa semantic-state semantic-action semantic-property))
+(defstringconstant ":IMPROVE:" ":GET-WORSE:" "<CHANGE-IN-STATE-PROPERTY>")
+(deftype change-in-state-thing (isa semantic-thing))
+(defstringconstant ":IMPROVEMENT:" ":WORSENING-OF:" "<CHANGE-IN-STATE-THING>")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Things
+
+(deftype person (isa semantic-thing))
+(deftype person-property (isa semantic-property))
+(deftype patient (isa person))
+(defstringconstant ":PATIENT:" "<PATIENT>")
+(deftype gendered-person (isa person semantic-property))
+(defstringconstant ":MALE:" ":FEMALE:" "<GENDERED-PERSON>")
+(deftype medical-provider (isa non-patient))
+(defstringconstant ":PROVIDER:" ":NURSE:" ":DOCTOR:" ":THERAPIST:" "SOCIAL-WORKER:" "<MEDICAL-PROVIDER>")
+
+(deftype place (isa semantic-thing))
+(deftype sameplace (isa place))
+(deftype otherplace (isa place))
+(deftype facility (isa place))
+(deftype medical-facility (isa facility))
+(defstringconstant ":HOSPITAL:" ":ER:" ":CLINIC:" ":VA:" ":MEDICAL-FACILITY:" "<MEDICAL-FACILITY>")
+
+(deftype exam-thing (isa semantic-thing))
+(defstringconstant ":EXAM:" ":PRIOR-EXAM:" ":CURRENT-EXAM:" "<EXAM-THING>")
+(deftype xray-thing (isa exam-thing))
+(deftype exam-property (isa semantic-property))
+(deftype exam-temporal-property (isa exam-property))
+(defstringconstant ":CURRENT:" ":PRIOR:" "<EXAM-TEMPORAL-PROPERTY>")
+
+(deftype report-thing (isa semantic-thing))
+(defstringconstant ":REPORT:" "<REPORT-THING>")
+
+(deftype examine-action (isa semantic-action semantic-thing))
+(defstringconstant ":EXAMINE:" ":EXAMINATION:" ":WATCH:" ":OBSERVE:" ":REVIEW-FOR:" "<EXAMINE-ACTION>")
+(deftype examine-predicate (isa semantic-predicate))
+(defstringconstant ":EXAMINE-PATIENT:" "<EXAMINE-PREDICATE>")
+(deftype examine-patient-for-reason (isa examine-predicate))
+(defstringconstant ":EXAMINE-PATIENT-AT-TIME-FOR-REASON:" 
+	":EXAMINE-PATIENT-FOR-REASON:" 
+	":EXAMINE-PATIENT-FOR-DEPRESSION:"
+	"<EXAMINE-PATIENT-FOR-REASON>")
+(deftype examine-sentence (isa semantic-sentence))
+
+(deftype diagnosis (isa semantic-thing semantic-action))
+(deftype diagnosis-with-disease (isa semantic-thing semantic-predicate))
+(defstringconstant ":DIAGNOSIS:" "<DIAGNOSIS>")
+(defstringconstant ":DIAGNOSIS-WITH-DISEASE:" "<DIAGNOSIS-WITH-DISEASE>")
+
+(defstringconstant ":NUMBER:" "<SEMANTIC-NUMBER>")
+
+(deftype quality-property (isa semantic-property semantic-manner))
+(deftype poor-quality-property (isa quality-property))
+(defstringconstant ":POOR:" ":POORLY:" ":BAD-CONDITION:" 
+	"<POOR-QUALITY-PROPERTY>")
+(deftype good-quality-property (isa quality-property))
+(defstringconstant ":GOOD:" ":WELL:"  ":GOOD-CONDITION:" 
+	"<GOOD-QUALITY-PROPERTY>")
+	
+(deftype degree-property (isa semantic-property))
+(deftype minimal-quality-property (isa degree-property))
+(defstringconstant ":MINIMAL:" ":MINIMALLY:" "<MINIMAL-QUALITY-PROPERTY>")
+(deftype moderate-quality-property (isa degree-property))
+(defstringconstant ":MODERATE:" ":MODERATELY:" "<MODERATE-QUALITY-PROPERTY>")
+(deftype maximal-quality-property (isa degree-property))
+(defstringconstant ":MAXIMAL:" ":MAXIMALLY:" ":TRAUMATIC:" 
+	"<MAXIMAL-QUALITY-PROPERTY>")
+	
+;; dimensions:  spatial extent, location, degree, change of state
+	
+(deftype change-of-state (isa semantic-property semantic-state))
+(defstringconstant ":INCREASED:" ":DECREASED:" ":CHRONIC:" ":IMPROVING:" 
+	":UNCHANGED:" ":WORSENING:" "<CHANGE-OF-STATE>")
+(deftype elaboration (isa semantic-property semantic-state))
+(defstringconstant ":CONTINUATION:" "<ELABORATION>")
+
+(deftype extent-property (isa semantic-property))
+(defstringconstant ":PARTIAL:" ":COMPLETE:" ":FULL:" "<EXTENT-PROPERTY>")
+
+(deftype spatial-extent-property (isa semantic-property))
+(defstringconstant ":LOCALIZED:" ":GENERALIZED:" "<SPATIAL-EXTENT-PROPERTY>")
+
+(deftype change-of-state-property (isa semantic-property))
+
+(deftype time-expression (isa semantic-time))
+(deftype time-modifier (isa time-expression))
+(deftype time-unit (isa time-expression))
+(deftype date (isa time-expression))
+(deftype time-duration (isa time-expression))
+(defstringconstant ":GENERAL-TIME:" ":REGULARLY:" ":CURRENTLY:" 
+	":PER-TIME-UNIT:" ":AT-TIME:" "<TIME-MODIFIER>")
+(defstringconstant ":TIME-UNIT:" "<TIME-UNIT>")
+(defstringconstant ":DATE:" ":TIME:" ":GENERAL-TIME:" ":SPECIFIC-TIME:" 
+	":DECADE-AGE:" "<TIME-EXPRESSION>")
+	
+(deftype temporal-duration-property (isa semantic-property))
+(defstringconstant ":LONG-TERM:" ":SHORT-TERM:" ":CONSTANT:" 
+	":INTERMITTENT:" "<TEMPORAL-DURATION-PROPERTY>")
+
+(deftype involvement-thing (isa semantic-thing behavior semantic-state))
+(defstringconstant ":INVOLVED:" "<INVOLVEMENT-THING>")
+
+(deftype health-thing (isa semantic-thing))
+(deftype health-action (isa semantic-action))
+(deftype health-property (isa semantic-property))
+(deftype health-manner (isa semantic-manner))
+(deftype health-predicate (isa semantic-predicate))
+(deftype health-sentence (isa semantic-sentence))
+
+(deftype injury-thing (isa health-thing))
+(defstringconstant ":INJURY:" "<INJURY-THING>")
+(deftype brain-injury-thing (isa injury-thing))
+(defstringconstant ":BRAIN-INJURY:" ":TRAUMATIC-BRAIN-INJURY:" 
+	"<BRAIN-INJURY-THING>")
+(deftype fracture-injury-thing (isa injury-thing))
+(defstringconstant ":FRACTURE:" ":FRACTURE-OF-APPENDAGE:" 
+	"<FRACTURE-INJURY-THING>")
+	
+(deftype disease-thing (isa health-thing))
+(defstringconstant ":DISEASE:" ":MEDICAL-CONDITION:" ":DISEASE-AT-TIME:" 
+	":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:"
+	":MEDICAL-CONDITION-NOT-NECESSARILY-CAUSING-ADL-DISABILITY:" 
+	":OBSTRUCTION:" ":INCONTINENCE:" 
+	":NERVE-CONDUCTION-LOSS:" ":ABNORMALITY:" ":MORBID-OBESITY:" 
+	
+	"<DISEASE-THING>")
+(deftype disease-property-or-manner (isa health-property health-manner))
+(defstringconstant ":PERCEPTION-IMPAIRED:" 
+	":MEDICAL-CONDITION-ADL-PROPERTY-OR-MANNER:" "<DISEASE-PROPERTY-OR-MANNER>")
+(deftype brain-disease-thing (isa disease-thing))
+(defstringconstant ":STROKE:" "<BRAIN-DISEASE-THING>")
+(deftype medical-condition-predicate (isa health-predicate))
+(deftype medical-condition-sentence (isa health-sentence))
+(defstringconstant ":HAVE-MEDICAL-CONDITION:" "<MEDICAL-CONDITION-PREDICATE>")
+(defstringconstant ":PERSON-HAVE-MEDICAL-CONDITION:" 
+	":PATIENT-HAVE-MEDICAL-CONDITION:" ":FAMILY-HAVE-MEDICAL-CONDITION:"
+	"<MEDICAL-CONDITION-SENTENCE>")
+(deftype pulmonary-disease-thing (isa disease-thing))
+(defstringconstant ":ANY-ACUTE-DISEASE:" ":ASPIRATION-PNEUMONIA:" 
+	":ATHEROSCLEROSIS:" ":ATYPICAL-PNEUMONIA:" 
+	":BRONCHIECTASIS:" ":CHF:" ":CHRONIC-OBSTRUCTIVE-PULMONARY-DISEASE:" 
+	":DIFFUSE-IDIOPATHIC-PULMONARY-FIBROSIS:" ":DISEASE-NOS:" ":METASTASIS:" 
+	":PNEUMONIA:" ":PNEUMONITIS:" ":PRIMARY-LUNG-CANCER:" 
+	":PULMONARY-DISEASE-NOS:" 
+	":ACUTE-LUNG-INJURY:"  ":ARDS:"
+	":BAROTRAUMA:"  				
+	":CARDIAC-DISEASE-NOS:" 
+	":COPD:" ":CYSTIC-DISEASE:" 		
+	":EMPHYSEMA:"  
+	":GERM-CELL-TUMOR:" ":HODGKIN-S-DISEASE:" 	
+	":LUPUS-ERYTHEMATOSIS:" 
+	":MUCOUS-PLUG:" ":OSTEOPENIA:" 
+	":PULMONARY-METASTASES:" ":RESPIRATORY-FAILURE:"
+	":TUBERCULOSIS:" 			
+	"<PULMONARY-DISEASE-THING>")
+	
+(deftype abdomen-disease (isa disease-thing))
+(defstringconstant ":INTRA-ABDOMENAL-ABNORMALITY:" "<ABDOMEN-DISEASE>")
+
+(deftype anatomic-location (isa health-thing))
+(deftype anatomy-location-modifier (isa health-property))
+(deftype anatomic-location-predicate (isa health-predicate))
+(deftype anatomic-location-sentence (isa health-sentence))
+
+(deftype pulmonary-location (isa anatomic-location))
+(defstringconstant ":ANATOMIC-CHEST:" ":LOBE:" ":PULMONARY_LOCATIONS:" ":LUNG-AREA:" 
+	":LUNG:" "<PULMONARY-LOCATION>")
+(deftype pulmonary-location-predicate (isa anatomic-location-predicate))
+(defstringconstant ":LOCATED-ON-RIGHT-PREDICATE:" ":LOCATED-ON-LEFT-PREDICATE:" 
+	"<PULMONARY-LOCATION-PREDICATE>")
+(deftype pulmonary-location-sentence (isa anatomic-location-sentence))
+(defstringconstant ":FINDING-LOCATED-ON-RIGHT-SENTENCE:" 
+	":FINDING-LOCATED-ON-LEFT-SENTENCE:" "<PULMONARY-LOCATION-SENTENCE>")
+
+(deftype general-pulmonary-location (isa pulmonary-location))
+(defstringconstant ":ANATOMIC-CHEST:" ":BOTH-LUNGS:" 
+	":ALL-THORACIC-LOCATIONS:" ":CARDIOPULMONARY:" ":INTRATHORACIC:"
+	":SOFT-TISSUES:" 
+	"<GENERAL-PULMONARY-LOCATION>")
+
+(deftype bony-pulmonary-location (isa pulmonary-location))
+(defstringconstant ":RIB:" ":VERTEBRAE:"":SKELETON-NOS:" 
+	"<BONY-PULMONARY-LOCATION>")
+	
+(deftype localized-pulmonary-location (isa pulmonary-location))	
+(defstringconstant 
+	":AORTA:"
+	":AZYGOUS-VEIN:"
+	":BRONCHIAL-WALL:"
+	":CHEST-WALL:"
+	":DIAPHRAGM:"
+	":GENERAL-LUNG-AREA:"
+	":HEART:"
+	":HILUM:"
+	":INTERLOBULAR-FISSURE:"
+	":INTERPLEURAL-SPACE-NS:"
+	":LEFT-ATRIAL-APPENDAGE:"
+	":LEFT-COSTOPHRENIC-SULCUS:"
+	":LEFT-HEMIDIAPHRAGM:"
+	":LEFT-HEMITHORAX:"
+	":LEFT-INTERPLEURAL-SPACE:"
+	":LEFT-LOWER-LOBE:"
+	":LEFT-LUNG:"
+	":LEFT-PERIHILAR-REGION:"
+	":LEFT-THORAX:"
+	":LEFT-UPPER-LOBE:"
+	":LOCAL-LUNG-AREA:"
+	":LOWER-LOBE:"
+	":LOWER-LUNG-REGIONS:"
+	":LUNG-LOBE:"
+	":MEDIASTINUM:"
+	":MID-REGION-LEFT-LUNG:"
+	":MID-REGION-RIGHT-LUNG:"
+	":PERICARDIAL-SPACE:"
+	":PLEURA:"
+	":PULMONARY-ARTERY:"
+	":PULMONARY-VESSELS:"
+	":RIGHT-INTERPLEURAL-SPACE:"
+	":RIGHT-LOWER-LOBE:"
+	":RIGHT-LUNG:"
+	":RIGHT-MIDDLE-LOBE:"
+	":RIGHT-PARITRACHEAL-AREA:"
+	":RIGHT-UPPER-LOBE:"
+	":SINGLE-LUNG:"
+	":UPPER-LOBE-VESSELS:"
+	":UPPER-LOBE:" 
+	"<LOCALIZED-PULMONARY-LOCATION>")
+	
+(deftype bilateral-pulmonary-location (isa pulmonary-location))
+(defstringconstant ":BILATERAL-HILUM:"
+	":BILATERAL-LOWER-LOBES:" ":BILATERAL-LUNG:" ":BILATERAL-PERIHILAR-REGION:" 	
+	":BILATERAL-UPPER-LOBES:" ":PERITRACHEAL-AREA:"
+	":LOWER-LUNG-REGIONS:" 
+	":BILATERAL-INTERPLEURAL-SPACE:" "<BILATERAL-PULMONARY-LOCATION>")
+
+(deftype pulmonary-location-modifier (isa anatomy-location-modifier))
+(defstringconstant ":POSITIONAL-MODIFIER:" ":LOCAL-POSITIONAL-MODIFIER:" 
+	":GENERAL-POSITIONAL-MODIFIER:" "<PULMONARY-LOCATION-MODIFIER>")
+(deftype pulmonary-location-modifier-side (isa pulmonary-location-modifier))
+(defstringconstant ":LEFT:" ":RIGHT:" ":BILATERAL:" "<PULMONARY-LOCATION-MODIFIER-SIDE>")
+(deftype pulmonary-location-modifier-upper-lower 
+	(isa pulmonary-location-modifier))
+(defstringconstant ":LOWER:" ":MIDDLE:" ":UPPER:" 
+	"<PULMONARY-LOCATION-MODIFIER-UPPER-LOWER>")
+(deftype pulmonary-location-modifier-posterior-anterior (isa pulmonary-location-modifier))
+(defstringconstant ":ANTERIOR:" ":POSTERIOR:" 
+	"<PULMONARY-LOCATION-MODIFIER-POSTERIOR-ANTERIOR>")
+	
+(deftype abdomen-location (isa anatomic-location))
+(defstringconstant ":ABDOMEN_NS:" "<ABDOMEN-LOCATION>")
+	
+(deftype symptom (isa health-thing))
+(deftype symptom-property-or-manner (isa disease-property-or-manner))
+(defstringconstant ":SYMPTOM:" ":FEVER:" ":PAIN:" ":FATIGUE:" ":DIZZINESS:" 
+	"<SYMPTOM>")
+(defstringconstant ":PAINFUL:" ":FATIGUED:" ":DIZZY:" 
+	"<SYMPTOM-PROPERTY-OR-MANNER>")
+(deftype chest-symptom-thing (isa symptom))
+(defstringconstant ":SOB:" ":CHEST-PAIN:" "<CHEST-SYMPTOM-THING>")
+
+(deftype exam-finding-thing (isa health-thing))
+(defstringconstant ":FINDING:" "<EXAM-FINDING-THING>")
+(deftype artifactual-finding-thing (isa exam-finding-thing))
+(defstringconstant ":ARTIFACT:" "<ARTIFACTUAL-FINDING-THING>")
+(deftype radiograph-finding-thing (isa exam-finding-thing))
+(deftype chest-xray-finding-thing (isa radiograph-finding-thing))
+(defstringconstant 
+	":ABNORMAL-AORTA:"
+	":ALVEOLAR-EDEMA:"
+	":AORTIC-ANEURYSM:"
+	":ATELECTASIS:"
+	":BLUNTING-OF-CP-ANGLE:"
+	":BONY-ABNORMALITY:"
+	":BONY-EROSION:"
+	":BRONCHIAL-WALL-THICKENING:"
+	":BRONCHIOLITIS-OBLITERANS:"
+	":BRONCHOGENIC-CYST:"
+	":BULLOUS-DISEASE:"
+	":CALCIFIED-NODULE:"
+	":CARDIAL-PERICARDIAL-ABNORMALITY:"
+	":CARDIOMEGALY:"
+	":CHEST-WALL-EDEMA:"
+	":CONSOLIDATION:"
+	":ENLARGEMENT-OF-THE-HEART:"
+	":ENLARGEMENT-OF-THE-PULMONARY-VESSELS:"
+	":FLUID-OVERLOAD:"
+	":FRACTURE-NOS:"
+	":FRACTURED-RIB:"
+	":GENERIC-INFILTRATE-NOS:"
+	":HEMORRHAGE:"
+	":HEMOTHORAX:"
+	":HILAR-ABNORMALITY:"
+	":HILAR-ADENOPATHY:"
+	":HILAR-MASS:"
+	":INCREASED-LUCENCY:"
+	":INSTERSTITIAL-ABNORMALITY:"
+	":INTERSTITIAL-EDEMA:"
+	":INTERSTITIAL-EMPHYSEMA:"
+	":INTERSTITIAL-INFILTRATE:"
+	":LINEAR-STREAKY-OPACITY:"
+	":LYMPHADENOPATHY:"
+	":MALIGNANT-EFFUSION:"
+	":MEDIASTINAL-ABNORMALITY:"
+	":MEDIASTINAL-ADENOPATHY:"
+	":MEDIASTINAL-LYMPH-NODE:"
+	":MEDIASTINAL-MASS:"
+	":MEDIASTINAL-SCARRING:"
+	":MEDIASTINAL-SHIFT:"
+	":MEDIASTINAL-WIDENING:"
+	":OPACITY:"
+	":PARENCHYMAL-ABNORMALITY-NO:"
+	":PARENCHYMAL-ABNORMALITY:"
+	":PARENCHYMAL-CALCIFICATION:"
+	":PARENCHYMAL-SCARRING:"
+	":PERIHILAR-INFILTRATE:"
+	":PLEURAL-ABNORMALITY:"
+	":PLEURAL-EFFUSION-NS:"
+	":PLEURAL-EFFUSION:"
+	":PLEURAL-PLAQUE:"
+	":PLEURAL-SCARRING:"
+	":PLEURAL-THICKENING:"
+	":PNEUMATOCELES:"
+	":PNEUMOMEDIASTINUM:"
+	":PNEUMOTHORAX:"
+	":POOR-INSPIRATORY-EFFORT:"
+	":PULMONARY-CAVITATION:"
+	":PULMONARY-EDEMA-NS:"
+	":PULMONARY-MASS-LESION:"
+	":PULMONARY-NODULAR-LESION:"
+	":PULMONARY-SCARRING:"
+	":PULMONARY-VASCULAR-REDISTRIBUTION:"
+	":ROUND-INFILTRATE:"
+	":SOFT-TISSUE-ABNORMALITY:"
+	":SOFT-TISSUE-EDEMA:"
+	":SUB-DIAPHRAGMATIC-ABNORMALITY:"
+	":SUBCUTANEOUS-EMPHYSEMA:"
+	":SYSTEMIC-ARTERIAL-ABNORMALITY:"
+	":SYSTEMIC-VENOUS-ENLARGMENT:"
+	":TRACHEA-DEVIATION:"
+	"<CHEST-XRAY-FINDING-THING>")
+(deftype general-chest-xray-finding-thing (isa chest-xray-finding-thing))
+(defstringconstant
+	":GENERALIZED-CONSOLIDATION:"
+	":GENERALIZED-INFILTRATE:"
+	":GENERALIZED-INTERSTITIAL-INFILTRATE:"
+	":GENERALIZED-VOLUME-INCREASE:"
+	":GENERALIZED-VOLUME-REDUCTION:"
+	"<GENERAL-CHEST-XRAY-FINDING-THING>")
+(deftype localized-chest-xray-finding-thing (isa chest-xray-finding-thing))
+(defstringconstant
+	":LOCALIZED-CONSOLIDATION:"
+	":LOCALIZED-PULMONARY-OLIGEMIA:"
+	":LOCALIZED-INFILTRATE:" 
+	":LOCALIZED-LOWER-LOBE-INFILTRATE:"
+	":LOCALIZED-PARENCHYMAL-ABNORMALITY-NS:"
+	":LOCALIZED-UPPER-LOBE-INFILTRATE:" 
+	":LOCALIZED-VOLUME-INCREASE:"
+	":LOCALIZED-VOLUME-REDUCTION:"
+ 	":LOCULATED-PLEURAL-EFFUSION:"
+ 	":LEFT-VENTRICULAR-FAILURE:"  
+ 	":UNILATERAL-DIAPHRAGMATIC-ELEVATION:" 
+	":UNILATERAL-PLEURAL-EFFUSION:"
+	":UPPER-LOBE-MASS:"	
+	":UPPER-LOBE-NODULE:"
+	"<LOCALIZED-CHEST-XRAY-FINDING-THING>")
+(deftype bilateral-chest-xray-finding-thing (isa chest-xray-finding-thing))
+(defstringconstant
+	":BILATERAL-DIAPHRAGMATIC-ELEVATION:"
+	":BILATERAL-PLEURAL-EFFUSION:"
+	"<BILATERAL-CHEST-XRAY-FINDING-THING>")
+(deftype chest-xray-finding-visual-quality (isa chest-xray-finding-thing))
+(defstringconstant ":ILL-DEFINED:" "<CHEST-XRAY-FINDING-VISUAL-QUALITY>")
+
+(deftype treatment-thing (isa health-thing))
+(defstringconstant ":THERAPY:" ":TREATMENT:" ":PHYSICAL-THERAPY:" 
+	":SPEECH-THERAPY:" ":MEDICAL-THERAPY:" "<TREATMENT-THING>")
+(deftype surgery-thing (isa treatment-thing))
+(defstringconstant ":AMPUTATION:" "<SURGERY-THING>")
+(deftype treatment-action (isa health-action))
+(defstringconstant ":TREAT:" "<TREATMENT-ACTION>")
+(deftype treatment-property (isa health-property health-manner))
+(defstringconstant ":THERAPEUTIC:" "<TREATMENT-PROPERTY>")
+(deftype treatment-predicate (isa health-predicate health-thing))
+(defstringconstant ":NEED-TREATMENT:" ":TREAT-DISEASE:" "<TREATMENT-PREDICATE>")
+(deftype treatment-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-NEED-TREATMENT:" ":DISEASE-NEED-TREATMENT:" 
+	":PATIENT-NEED-TREATMENT-FOR-DISEASE:"
+	"<TREATMENT-SENTENCE>")
+
+(deftype evaluation-thing-action-predicate 
+	(isa semantic-thing semantic-action semantic-predicate))
+(defstringconstant ":EVALUATE:" ":EVALUATION:" ":EVALUATION-FOR-THING:" 
+	":EVALUATION-FOR-DEPRESSION:" "<EVALUATION-THING-ACTION-PREDICATE>")
+(deftype evaluation-sentence (isa semantic-sentence))
+(defstringconstant ":PATIENT-EVALUATED-FOR-THING:" 
+	":PATIENT-EVALUATED-FOR-DEPRESSION:" "<EVALUATION-SENTENCE>")
+	
+(deftype medical-thing (isa semantic-thing))
+(deftype medical-property (isa semantic-property))
+(deftype medical-procedure-property (isa semantic-property))
+(deftype medical-procedure (isa medical-thing))
+(defstringconstant ":MEDICAL-PROCEDURE:" 
+	":MECHANICAL-VENTILATION:" ":INTUBATION:" "<MEDICAL-PROCEDURE>")
+(defstringconstant ":MEDICAL-PROCEDURE-PROPERTY:" 
+	":VENTILATED:" ":INTUBATED:" "<MEDICAL-PROCEDURE-PROPERTY>")
+(deftype medical-measurement (isa medical-thing))
+(deftype medical-procedure-property-state (isa medical-thing))
+
+(deftype appropriateness (isa semantic-state semantic-property))
+(defstringconstant ":APPROPRIATE:" ":INAPPROPRIATE:" "<APPROPRIATENESS>")
+
+(deftype possibly 
+	(isa semantic-state semantic-manner semantic-property))
+(defstringconstant ":POSSIBLE:" ":POSSIBLY:" ":PROBABLY:" ":LIKELY:" 
+	"<POSSIBLY>")
+
+(deftype possibility (isa semantic-thing))
+(defstringconstant ":POSSIBILITY:" ":PROBABILITY:" ":RISK:" "<POSSIBILITY>")
+
+(deftype observe-action-thing (isa semantic-action semantic-thing))
+(defstringconstant ":OBSERVE:" "<OBSERVE-ACTION-THING>")
+(deftype observe-thing-predicate (isa semantic-predicate))
+(defstringconstant ":OBSERVE-PATIENT:" "<OBSERVE-THING-PREDICATE>")
+(deftype person-observe-thing-sentence (isa semantic-sentence))
+(defstringconstant ":FAMILY-OBSERVE-PATIENT:" 
+	"<PERSON-OBSERVE-THING-SENTENCE>")
+
+(deftype question-answer (isa semantic-thing semantic-action))
+(defstringconstant ":QUESTION:" ":ANSWER:" "<QUESTION-ANSWER>")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Actions
+(deftype appear-action (isa semantic-action))
+(defstringconstant ":APPEAR:" "<APPEAR-ACTION>")
+
+(deftype start-stop-action (isa semantic-action))
+(defstringconstant ":START:" ":STOP:" "<START-STOP-ACTION>")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Grammar
+
+;; Grammar types
+(deftype grammar-sentence (isa sentence))
+(deftype grammar-predicate (isa predicate))
+(deftype grammar-thing (isa thing))
+(deftype grammar-state (isa state))
+(deftype grammar-manner (isa manner))
+(deftype grammar-property (isa property))
+
+(deftype grammar-time (isa time))
+
+;; Grammar predicates
+(deftype grammar-predicate-pp-predicate (isa grammar-predicate))
+(deftype grammar-passive-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-thing-predicate (isa grammar-predicate))
+(deftype grammar-action-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-pp-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-thing-pp-pp-predicate (isa grammar-predicate))
+(deftype grammar-action-manner-predicate (isa grammar-predicate))
+(deftype grammar-is-pp-predicate (isa grammar-predicate))
+(deftype grammar-is-state-predicate (isa grammar-predicate))
+(deftype grammar-isnt-state-predicate (isa grammar-predicate))
+
+(deftype grammar-action-state-thing-infinitive-predicate 
+	(isa grammar-predicate))
+
+
+;; Grammar sentences
+(deftype grammar-conjunct-sentence (isa grammar-sentence))
+(deftype grammar-passive-sentence (isa grammar-sentence))
+(deftype grammar-thing-is-state-sentence (isa grammar-sentence))
+(deftype grammar-thing-isnt-state-sentence (isa grammar-sentence))
+(deftype grammar-person-predicate-sentence (isa grammar-sentence))
+(deftype grammar-person-have-thing-sentence (isa grammar-sentence))
+(deftype grammar-thing-is-pp-sentence (isa grammar-sentence))
+(deftype grammar-thing-pp-sentence (isa grammar-sentence))
+
+;; Grammar predicates
+(deftype grammar-passive-predicate (isa grammar-predicate))
+
+;; Grammar states
+(deftype grammar-state-pp (isa grammar-state))  ;; "alone at home"
+(deftype grammar-state-predicate (isa grammar-state))
+(deftype grammar-action-state (isa grammar-state))  ;; "live alone"
+(deftype grammar-state-action-thing (isa grammar-state))
+(deftype grammar-state-action-thing-pp (isa grammar-state))
+
+;; Grammar things
+(deftype grammar-thing-pp-thing (isa grammar-thing))
+
+;; PP
+(defstringconstant ":PP:" "<PP>")
+
+(deftype grammar-modifier-thing (isa grammar-modifier grammar-thing)) ;; 2 bedroom, 2 bedroom home
+
+(deftype grammar-conjunct (isa conjunct))
+(defstringtype ":CONJ:" ":BUT:" ":SENTENCE-CONJUNCT:" "<GRAMMAR-CONJUNCT>")
+
+;; (deftype context-word (isa property state)) -- Only use this in negation rule, not as state or property
+(defstringconstant ":PRE-NEGATION-WORD:" "<CONTEXT-WORD>")
+
+(deftype checkbox-checked (isa meta-grammar-property))
+(defstringconstant ":CHECKBOX-CHECKED:" ":CHECKBOX-UNCHECKED:" "<CHECKBOX-CHECKED>")
+
+(defstringconstant ":BULLET:" ":CHECKBOX:" "<META-GRAMMAR-THING>")
+
+(deftype wh-word (isa sentence-modifier))
+(defstringconstant ":WHAT:" ":WHO:" ":WHERE:" ":WHY:" "<WH-WORD>")
+
+;; Meta grammar items
+(deftype meta-grammar (isa root))
+(deftype meta-grammar-thing (isa meta-grammar))
+(deftype meta-grammar-property (isa meta-grammar))
+
+
+)
+
+
+
+
+
+
+
+

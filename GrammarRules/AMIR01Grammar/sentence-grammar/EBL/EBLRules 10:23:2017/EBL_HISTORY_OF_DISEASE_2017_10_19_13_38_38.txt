@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HISTORY-OF-DISEASE::2017/10/19 13:38:38") 
+  (specialized) 
+  (example-snippet "history of cancer in her 30s") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":HISTORY-OF-DISEASE:") 
+  (stype "<HISTORY-THING>") 
+  (window 16.0) 
+  (words 
+    (":HISTORY::DISEASE:") 
+    (":PREP::DECADE-AGE:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")))
+
+)

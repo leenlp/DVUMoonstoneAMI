@@ -1,0 +1,27 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FF-AT-FACILITY::2018/03/08 13:03:24") 
+  (specialized) 
+  (example-snippet "her husband was in this afternoon") 
+  (ordered true) 
+  (sourceid "person-at-place-rule-2") 
+  (concept ":FF-AT-FACILITY:") 
+  (stype "<PERSON-AT-PLACE-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    (":FAMILY:") 
+    (":WAS:") 
+    ("in") 
+    (":SPECIFIC-TIME:")) 
+  (properties 
+    (person "?0") 
+    (location ":HERE:") 
+    (time "?3")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2) 
+    ("notneg" ?3)))
+
+)

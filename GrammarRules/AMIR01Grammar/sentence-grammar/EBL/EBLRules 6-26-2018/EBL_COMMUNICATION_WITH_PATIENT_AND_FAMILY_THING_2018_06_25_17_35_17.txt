@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-PATIENT-AND-FAMILY-THING::2018/06/25 17:35:17") 
+  (specialized) 
+  (example-snippet "patientcaregiver education") 
+  (ordered true) 
+  (sourceid "person-thing-thing-rule") 
+  (concept ":COMMUNICATION-WITH-PATIENT-AND-FAMILY-THING:") 
+  (stype "<COMMUNICATION-THING>") 
+  (window 16.0) 
+  (words 
+    (":FF:") 
+    (":EDUCATION:")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

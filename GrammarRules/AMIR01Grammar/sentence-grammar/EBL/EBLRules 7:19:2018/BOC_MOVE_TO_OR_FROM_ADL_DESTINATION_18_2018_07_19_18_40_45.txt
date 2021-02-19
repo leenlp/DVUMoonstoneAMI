@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:MOVE-TO-OR-FROM-ADL-DESTINATION:-18-2018/07/19 18:40:45") 
+  (specialized) 
+  (example-snippet "transfer from bed to chair") 
+  (ordered true) 
+  (concept ":MOVE-TO-OR-FROM-ADL-DESTINATION:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":TRANSFER::FROM-ADL-PLACE-TO-ADL-PLACE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

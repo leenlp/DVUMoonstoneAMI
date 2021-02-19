@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-according-to-person-rule-0-2017/10/10 15:57:15") 
+  (specialized) 
+  (example-snippet "according to mom") 
+  (ordered true) 
+  (concept ":POSSIBLE-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 16.0) 
+  (bagofconcepts true) 
+  (words 
+    (":ACCORDING-TO-FAMILY:")))
+
+)

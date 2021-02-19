@@ -1,0 +1,17 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-LIVING-ALONE:-0-2018/06/25 23:01:48") 
+  (specialized) 
+  (example-snippet "benefit from brief inpt rehab") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-LIVING-ALONE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":BENEFIT::PREP::INPATIENT::NURSING-HOME:")) 
+  (tests 
+    ("notneg" ?0))
+  (properties (directionality uncertain)))
+
+)

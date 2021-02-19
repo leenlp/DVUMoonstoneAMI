@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-16-2018/06/25 21:36:20") 
+  (specialized) 
+  (example-snippet "someone will always be around") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":SOMEONE::REGULARLY::DISTANCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

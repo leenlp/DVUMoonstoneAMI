@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::SPEAK-IMPERFECT-ENGLISH-PREDICATE::2018/04/09 14:58:01") 
+  (specialized) 
+  (example-snippet "speaks a little English") 
+  (ordered true) 
+  (sourceid "person-communicates-sentence-or-thing-predicate-rule") 
+  (concept ":SPEAK-IMPERFECT-ENGLISH-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":SPEAK:") 
+    (":MINIMAL::ENGLISH:")) 
+  (properties 
+    (topic "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)) 
+  (removeproperties directionality))
+
+)

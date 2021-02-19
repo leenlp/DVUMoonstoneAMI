@@ -1,0 +1,49 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LIVES-IN-NURSING-HOME::2017/10/12 16:02:51") 
+  (specialized) 
+  (example-snippet "now is in nursing facility") 
+  (sourceid "predicate-plus-time-rule") 
+  (concept ":LIVES-IN-NURSING-HOME:") 
+  (stype "<LIVE-IN-FACILITY-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    ("@EBL:null:2017/10/12 16:02:51@") 
+    ("@specific-time-rule-1@")) 
+  (properties 
+    (predicate "?0") 
+    (time "?1")))
+
+(
+  (ruleid "EBL:null:2017/10/12 16:02:51") 
+  (specialized) 
+  (intermediate) 
+  (example-snippet "is in nursing facility") 
+  (ordered true) 
+  (sourceid "is-pp-predicate-rule") 
+  (stype "<GRAMMAR-IS-PP-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    ("@is-auxilliary-word-rule@") 
+    ("@EBL:null:2017/10/12 16:02:51@")) 
+  (properties 
+    (predicate "?1")))
+
+(
+  (ruleid "EBL:null:2017/10/12 16:02:51") 
+  (specialized) 
+  (intermediate) 
+  (example-snippet "in nursing facility") 
+  (ordered true) 
+  (sourceid "EBL::AT-NURSING-HOME::2017/10/09 18:49:40") 
+  (concept ":AT-NURSING-HOME:") 
+  (stype "<AT-PLACE-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    ("@preposition-word-rule@") 
+    ("@nursing-home-rule-1@")) 
+  (properties 
+    (thing "?1")))
+
+)

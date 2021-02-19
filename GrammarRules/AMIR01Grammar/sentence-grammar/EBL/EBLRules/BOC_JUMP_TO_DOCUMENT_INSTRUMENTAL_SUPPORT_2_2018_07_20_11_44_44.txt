@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-2-2018/07/20 11:44:44") 
+  (specialized) 
+  (example-snippet "attends a senior daycare center") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":GO::DAYCARE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,437 @@
+'(
+wordrule
+ 
+ ;; PREDICATE RULES
+ 
+((ruleid hypothetical-predicate-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ (concept ?1)
+ (ordered true)
+ (window 32)
+ (words ("might" "would" "could" "may" "most likely" "likely") ("<PREDICATE>"))
+ (properties (predicate ?1) (directionality hypothetical)))
+ 
+((ruleid property-predicate-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ (concept ?1)
+ (ordered true)
+ (window 32)
+ (words ("_IS_" "_WAS_") ("<PROPERTY>"))
+ (properties (property ?1)))
+ 
+ ((ruleid manner-property-property-rule)
+ (stype "<GRAMMAR-PROPERTY>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<MANNER>") ("<PROPERTY>"))
+ (properties (manner ?0) (property ?1)))
+ 
+ 
+ ;; 3/8/2018
+ ;; "walking for 20 minutes four or five days out of the week  with a friend"
+((ruleid predicate-pp-rule)
+ (stype "<GRAMMAR-PREDICATE-PP-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<PREDICATE>") ("<PP>"))
+ (properties (predicate ?0) (object (thing ?1))))
+ 
+ ;; Changed to complex-concept 3/8/2018.  What side effects?
+((ruleid predicate-plus-time-rule)
+ ;; (stype ?0)
+ ;; (concept ?0)
+ (stype "<GRAMMAR-PREDICATE>")
+ (complex-concept)
+ (window 32)
+ (words ("<PREDICATE>") ("<TIME-EXPRESSION>"))
+ (properties (predicate ?0) (time ?1)))
+ 
+((ruleid simple-action-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ (concept ?0)
+ (words ("<UNDERSTAND-ACTION>"))  ;; Other types of intransitive actions here...
+ (properties (action ?0)))
+ 
+((ruleid action-thing-rule)
+ (stype "<GRAMMAR-ACTION-THING-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<ACTION>") ("<THING>"))
+ (tests (notneg ?0)) ;; 3/20/2018
+ (properties (action ?0) (object ?1)))
+ 
+ ((ruleid action-property-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<ACTION>") ("<PROPERTY>" "<STATE>" "<TIME-EXPRESSION>"))
+ ;; (tests (not("isEDFormActionWord" ?0)))
+ (properties (action ?0) (property ?1)))
+
+;; Deactivated 6/11/2018 -- There are very few statements of this type, and
+;; this interupts communication-style sentences
+;; e.g. "Give his son a book"
+((ruleidXXX action-thing-thing-rule)
+ (stype "<GRAMMAR-ACTION-THING-THING-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<ACTION>") ("<THING>") ("<THING>"))
+ ;; (tests (not("isEDFormActionWord" ?0)))
+ (properties (action ?0) (first-object ?1) (second-object ?2)))
+
+;; "walk to the bathroom"
+((ruleid action-pp-rule)
+ (stype "<GRAMMAR-ACTION-PP-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<ACTION>") ("<PP>"))
+ ;; (tests (not("isEDFormActionWord" ?0)))
+ (properties (action ?0) (object (thing ?1))))
+ 
+((ruleid action-pp-pp-rule)
+ (stype "<GRAMMAR-ACTION-PP-PP-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<ACTION>") ("<PP>") ("<PP>"))
+ ;; (tests (not("isEDFormActionWord" ?0)))
+ (properties (action ?0) 
+ 			(first-pp ?1)
+ 			(second-pp ?2)))
+ 
+ ((ruleid action-thing-pp-rule)
+ (stype "<GRAMMAR-ACTION-THING-PP-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<ACTION>") ("<THING>") ("<PP>"))
+ ;; (tests (not("isEDFormActionWord" ?0)))
+ (properties (action ?0) (first-object ?1) (pp-object (thing ?2))))
+
+((ruleid action-thing-pp-pp-rule)
+ (stype "<GRAMMAR-ACTION-THING-PP-PP-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<ACTION>") ("<THING>") ("<PP>") ("<PP>"))
+ ;; (tests (not("isEDFormActionWord" ?0)))
+ (properties (action ?0) 
+ 	(object ?1) 
+ 	(first-pp-object (thing ?2)) 
+ 	(second-pp-object (thing ?3))))
+ 	
+ ;; 3/13/2018
+ ;; 6/18/2018:  I'm making this complex, to distinguish between the task and 
+ ;; the doing of the task.  
+ ;; CHECK FOR ADVERSE SIDE EFFECTS FROM THIS CHANGE
+((ruleid do-predicate-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ 
+ ;; CHANGED 6/18/2018
+ ;; (concept ?1)
+ (complex-concept)
+ 
+ (ordered true)
+ (window 32)
+ (words (":DO:") ("<PREDICATE>"))
+ ;; (tests ("isRootForm" ("getWord" (action ?1))))
+ (properties (predicate ?1))
+ (tests (notneg ?1)))
+ 
+((ruleid infinitive-phrase-predicate-rule)
+ (stype "<GRAMMAR-INFINITIVE-PREDICATE>")
+ (concept ?1)
+ (ordered true)
+ (window 32)
+ (words ("to") ("<PREDICATE>"))
+ ;; (tests ("isRootForm" ("getWord" (action ?1))))
+ (properties (predicate ?1)))
+ 
+;; "is at the nursing home"
+((ruleid is-pp-predicate-rule)
+ (stype "<GRAMMAR-IS-PP-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("_IS_" "_ISNT_") ("<PP>"))
+ (properties (predicate ?1)))
+ 
+;; 10/13/2017 (Needs expansion into more rules)
+((ruleid passive-action-state-predicate-rule)
+ (stype "<GRAMMAR-PASSIVE-PREDICATE>")
+;; (complex-concept)
+ (concept ?1)  ;; 3/13/2018 -- Too permissive?
+ (ordered true)
+ (window 32)
+ (words ("_IS_" ) 
+ 		("<ACTION>" "<STATE>" "<PREDICATE>" "<PROPERTY>"))
+ (tests ("hasNestedFirstEDFormActionWord" ?1))
+ (properties (predicate ?1) (verb-form passive)))
+ 
+((ruleid passive-isnt-action-state-predicate-rule)
+ (stype "<GRAMMAR-PASSIVE-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("_ISNT_") 
+ 		("<ACTION>" "<STATE>" "<PREDICATE>" "<PROPERTY>"))
+ (tests ("isEDFormActionWord" ?1))
+ (properties 
+ 	(action ?1) (predicate ?2) (verb-form passive)
+ 	(directionality negated)))
+ 	
+
+;;;;;;;;;;;;
+;;; BAD IN HERE:
+ 
+;; 4/1/2018
+((ruleid is-thing-predicate-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ (concept ?1)
+ (ordered true)
+ (window 32)
+ (words ("_IS_" "_WAS_") ("<THING>"))
+ (tests (notneg ?1))
+ (properties (thing ?1)))
+ 
+((ruleid isnt-thing-predicate-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ (concept ?1)
+ (ordered true)
+ (window 32)
+ (words ("_ISNT_" "_WASNT_") ("<THING>"))
+ (tests (notneg ?1))
+ (properties (thing ?1) (directionality negated)))
+ 
+;; 11/17/2017
+ ;; e.g. "is happy" "is depressed"
+((ruleid predicate-state-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ (concept ?1)
+ (ordered true)
+ (window 32)
+ (words ("_IS_" "_WAS_") ("<STATE>" "<PROPERTY>" "<PREDICATE>"))
+ (tests (notneg ?1))
+ (properties (property ?1)))
+ 
+((ruleid predicate-not-state-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ (concept ?1)
+ (ordered true)
+ (window 32)
+ (words ("_ISNT_" "_WASNT_") ("<STATE>" "<PROPERTY>" "<PREDICATE>"))
+ (properties (directionality negated)))
+ 
+ ;; 5/10/2018 TEST -- TEMPORARY.  REMOVING "THING", SINCE PERSON/PREDICATE IS IN
+ ;; ANOTHER RULE
+((ruleid state-action-thing-infinitive-predicate-rule)
+  (stype "<GRAMMAR-ACTION-STATE-THING-INFINITIVE-PREDICATE>")
+  (complex-concept)
+  (ordered true)
+  (window 32)
+  (words ("<STATE>" "<ACTION>" 
+  			"<THING>" 
+  			"<PROPERTY>")
+  		 ("<PREDICATE>"))
+  (properties (prefix ?0) (predicate ?1)))
+  
+((ruleid action-state-predicate-rule)
+  (stype "<GRAMMAR-ACTION-STATE-THING-INFINITIVE-PREDICATE>")
+  (complex-concept)
+  (ordered true)
+  (window 32)
+  (words ("<ACTION>") ("<STATE>"))
+  (properties (action ?0) (predicate ?1)))
+
+((ruleid desire-or-request-predicate)
+  (stype "<GRAMMAR-PREDICATE>")
+  (complex-concept)
+  (ordered true)
+  (words (":DESIRE:") ("<PREDICATE>" "<THING>"))
+  (window 32)
+  (properties (action ?0) (thing-or-predicate ?1))
+  (tests (notneg ?0) (notneg ?1)))
+  
+((ruleid have-thing-predicate-rule)
+ (stype "<GRAMMAR-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("_HAVE_") ("<THING>"))
+ (properties (object ?2)))
+
+
+;;;;;;;;;;;;
+
+;; SENTENCE RULES
+
+
+;; "her primary language is Spanish"
+((ruleid thing-is-thing-sentence-rule)
+ (stype "<GRAMMAR-SENTENCE>")
+ (complex-concept)  
+ (ordered true)
+ (window 32)
+ (words ("<THING>") 
+ 		("@is-thing-predicate-rule@" "@isnt-thing-predicate-rule@"))
+ (tests (notneg ?0))
+ (properties (subject ?0) 
+ 			(predicate ?1) 
+ 			(object (object ?1))))
+
+;; "unclear if they will be immediately moving back in together"
+((ruleid unclear-if-sentence-rule)
+ (stype "<GRAMMAR-SENTENCE>")
+ (concept ?1)  
+ (ordered true)
+ (window 32)
+ (words ("unclear" "uncertain") ("@if-hypothetical-sentence-rule@"))
+ (properties (directionality hypothetical)))
+
+((ruleid if-hypothetical-sentence-rule)
+ (stype "<GRAMMAR-SENTENCE>")
+ (concept ?1)  
+ (ordered true)
+ (window 32)
+ (words ("if" "whether") ("<SENTENCE>"))
+ (properties (sentence-nature if)))
+ 
+ 
+ ;; Removed 3/8/2018.  Time should modify predicate...
+((ruleid sentence-plus-time-rule)
+ (stype ?0)
+ (concept ?0)
+ (window 32)
+ (words ("<SENTENCE>") ("<TIME-EXPRESSION>"))
+ (properties (sentence ?0) (time ?1)))
+ 
+((ruleid person-predicate-sentence-rule)
+ (stype "<GRAMMAR-PERSON-PREDICATE-SENTENCE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<PERSON>" "<FACILITY>") ("<PREDICATE>"))
+ (properties (subject ?0) (predicate ?1))
+ (tests (notneg ?0)))  ;; e.g. may pull up negated predicate with :PATIENT: as summary
+ 
+;; 4/3/2018
+((ruleid person-predicate-sentence-imperfect-tense-rule)
+ (stype "<GRAMMAR-SENTENCE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<PERSON>" "<FACILITY>") ("_HAVE_") ("<PREDICATE>"))
+ (properties (subject ?0) (predicate ?2) (tense imperfect)))
+ 
+((ruleid person-have-thing-rule)
+ (stype "<GRAMMAR-PERSON-HAVE-THING-SENTENCE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<PERSON>") ("@have-thing-predicate-rule@"))
+ (properties (subject ?0) (object (object ?1))))
+ 
+ ;; wife is at bedside
+((ruleid thing-is-pp-rule)
+ (stype "<GRAMMAR-THING-IS-PP-SENTENCE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<THING>") ("_IS_" "_ISNT_") ("<PP>"))
+ (properties (subject ?0) (predicate ?2)))
+ 
+((ruleid thing-pp-thing-rule)
+ (stype "<GRAMMAR-THING-PP-THING>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<THING>") ("<PP>"))
+ (properties (object ?0) (modifier (thing ?1))))
+ 
+;; "behaves badly"
+((ruleid action-manner-predicate-rule)
+ (stype "<GRAMMAR-ACTION-MANNER-PREDICATE>")
+ (complex-concept)
+ (ordered true)
+ (words ("<ACTION>" "<PREDICATE>") ("<MANNER>"))
+ (properties (action ?0) (manner ?1)))
+ 
+((ruleid passive-sentence-rule)
+ (stype "<GRAMMAR-PASSIVE-SENTENCE>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<THING>") ("<GRAMMAR-PASSIVE-PREDICATE>"))
+ (properties (subject ?0) (predicate ?1) (verb-form passive)))
+ 
+;; PP RULES
+
+((ruleid pp-rule)
+ (stype "<PP>")
+ (complex-concept)
+ ;; (concept ?1)
+ (ordered true)
+ (words ("_PREP_" ":PREP:") ("<THING>"))
+ (properties (thing ?1)))
+
+;; THING RULES
+
+;; 6/8/2017
+((ruleid person-with-whom-clause-thing-rule)
+ (stype "<GRAMMAR-THING>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<PERSON>") ("with whom") ("<SENTENCE>"))
+ (properties (person ?0) (sentence ?2)))
+
+;; "what we are talking about"
+((ruleid wh-sentence-transform-thing-rule)
+ (stype "<GRAMMAR-THING>")
+ (complex-concept)
+ (ordered true)
+ (window 32)
+ (words ("<WH-WORD>") ("<PERSON>") ("_IS_") ("<ACTION>"))
+ (properties (object ?0)))
+
+;; 3/13/2018
+((ruleid what-sentence-thing-rule)
+ (stype "<GRAMMAR-THING>")
+ (complex-concept)
+ (juxtaposed true)
+ (window 32)
+ (words (":WHAT:") ("<SENTENCE>"))
+ (properties (sentence ?1)))
+
+((ruleid property-thing-rule)
+ (stype "<GRAMMAR-THING>")
+ (complex-concept)
+ (ordered true)
+ (words ("<PROPERTY>") ("<THING>"))
+ (properties (property ?0) (thing ?1)))
+  
+((ruleid thing-predicate-thing-rule)
+ (stype "<GRAMMAR-THING-PP-THING>")
+ (complex-concept)
+ (ordered true)
+ (words ("<THING>") ("<PP>"))
+ (properties (object ?0) (modifier (thing ?1))))
+ 
+ 
+;; PROPERTY RULES
+((ruleid recursive-genetive-property-rule)
+ (stype ?1)
+ (complex-concept)
+ (ordered true)
+ (words ("<GENITIVE-PROPERTY>") ("<GENITIVE-PROPERTY>"))
+ (properties (genitive ?0) (thing (thing ?1))))
+
+
+
+)

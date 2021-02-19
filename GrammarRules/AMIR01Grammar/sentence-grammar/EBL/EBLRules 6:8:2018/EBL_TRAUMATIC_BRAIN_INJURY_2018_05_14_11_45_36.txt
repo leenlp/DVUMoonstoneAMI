@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::TRAUMATIC-BRAIN-INJURY::2018/05/14 11:45:36") 
+  (specialized) 
+  (example-snippet "traumatic brain injury") 
+  (ordered true) 
+  (sourceid "property-thing-rule") 
+  (concept ":TRAUMATIC-BRAIN-INJURY:") 
+  (stype "<INJURY-THING>") 
+  (window 16.0) 
+  (words 
+    (":TRAUMATIC:") 
+    (":BRAIN-INJURY:")) 
+  (properties 
+    (property "?0") 
+    (thing "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

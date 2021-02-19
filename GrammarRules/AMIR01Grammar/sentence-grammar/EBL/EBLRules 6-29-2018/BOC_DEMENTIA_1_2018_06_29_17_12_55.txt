@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:DEMENTIA:-1-2018/06/29 17:12:55") 
+  (specialized) 
+  (example-snippet "persistent deficits in cognition") 
+  (ordered true) 
+  (concept ":DEMENTIA:") 
+  (stype "<MENTAL-IMPAIRMENT-THING>") 
+  (bagofconcepts true) 
+  (words 
+    (":LONG-TERM::GENERAL-COGNITIVE-ABILITY-DEFICIT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-COGNITIVE-ABILITY-DEFICIT::2018/03/16 20:44:53") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "have-thing-predicate-rule") 
+  (concept ":HAVE-COGNITIVE-ABILITY-DEFICIT:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    ("@have-word-rule@") 
+    (":COGNITIVE-ABILITY-DEFICIT:<THING>")) 
+  (properties 
+    (object "?2")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

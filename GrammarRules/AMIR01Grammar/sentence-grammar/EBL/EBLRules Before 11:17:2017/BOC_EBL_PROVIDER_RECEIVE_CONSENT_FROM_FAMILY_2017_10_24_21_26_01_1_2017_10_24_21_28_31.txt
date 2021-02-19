@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-EBL::PROVIDER-RECEIVE-CONSENT-FROM-FAMILY::2017/10/24 21:26:01-1-2017/10/24 21:28:31") 
+  (specialized) 
+  (example-snippet "consent was obtained from the daughter who has power of attorney") 
+  (ordered true) 
+  (concept ":HAVE-SUPPORT:") 
+  (stype "<RECEIVE-SUPPORT-PREDICATE>") 
+  (window 32.0) 
+  (bagofconcepts true) 
+  (words 
+    (":PROVIDER-RECEIVE-CONSENT-FROM-FAMILY:")))
+
+)

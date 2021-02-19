@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-9-2019/12/11 17:20:34") 
+  (specialized) 
+  (example-snippet "Rectal incontinence") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":INCONTINENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

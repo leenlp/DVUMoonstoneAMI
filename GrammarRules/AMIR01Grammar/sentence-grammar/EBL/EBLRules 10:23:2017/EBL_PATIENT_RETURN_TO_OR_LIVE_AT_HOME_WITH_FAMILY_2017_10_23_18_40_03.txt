@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY::2017/10/23 18:40:03") 
+  (specialized) 
+  (example-snippet "patient was discharged to return home to her parents") 
+  (ordered true) 
+  (sourceid "passive-sentence-rule") 
+  (concept ":PATIENT-RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:") 
+  (stype "<LIVE-AT-HOME-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":DISCHARGE::RETURN-TO-OR-LIVE-AT-HOME-WITH-FAMILY:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1") 
+    (verb-form "passive")))
+
+)

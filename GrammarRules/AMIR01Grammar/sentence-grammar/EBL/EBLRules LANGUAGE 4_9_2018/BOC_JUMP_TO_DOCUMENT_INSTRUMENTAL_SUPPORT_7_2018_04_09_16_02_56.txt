@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-7-2018/04/09 16:02:56") 
+  (specialized) 
+  (example-snippet "Her boyfriend does help to make sure that she understands what we are talking about") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PERSON-HELP-PATIENT-UNDERSTAND-CONVERSATION-SENTENCE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

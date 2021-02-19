@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-15-2018/07/19 16:55:59") 
+  (specialized) 
+  (example-snippet "requiring redirection to task") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED-HELP::DO::ADL-ACTIVITY:"
+    ":NEED::THERAPY-PROMPT::PREP::GENERAL-ADL-TASK:"
+    ":NEED-HELP::DO::GENERAL-ADL-TASK:"
+    ":NEED::MAXIMAL::PREP::TRANSFER::PREP::POSITIONAL-ACTION::PREP::CHAIR:"
+    ":NEED::MAXIMALLY::TRANSFER::ADL-ACTIVITY::PREP::ADL-DESTINATION:"
+    ":NEED::MAXIMALLY::DO::ADL-FURNITURE::PREP::CHAIR::TRANSFER:"
+    ":POOR-TOLERANCE::PREP::GENERAL-ADL-TASK:"
+    ":UNABLE::COMPLETE-PROPERTY::GENERAL-ADL-TASK:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

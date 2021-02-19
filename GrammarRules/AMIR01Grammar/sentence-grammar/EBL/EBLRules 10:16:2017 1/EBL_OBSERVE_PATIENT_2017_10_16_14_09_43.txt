@@ -1,0 +1,19 @@
+'(
+wordrule
+(
+  (ruleid "EBL::OBSERVE-PATIENT::2017/10/16 14:09:43") 
+  (specialized) 
+  (example-snippet "keep an eye on him") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":OBSERVE-PATIENT:") 
+  (stype "<OBSERVE-THING-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":OBSERVE:<ACTION>") 
+    (":PATIENT:")) 
+  (properties 
+    (action "?0") 
+    (object "?1")))
+
+)

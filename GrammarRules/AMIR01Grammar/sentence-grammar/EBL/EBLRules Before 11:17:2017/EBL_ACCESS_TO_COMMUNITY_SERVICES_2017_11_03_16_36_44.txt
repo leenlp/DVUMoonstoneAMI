@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ACCESS-TO-COMMUNITY-SERVICES::2017/11/03 16:36:44") 
+  (specialized) 
+  (example-snippet "was referred to Community Mental Health Agencies") 
+  (sourceid "referred-to-rule") 
+  (concept ":ACCESS-TO-COMMUNITY-SERVICES:") 
+  (stype "<ACCESS-TO-COMMUNITY-SERVICES-PREDICATE>") 
+  (window 16.0) 
+  (words 
+    (":REFER:") 
+    (":PREP:") 
+    (":COMMUNITY-SERVICE:")))
+
+)

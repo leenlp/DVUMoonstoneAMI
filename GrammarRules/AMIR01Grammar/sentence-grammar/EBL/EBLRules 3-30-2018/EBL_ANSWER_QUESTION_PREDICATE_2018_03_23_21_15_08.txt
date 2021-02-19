@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ANSWER-QUESTION-PREDICATE::2018/03/23 21:15:08") 
+  (specialized) 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":ANSWER-QUESTION-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ANSWER:<ACTION>") 
+    (":QUESTION:<THING>")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

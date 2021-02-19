@@ -1,0 +1,15 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HAVE-SUPPORT:-1-2018/03/01 20:45:46") 
+  (specialized) 
+  (example-snippet "Mom brings the patient in today") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (bagofconcepts true) 
+  (words 
+    (":FF-TRANSPORT-PATIENT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

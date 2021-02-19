@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-LIVES-IN-NURSING-HOME::2017/10/18 17:43:59") 
+  (specialized) 
+  (example-snippet "she eats in the nursing home") 
+  (ordered true) 
+  (sourceid "EBL::PATIENT-LIVES-IN-NURSING-HOME::2017/10/09 18:50:06") 
+  (concept ":PATIENT-PERFORM-ADL-IN-NURSING-HOME:") 
+  (window 32.0) 
+  (words 
+    (":PERSON:") 
+    (":ADL-ACTIVITY:<ACTION>") 
+    (":AT-NURSING-HOME:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (activity "?1") 
+    (pp "?2")))
+
+)

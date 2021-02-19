@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:LIVE-IN-NURSING-HOME:-1-2019/12/11 13:37:20") 
+  (specialized) 
+  (example-snippet "Discharge Transport Facility") 
+  (ordered true) 
+  (concept ":LIVE-IN-NURSING-HOME:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DISCHARGE::TRANSPORT::MEDICAL-FACILITY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-DEPRESSION:-1-2018/05/10 10:34:05") 
+  (specialized) 
+  (example-snippet "a history of depression versus bipolar disorder") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-DEPRESSION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":HISTORY::DEPRESSION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

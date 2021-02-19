@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HELP-TO-MOVE-TO-ADL-DESTINATION::2018/07/17 20:30:20") 
+  (specialized) 
+  (example-snippet "help to get to bathroom") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":HELP-TO-MOVE-TO-ADL-DESTINATION:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":HELP:") 
+    (":PREP::MOVE-TO::PREP::ADL-ROOM:")) 
+  (properties 
+    (action "?0") 
+    (object (thing ?1))) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

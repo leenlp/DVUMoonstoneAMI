@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMPLIANCE::2018/01/19 12:14:57") 
+  (specialized) 
+  (example-snippet "compliant with meds") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":COMPLIANCE:") 
+  (stype "<BEHAVIOR>") 
+  (window 32.0) 
+  (words 
+    (":COMPLIANCE:<ACTION>") 
+    (":PREP::PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (action "?0") 
+    (object "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

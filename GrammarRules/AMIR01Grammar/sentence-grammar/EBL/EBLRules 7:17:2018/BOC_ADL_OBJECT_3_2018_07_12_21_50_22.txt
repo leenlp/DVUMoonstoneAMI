@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:ADL-OBJECT:-3-2018/07/12 21:50:22") 
+  (specialized) 
+  (example-snippet "mild soap") 
+  (ordered true) 
+  (concept ":ADL-OBJECT:") 
+  (stype "<ADL-OBJECT>") 
+  (bagofconcepts true) 
+  (words 
+    (":MINIMAL::ADL-OBJECT:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

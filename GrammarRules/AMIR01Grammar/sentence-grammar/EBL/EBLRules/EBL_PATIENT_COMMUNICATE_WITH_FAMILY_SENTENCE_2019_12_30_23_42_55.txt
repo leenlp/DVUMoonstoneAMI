@@ -1,0 +1,25 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-COMMUNICATE-WITH-FAMILY-SENTENCE::2019/12/30 23:42:55") 
+  (specialized) 
+  (example-snippet "she has repeatedly been told otherwise by her children") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-imperfect-tense-rule") 
+  (concept ":PATIENT-COMMUNICATE-WITH-FAMILY-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    ("@have-word-rule@") 
+    (":COMMUNICATE-AFFIRMATIVELY::PREP::CHILDREN:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?2") 
+    (tense "imperfect")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1) 
+    ("notneg" ?2)))
+
+)

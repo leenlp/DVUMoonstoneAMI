@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::FAMILY-DECIDE-THING-SENTENCE::2018/03/28 20:27:24") 
+  (specialized) 
+  (example-snippet "Followup will be as determined by the family") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":FAMILY-DECIDE-THING-SENTENCE:") 
+  (stype "<DECISION-SENTENCE>") 
+  (window 16.0) 
+  (words 
+    ("<THING>") 
+    (":DECIDE-BY-FAMILY-PREDICATE:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

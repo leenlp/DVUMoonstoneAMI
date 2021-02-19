@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DIFFICULTY-WITH-COMMUNICATION::2018/03/20 17:59:56") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":DIFFICULTY-WITH-COMMUNICATION:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":INABILITY:") 
+    (":COMMUNICATE-AFFIRMATIVELY::PREP::ADL-FACILITY:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

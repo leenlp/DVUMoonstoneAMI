@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-DISABILITY::2018/03/21 19:29:56") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "state-thing-rule") 
+  (concept ":ADL-DISABILITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":INABILITY:" ":UNABLE:") 
+    (":SPECIFIC-COGNITIVE-ABILITY-THING:" "<ADL-ACTIVITY>")) 
+  (properties 
+    (state "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:-23-2018/07/19 19:27:07") 
+  (specialized) 
+  (example-snippet "required Mod A of therapist") 
+  (ordered true) 
+  (concept ":NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED::MODERATE::PREP::PROVIDER:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

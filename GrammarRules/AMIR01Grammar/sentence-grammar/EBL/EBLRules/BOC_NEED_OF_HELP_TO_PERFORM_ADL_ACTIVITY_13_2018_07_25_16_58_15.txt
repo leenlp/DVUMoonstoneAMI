@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:-13-2018/07/25 16:58:15") 
+  (specialized) 
+  (example-snippet "required mod A of 2 to complete transfer from bed to chair") 
+  (ordered true) 
+  (concept ":NEED-OF-HELP-TO-PERFORM-ADL-ACTIVITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED::HELP::COMPLETE-PROPERTY::TRANSFER::FROM-ADL-PLACE-TO-ADL-PLACE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

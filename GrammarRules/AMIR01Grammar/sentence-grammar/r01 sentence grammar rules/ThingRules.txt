@@ -1,0 +1,114 @@
+'(
+wordrule
+
+
+((ruleid determinate-thing-phrase-rule)
+ (concept ?1)
+ (ordered true)
+ (words ("a" "the") ("<THING>")))
+ 
+((ruleid history-of-thing-rule)
+ (stype ?1)
+ (complex-concept)
+ ;; (concept ?1)
+ (ordered true)
+ (words (":HISTORY:") ("<THING>" "<PREDICATE>"))
+ (properties (temporality "historical")))
+ 
+((ruleid thing-from-person-rule)
+ (stype ?0)
+ (complex-concept)
+ (ordered true)
+ (words ("<THING>") ("from") ("<PERSON>"))
+ (properties (person ?2) (source ?2) (object ?0))
+ (tests (not ("isEDFormActionWord" ?0))))
+ 
+;; 11/3/2017
+ 
+;; 7/13/2016, e.g. "supportive visit"
+((ruleid state-thing-rule)
+ (stype ?1)
+ (complex-concept)
+ (ordered true)
+ (words ("<STATE>") ("<THING>"))
+ (properties (state ?0) (object ?1)))
+  
+((ruleid double-pp-rule)
+ (complex-concept)
+ ;; (concept ?1)
+ (macro "_PP_")
+ (ordered true)
+ (words ("@simple-pp-rule@") ("@simple-pp-rule@"))
+ (properties  
+ 	(source (object ?0)) 
+ 	(destination (object ?1))))
+
+((ruleid there-is-thing-rule)
+ (concept ?1)
+ (ordered true)
+ (words ("there is" "there are") ("<THING>"))
+ (tests (not ("isEDFormActionWord" ?1))))
+ 
+  		
+((ruleid disease-versus-disease-rule) 
+  (stype ?0)
+  (concept ?0) 
+  (ordered true) 
+  (words ("<DISEASE-THING>") ("versus" "vs") ("<DISEASE-THING>"))
+  (properties ("Assertion" uncertain) ("Assertion" ?0 uncertain) 
+  	("Assertion" ?2 uncertain))
+  (tests (notneg ?0) (notneg ?2)))
+  
+((ruleid possessive-thing-rule)
+ (stype ?1)
+ (complex-concept)
+ (ordered true)
+ (window 8)
+ (ordered true)
+ (pattern ("_POSSESSIVE_" "@possessive-person-rule@") ("<THING>"))
+ (properties (thing ?1)))
+  
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; NUMBER RULES
+
+((ruleid number-range-rule) 
+  (stype ?0)
+  (concept ?0) 
+  (ordered true) 
+  (flags conj) 
+  (words (":NUMBER:") ("to") (":NUMBER:"))
+  (properties (start ?0) (end ?1)))
+  		
+((ruleid general-number-state-conjunct-rule) 
+  (stype ?0)
+  (concept ?0) 
+  (ordered true) 
+  (words (":NUMBER:") ("_CONJ_") (":NUMBER:")))
+
+;; e.g. "one bottle of beer"
+((ruleid number-thing-rule)
+ (concept ?1)
+ (ordered true)
+ (window 32)
+ ;;(juxtaposed true)
+ (ordered true)
+ (words (":NUMBER:") ("<THING>"))
+ (properties (number ?0) (thing ?1)))
+
+;; Test is a klooge:  Type loop check determines annotation has same
+;; type as input, so requires tests to be legit.
+((ruleid number-digit-rule)
+ (concept ":NUMBER:")
+ (words ("#NUMBER#"))
+ (properties (value ?0))
+ (tests (notneg ?0)))
+
+((ruleid number-words-rule) 
+  (words 
+    ("one" "two" "three" "four" "five" "six" 
+	"seven" "eight" "nine" "ten")) 
+  (concept ":NUMBER:")
+  (properties (number ?0))) 
+
+
+)

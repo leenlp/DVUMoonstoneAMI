@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-0-2018/07/09 15:23:14") 
+  (specialized) 
+  (example-snippet "dysarthria") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DYSARTHRIA:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

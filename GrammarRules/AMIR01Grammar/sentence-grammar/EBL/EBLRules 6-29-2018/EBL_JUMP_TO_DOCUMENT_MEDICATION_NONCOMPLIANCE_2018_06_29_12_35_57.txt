@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE::2018/06/29 12:35:57") 
+  (specialized) 
+  (example-snippet "takes prescribed medications sometimes") 
+  (sourceid "predicate-plus-time-rule") 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (window 32.0) 
+  (words 
+    (":TAKE::PRESCRIPTION-MEDICATION:") 
+    (":SOMETIMES:")) 
+  (properties 
+    (predicate "?0") 
+    (time "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

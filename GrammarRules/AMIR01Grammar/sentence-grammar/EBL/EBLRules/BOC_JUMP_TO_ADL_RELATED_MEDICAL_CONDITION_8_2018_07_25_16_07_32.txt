@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:-8-2018/07/25 16:07:32") 
+  (specialized) 
+  (example-snippet "decreased safety awareness") 
+  (ordered true) 
+  (concept ":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":DECREASED::FOCUS-THING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

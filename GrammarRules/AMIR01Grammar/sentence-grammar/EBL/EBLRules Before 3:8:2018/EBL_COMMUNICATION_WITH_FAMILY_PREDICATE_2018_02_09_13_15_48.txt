@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::COMMUNICATION-WITH-FAMILY-PREDICATE::2018/02/09 13:15:48") 
+  (specialized) 
+  (example-snippet "discussed with the patients mother") 
+  (ordered true) 
+  (sourceid "action-pp-rule") 
+  (concept ":COMMUNICATION-WITH-FAMILY-PREDICATE:") 
+  (stype "<COMMUNICATION-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":DISCUSS:") 
+    (":WITH-FAMILY:<PREDICATE>")) 
+  (properties 
+    (action "?0") 
+    (object (thing ?1)))
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

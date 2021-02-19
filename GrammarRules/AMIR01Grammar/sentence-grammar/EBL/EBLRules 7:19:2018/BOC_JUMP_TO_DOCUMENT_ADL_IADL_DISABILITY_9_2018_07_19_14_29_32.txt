@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-9-2018/07/19 14:29:32") 
+  (specialized) 
+  (example-snippet "shoulder flexion with active assist") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PHYSICAL-THERAPY-EXERCISE::WITH-HELP:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

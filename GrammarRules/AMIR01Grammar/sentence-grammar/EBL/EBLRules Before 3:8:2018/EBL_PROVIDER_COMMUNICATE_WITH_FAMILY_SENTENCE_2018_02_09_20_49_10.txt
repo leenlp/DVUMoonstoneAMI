@@ -1,0 +1,23 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PROVIDER-COMMUNICATE-WITH-FAMILY-SENTENCE::2018/02/09 20:49:10") 
+  (specialized) 
+  (example-snippet "procedure was discussed with father and mother") 
+  (ordered true) 
+  (sourceid "passive-sentence-rule") 
+  (concept ":PROVIDER-COMMUNICATE-WITH-FAMILY-SENTENCE:") 
+  (stype "<COMMUNICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    ("<THING>") 
+    (":IS::COMMUNICATION-WITH-FAMILY-PREDICATE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1") 
+    (verb-form "passive")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

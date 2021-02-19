@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PERSON-HAVE-PATIENT-MEDICATIONS::2018/03/07 18:15:40") 
+  (specialized) 
+  (example-snippet "He had a box of her pain medications") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":PERSON-HAVE-PATIENT-MEDICATIONS:") 
+  (stype "<MEDICATION-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PERSON:") 
+    (":PATIENT-PRESCRIPTION-MEDICATIONS:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

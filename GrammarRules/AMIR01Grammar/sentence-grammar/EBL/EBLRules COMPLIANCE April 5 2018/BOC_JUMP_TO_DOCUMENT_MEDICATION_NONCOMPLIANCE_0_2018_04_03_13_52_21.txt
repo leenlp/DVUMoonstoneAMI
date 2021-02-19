@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:-0-2018/04/03 13:52:21") 
+  (specialized) 
+  (example-snippet "has not been getting Sinemet") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NOT-RECEIVE-PRESCRIPTION-MEDICATION-PREDICATE:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

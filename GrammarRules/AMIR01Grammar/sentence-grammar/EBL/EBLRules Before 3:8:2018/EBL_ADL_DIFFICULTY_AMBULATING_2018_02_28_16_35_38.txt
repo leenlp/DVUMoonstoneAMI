@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::ADL-DIFFICULTY-AMBULATING::2018/02/28 16:35:38") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":ADL-DIFFICULTY-AMBULATING:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":DEFICIT:<THING>") 
+    (":PREP::WALKING:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

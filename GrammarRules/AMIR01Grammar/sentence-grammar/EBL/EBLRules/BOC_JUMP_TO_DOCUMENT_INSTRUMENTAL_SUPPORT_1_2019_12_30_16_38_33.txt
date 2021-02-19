@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:-1-2019/12/30 16:38:33") 
+  (specialized) 
+  (example-snippet "her stay in Rock Springs with her daughter") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":PATIENT-LIVE-WITH-FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

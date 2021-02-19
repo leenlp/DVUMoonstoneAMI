@@ -1,0 +1,20 @@
+'(
+wordrule
+(
+  (ruleid "EBL::MOVE-TO-ADL-FACILITY::2017/12/08 11:17:05") 
+  (specialized) 
+  (example-snippet "transferred back to assisted living") 
+  (ordered true) 
+  (sourceid "thing-pp-thing-rule") 
+  (concept ":MOVE-TO-ADL-FACILITY:") 
+  (stype "<ADL-ACTIVITY>") 
+  (window 16.0) 
+  (words 
+    (":MOVE-TO:<THING>") 
+    (":PREP::ASSISTED-LIVING:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (removeproperties directionality))
+
+)

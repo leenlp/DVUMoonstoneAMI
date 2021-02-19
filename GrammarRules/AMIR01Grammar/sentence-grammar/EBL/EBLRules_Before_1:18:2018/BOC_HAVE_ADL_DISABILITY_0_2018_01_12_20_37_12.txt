@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:HAVE-ADL-DISABILITY:-0-2018/01/12 20:37:12") 
+  (specialized) 
+  (example-snippet "needs help to ambulate") 
+  (ordered true) 
+  (concept ":HAVE-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":UNABLE-TO-PERFORM-ADL-WITHOUT-HELP:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:DIFFICULTY-PERFORMING-ADL:-0-2020/01/07 21:20:43") 
+  (specialized) 
+  (example-snippet "pregait shuffling") 
+  (ordered true) 
+  (concept ":DIFFICULTY-PERFORMING-ADL:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (bagofconcepts true) 
+  (words 
+    (":GAIT::DIFFICULTY-AMBULATING:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

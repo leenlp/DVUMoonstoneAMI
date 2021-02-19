@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LACK-SUPPORT::2017/12/08 21:11:21") 
+  (specialized) 
+  (example-snippet "she does not get enough support from her husband") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule") 
+  (concept ":LACK-SUPPORT:") 
+  (stype "<SOCIAL-SUPPORT-TARGET>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":RECEIVE::PROVISION-OF-CARE::SPOUSE:")) 
+  (tests (neg ?1))
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (removeproperties directionality))
+
+)

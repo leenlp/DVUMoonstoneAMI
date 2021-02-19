@@ -1,0 +1,245 @@
+'(
+wordrule
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; MEDICAL CONDITION RULES
+((ruleid gate-keeper-medical-care-rule)
+ (concept ":PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:")
+ (words (":MEDICAL-CONDITION-CAUSING-ADL-DISABILITY:"
+ 		":ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:" 
+ 		":HAVE-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:"
+ 		":PATIENT-HAS-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:"
+ 		":JUMP-TO-ADL-RELATED-MEDICAL-CONDITION:"))
+ ;; 7/23/2018:  Not permitting negated conditions
+ (tests (notneg ?0)))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LIVING ALONE RULES
+
+((ruleid gate-keeper-not-living-alone-rule)
+ (concept ":LIVING-ALONE:")
+ (words (":LIVE-WITH-FF:" ":LIVE-WITH-FAMILY:" ":NOT-LIVING-ALONE:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+ 
+((ruleid gate-keeper-negated-not-living-alone-rule)
+ (concept ":LIVING-ALONE:")
+ (words (":NOT-LIVING-ALONE:" ":LIVES-IN-FACILITY:" ":LIVE-WITH-FF:"
+ 			":LIVES-IN-NURSING-HOME:"
+ 			":LIVE-WITH-FAMILY:"
+ 			":PATIENT-LIVE-WITH-FAMILY:"
+ 			":PATIENT-LIVE-WITH-FF:"
+ 			":PATIENT-LIVES-IN-FACILITY:" ":PATIENT-IN-NURSING-HOME-THING:" 
+ 			;; 3/14/2018
+ 			":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:"))
+ (tests (notneg ?0) 
+ 		(not ("isPossibleUncertainOrHypothetical" ?0)))
+ (properties (directionality negated)))
+ 
+;; 7/23/2018
+((ruleid gate-keeper-uncertain-living-alone-rule)
+ (concept ":LIVING-ALONE:")
+ (words (":LIVING-ALONE:" ":NOT-LIVING-ALONE:" ":LIVES-IN-FACILITY:" ":LIVE-WITH-FF:"
+ 			":LIVES-IN-NURSING-HOME:"
+ 			":LIVE-WITH-FAMILY:"
+ 			":PATIENT-LIVE-WITH-FAMILY:"
+ 			":PATIENT-LIVE-WITH-FF:"
+ 			":PATIENT-LIVES-IN-FACILITY:" ":PATIENT-IN-NURSING-HOME-THING:" 
+ 			":JUMP-TO-DOCUMENT-NOT-LIVING-ALONE:"
+ 			":JUMP-TO-DOCUMENT-LIVING-ALONE:"))
+ ;; (tests (not ("isPossibleUncertainOrHypothetical" ?0)))
+ ;; Changed 1/7/2020
+ (tests ("isPossibleUncertainOrHypothetical" ?0)))
+ 
+((ruleid gate-keeper-living-alone-rule)
+ (concept ":LIVING-ALONE:" )
+ (words (":LIVING-ALONE:" ":JUMP-TO-DOCUMENT-LIVING-ALONE:"))
+ (tests (notneg ?0)))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ADL RULES
+((ruleid gate-keeper-adl-disability-rule)
+ (concept ":PATIENT-HAS-ADL-DISABILITY:")
+ (words (":PATIENT-HAS-ADL-DISABILITY:" 
+		 ":HAVE-ADL-DISABILITY:" 
+		 ":ADL-IMPAIRMENT:"
+		 ;; ":MENTAL-IMPAIRMENT:"
+		 ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:"
+		 )))
+ 
+((ruleid gate-keeper-no-adl-disability-rule)
+ (concept ":PATIENT-HAS-ADL-DISABILITY:")
+ (words (":PATIENT-DOES-NOT-HAVE-ADL-DISABILITY:"
+		 ":DOES-NOT-HAVE-ADL-DISABILITY:"))
+ (tests (notneg ?0))
+ (properties (directionality negated)))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; DEPRESSION RULES
+((ruleid gate-keeper-depression-rule)
+ (concept ":PERSON-IS-DEPRESSED:")
+ (words (":PERSON-IS-DEPRESSED:" ":DEPRESSION:" 
+ 		":JUMP-TO-DOCUMENT-DEPRESSION:"))
+ ;; (tests (notneg ?0)) -- filters out "negative for depression"
+ )
+ 
+((ruleid gate-keeper-dementia-rule)
+ (concept ":PERSON-HAS-DEMENTIA:")
+ (words (":PERSON-HAS-DEMENTIA:" ":JUMP-TO-DOCUMENT-DEMENTIA:")))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LIVING SITUATION RULES
+
+((ruleid gate-keeper-marginal-support-rule)
+ (concept ":PATIENT-IN-MARGINAL-SUPPORT-FACILITY:")
+ (words (":IN-MARGINAL-SUPPORT-FACILITY:" ":MARGINAL-SUPPORT-FACILITY:" 
+ 		":PATIENT-IN-MARGINAL-SUPPORT-FACILITY:"))
+ (tests (notneg ?0)))
+
+((ruleid gate-keeper-homelessness-rule)
+ (stype ?0)
+ (concept ":HOMELESS:")
+ (words (":POSSIBLY-HOMELESS:"))
+ (tests (notneg ?0) (<= ("getSentenceWordTokenLength" ?0) 16)))
+		
+
+((ruleid general-stable-housing-rule)
+ (stype ?0)
+ (concept ":STABLE-HOUSING:")
+ (words (":LIVE-AT-HOME:" ":POSSIBLE-LIVE-AT-HOME:" 
+		":NOT-HOMELESS-BUT-OTHER-LIVING-SITUATION:" 
+		":NOT-HOMELESS:" 
+		":RETURN-TO-OR-LIVE-AT-HOME:"
+		":PATIENT::STABLE-HOUSING:"
+		
+		;; REMOVED 2/14/2017.  This is adding StableHousing to ALL annotations 
+		;; indicating not living alone...
+		;; ":NOT-LIVING-ALONE:"  ;; 11/6/2016:  TEST.  HAIL-MARY PASS TO PUSH FOR BETTER ACCURACY...
+		))
+ (tests (notneg ?0) (<= ("getSentenceWordTokenLength" ?0) 16)))
+ 
+ ;; 5/28/2017 ":POSSIBLY-HOMELESS:" needs vetting first
+((ruleid general-unstable-housing-rule)
+ (stype ?0)
+ (concept ":UNSTABLE-HOUSING:")
+ (words (":HOMELESS:" 
+		;; ":POSSIBLY-HOMELESS:" 
+		":MARGINALLY-HOUSED:"))
+ (tests (notneg ?0)))
+ 
+((ruleid homelessness-in-short-sentence-indicates-homeless-rule)
+ (stype ?0)
+ (concept ":HOMELESS:")
+ (words (":HOMELESSNESS:"))
+ (tests (notneg ?0)
+		(< ("getSentenceWordTokenLength" ?*) 8)))
+		
+((ruleid general-live-in-facility-rule)
+ (stype ?0)
+ (concept ":LIVES-IN-FACILITY:")
+ (words (":LIVE-IN-NURSING-HOME:" ":LIVE-IN-ASSISTED-LIVING:" ":LIVE-IN-GROUP-HOME:"))
+ (tests (notneg ?0)))
+ 
+((ruleid not-homeless-rule-1)
+ (concept ":NOT-HOMELESS:")
+ (words (":HOMELESS:" ":HOMELESSNESS:"))
+ (tests (neg ?0)
+		(< ("getSentenceWordTokenLength" ?*) 8))
+ (removeproperties directionality))
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; SOCIAL SUPPORT DOCUMENT RULES 
+
+((ruleid gate-keeper-support-rule)
+ (concept ":HAVE-SUPPORT:")
+ (words (":POSSIBLE-SUPPORT:" 
+ 		;; ":LIVE-WITH-FAMILY:" -- 3/15/2018
+ 		":PATIENT-IN-MARGINAL-SUPPORT-FACILITY:"
+ 		":PATIENT-HAS-ACCESS-TO-COMMUNITY-SERVICES:"
+ 		":ACCESS-TO-COMMUNITY-SERVICES:"
+ 		":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:"))
+ (tests (notneg ?0)))
+	
+((ruleid lack-of-support-is-negated-support-rule)
+ (concept ":HAVE-SUPPORT:")
+ (words (":LACK-SUPPORT:"))
+ (tests (notneg ?0))
+ (properties (directionality negated)))
+ 
+;; 7/13/2018  "No family was available"
+((ruleid negated-support-is-lack-of-support-rule)
+ (concept ":LACK-SUPPORT:")
+ (words (":JUMP-TO-DOCUMENT-INSTRUMENTAL-SUPPORT:" ":POSSIBLE-SUPPORT:" ":HAVE-SUPPORT:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+	
+((ruleid gate-keeper-lack-support-rule-1)
+ (concept ":LACK-SUPPORT:")
+ (words (":POSSIBLE-LACK-SUPPORT:" ":LACK-SUPPORT:"))
+ (tests (notneg ?0) (not ("containsComma" ?0)) (not (atct ?0 "alternat"))))
+
+((ruleid help-from-church-connotes-access-to-community-services-rule) 
+  (concept ":ACCESS-TO-COMMUNITY-SERVICES:") 
+  (words (":POSSIBLE-SUPPORT:")) 
+  (tests (notneg ?0) (hcr ?0 ":CHURCH:") (< ("getSentenceWordTokenLength" ?*) 8)))
+
+((ruleid parent-alone-indicates-social-support-rule)
+ (concept ":HAVE-SUPPORT:")
+ (words (":PARENT:"))
+ (tests (notneg ?0)))
+ 
+ 
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LANGUAGE BARRIER RULES
+((ruleid language-barrier-gateway-rule-1)
+ (concept ":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:")
+ (words (":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:" 
+ 		":JUMP-TO-DOCUMENT-LANGUAGE-BARRIER:"))
+ (tests (notneg ?0)))
+ 
+((ruleid language-barrier-gateway-rule-2)
+ (concept ":PATIENT-HAVE-LANGUAGE-BARRIER-SENTENCE:")
+ (words (":PATIENT-SPEAKS-COMPETENT-ENGLISH-SENTENCE:")
+ 		(":PATIENT-PRIMARY-FOREIGN-LANGUAGE-SENTENCE:"))
+ (tests (notneg ?0) 
+ 		(notneg ?1)
+ 		("withinNSentences" ?0 ?1 2)))
+ 		
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; MEDICATION COMPLIANCE
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; NONCOMPLIANCE RULES
+
+((ruleid gate-keeper-medicine-compliance-rule-1)
+ (concept ":PATIENT-IS-NONCOMPLIANT:")
+ (words (":PATIENT-IS-NONCOMPLIANT:" 
+ 		":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:"))
+ (tests (notneg ?0)))
+ 		
+((ruleid gate-keeper-medicine-compliance-rule-2)
+ (concept ":PATIENT-IS-NONCOMPLIANT:")
+ (words (":PATIENT-IS-COMPLIANT:"))
+ (tests (neg ?0))
+ (removeproperties directionality))
+
+((ruleid gate-keeper-medicine-compliance-complex-rule-1)
+ (concept ":PATIENT-IS-NONCOMPLIANT:")
+ (words (":PATIENT-IS-COMPLIANT:")  (":PATIENT-IS-NONCOMPLIANT:"))
+ (tests (notneg ?0) 
+ 		(notneg ?1)
+ 		("withinNSentences" ?0 ?1 2))
+ (properties (directionality uncertain)))
+
+ 
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; CAPTURE AT DOCUMENT RULES
+ 
+((ruleid capture-at-document-gateway-rule)
+ (concept ":CAPTURE-AT-DOCUMENT-CONCEPT:")
+ (words (":CAPTURE-AT-DOCUMENT-CONCEPT:")))
+
+ 
+)

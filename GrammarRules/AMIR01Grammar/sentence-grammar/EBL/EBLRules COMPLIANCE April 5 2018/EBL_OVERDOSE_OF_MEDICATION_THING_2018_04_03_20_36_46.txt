@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::OVERDOSE-OF-MEDICATION-THING::2018/04/03 20:36:46") 
+  (specialized) 
+  (example-snippet "overdose of about 30 Haldol") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":OVERDOSE-OF-MEDICATION-THING:") 
+  (stype "<BEHAVIOR-THING>") 
+  (window 16.0) 
+  (words 
+    (":OVERDOSE-THING:") 
+    (":PREP::PRESCRIPTION-MEDICATION:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

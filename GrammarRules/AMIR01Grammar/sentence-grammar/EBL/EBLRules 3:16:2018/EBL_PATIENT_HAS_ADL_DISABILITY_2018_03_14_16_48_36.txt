@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HAS-ADL-DISABILITY::2018/03/14 16:48:36") 
+  (specialized)  
+  (ordered true) 
+  (sourceid "person-have-thing-rule") 
+  (concept ":PATIENT-HAS-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":ADL-IMPAIRMENT:<PREDICATE>")) 
+  (properties 
+    (subject "?0") 
+    (object "[object, ?2]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

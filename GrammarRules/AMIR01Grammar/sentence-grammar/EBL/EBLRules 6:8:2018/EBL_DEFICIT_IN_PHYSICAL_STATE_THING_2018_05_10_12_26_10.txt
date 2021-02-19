@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::DEFICIT-IN-PHYSICAL-STATE-THING::2018/05/10 12:26:10") 
+  (specialized) 
+  (example-snippet "deficits in strength balance and ambulation") 
+  (ordered true) 
+  (sourceid "thing-predicate-thing-rule") 
+  (concept ":DEFICIT-IN-PHYSICAL-STATE-THING:") 
+  (stype "<POOR-PHYSICAL-STATE-THING>") 
+  (window 16.0) 
+  (words 
+    (":DEFICIT:<THING>") 
+    (":PREP::STRENGTH:")) 
+  (properties 
+    (object "?0") 
+    (modifier "[thing, ?1]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

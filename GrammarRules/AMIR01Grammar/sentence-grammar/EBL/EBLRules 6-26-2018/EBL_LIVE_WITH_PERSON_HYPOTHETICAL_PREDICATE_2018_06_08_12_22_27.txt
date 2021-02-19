@@ -1,0 +1,21 @@
+'(
+wordrule
+(
+  (ruleid "EBL::LIVE-WITH-PERSON-HYPOTHETICAL-PREDICATE::2018/06/08 12:22:27") 
+  (specialized) 
+  (example-snippet "has relatives in Nashville with whom she could stay posttransplant") 
+  (ordered true) 
+  (sourceid "have-thing-predicate-rule_52320") 
+  (concept ":LIVE-WITH-PERSON-HYPOTHETICAL-PREDICATE:") 
+  (stype "<LIVE-WITH-PERSON-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    ("@have-word-rule_54597@") 
+    (":FF-WITH-WHOM-PATIENT-COULD-HYPOTHETICALLY-LIVE:")) 
+  (properties 
+    (object "?2")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

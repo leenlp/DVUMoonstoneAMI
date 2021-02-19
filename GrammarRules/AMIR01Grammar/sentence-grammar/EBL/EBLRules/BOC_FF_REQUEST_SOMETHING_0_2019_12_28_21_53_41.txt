@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:FF-REQUEST-SOMETHING:-0-2019/12/28 21:53:41") 
+  (specialized) 
+  (example-snippet "request of son") 
+  (ordered true) 
+  (concept ":FF-REQUEST-SOMETHING:") 
+  (stype "<REQUEST-SENTENCE>") 
+  (bagofconcepts true) 
+  (words 
+    (":REQUEST::PREP::FAMILY:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

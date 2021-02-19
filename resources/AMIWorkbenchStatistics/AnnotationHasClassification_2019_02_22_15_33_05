@@ -1,0 +1,182 @@
+<EvaluationWorkbenchStatistics date="2019/02/22 15:33:05" constraint="AnnotationHasClassification">
+  <EvaluationWorkbenchRow row=0>
+    <WorkbenchColumn column="Concept" value="SUMMARY"/>
+    <WorkbenchColumn column="TP" value="1155"/>
+    <WorkbenchColumn column="FP" value="137"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="162"/>
+    <WorkbenchColumn column="Acc" value="0.79"/>
+    <WorkbenchColumn column="PPV" value="0.89"/>
+    <WorkbenchColumn column="Sen" value="0.87"/>
+    <WorkbenchColumn column="NPV" value="0.0"/>
+    <WorkbenchColumn column="Spec" value="0.0"/>
+    <WorkbenchColumn column="ScottsPi" value="*"/>
+    <WorkbenchColumn column="CohenK" value="-0.1"/>
+    <WorkbenchColumn column="Fmeas" value="0.88"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=1>
+    <WorkbenchColumn column="Concept" value="COMMUNITY SUPPORT"/>
+    <WorkbenchColumn column="TP" value="0"/>
+    <WorkbenchColumn column="FP" value="0"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="0"/>
+    <WorkbenchColumn column="Acc" value="*"/>
+    <WorkbenchColumn column="PPV" value="*"/>
+    <WorkbenchColumn column="Sen" value="*"/>
+    <WorkbenchColumn column="NPV" value="*"/>
+    <WorkbenchColumn column="Spec" value="*"/>
+    <WorkbenchColumn column="ScottsPi" value="0.0"/>
+    <WorkbenchColumn column="CohenK" value="0.0"/>
+    <WorkbenchColumn column="Fmeas" value="*"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=2>
+    <WorkbenchColumn column="Concept" value="DEMENTIA"/>
+    <WorkbenchColumn column="TP" value="15"/>
+    <WorkbenchColumn column="FP" value="0"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="1"/>
+    <WorkbenchColumn column="Acc" value="0.93"/>
+    <WorkbenchColumn column="PPV" value="1.0"/>
+    <WorkbenchColumn column="Sen" value="0.93"/>
+    <WorkbenchColumn column="NPV" value="0.0"/>
+    <WorkbenchColumn column="Spec" value="*"/>
+    <WorkbenchColumn column="ScottsPi" value="*"/>
+    <WorkbenchColumn column="CohenK" value="0.0"/>
+    <WorkbenchColumn column="Fmeas" value="0.96"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=3>
+    <WorkbenchColumn column="Concept" value="DEPRESSION"/>
+    <WorkbenchColumn column="TP" value="40"/>
+    <WorkbenchColumn column="FP" value="3"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="3"/>
+    <WorkbenchColumn column="Acc" value="0.86"/>
+    <WorkbenchColumn column="PPV" value="0.93"/>
+    <WorkbenchColumn column="Sen" value="0.93"/>
+    <WorkbenchColumn column="NPV" value="0.0"/>
+    <WorkbenchColumn column="Spec" value="0.0"/>
+    <WorkbenchColumn column="ScottsPi" value="*"/>
+    <WorkbenchColumn column="CohenK" value="-0.0"/>
+    <WorkbenchColumn column="Fmeas" value="0.93"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=4>
+    <WorkbenchColumn column="Concept" value="IMPAIRED ADL/IADL"/>
+    <WorkbenchColumn column="TP" value="601"/>
+    <WorkbenchColumn column="FP" value="28"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="40"/>
+    <WorkbenchColumn column="Acc" value="0.89"/>
+    <WorkbenchColumn column="PPV" value="0.95"/>
+    <WorkbenchColumn column="Sen" value="0.93"/>
+    <WorkbenchColumn column="NPV" value="0.0"/>
+    <WorkbenchColumn column="Spec" value="0.0"/>
+    <WorkbenchColumn column="ScottsPi" value="*"/>
+    <WorkbenchColumn column="CohenK" value="-0.0"/>
+    <WorkbenchColumn column="Fmeas" value="0.94"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=5>
+    <WorkbenchColumn column="Concept" value="INSTRUMENTAL SUPPORT"/>
+    <WorkbenchColumn column="TP" value="237"/>
+    <WorkbenchColumn column="FP" value="21"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="38"/>
+    <WorkbenchColumn column="Acc" value="0.80"/>
+    <WorkbenchColumn column="PPV" value="0.91"/>
+    <WorkbenchColumn column="Sen" value="0.86"/>
+    <WorkbenchColumn column="NPV" value="0.0"/>
+    <WorkbenchColumn column="Spec" value="0.0"/>
+    <WorkbenchColumn column="ScottsPi" value="*"/>
+    <WorkbenchColumn column="CohenK" value="-0.1"/>
+    <WorkbenchColumn column="Fmeas" value="0.88"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=6>
+    <WorkbenchColumn column="Concept" value="LANGUAGE BARRIER"/>
+    <WorkbenchColumn column="TP" value="6"/>
+    <WorkbenchColumn column="FP" value="2"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="0"/>
+    <WorkbenchColumn column="Acc" value="0.75"/>
+    <WorkbenchColumn column="PPV" value="0.75"/>
+    <WorkbenchColumn column="Sen" value="1.0"/>
+    <WorkbenchColumn column="NPV" value="*"/>
+    <WorkbenchColumn column="Spec" value="0.0"/>
+    <WorkbenchColumn column="ScottsPi" value="*"/>
+    <WorkbenchColumn column="CohenK" value="0.0"/>
+    <WorkbenchColumn column="Fmeas" value="0.85"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=7>
+    <WorkbenchColumn column="Concept" value="LIVING ALONE"/>
+    <WorkbenchColumn column="TP" value="104"/>
+    <WorkbenchColumn column="FP" value="8"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="19"/>
+    <WorkbenchColumn column="Acc" value="0.79"/>
+    <WorkbenchColumn column="PPV" value="0.92"/>
+    <WorkbenchColumn column="Sen" value="0.84"/>
+    <WorkbenchColumn column="NPV" value="0.0"/>
+    <WorkbenchColumn column="Spec" value="0.0"/>
+    <WorkbenchColumn column="ScottsPi" value="*"/>
+    <WorkbenchColumn column="CohenK" value="-0.0"/>
+    <WorkbenchColumn column="Fmeas" value="0.88"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=8>
+    <WorkbenchColumn column="Concept" value="MARGINAL SUPPORT"/>
+    <WorkbenchColumn column="TP" value="0"/>
+    <WorkbenchColumn column="FP" value="0"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="0"/>
+    <WorkbenchColumn column="Acc" value="*"/>
+    <WorkbenchColumn column="PPV" value="*"/>
+    <WorkbenchColumn column="Sen" value="*"/>
+    <WorkbenchColumn column="NPV" value="*"/>
+    <WorkbenchColumn column="Spec" value="*"/>
+    <WorkbenchColumn column="ScottsPi" value="0.0"/>
+    <WorkbenchColumn column="CohenK" value="0.0"/>
+    <WorkbenchColumn column="Fmeas" value="*"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=9>
+    <WorkbenchColumn column="Concept" value="MEDICAL CONDITION"/>
+    <WorkbenchColumn column="TP" value="131"/>
+    <WorkbenchColumn column="FP" value="74"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="61"/>
+    <WorkbenchColumn column="Acc" value="0.49"/>
+    <WorkbenchColumn column="PPV" value="0.63"/>
+    <WorkbenchColumn column="Sen" value="0.68"/>
+    <WorkbenchColumn column="NPV" value="0.0"/>
+    <WorkbenchColumn column="Spec" value="0.0"/>
+    <WorkbenchColumn column="ScottsPi" value="*"/>
+    <WorkbenchColumn column="CohenK" value="-0.3"/>
+    <WorkbenchColumn column="Fmeas" value="0.65"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=10>
+    <WorkbenchColumn column="Concept" value="MEDICATION COMPLIANCE"/>
+    <WorkbenchColumn column="TP" value="21"/>
+    <WorkbenchColumn column="FP" value="1"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="0"/>
+    <WorkbenchColumn column="Acc" value="0.95"/>
+    <WorkbenchColumn column="PPV" value="0.95"/>
+    <WorkbenchColumn column="Sen" value="1.0"/>
+    <WorkbenchColumn column="NPV" value="*"/>
+    <WorkbenchColumn column="Spec" value="0.0"/>
+    <WorkbenchColumn column="ScottsPi" value="*"/>
+    <WorkbenchColumn column="CohenK" value="0.0"/>
+    <WorkbenchColumn column="Fmeas" value="0.97"/>
+  </EvaluationWorkbenchRow>
+  <EvaluationWorkbenchRow row=11>
+    <WorkbenchColumn column="Concept" value="SECTION"/>
+    <WorkbenchColumn column="TP" value="0"/>
+    <WorkbenchColumn column="FP" value="0"/>
+    <WorkbenchColumn column="TN" value="0"/>
+    <WorkbenchColumn column="FN" value="0"/>
+    <WorkbenchColumn column="Acc" value="*"/>
+    <WorkbenchColumn column="PPV" value="*"/>
+    <WorkbenchColumn column="Sen" value="*"/>
+    <WorkbenchColumn column="NPV" value="*"/>
+    <WorkbenchColumn column="Spec" value="*"/>
+    <WorkbenchColumn column="ScottsPi" value="0.0"/>
+    <WorkbenchColumn column="CohenK" value="0.0"/>
+    <WorkbenchColumn column="Fmeas" value="*"/>
+  </EvaluationWorkbenchRow>
+</EvaluationWorkbenchStatistics>

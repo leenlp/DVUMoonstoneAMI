@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:-16-2018/07/19 17:13:55") 
+  (specialized) 
+  (example-snippet "required Max A of 2 to transfer to sitting at edge of neuro chair") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-ADL-IADL-DISABILITY:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":NEED::MAXIMAL::PREP::TRANSFER::PREP::POSITIONAL-ACTION::PREP::CHAIR:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

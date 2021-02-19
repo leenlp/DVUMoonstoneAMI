@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::HAVE-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION::2018/04/25 20:50:46") 
+  (specialized) 
+  (example-snippet "arm is slightly weak") 
+  (ordered true) 
+  (sourceid "state-action-thing-infinitive-predicate-rule") 
+  (concept ":HAVE-ADL-DISABILITY-DUE-TO-MEDICAL-CONDITION:") 
+  (stype "<PERFORM-ADL-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":ANATOMIC-APPENDAGE:") 
+    (":WEAK:")) 
+  (properties 
+    (prefix "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

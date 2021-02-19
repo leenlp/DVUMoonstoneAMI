@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::GIVE-CONSENT::2018/03/28 20:09:30") 
+  (specialized) 
+  (example-snippet "gave informed consent") 
+  (ordered true) 
+  (sourceid "action-thing-rule") 
+  (concept ":GIVE-CONSENT:") 
+  (stype "<GIVE-TAKE-PREDICATE>") 
+  (window 32.0) 
+  (words 
+    (":PROVIDE:") 
+    (":CONSENT:<THING>")) 
+  (properties 
+    (action "?0") 
+    (object "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

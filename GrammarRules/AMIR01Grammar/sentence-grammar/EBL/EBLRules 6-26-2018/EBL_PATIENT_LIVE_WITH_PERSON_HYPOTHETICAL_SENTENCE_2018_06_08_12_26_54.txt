@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-LIVE-WITH-PERSON-HYPOTHETICAL-SENTENCE::2018/06/08 12:26:54") 
+  (specialized) 
+  (example-snippet "she reports that she has relatives in Nashville with whom she could stay posttransplant") 
+  (ordered true) 
+  (sourceid "person-predicate-sentence-rule_60169") 
+  (concept ":PATIENT-LIVE-WITH-PERSON-HYPOTHETICAL-SENTENCE:") 
+  (stype "<LIVE-WITH-PERSON-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":COMMUNICATE-AFFIRMATIVELY::PATIENT-LIVE-WITH-PERSON-HYPOTHETICAL-SENTENCE:")) 
+  (properties 
+    (subject "?0") 
+    (predicate "?1")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)

@@ -1,0 +1,16 @@
+'(
+wordrule
+(
+  (ruleid "BOC-:JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:-6-2018/06/29 11:54:27") 
+  (specialized) 
+  (example-snippet "abuse of Xanax") 
+  (ordered true) 
+  (concept ":JUMP-TO-DOCUMENT-MEDICATION-NONCOMPLIANCE:") 
+  (stype "<UNDEFINED>") 
+  (bagofconcepts true) 
+  (words 
+    (":ABUSE-THING::PREP::PRESCRIPTION-MEDICATION:")) 
+  (tests 
+    ("notneg" ?0)))
+
+)

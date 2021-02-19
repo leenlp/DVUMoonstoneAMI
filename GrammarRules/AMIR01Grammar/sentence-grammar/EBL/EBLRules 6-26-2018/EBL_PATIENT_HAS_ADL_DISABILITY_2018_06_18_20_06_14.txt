@@ -1,0 +1,22 @@
+'(
+wordrule
+(
+  (ruleid "EBL::PATIENT-HAS-ADL-DISABILITY::2018/06/18 20:06:14") 
+  (specialized) 
+  (example-snippet "Patient has difficulty with higher level balance") 
+  (ordered true) 
+  (sourceid "person-have-thing-rule") 
+  (concept ":PATIENT-HAS-ADL-DISABILITY:") 
+  (stype "<PERFORM-ADL-SENTENCE>") 
+  (window 32.0) 
+  (words 
+    (":PATIENT:") 
+    (":DIFFICULTY::PREP::NEUROLOGICAL-ABILITY-THING:")) 
+  (properties 
+    (subject "?0") 
+    (object "[object, ?2]")) 
+  (tests 
+    ("notneg" ?0) 
+    ("notneg" ?1)))
+
+)
